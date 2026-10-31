@@ -33,11 +33,25 @@ export const MODELS = [
     kind: 'Red de acueducto · barrio en terrazas',
     desc: 'Tanque de almacenamiento en la cota alta, línea de conducción, ramales por terraza, válvulas reguladoras de presión y estación de rebombeo.',
     watch: ['Diferencias de cota entre terrazas (≈ 4 m)', 'Trazado de la conducción y los ramales', 'Ubicación de las válvulas reguladoras'] },
+  { key: '006', code: 'EXP-006', title: 'El traslapo corto', scene: 'case006', env: 'env_day', caseId: '006',
+    kind: 'Centro comercial de 3 pisos · pórticos de concreto',
+    desc: 'Centro comercial de barrio con un pasaje de acceso bajo la viga V-2B, fisurada a mitad de luz. Alrededor: el taller de figurado del contratista de acero, la oficina de administración y el laboratorio.',
+    watch: ['Viga V-2B sobre el pasaje y su gemela V-3B en el piso 3', 'Luces de 7,5 m entre columnas', 'Local de electrodomésticos sobre la viga'] },
+  { key: '007', code: 'EXP-007', title: 'El acero que no llegó', scene: 'case007', env: 'env_day', caseId: '007',
+    kind: 'Colegio de 2 pisos en construcción · grupo de uso III',
+    desc: 'Primer piso fundido con barras de espera, acopio con dos tipos de acero, oficina con el cronograma, almacén y laboratorio. Las columnas del eje C están cercadas con cinta roja.',
+    watch: ['Compare los arranques del eje B con los del eje C', 'Paquetes con y sin etiqueta en el acopio', 'Tablero del cronograma junto a la oficina'] },
+  { key: '008', code: 'EXP-008', title: 'La columna que no baja', scene: 'case008', env: 'env_day', caseId: '008',
+    kind: 'Edificio de 6 pisos · parqueadero en piso 1 · auditoría',
+    desc: 'Edificio de uso mixto con parqueadero abierto. La columna C-B2 existe desde el piso 2 hacia arriba, pero no en el parqueadero: la losa se fisura en estrella bajo su arranque.',
+    watch: ['Mire el techo del parqueadero bajo la columna que falta', 'Use «Rayos X» para seguir la columna C-B2 hacia arriba', 'Dado de cimentación con arranques cortados'] },
   { key: 'h72', code: 'HISTORIA', title: '72 horas · Refugio modular', scene: 'story', env: 'env_hill', story: true,
     kind: 'Estructura metálica de emergencia · 30 × 20 m',
     desc: 'Refugio temporal en pórticos de acero a dos aguas sobre dados de concreto, arriostrado en los vanos extremos, con cubierta liviana y dos salidas remotas.',
     watch: ['Recorra las etapas de obra con el control deslizante', 'Arriostramiento en X de los vanos extremos', 'Cimentación: dados, pernos de anclaje y vigas de amarre'] }
 ];
+// Orden: expedientes por número y, al final, el modo historia
+MODELS.sort((a, b) => (a.story ? 1 : 0) - (b.story ? 1 : 0) || a.key.localeCompare(b.key));
 
 const STAGES = ['Lote', 'Replanteo y sondeos', 'Cimentación', 'Estructura', 'Cubierta', 'Cierres y salidas', 'Prueba nocturna'];
 

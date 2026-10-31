@@ -43,18 +43,18 @@ js/
   hypotheses.js       Tablero de hipótesis (estados, relaciones, argumentos, notas)
   report.js           Informe guiado y pantalla de evaluación
   scoring.js          Motor de evaluación (funciones puras)
-  illustrations.js    Ilustraciones SVG generadas por código
+  illustrations*.js   Ilustraciones SVG generadas por código (una por expediente o grupo)
   viewer.js           Galería y visor de modelos 3D (acceso libre)
   story.js            Modo historia «72 horas»
 scenes/
   kit.js              Texturas fotográficas, panoramas, escena base, rayos X
-  case001.js / case004.js / case005.js   Escenas 3D de los expedientes jugables
+  case001.js, case004.js a case008.js   Escenas 3D de los expedientes jugables
   case002.js / case003.js   Modelos preliminares (expedientes en desarrollo)
   story.js            Refugio modular que se construye por etapas
   fallback2d.js       Vista 2D equivalente
 data/
   cases.json          Registro de expedientes, requisitos de desbloqueo, especialidades
-  case001.json / case004.json / case005.json   Contenido de los expedientes
+  case001.json, case004.json a case008.json   Contenido de los expedientes
   story.json          Guion, fichas técnicas y decisiones del modo historia
 assets/textures/      Texturas y panoramas CC0 (Poly Haven) · ver assets/CREDITOS.md
 ```
@@ -76,6 +76,25 @@ El balcón en voladizo del apartamento 402 de un edificio recién entregado se d
 - Evidencias con entrevista al maestro, fotos del chat de obra y un balcón «gemelo» de control (502).
 - Verificaciones NSR-10: C.7.5.1 y CR7.5.1, C.7.5.2.1, Tabla C.9.5(a), C.7.7.1, C.5.6.3.3, Tabla B.4.2.1-1, C.6.2.2.1, C.1.3.2 y Tabla I.4.3-2, Capítulo C.20.
 - Lección: la decisión fue del maestro, pero el error pasó por un sistema de control que no funcionó.
+
+## EXP-006 · El traslapo corto (disponible desde el inicio)
+
+Una viga de 7,50 m sobre el pasaje de un centro comercial se agrieta a mitad de luz. El caso separa el error de **planos** (nota genérica «traslapos 40 cm», sin ubicación) del error de **ejecución** (las tres barras inferiores empalmadas en la zona de momento máximo para optimizar el corte). Una viga gemela del piso 3, empalmada cerca de los apoyos, sirve de control.
+
+- Verificaciones NSR-10: C.12.2.2 y C.12.15.1 (longitud de traslapo), C.12.15.2 (clase de empalme), C.1.2.1 (h) (contenido de planos), Tabla I.4.3-2 e I.2.3.1 (e), C.5.6.3.3, Tabla B.4.2.1-1, C.20.1.1.
+
+## EXP-007 · El acero que no llegó (disponible desde el inicio)
+
+En un colegio con multa por atraso, un paro retrasa el acero y el residente compra barras sin certificado en una ferretería: marcadas «S» (NTC 248) y, en las columnas del eje C, de un diámetro menor. Caso sobre **retraso de material**, planeación del suministro y control de recepción.
+
+- Herramienta nueva: **calibrador** para leer la marca de las barras.
+- Verificaciones NSR-10: C.3.5.3.1 y CR3.5.3.1 (solo acero NTC 2289), C.3.5.10.2 (certificados), C.10.9.1 (cuantía mínima), I.4.3.5, I.2.3.1 (k) (l), C.20.1.1.
+
+## EXP-008 · La columna que no baja (auditoría técnica)
+
+Auditoría para una aseguradora: una losa con fisuras en estrella bajo una columna que **nace** en el piso 2 porque se suprimió en el parqueadero para ganar dos celdas, sin rediseño. La carga de cinco pisos llega como carga puntual a la losa; los muros fuera de vigas agravan el problema. El jugador compara lo aprobado, lo decidido en comité y lo construido.
+
+- Verificaciones NSR-10: Tabla A.3-7 tipo 4A, A.3.6.12 (b), C.1.2.1, I.2.3.1 (i) (j) (k), C.5.6.5.4, C.20.1.1.
 
 ## EXP-004 · Cuenta regresiva (misión en tiempo real)
 
@@ -102,7 +121,7 @@ Cada capítulo tiene diálogo, una ficha técnica con el proceso constructivo, c
 
 ## Visor de modelos 3D
 
-`#/modelos`: acceso libre a los seis modelos (EXP-001, EXP-005, EXP-004, EXP-002 y EXP-003 preliminares, y el refugio de la historia), sin importar desbloqueos. Tiene rotación automática, **rayos X**, puntos de inspección opcionales en los expedientes jugables, control de etapas de obra en el refugio y captura PNG. Es de solo lectura y no altera el progreso.
+`#/modelos`: acceso libre a los nueve modelos (EXP-001 a EXP-008, con EXP-002 y EXP-003 preliminares, y el refugio de la historia), ordenados por número, sin importar desbloqueos. Tiene rotación automática, **rayos X**, puntos de inspección opcionales en los expedientes jugables, control de etapas de obra en el refugio y captura PNG. Es de solo lectura y no altera el progreso.
 
 ## Tema día / noche y estilo «terminal de campo»
 

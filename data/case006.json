@@ -1,0 +1,1609 @@
+{
+  "id": "006",
+  "code": "EXP-006",
+  "title": "EL TRASLAPO CORTO",
+  "category": "Planos y ejecución",
+  "difficulty": "Intermedio",
+  "location": "Centro comercial de barrio «Plaza Granada» (ficticio) · 3 pisos en pórticos de concreto (DMO) · 3 200 m² · en funcionamiento hace 5 meses",
+  "date": "Día +150 desde la apertura al público",
+  "disclaimer": "Caso ficticio con fines educativos. Todos los nombres, registros, mediciones y resultados de ensayos son DATOS SIMULADOS. Las citas del Reglamento NSR-10 indican numeral y folio del texto oficial; los requisitos se transcriben de forma resumida. Consulte siempre el texto vigente: esta herramienta no reemplaza al ingeniero diseñador, al supervisor técnico ni a la autoridad competente.",
+  "briefing": {
+    "summary": "La viga V-2B, que cruza sobre el pasaje de acceso del centro comercial, presenta una fisura vertical a mitad de luz y fisuras a lo largo de su cara inferior. Las demás vigas del mismo plano están sanas o con fisuras mínimas.",
+    "cover": {
+      "illustration": "beamCrack",
+      "caption": "IMAGEN DEL INCIDENTE · VIGA V-2B · MITAD DE LUZ"
+    },
+    "narrative": [
+      "Un guardia de seguridad notó polvo de concreto sobre la baldosa del pasaje, justo debajo de la viga V-2B. Al mirar hacia arriba vio una grieta vertical que «antes no estaba». La administración cerró el pasaje con vallas.",
+      "La viga tiene 7,50 m de luz y sostiene la losa del local de electrodomésticos del piso 2. El calculista asegura que su diseño «está sobrado»; el contratista de estructura dice que armó «exactamente lo que decía el plano».",
+      "Ambos podrían tener parte de razón. La aseguradora pidió un dictamen que separe lo que estaba mal en el papel de lo que se hizo mal en la obra. Usted tiene el expediente."
+    ],
+    "objectives": [
+      {
+        "id": "obj-scene",
+        "text": "Inspeccionar la viga V-2B y localizar el defecto con las herramientas adecuadas."
+      },
+      {
+        "id": "obj-evidence",
+        "text": "Recopilar al menos 8 evidencias de campo y documentales."
+      },
+      {
+        "id": "obj-review",
+        "text": "Revisar el plano de despiece, la planilla de figurado, la bitácora y la entrevista al jefe de armado."
+      },
+      {
+        "id": "obj-norm",
+        "text": "Verificar el diseño y la ejecución frente al NSR-10."
+      },
+      {
+        "id": "obj-hyp",
+        "text": "Evaluar las cuatro hipótesis y separar el error de planos del error de ejecución."
+      },
+      {
+        "id": "obj-report",
+        "text": "Emitir un informe técnico con diagnóstico y recomendaciones."
+      }
+    ],
+    "inspectables": [
+      "Viga V-2B sobre el pasaje",
+      "Cara inferior de la viga (zona en sombra)",
+      "Viga gemela V-3B del piso 3",
+      "Mesa de planos de la administración",
+      "Taller de figurado del contratista",
+      "Carpeta de la supervisión técnica",
+      "Local de electrodomésticos (piso 2)",
+      "Piso del pasaje"
+    ],
+    "people": [
+      {
+        "name": "Ing. Camilo Restrepo",
+        "role": "Calculista estructural"
+      },
+      {
+        "name": "Fabio Moreno",
+        "role": "Jefe de armado (contratista de acero)"
+      },
+      {
+        "name": "Ing. Sandra Vélez",
+        "role": "Supervisora técnica"
+      },
+      {
+        "name": "Lab. ConcreTest (ficticio)",
+        "role": "Laboratorio de ensayos"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "id": "visual",
+      "name": "Inspección visual",
+      "desc": "Observación directa del elemento."
+    },
+    {
+      "id": "linterna",
+      "name": "Linterna",
+      "desc": "Ilumina zonas oscuras bajo losas y vigas."
+    },
+    {
+      "id": "fisurometro",
+      "name": "Fisurómetro",
+      "desc": "Regla con patrones de ancho para medir la abertura de fisuras."
+    },
+    {
+      "id": "pachometro",
+      "name": "Pachómetro",
+      "desc": "Detector de armaduras (ferroscan): localiza las barras, sus extremos y su profundidad sin romper el concreto."
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hs-viga",
+      "name": "Viga V-2B · mitad de luz",
+      "evidence": "E01",
+      "anomaly": true,
+      "requiresTool": "fisurometro",
+      "toolHint": "La grieta vertical es evidente, pero hay que medirla con el fisurómetro para registrarla.",
+      "description": "Viga de 30 × 50 cm y 7,50 m de luz, entre las columnas B2 y B3, sobre el pasaje de acceso.",
+      "observation": "Fisura vertical que nace en la cara inferior, a mitad de luz, y sube hasta unos 35 cm de altura. A simple vista la viga parece «bajada» en el centro.",
+      "toolObservation": "Fisurómetro: 1,6 mm en la cara inferior, disminuye hacia arriba (0,3 mm a 30 cm). Patrón típico de flexión. Con hilo tensado entre apoyos: flecha de 22 mm a mitad de luz.",
+      "pos3d": [
+        0,
+        3.1,
+        6.4
+      ],
+      "pos2d": [
+        50,
+        75
+      ]
+    },
+    {
+      "id": "hs-inferior",
+      "name": "Cara inferior de la viga V-2B",
+      "evidence": "E02",
+      "anomaly": true,
+      "requiresTool": "linterna",
+      "toolHint": "La cara inferior está en sombra bajo la cubierta del pasaje. Use la linterna.",
+      "description": "Fondo de la viga, donde está el refuerzo inferior.",
+      "observation": "Con la linterna se ven fisuras LONGITUDINALES finas, paralelas a la viga, alineadas con las barras inferiores, en un tramo de unos 45 cm centrado en la mitad de la luz. Hay un pequeño desprendimiento de recubrimiento en una esquina.",
+      "toolObservation": "",
+      "pos3d": [
+        1.3,
+        2.98,
+        6.25
+      ],
+      "pos2d": [
+        54,
+        77.5
+      ]
+    },
+    {
+      "id": "hs-escaneo",
+      "name": "Escaneo del refuerzo inferior",
+      "evidence": "E03",
+      "anomaly": true,
+      "requiresTool": "pachometro",
+      "toolHint": "Para saber qué pasa con las barras inferiores necesita el pachómetro.",
+      "description": "Zona central de la viga, por su cara lateral.",
+      "observation": "La superficie no muestra nada distinto a las fisuras ya vistas.",
+      "toolObservation": "El pachómetro detecta 6 extremos de barra N.º 6 en la zona central: las 3 barras inferiores están empalmadas EN LA MISMA SECCIÓN, a mitad de luz, con traslapos de unos 40 cm. Los estribos N.º 3 están cada 15 cm.",
+      "pos3d": [
+        -1.6,
+        3.3,
+        6.4
+      ],
+      "pos2d": [
+        45.5,
+        73.5
+      ]
+    },
+    {
+      "id": "hs-v3b",
+      "name": "Viga gemela V-3B (piso 3)",
+      "evidence": "E04",
+      "anomaly": false,
+      "requiresTool": "pachometro",
+      "toolHint": "Para comparar con la V-2B necesita escanear esta viga con el pachómetro.",
+      "description": "Viga del piso 3 con el mismo plano, la misma luz y una carga similar.",
+      "observation": "Solo una fisura capilar en la cara inferior. No hay fisuras longitudinales.",
+      "toolObservation": "Pachómetro: las barras inferiores están empalmadas cerca de los apoyos (a 1,2 m de cada columna), en barras alternas, con traslapos de unos 60 cm. Fisura máxima 0,2 mm. La armó otra cuadrilla.",
+      "pos3d": [
+        0,
+        6.75,
+        6.4
+      ],
+      "pos2d": [
+        50,
+        59
+      ]
+    },
+    {
+      "id": "hs-plans",
+      "name": "Mesa de planos",
+      "evidence": "E05",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Planos estructurales aprobados, en la oficina de administración.",
+      "observation": "La plancha de despiece de vigas del piso 2 tiene notas generales en una esquina. La V-2B aparece con barras «corridas» de lado a lado.",
+      "toolObservation": "",
+      "pos3d": [
+        15,
+        1.1,
+        8.6
+      ],
+      "pos2d": [
+        87.5,
+        86
+      ]
+    },
+    {
+      "id": "hs-figurado",
+      "name": "Taller de figurado",
+      "evidence": "E06",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Bodega del contratista de acero, que aún guarda las planillas de corte del proyecto.",
+      "observation": "En el tablero hay planillas de corte y doblado. Las barras se compraron en longitud comercial de 6 m.",
+      "toolObservation": "",
+      "pos3d": [
+        -17,
+        2,
+        3.6
+      ],
+      "pos2d": [
+        7.5,
+        82
+      ]
+    },
+    {
+      "id": "hs-armado",
+      "name": "Jefe de armado",
+      "evidence": "E07",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Fabio Moreno, jefe de la cuadrilla que armó las vigas del piso 2.",
+      "observation": "Acepta conversar. Tiene a mano su libreta de obra y el plano doblado en el bolsillo.",
+      "toolObservation": "",
+      "pos3d": [
+        -15,
+        1.2,
+        8.5
+      ],
+      "pos2d": [
+        13,
+        88
+      ]
+    },
+    {
+      "id": "hs-supervision",
+      "name": "Carpeta de la supervisión técnica",
+      "evidence": "E08",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Archivo de la supervisión técnica, en la oficina de administración.",
+      "observation": "Contiene las actas de liberación de vaciado del piso 2 con fotos del refuerzo.",
+      "toolObservation": "",
+      "pos3d": [
+        17,
+        1.4,
+        7.1
+      ],
+      "pos2d": [
+        92,
+        80
+      ]
+    },
+    {
+      "id": "hs-lab",
+      "name": "Reporte del laboratorio",
+      "evidence": "E09",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Archivo del laboratorio que controló el concreto de la obra.",
+      "observation": "El técnico entrega los resultados de los cilindros de las vigas y la losa del piso 2.",
+      "toolObservation": "",
+      "pos3d": [
+        9,
+        0.9,
+        11
+      ],
+      "pos2d": [
+        72.5,
+        88
+      ]
+    },
+    {
+      "id": "hs-local",
+      "name": "Local de electrodomésticos (piso 2)",
+      "evidence": "E10",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Local comercial apoyado sobre la losa que carga la viga V-2B.",
+      "observation": "Neveras y lavadoras en exhibición y algunas cajas apiladas en bodega. El administrador del local teme que «el peso de la mercancía» sea el culpable.",
+      "toolObservation": "",
+      "pos3d": [
+        5.6,
+        4.6,
+        5.2
+      ],
+      "pos2d": [
+        64,
+        68
+      ]
+    },
+    {
+      "id": "hs-piso",
+      "name": "Piso del pasaje",
+      "evidence": "E11",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Baldosa cerámica del pasaje de acceso.",
+      "observation": "Hay una línea de baldosas fisuradas que cruza el pasaje a 3 m de la viga, siguiendo una junta del contrapiso.",
+      "toolObservation": "",
+      "pos3d": [
+        2,
+        0.15,
+        9.2
+      ],
+      "pos2d": [
+        40,
+        93
+      ]
+    }
+  ],
+  "evidences": [
+    {
+      "id": "E01",
+      "name": "Fisura de flexión a mitad de luz",
+      "type": "Registro fotográfico",
+      "summary": "Fotografía, medición de la fisura vertical y flecha de la viga V-2B.",
+      "doc": {
+        "illustration": "beamCrack",
+        "fields": [
+          [
+            "Elemento",
+            "Viga V-2B · 30 × 50 cm · luz 7,50 m"
+          ],
+          [
+            "Fisura principal",
+            "Vertical, mitad de luz, desde la cara inferior"
+          ],
+          [
+            "Abertura",
+            "1,6 mm abajo · 0,3 mm a 30 cm"
+          ],
+          [
+            "Flecha a mitad de luz",
+            "22 mm (≈ L/340)"
+          ],
+          [
+            "Demás vigas del piso 2",
+            "Fisuras capilares < 0,2 mm"
+          ]
+        ],
+        "notes": [
+          "El polvo sobre la baldosa indica que la fisura sigue abriéndose."
+        ]
+      },
+      "technical": [
+        "Una fisura vertical que nace abajo a mitad de luz es una fisura de FLEXIÓN: allí el momento positivo es máximo y tracciona la cara inferior.",
+        "Que sea mucho más ancha que en las vigas vecinas indica que, en esa sección, el acero inferior no está trabajando como se previó.",
+        "El NSR-10 no fija un ancho máximo de fisura para dictaminar un elemento construido; hay que encontrar la causa y evaluar la capacidad."
+      ],
+      "relevance": "Documenta el síntoma principal y su ubicación exacta."
+    },
+    {
+      "id": "E02",
+      "name": "Fisuras longitudinales en la cara inferior",
+      "type": "Observación de campo",
+      "summary": "Fisuras paralelas a las barras inferiores en la zona central, observadas con linterna.",
+      "doc": {
+        "illustration": "splittingCracks",
+        "fields": [
+          [
+            "Ubicación",
+            "Cara inferior, mitad de luz, tramo de ≈ 45 cm"
+          ],
+          [
+            "Dirección",
+            "Paralelas a las barras inferiores"
+          ],
+          [
+            "Abertura",
+            "0,2 – 0,5 mm"
+          ],
+          [
+            "Desprendimiento",
+            "Recubrimiento suelto en una esquina (≈ 8 × 4 cm)"
+          ]
+        ],
+        "notes": [
+          "El tramo fisurado coincide en longitud con un posible empalme por traslapo."
+        ]
+      },
+      "technical": [
+        "Las fisuras a lo largo de las barras se llaman fisuras de HENDIMIENTO: aparecen cuando la barra intenta deslizarse dentro del concreto y lo «abre» al transmitir su fuerza.",
+        "Su presencia sugiere que la fuerza de las barras se está transfiriendo en una longitud demasiado corta: un anclaje o un empalme insuficiente."
+      ],
+      "relevance": "Es la «firma» del mecanismo: orienta hacia un problema de transferencia de fuerza entre barras."
+    },
+    {
+      "id": "E03",
+      "name": "Escaneo del refuerzo inferior de la V-2B",
+      "type": "Ensayo de laboratorio",
+      "summary": "Localización de barras, extremos y estribos con pachómetro en la zona central de la viga. DATOS SIMULADOS.",
+      "doc": {
+        "illustration": "spliceScan",
+        "table": {
+          "headers": [
+            "Barra",
+            "Diámetro",
+            "Empalme detectado",
+            "Longitud de traslapo",
+            "Posición"
+          ],
+          "rows": [
+            [
+              "Inferior 1",
+              "N.º 6",
+              "Sí",
+              "≈ 40 cm",
+              "Mitad de luz"
+            ],
+            [
+              "Inferior 2",
+              "N.º 6",
+              "Sí",
+              "≈ 40 cm",
+              "Mitad de luz"
+            ],
+            [
+              "Inferior 3",
+              "N.º 6",
+              "Sí",
+              "≈ 41 cm",
+              "Mitad de luz"
+            ]
+          ],
+          "flagRows": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fields": [
+          [
+            "Barras empalmadas en la misma sección",
+            "3 de 3 (100 %)"
+          ],
+          [
+            "Estribos",
+            "N.º 3 c/ 15 cm (coincide con el plano)"
+          ],
+          [
+            "Recubrimiento inferior",
+            "40 – 45 mm"
+          ]
+        ],
+        "notes": [
+          "Confirmar con una regata puntual antes del reforzamiento."
+        ]
+      },
+      "technical": [
+        "Empalmar barras por traslapo es válido, pero la longitud debe permitir que la fuerza pase de una barra a la otra a través del concreto.",
+        "Para estas condiciones (N.º 6, f'c = 21 MPa, fy = 420 MPa, barra inferior), la longitud de desarrollo de C.12.2.2 es ≈ 834 mm, y un empalme Clase B (C.12.15.1) exige ≈ 1,08 m. Los 40 cm ejecutados son ≈ 37 % de lo requerido.",
+        "Además, empalmar el 100 % de las barras en la zona de momento máximo es la peor ubicación posible."
+      ],
+      "relevance": "Evidencia determinante: muestra QUÉ se ejecutó mal y DÓNDE."
+    },
+    {
+      "id": "E04",
+      "name": "Escaneo de la viga gemela V-3B",
+      "type": "Ensayo de laboratorio",
+      "summary": "Viga de control: mismo plano, armada por otra cuadrilla. DATOS SIMULADOS.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Diseño",
+            "Idéntico a la V-2B (misma plancha)"
+          ],
+          [
+            "Ubicación de empalmes",
+            "Cerca de los apoyos, barras alternas"
+          ],
+          [
+            "Longitud de traslapo",
+            "≈ 60 cm"
+          ],
+          [
+            "Fisura máxima",
+            "0,2 mm"
+          ],
+          [
+            "Fisuras longitudinales",
+            "No"
+          ]
+        ],
+        "notes": [
+          "Su traslapo tampoco alcanza la longitud requerida, pero está en una zona de momento positivo bajo y no empalma todas las barras juntas."
+        ]
+      },
+      "technical": [
+        "La comparación aísla la variable: misma luz, mismo plano, misma carga; cambia la UBICACIÓN de los empalmes.",
+        "La V-3B también tiene un traslapo corto, lo que confirma que el problema de longitud viene del plano. Que funcione mejor muestra el peso de la ubicación elegida en obra."
+      ],
+      "relevance": "Permite separar la responsabilidad del plano (longitud) de la de la ejecución (ubicación)."
+    },
+    {
+      "id": "E05",
+      "name": "Plano de despiece de vigas · piso 2",
+      "type": "Documento de diseño",
+      "summary": "Despiece de la V-2B y notas generales de la plancha E-05.",
+      "doc": {
+        "illustration": "beamPlan",
+        "fields": [
+          [
+            "Sección",
+            "30 × 50 cm"
+          ],
+          [
+            "Refuerzo inferior",
+            "3 N.º 6 «corridas» de apoyo a apoyo (7,90 m)"
+          ],
+          [
+            "Refuerzo superior",
+            "2 N.º 6 corridas + bastones N.º 6 en apoyos"
+          ],
+          [
+            "Estribos",
+            "N.º 3 c/ 10 cm en extremos · c/ 15 cm en el centro"
+          ],
+          [
+            "Concreto / acero",
+            "f'c = 21 MPa · fy = 420 MPa"
+          ],
+          [
+            "Nota de traslapos",
+            "«Traslapos: 40 cm» (sin indicar ubicación)"
+          ]
+        ],
+        "notes": [
+          "La nota general dice «Traslapos: 40 cm» para todos los diámetros. No hay indicación de dónde empalmar ni de escalonar.",
+          "El acero inferior de 7,90 m no existe en longitud comercial de 6 m: el empalme era inevitable y el plano no lo resolvió."
+        ]
+      },
+      "technical": [
+        "NSR-10, C.1.2.1 (h) (folio C-7): los planos deben incluir la longitud de anclaje del refuerzo y la LOCALIZACIÓN y longitud de los empalmes por traslapo.",
+        "Una longitud única de traslapo para todos los diámetros es una simplificación peligrosa: la longitud requerida crece con el diámetro de la barra.",
+        "NSR-10, I.2.3.1 (e) (folio I-5): la supervisión técnica debe exigir a los diseñadores corregir planos incompletos o con errores."
+      ],
+      "relevance": "Muestra el error de ORIGEN: el plano fijó un traslapo insuficiente y no dijo dónde ubicarlo."
+    },
+    {
+      "id": "E06",
+      "name": "Planilla de figurado de la V-2B",
+      "type": "Documento de obra",
+      "summary": "Planilla de corte y doblado del contratista de acero.",
+      "doc": {
+        "illustration": null,
+        "table": {
+          "headers": [
+            "Marca",
+            "Diámetro",
+            "Cantidad",
+            "Longitud de corte",
+            "Observación"
+          ],
+          "rows": [
+            [
+              "V2B-i1",
+              "N.º 6",
+              "3",
+              "4,15 m",
+              "Gancho en apoyo B2"
+            ],
+            [
+              "V2B-i2",
+              "N.º 6",
+              "3",
+              "4,15 m",
+              "Gancho en apoyo B3"
+            ],
+            [
+              "—",
+              "—",
+              "—",
+              "—",
+              "«Traslapo 40 cm al centro (plano)»"
+            ]
+          ],
+          "flagRows": [
+            2
+          ]
+        },
+        "notes": [
+          "Corte optimizado: 2 piezas de 4,15 m por barra de 6 m + desperdicio mínimo.",
+          "Las piezas iguales llevan necesariamente el empalme al centro de la luz."
+        ]
+      },
+      "technical": [
+        "Optimizar el corte para reducir desperdicio es buena práctica comercial, pero no puede decidir la ubicación de los empalmes estructurales.",
+        "Partir la barra en dos piezas iguales coloca el empalme justo donde el momento es máximo."
+      ],
+      "relevance": "Explica por qué todos los empalmes quedaron al centro."
+    },
+    {
+      "id": "E07",
+      "name": "Entrevista al jefe de armado",
+      "type": "Entrevista",
+      "summary": "Conversación con Fabio Moreno sobre el armado de la V-2B.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Entrevistado",
+            "Fabio Moreno · jefe de armado · 15 años de oficio"
+          ],
+          [
+            "Traslapo usado",
+            "40 cm, «lo que dice el plano»"
+          ],
+          [
+            "Ubicación del empalme",
+            "Al centro, «donde cuadraban las piezas»"
+          ],
+          [
+            "Consulta al calculista",
+            "No"
+          ],
+          [
+            "Revisión antes de fundir",
+            "La supervisora revisó fotos"
+          ]
+        ],
+        "notes": [
+          "«El plano dice 40 centímetros y yo puse 40. Si estaba mal, que lo hubieran dicho».",
+          "«Al centro es donde cuadra: dos pedazos iguales y no se bota hierro».",
+          "«En la del piso 3 los muchachos de Wilson los pusieron cerca de las columnas, pero porque les sobraban puntas»."
+        ]
+      },
+      "technical": [
+        "El jefe de armado siguió el plano en la longitud, pero eligió la ubicación con un criterio de desperdicio, no estructural.",
+        "Un buen jefe de armado reconoce que el momento máximo de una viga simplemente apoyada o continua en su tramo central está en la mitad de la luz, y evita empalmar allí."
+      ],
+      "relevance": "Confirma la cadena: plano incompleto + decisión de obra sin criterio estructural."
+    },
+    {
+      "id": "E08",
+      "name": "Acta de liberación de vaciado · vigas piso 2",
+      "type": "Documento de obra",
+      "summary": "Formato de la supervisión técnica para la fundida de vigas y losa del piso 2.",
+      "doc": {
+        "illustration": null,
+        "table": {
+          "headers": [
+            "Ítem",
+            "Verificación",
+            "Estado"
+          ],
+          "rows": [
+            [
+              "Diámetros y cantidades",
+              "Fotos",
+              "OK"
+            ],
+            [
+              "Estribos",
+              "Fotos",
+              "OK"
+            ],
+            [
+              "Empalmes: longitud y ubicación",
+              "—",
+              "«OK según plano»"
+            ],
+            [
+              "Recubrimientos",
+              "Medido",
+              "OK"
+            ]
+          ],
+          "flagRows": [
+            2
+          ]
+        },
+        "notes": [
+          "Nota de la supervisora: «Traslapos según plano (40 cm)». No hay observación sobre la ubicación ni sobre la longitud frente al diámetro."
+        ]
+      },
+      "technical": [
+        "La Tabla I.4.3-2 (I.4.3.7, folio I-17) incluye el control de «empalmes (traslapados, conexiones mecánicas o soldadas)» para supervisión continua e itinerante.",
+        "Verificar «según plano» no basta cuando el plano es incompleto: I.2.3.1 (e) pide exigir su corrección."
+      ],
+      "relevance": "Muestra que el control existió pero no detectó ni el error del plano ni la ubicación de los empalmes."
+    },
+    {
+      "id": "E09",
+      "name": "Ensayos de resistencia del concreto · piso 2",
+      "type": "Ensayo de laboratorio",
+      "summary": "Cilindros de vigas y losa del piso 2 (NTC 673). DATOS SIMULADOS.",
+      "doc": {
+        "illustration": null,
+        "table": {
+          "headers": [
+            "Ensayo",
+            "Edad",
+            "Resultado (MPa)"
+          ],
+          "rows": [
+            [
+              "T-1",
+              "28 días",
+              "24,1"
+            ],
+            [
+              "T-2",
+              "28 días",
+              "22,9"
+            ],
+            [
+              "T-3",
+              "28 días",
+              "23,6"
+            ]
+          ],
+          "flagRows": []
+        },
+        "fields": [
+          [
+            "f'c especificado",
+            "21,0 MPa"
+          ],
+          [
+            "Promedio",
+            "23,5 MPa"
+          ],
+          [
+            "Ensayo más bajo",
+            "22,9 MPa (límite 17,5 MPa)"
+          ]
+        ]
+      },
+      "technical": [
+        "NSR-10, C.5.6.3.3 (folio C-77): promedio de tres ensayos consecutivos ≥ f'c y ningún ensayo menor que f'c − 3,5 MPa (f'c ≤ 35 MPa)."
+      ],
+      "relevance": "Permite evaluar la hipótesis de concreto deficiente."
+    },
+    {
+      "id": "E10",
+      "name": "Carga del local de electrodomésticos",
+      "type": "Observación de campo",
+      "summary": "Estimación de la carga real sobre la losa que apoya en la V-2B.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Uso",
+            "Comercio minorista (exhibición y bodega)"
+          ],
+          [
+            "Carga estimada (inventario y pesaje)",
+            "≈ 3,2 kN/m²"
+          ],
+          [
+            "Carga viva de diseño (comercio minorista)",
+            "5,0 kN/m²"
+          ],
+          [
+            "Local sobre la V-3B",
+            "Almacén de muebles · ≈ 3,5 kN/m²"
+          ]
+        ]
+      },
+      "technical": [
+        "NSR-10, Tabla B.4.2.1-1 (folio B-15): carga viva mínima para comercio minorista = 5,0 kN/m².",
+        "La V-3B soporta una carga similar o mayor y está sana."
+      ],
+      "relevance": "Permite contrastar la hipótesis de sobrecarga."
+    },
+    {
+      "id": "E11",
+      "name": "Baldosas fisuradas en el pasaje",
+      "type": "Observación de campo",
+      "summary": "Línea de baldosas fisuradas a 3 m de la viga, sobre una junta del contrapiso.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Ubicación",
+            "Piso del pasaje, a 3 m de la V-2B"
+          ],
+          [
+            "Patrón",
+            "Línea recta que sigue una junta de contrapiso"
+          ],
+          [
+            "Relación estructural con la V-2B",
+            "Ninguna (placa sobre terreno)"
+          ]
+        ],
+        "notes": [
+          "La baldosa se instaló sin respetar la junta del contrapiso."
+        ]
+      },
+      "technical": [
+        "Las baldosas que se fisuran sobre una junta del contrapiso suelen deberse a que el enchape no respetó la junta.",
+        "Descartar lo que no está relacionado también es parte del análisis."
+      ],
+      "relevance": "Elemento observado en el entorno. Evalúe si guarda relación con el problema investigado."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "Sobrecarga del local comercial",
+      "question": "¿Carga la mercancía la losa por encima de lo previsto en el diseño?",
+      "arguments": {
+        "for": [
+          {
+            "text": "El local almacena neveras y lavadoras pesadas.",
+            "requires": "E10"
+          }
+        ],
+        "against": [
+          {
+            "text": "La carga estimada (3,2 kN/m²) es menor que la de diseño (5,0 kN/m²).",
+            "requires": "E10"
+          },
+          {
+            "text": "La V-3B soporta una carga similar y está sana.",
+            "requires": "E04"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "contribuyente": 0.3,
+        "requiere_info": 0.3,
+        "principal": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E10",
+          "E04"
+        ]
+      },
+      "explanation": "La carga está por debajo de la de diseño y la viga gemela, con carga similar, está sana. Se DESCARTA."
+    },
+    {
+      "id": "H2",
+      "title": "Concreto de baja resistencia",
+      "question": "¿Tiene el concreto de la viga menos resistencia de la especificada?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Las fisuras de hendimiento dependen también de la resistencia del concreto.",
+            "requires": "E02"
+          }
+        ],
+        "against": [
+          {
+            "text": "Los ensayos cumplen ambos criterios de aceptación.",
+            "requires": "E09"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.4,
+        "contribuyente": 0.2,
+        "principal": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E09"
+        ]
+      },
+      "explanation": "El concreto cumple C.5.6.3.3. Se DESCARTA como causa."
+    },
+    {
+      "id": "H3",
+      "title": "Detallado deficiente en los planos",
+      "question": "¿Contiene el plano errores u omisiones que llevaron al defecto?",
+      "arguments": {
+        "for": [
+          {
+            "text": "El plano fija «traslapos 40 cm» para todos los diámetros, muy por debajo de lo requerido para N.º 6.",
+            "requires": "E05"
+          },
+          {
+            "text": "El plano no indica dónde empalmar, aunque el acero de 7,90 m obligaba a empalmar.",
+            "requires": "E05"
+          },
+          {
+            "text": "La V-3B, con el mismo plano, también tiene traslapos cortos.",
+            "requires": "E04"
+          }
+        ],
+        "against": [
+          {
+            "text": "La sección, la cantidad de acero y los estribos del diseño son adecuados.",
+            "requires": "E05"
+          }
+        ]
+      },
+      "best": "contribuyente",
+      "partial": {
+        "principal": 0.6,
+        "requiere_info": 0.3,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E05",
+          "E04"
+        ],
+        "contradict": []
+      },
+      "explanation": "El plano es el ORIGEN del problema: fijó un traslapo insuficiente y omitió su ubicación. Pero la viga gemela muestra que la decisión de obra fue la que convirtió ese error en daño. Es CONTRIBUYENTE."
+    },
+    {
+      "id": "H4",
+      "title": "Empalmes ejecutados en la zona de momento máximo",
+      "question": "¿Se ejecutaron los empalmes de forma que la viga no pudiera transmitir la fuerza del acero inferior?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Las 3 barras inferiores están empalmadas en la misma sección, a mitad de luz, con 40 cm.",
+            "requires": "E03"
+          },
+          {
+            "text": "Las fisuras de hendimiento ocupan justo la longitud del empalme.",
+            "requires": "E02"
+          },
+          {
+            "text": "La planilla de figurado partió las barras en dos piezas iguales.",
+            "requires": "E06"
+          },
+          {
+            "text": "La supervisión liberó el vaciado sin revisar ubicación ni longitud.",
+            "requires": "E08"
+          },
+          {
+            "text": "El jefe de armado ubicó el empalme «donde cuadraban las piezas».",
+            "requires": "E07"
+          }
+        ],
+        "against": [
+          {
+            "text": "La longitud de 40 cm era la que indicaba el plano.",
+            "requires": "E05"
+          }
+        ]
+      },
+      "best": "principal",
+      "partial": {
+        "contribuyente": 0.5,
+        "requiere_info": 0.3,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E03",
+          "E02",
+          "E06",
+          "E07",
+          "E08",
+          "E01"
+        ],
+        "contradict": []
+      },
+      "explanation": "Empalmar el 100 % del acero inferior con un 37 % de la longitud requerida, justo donde el momento es máximo, explica la fisura de flexión, el hendimiento y la flecha. Es la hipótesis PRINCIPAL; el plano incompleto es su causa contribuyente."
+    }
+  ],
+  "report": {
+    "steps": [
+      {
+        "id": "anomaly",
+        "title": "Identificación de la anomalía",
+        "prompt": "¿Qué anomalías identifica en la viga V-2B?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "a1",
+            "text": "Fisura vertical de flexión de 1,6 mm a mitad de luz.",
+            "correct": true,
+            "feedback": "Correcto: síntoma principal, medido con fisurómetro."
+          },
+          {
+            "id": "a2",
+            "text": "Fisuras longitudinales de hendimiento en la cara inferior.",
+            "correct": true,
+            "feedback": "Correcto: firma del mecanismo de empalme insuficiente."
+          },
+          {
+            "id": "a3",
+            "text": "Las 3 barras inferiores empalmadas en la misma sección con ≈ 40 cm.",
+            "correct": true,
+            "feedback": "Correcto: anomalía constructiva detectada con pachómetro."
+          },
+          {
+            "id": "a4",
+            "text": "Flecha de 22 mm a mitad de luz.",
+            "correct": true,
+            "feedback": "Correcto: medida con hilo tensado."
+          },
+          {
+            "id": "a5",
+            "text": "Falla por cortante cerca de los apoyos.",
+            "correct": false,
+            "feedback": "No observada: no hay fisuras inclinadas junto a las columnas."
+          },
+          {
+            "id": "a6",
+            "text": "Asentamiento de la columna B3.",
+            "correct": false,
+            "feedback": "Sin evidencia: no hay desniveles ni fisuras en los muros o el piso asociados."
+          }
+        ]
+      },
+      {
+        "id": "concepts",
+        "title": "Síntoma, causa y consecuencia",
+        "prompt": "Clasifique cada enunciado.",
+        "type": "classify",
+        "categories": [
+          {
+            "id": "sintoma",
+            "name": "Síntoma"
+          },
+          {
+            "id": "anomalia",
+            "name": "Anomalía"
+          },
+          {
+            "id": "mecanismo",
+            "name": "Mecanismo de deterioro"
+          },
+          {
+            "id": "directa",
+            "name": "Causa directa"
+          },
+          {
+            "id": "contribuyente",
+            "name": "Causa contribuyente"
+          },
+          {
+            "id": "consecuencia",
+            "name": "Consecuencia"
+          },
+          {
+            "id": "correctiva",
+            "name": "Medida correctiva"
+          }
+        ],
+        "items": [
+          {
+            "id": "c1",
+            "text": "Grieta vertical y polvo de concreto sobre la baldosa del pasaje.",
+            "answer": "sintoma",
+            "feedback": "Es lo observable."
+          },
+          {
+            "id": "c2",
+            "text": "Traslapo de 40 cm en el 100 % de las barras, a mitad de luz.",
+            "answer": "anomalia",
+            "feedback": "Es la desviación de lo requerido."
+          },
+          {
+            "id": "c3",
+            "text": "Las barras deslizan en el empalme, hienden el concreto y la sección pierde capacidad a flexión.",
+            "answer": "mecanismo",
+            "feedback": "Es el proceso físico."
+          },
+          {
+            "id": "c4",
+            "text": "Ubicar todos los empalmes en la zona de momento máximo al optimizar el corte.",
+            "answer": "directa",
+            "feedback": "Es la decisión que produjo el daño."
+          },
+          {
+            "id": "c5",
+            "text": "Plano con «traslapos 40 cm» sin ubicación y liberación sin revisar empalmes.",
+            "answer": "contribuyente",
+            "feedback": "Permitieron el error y no lo detectaron."
+          },
+          {
+            "id": "c6",
+            "text": "Falla frágil del empalme si aumenta la carga.",
+            "answer": "consecuencia",
+            "feedback": "Es un efecto potencial."
+          },
+          {
+            "id": "c7",
+            "text": "Reforzar a flexión la zona central (por ejemplo, con platinas o fibras de carbono) según diseño.",
+            "answer": "correctiva",
+            "feedback": "Es una medida de reparación."
+          }
+        ]
+      },
+      {
+        "id": "hypothesis",
+        "title": "Hipótesis principal",
+        "prompt": "¿Qué hipótesis explica mejor las evidencias? Justifique.",
+        "type": "single-hypothesis",
+        "justification": {
+          "minLength": 60,
+          "keywords": [
+            [
+              "traslapo",
+              "empalme"
+            ],
+            [
+              "40 cm",
+              "longitud",
+              "1,08",
+              "834",
+              "desarrollo"
+            ],
+            [
+              "mitad de luz",
+              "centro",
+              "momento máximo",
+              "misma sección"
+            ],
+            [
+              "plano",
+              "despiece",
+              "nota"
+            ],
+            [
+              "v-3b",
+              "gemela",
+              "piso 3"
+            ],
+            [
+              "supervis",
+              "liberación",
+              "figurado"
+            ]
+          ],
+          "hint": "Un buen argumento menciona la longitud de traslapo insuficiente, su ubicación a mitad de luz en el 100 % de las barras, el error del plano, la comparación con la V-3B y la falla de los controles."
+        }
+      },
+      {
+        "id": "evidence",
+        "title": "Evidencias de soporte",
+        "prompt": "Seleccione las evidencias que sustentan su conclusión.",
+        "type": "evidence-select",
+        "weights": {
+          "E01": 0.6,
+          "E02": 1,
+          "E03": 1,
+          "E04": 1,
+          "E05": 1,
+          "E06": 1,
+          "E07": 0.6,
+          "E08": 1,
+          "E09": 0.4,
+          "E10": 0.4,
+          "E11": -1
+        },
+        "feedback": {
+          "E11": "Las baldosas del pasaje se fisuraron por una junta del contrapiso: no tienen relación con la viga."
+        }
+      },
+      {
+        "id": "causes",
+        "title": "Causas probables",
+        "prompt": "Seleccione las causas probables.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "k1",
+            "text": "Empalme del 100 % del acero inferior en la zona de momento máximo.",
+            "correct": true,
+            "feedback": "Correcto: causa directa."
+          },
+          {
+            "id": "k2",
+            "text": "Longitud de traslapo de 40 cm, muy inferior a la requerida para N.º 6.",
+            "correct": true,
+            "feedback": "Correcto: error del plano que la obra replicó."
+          },
+          {
+            "id": "k3",
+            "text": "Plano sin localización de empalmes, contrario a C.1.2.1 (h).",
+            "correct": true,
+            "feedback": "Correcto: omisión del diseño."
+          },
+          {
+            "id": "k4",
+            "text": "Liberación del vaciado sin verificar empalmes.",
+            "correct": true,
+            "feedback": "Correcto: falla de control."
+          },
+          {
+            "id": "k5",
+            "text": "Peso de la mercancía del local.",
+            "correct": false,
+            "feedback": "Incorrecto: está por debajo de la carga de diseño."
+          },
+          {
+            "id": "k6",
+            "text": "Concreto de mala calidad.",
+            "correct": false,
+            "feedback": "Incorrecto: cumple los criterios de aceptación."
+          }
+        ]
+      },
+      {
+        "id": "consequences",
+        "title": "Consecuencias potenciales",
+        "prompt": "¿Qué podría pasar si no se atiende?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "q1",
+            "text": "Falla súbita del empalme con colapso local del tramo de viga y la losa que soporta.",
+            "correct": true,
+            "feedback": "Correcto: los empalmes cortos fallan de forma frágil."
+          },
+          {
+            "id": "q2",
+            "text": "Aumento progresivo de la fisura y la flecha.",
+            "correct": true,
+            "feedback": "Correcto: el polvo indica actividad."
+          },
+          {
+            "id": "q3",
+            "text": "Corrosión del acero por la fisura y el recubrimiento desprendido.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "q4",
+            "text": "Ninguna: es una fisura de retracción normal.",
+            "correct": false,
+            "feedback": "Incorrecto: es una fisura de flexión de 1,6 mm con hendimiento."
+          },
+          {
+            "id": "q5",
+            "text": "Colapso inmediato de todo el centro comercial.",
+            "correct": false,
+            "feedback": "Alarmista: el problema está localizado en un tramo de viga; requiere apuntalamiento, no evacuación general."
+          }
+        ]
+      },
+      {
+        "id": "certainty",
+        "title": "Nivel de certeza",
+        "prompt": "¿Cómo debe presentarse el diagnóstico?",
+        "type": "single",
+        "options": [
+          {
+            "id": "s1",
+            "text": "Definitivo: no se requiere nada más.",
+            "correct": false,
+            "feedback": "Falta confirmar con regata y evaluar la capacidad para diseñar el reforzamiento."
+          },
+          {
+            "id": "s2",
+            "text": "Probable con alta confianza: pendiente de regata de confirmación y evaluación de capacidad (C.20).",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "s3",
+            "text": "Indeterminado: es la palabra del calculista contra la del contratista.",
+            "correct": false,
+            "feedback": "Incorrecto: el escaneo y el plano son evidencia objetiva."
+          }
+        ]
+      },
+      {
+        "id": "recommendations",
+        "title": "Recomendaciones técnicas",
+        "prompt": "Seleccione las medidas que recomendaría.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "r1",
+            "text": "Apuntalar la V-2B y mantener cerrado el pasaje bajo ella.",
+            "correct": true,
+            "feedback": "Correcto: medida inmediata."
+          },
+          {
+            "id": "r2",
+            "text": "Escanear todas las vigas de luz mayor a 6 m para ubicar empalmes en zonas críticas.",
+            "correct": true,
+            "feedback": "Correcto: el error de plano afecta a toda la obra."
+          },
+          {
+            "id": "r3",
+            "text": "Que el calculista corrija el plano y diseñe el reforzamiento con una evaluación de resistencia (C.20).",
+            "correct": true,
+            "feedback": "Correcto: C.20.1.1 (folio C-351)."
+          },
+          {
+            "id": "r4",
+            "text": "Que la supervisión deje constancia escrita y exija la corrección de los planos.",
+            "correct": true,
+            "feedback": "Correcto: I.2.3.1 (e) y (g) (folio I-5)."
+          },
+          {
+            "id": "r5",
+            "text": "Inyectar la fisura con epóxico y reabrir el pasaje.",
+            "correct": false,
+            "feedback": "Incorrecto: la inyección no restituye la capacidad de un empalme insuficiente."
+          },
+          {
+            "id": "r6",
+            "text": "Desalojar el local de electrodomésticos de forma permanente.",
+            "correct": false,
+            "feedback": "Desproporcionado: la carga no es la causa; basta restringir mientras se refuerza."
+          }
+        ]
+      },
+      {
+        "id": "prevention",
+        "title": "Medidas preventivas",
+        "prompt": "¿Qué evitaría que se repita?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "p1",
+            "text": "Planos con tabla de longitudes de traslapo por diámetro y zonas permitidas de empalme dibujadas.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p2",
+            "text": "Planillas de figurado revisadas por el residente antes del corte.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p3",
+            "text": "Lista de chequeo con medición de longitud y ubicación de empalmes.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p4",
+            "text": "Escalonar los empalmes y evitarlos en zonas de momento máximo.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p5",
+            "text": "Usar siempre 40 cm de traslapo «para estandarizar».",
+            "correct": false,
+            "feedback": "Incorrecto: la longitud depende del diámetro, f'c y condiciones de la barra."
+          }
+        ]
+      }
+    ]
+  },
+  "scoring": {
+    "keyEvidences": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "anomalyHotspots": [
+      "hs-viga",
+      "hs-inferior",
+      "hs-escaneo"
+    ],
+    "verificationWeight": 0.45,
+    "mustCite": [
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E08"
+    ],
+    "mainHypothesis": {
+      "H4": 1,
+      "H3": 0.6,
+      "H1": 0,
+      "H2": 0
+    },
+    "minEvidence": 8,
+    "reviewSet": [
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09"
+    ],
+    "reviewMin": 4,
+    "mainExplanation": "La hipótesis más consistente es H4 (empalmes en la zona de momento máximo), con H3 (plano incompleto) como contribuyente.",
+    "mustCiteWhy": "Es una evidencia determinante para separar el error de planos del de ejecución.",
+    "distractors": [
+      "E11"
+    ]
+  },
+  "reveal": {
+    "title": "Lo que realmente ocurrió",
+    "paragraphs": [
+      "El calculista dimensionó bien la V-2B, pero su plancha resolvió los traslapos con una nota genérica: «Traslapos: 40 cm». No distinguió diámetros ni dibujó dónde empalmar, aunque las barras de 7,90 m obligaban a hacerlo.",
+      "El taller de figurado optimizó el corte: dos piezas iguales de 4,15 m por barra. Así, las tres barras inferiores quedaron empalmadas en la mitad de la luz, justo donde el momento es máximo, con un traslapo que era apenas el 37 % del requerido.",
+      "La supervisión revisó «traslapos según plano» y liberó la fundida. Nadie preguntó si 40 cm alcanzaban para una barra N.º 6 ni por qué todos los empalmes estaban juntos.",
+      "Con el local en uso, las barras empezaron a deslizar en el empalme: el concreto se hendió a lo largo de ellas, la sección perdió capacidad y apareció la grieta de flexión. En el piso 3, otra cuadrilla había empalmado cerca de los apoyos por pura casualidad, y esa viga resistió.",
+      "La lección: un error de plano y un error de ejecución rara vez actúan solos. Corregir solo uno de los dos no habría bastado; detectar cualquiera de los dos a tiempo habría evitado el daño."
+    ]
+  },
+  "verificationOptions": [
+    {
+      "id": "cumple",
+      "name": "Cumple"
+    },
+    {
+      "id": "no_cumple",
+      "name": "No cumple"
+    },
+    {
+      "id": "requiere",
+      "name": "Requiere verificación adicional"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "V1",
+      "evidence": "E05",
+      "title": "Longitud de traslapo especificada en el plano",
+      "clause": "C.12.15.1 · C.12.2.2",
+      "ref": "NSR-10, Título C, numerales C.12.2.2 (folio C-218) y C.12.15.1 (folio C-240)",
+      "requirement": "La longitud mínima de un empalme por traslapo en tracción es 1,0 ℓd (Clase A) o 1,3 ℓd (Clase B), y no menor que 300 mm, con ℓd calculado según C.12.2.",
+      "data": [
+        [
+          "Barra",
+          "N.º 6 · db = 19,1 mm"
+        ],
+        [
+          "ℓd (C.12.2.2, f'c 21 MPa, fy 420 MPa)",
+          "≈ 834 mm"
+        ],
+        [
+          "Clase B (1,3 ℓd)",
+          "≈ 1 084 mm"
+        ],
+        [
+          "Traslapo en el plano",
+          "400 mm"
+        ]
+      ],
+      "question": "¿El traslapo especificado en el plano para las barras N.º 6 cumple?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "ℓd = 420 / (2,1 × √21) × 19,1 ≈ 834 mm. Aun como Clase A se requieren 834 mm; el plano pide 400 mm. NO CUMPLE (cálculo hecho por el juego con la expresión simplificada de C.12.2.2; el diseñador debe verificarlo con sus condiciones reales)."
+    },
+    {
+      "id": "V2",
+      "evidence": "E03",
+      "title": "Clase de empalme exigida por la ejecución",
+      "clause": "C.12.15.2",
+      "ref": "NSR-10, Título C, numeral C.12.15.2 · folio C-241",
+      "requirement": "Los empalmes por traslapo en tracción deben ser Clase B, excepto que se admite Clase A cuando el área de refuerzo es al menos el doble de la requerida a lo largo del empalme y se empalma la mitad o menos del refuerzo total.",
+      "data": [
+        [
+          "Barras empalmadas en la sección",
+          "3 de 3 (100 %)"
+        ],
+        [
+          "Ubicación",
+          "Mitad de luz (momento máximo)"
+        ],
+        [
+          "As proporcionado / As requerido en la zona",
+          "< 2"
+        ]
+      ],
+      "question": "¿Podía usarse un empalme Clase A en la ejecución de la V-2B?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "Se empalmó el 100 % del acero en la zona donde se requiere todo el refuerzo: no se cumple ninguna de las dos condiciones para Clase A. Se requería Clase B (≈ 1,08 m) y se ejecutaron 40 cm. NO CUMPLE."
+    },
+    {
+      "id": "V3",
+      "evidence": "E05",
+      "title": "Contenido del plano sobre empalmes",
+      "clause": "C.1.2.1 (h)",
+      "ref": "NSR-10, Título C, numeral C.1.2.1 · folio C-7",
+      "requirement": "Los planos de diseño deben incluir la longitud de anclaje del refuerzo y la localización y longitud de los empalmes por traslapo.",
+      "data": [
+        [
+          "Longitud de empalmes",
+          "Nota genérica «40 cm»"
+        ],
+        [
+          "Localización de empalmes",
+          "No indicada"
+        ],
+        [
+          "Acero inferior en el plano",
+          "7,90 m corrido (longitud comercial 6 m)"
+        ]
+      ],
+      "question": "¿El plano de despiece cumple el contenido mínimo respecto a empalmes?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "El plano no localiza los empalmes y su longitud es insuficiente. NO CUMPLE C.1.2.1 (h). Ese vacío dejó la decisión estructural en manos del taller de figurado."
+    },
+    {
+      "id": "V4",
+      "evidence": "E08",
+      "title": "Control de empalmes por la supervisión",
+      "clause": "Tabla I.4.3-2 · I.2.3.1 (e)",
+      "ref": "NSR-10, Título I, numeral I.4.3.7, Tabla I.4.3-2 (folio I-17) y numeral I.2.3.1 (folio I-5)",
+      "requirement": "El supervisor técnico debe controlar los empalmes (traslapados, mecánicos o soldados) y exigir a los diseñadores la corrección de planos incompletos o con errores.",
+      "data": [
+        [
+          "Ítem de empalmes en el acta",
+          "«OK según plano»"
+        ],
+        [
+          "Medición de longitud y ubicación",
+          "No"
+        ],
+        [
+          "Solicitud de corrección al calculista",
+          "No"
+        ]
+      ],
+      "question": "¿La supervisión cumplió su control sobre los empalmes?",
+      "answer": "no_cumple",
+      "partial": {
+        "requiere": 0.3
+      },
+      "explanation": "Verificó contra un plano incompleto sin cuestionarlo ni medir la ubicación. NO CUMPLE: el control existió en el papel, no en la práctica."
+    },
+    {
+      "id": "V5",
+      "evidence": "E09",
+      "title": "Aceptación del concreto",
+      "clause": "C.5.6.3.3",
+      "ref": "NSR-10, Título C, numeral C.5.6.3.3 · folio C-77",
+      "requirement": "Para f'c ≤ 35 MPa: promedio de tres ensayos consecutivos ≥ f'c y ningún ensayo menor que f'c − 3,5 MPa.",
+      "data": [
+        [
+          "Ensayos",
+          "24,1 · 22,9 · 23,6 MPa"
+        ],
+        [
+          "Promedio",
+          "23,5 MPa"
+        ],
+        [
+          "f'c",
+          "21,0 MPa"
+        ]
+      ],
+      "question": "¿El concreto del piso 2 cumple?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "23,5 ≥ 21,0 y 22,9 ≥ 17,5 MPa: CUMPLE."
+    },
+    {
+      "id": "V6",
+      "evidence": "E10",
+      "title": "Carga de uso del local",
+      "clause": "Tabla B.4.2.1-1",
+      "ref": "NSR-10, Título B, Tabla B.4.2.1-1 · folio B-15",
+      "requirement": "Carga viva mínima para comercio minorista: 5,0 kN/m².",
+      "data": [
+        [
+          "Carga estimada",
+          "≈ 3,2 kN/m²"
+        ],
+        [
+          "Carga de diseño",
+          "5,0 kN/m²"
+        ]
+      ],
+      "question": "¿La carga del local excede la de diseño?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "3,2 < 5,0 kN/m²: el uso CUMPLE."
+    },
+    {
+      "id": "V7",
+      "evidence": "E01",
+      "title": "Seguridad de la V-2B en su estado actual",
+      "clause": "C.20.1.1",
+      "ref": "NSR-10, Título C, numeral C.20.1.1 · folio C-351",
+      "requirement": "Cuando existan dudas sobre la seguridad de una estructura o elemento, debe realizarse una evaluación de resistencia.",
+      "data": [
+        [
+          "Fisura",
+          "1,6 mm, activa"
+        ],
+        [
+          "Empalme",
+          "≈ 37 % de la longitud requerida"
+        ],
+        [
+          "Evaluación de resistencia",
+          "No realizada"
+        ]
+      ],
+      "question": "¿Puede dictaminarse la seguridad de la viga solo con estas mediciones?",
+      "answer": "requiere",
+      "partial": {
+        "no_cumple": 0.4
+      },
+      "explanation": "Hay razones para apuntalar ya, pero el dictamen formal y el diseño del reforzamiento exigen una evaluación de resistencia (C.20). REQUIERE verificación adicional."
+    }
+  ]
+}

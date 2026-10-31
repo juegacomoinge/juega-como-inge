@@ -14,7 +14,7 @@ import { caseShell, discoverEvidence } from './layout.js';
 import { openEvidence } from './evidenceViewer.js';
 import { actionList, onCrisisTick, occupants } from './crisis.js';
 
-const TOOL_ICONS = { visual: 'eye', linterna: 'torch', fisurometro: 'ruler', nivel: 'flash', pachometro: 'layers' };
+const TOOL_ICONS = { visual: 'eye', linterna: 'torch', fisurometro: 'ruler', nivel: 'flash', pachometro: 'layers', calibrador: 'search' };
 
 function webglAvailable() {
   try {

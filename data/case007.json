@@ -1,0 +1,1593 @@
+{
+  "id": "007",
+  "code": "EXP-007",
+  "title": "EL ACERO QUE NO LLEGÓ",
+  "category": "Suministro de materiales",
+  "difficulty": "Intermedio",
+  "location": "Institución educativa «La Esperanza» (ficticia) · 2 pisos en pórticos de concreto · 1 800 m² · grupo de uso III · obra pública en ejecución",
+  "date": "Semana 14 de 22 del cronograma · 9 días de atraso acumulado",
+  "disclaimer": "Caso ficticio con fines educativos. Todos los nombres, registros, mediciones y resultados de ensayos son DATOS SIMULADOS. Las citas del Reglamento NSR-10 indican numeral y folio del texto oficial; los requisitos se transcriben de forma resumida. Las referencias a la norma NTC 2289 son orientativas: consulte siempre el texto vigente. Esta herramienta no reemplaza al ingeniero diseñador, al supervisor técnico ni a la autoridad competente.",
+  "briefing": {
+    "summary": "La nueva supervisora técnica de un colegio en construcción encontró en el acopio barras con una marca distinta a la del proveedor contratado. Algunas de esas barras ya están dentro de las columnas fundidas del primer piso.",
+    "cover": {
+      "illustration": "barMarks",
+      "caption": "IMAGEN DEL HALLAZGO · ACOPIO DE ACERO · MARCA «S»"
+    },
+    "narrative": [
+      "El colegio debe entregarse antes del inicio del año escolar y el contrato cobra multa por cada día de atraso. Hace cuatro semanas, el pedido de acero a la siderúrgica quedó atrapado en un paro de transportadores.",
+      "La Ing. Lucía Gaitán asumió la supervisión hace diez días. En su primera revisión del acopio vio paquetes de barras sin etiqueta, con una letra «S» en el relieve, junto a los pocos paquetes etiquetados del proveedor oficial. El residente le dijo que «es el mismo acero, solo que de otra marca».",
+      "Las columnas del eje C del primer piso ya se fundieron. Las del segundo piso esperan concreto mañana. Usted debe establecer qué se instaló, qué riesgo representa y cómo se llegó hasta aquí."
+    ],
+    "objectives": [
+      {
+        "id": "obj-scene",
+        "text": "Inspeccionar el acopio y las columnas, e identificar el material no conforme."
+      },
+      {
+        "id": "obj-evidence",
+        "text": "Recopilar al menos 8 evidencias de campo, documentales y testimoniales."
+      },
+      {
+        "id": "obj-review",
+        "text": "Revisar el plano, las compras, el cronograma, la entrevista al residente y los ensayos."
+      },
+      {
+        "id": "obj-norm",
+        "text": "Verificar el material y su control frente al NSR-10."
+      },
+      {
+        "id": "obj-hyp",
+        "text": "Evaluar las cuatro hipótesis sobre el origen del problema."
+      },
+      {
+        "id": "obj-report",
+        "text": "Emitir un informe con diagnóstico, decisión sobre lo construido y plan de suministro."
+      }
+    ],
+    "inspectables": [
+      "Acopio de acero",
+      "Columnas del eje C (piso 1, fundidas)",
+      "Columnas del eje B (piso 1, fundidas)",
+      "Mesa de planos",
+      "Oficina de obra: correos y compras",
+      "Almacén: remisiones",
+      "Tablero del cronograma",
+      "Laboratorio de ensayos",
+      "Carpeta de la supervisión"
+    ],
+    "people": [
+      {
+        "name": "Ing. Andrés Pulido",
+        "role": "Residente de obra"
+      },
+      {
+        "name": "Ing. Lucía Gaitán",
+        "role": "Supervisora técnica (recién asignada)"
+      },
+      {
+        "name": "Gloria Ramírez",
+        "role": "Almacenista"
+      },
+      {
+        "name": "Lab. Materiales Andinos (ficticio)",
+        "role": "Laboratorio de ensayos"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "id": "visual",
+      "name": "Inspección visual",
+      "desc": "Observación directa del elemento."
+    },
+    {
+      "id": "calibrador",
+      "name": "Calibrador",
+      "desc": "Pie de rey para medir diámetros y leer el relieve de identificación de las barras."
+    },
+    {
+      "id": "pachometro",
+      "name": "Pachómetro",
+      "desc": "Detector de armaduras: localiza las barras dentro del concreto y estima su diámetro."
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hs-acopio",
+      "name": "Acopio de acero",
+      "evidence": "E01",
+      "anomaly": true,
+      "requiresTool": "calibrador",
+      "toolHint": "Las marcas de identificación de las barras son pequeñas y están en el relieve. Use el calibrador para leerlas y medir.",
+      "description": "Paquetes de varilla corrugada sobre durmientes de madera, junto al taller de figurado.",
+      "observation": "Hay dos tipos de paquetes: unos con etiqueta metálica de la siderúrgica contratada y otros sin etiqueta, atados con alambre, con barras de un color más oscuro.",
+      "toolObservation": "Las barras etiquetadas llevan la letra «W» en el relieve (acero de baja aleación, NTC 2289). Las barras sin etiqueta llevan una «S» y no muestran marca de fabricante legible. Diámetros medidos: N.º 4 y N.º 5.",
+      "pos3d": [
+        -6,
+        0.6,
+        7
+      ],
+      "pos2d": [
+        26,
+        86
+      ]
+    },
+    {
+      "id": "hs-colC",
+      "name": "Columnas del eje C · piso 1",
+      "evidence": "E02",
+      "anomaly": true,
+      "requiresTool": "pachometro",
+      "toolHint": "El acero ya está dentro del concreto. Use el pachómetro.",
+      "description": "Cuatro columnas de 30 × 40 cm ya fundidas, con las barras de arranque del piso 2 a la vista.",
+      "observation": "Las barras de arranque que sobresalen arriba son más oscuras que las del eje B y tienen la letra «S».",
+      "toolObservation": "El pachómetro estima barras N.º 4 (12,7 mm) en las cuatro columnas del eje C: 8 barras por columna. El plano especifica 8 N.º 5 (15,9 mm).",
+      "pos3d": [
+        2.5,
+        2.4,
+        4.25
+      ],
+      "pos2d": [
+        66,
+        60
+      ]
+    },
+    {
+      "id": "hs-colB",
+      "name": "Columnas del eje B · piso 1",
+      "evidence": "E03",
+      "anomaly": false,
+      "requiresTool": "pachometro",
+      "toolHint": "Para comparar con el eje C, escanee estas columnas con el pachómetro.",
+      "description": "Columnas fundidas tres semanas antes que las del eje C.",
+      "observation": "Arranques con la letra «W» y el color habitual del acero del proveedor.",
+      "toolObservation": "Pachómetro: 8 barras N.º 5 por columna, como indica el plano.",
+      "pos3d": [
+        -2.5,
+        2.4,
+        4.25
+      ],
+      "pos2d": [
+        34,
+        60
+      ]
+    },
+    {
+      "id": "hs-plans",
+      "name": "Mesa de planos",
+      "evidence": "E04",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Planos estructurales aprobados del colegio.",
+      "observation": "El cuadro de columnas y las notas generales sobre materiales están en la plancha E-02.",
+      "toolObservation": "",
+      "pos3d": [
+        -11,
+        1.1,
+        9
+      ],
+      "pos2d": [
+        12,
+        80
+      ]
+    },
+    {
+      "id": "hs-oficina",
+      "name": "Oficina de obra · correos y compras",
+      "evidence": "E05",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Contenedor-oficina del residente, con el portátil y la carpeta de compras.",
+      "observation": "El residente tiene abiertos los correos con la siderúrgica y la orden de compra original.",
+      "toolObservation": "",
+      "pos3d": [
+        -14,
+        1.6,
+        5.3
+      ],
+      "pos2d": [
+        6,
+        70
+      ]
+    },
+    {
+      "id": "hs-almacen",
+      "name": "Almacén · remisiones",
+      "evidence": "E06",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Caseta del almacén donde se registran entradas de material.",
+      "observation": "La almacenista guarda una remisión de una ferretería del municipio, distinta al proveedor contratado.",
+      "toolObservation": "",
+      "pos3d": [
+        12,
+        1.4,
+        6
+      ],
+      "pos2d": [
+        88,
+        76
+      ]
+    },
+    {
+      "id": "hs-cronograma",
+      "name": "Tablero del cronograma",
+      "evidence": "E07",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Tablero con el cronograma de obra y el avance semanal.",
+      "observation": "Hay varias actividades en rojo y una nota con el valor de la multa diaria del contrato.",
+      "toolObservation": "",
+      "pos3d": [
+        -12.2,
+        1.8,
+        5.6
+      ],
+      "pos2d": [
+        10,
+        66
+      ]
+    },
+    {
+      "id": "hs-residente",
+      "name": "Residente de obra",
+      "evidence": "E08",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Ing. Andrés Pulido, residente desde el inicio de la obra.",
+      "observation": "Está nervioso: mañana hay concreto programado para las columnas del piso 2.",
+      "toolObservation": "",
+      "pos3d": [
+        -9,
+        1.2,
+        6.5
+      ],
+      "pos2d": [
+        18,
+        84
+      ]
+    },
+    {
+      "id": "hs-lab",
+      "name": "Laboratorio de ensayos",
+      "evidence": "E09",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Carro del laboratorio con las muestras de barras tomadas por la supervisora.",
+      "observation": "El técnico trae los resultados de tracción de las barras «S» y de las barras del proveedor.",
+      "toolObservation": "",
+      "pos3d": [
+        9,
+        0.8,
+        10
+      ],
+      "pos2d": [
+        80,
+        88
+      ]
+    },
+    {
+      "id": "hs-supervision",
+      "name": "Carpeta de la supervisión",
+      "evidence": "E10",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Archivo de la supervisión técnica desde el inicio de la obra.",
+      "observation": "Contiene el informe del supervisor anterior y la primera anotación de la Ing. Gaitán.",
+      "toolObservation": "",
+      "pos3d": [
+        13.5,
+        1.3,
+        8.6
+      ],
+      "pos2d": [
+        92,
+        82
+      ]
+    },
+    {
+      "id": "hs-oxido",
+      "name": "Paquetes del proveedor oficial",
+      "evidence": "E11",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Paquetes con etiqueta de la siderúrgica, llegados ayer.",
+      "observation": "Las barras tienen una capa delgada de óxido rojizo uniforme por la lluvia de anoche.",
+      "toolObservation": "",
+      "pos3d": [
+        -1.5,
+        0.4,
+        7.8
+      ],
+      "pos2d": [
+        40,
+        88
+      ]
+    }
+  ],
+  "evidences": [
+    {
+      "id": "E01",
+      "name": "Barras con marca «S» en el acopio",
+      "type": "Observación de campo",
+      "summary": "Identificación por relieve y medición de las barras sin etiqueta del acopio.",
+      "doc": {
+        "illustration": "barMarks",
+        "fields": [
+          [
+            "Paquetes del proveedor contratado",
+            "Etiqueta metálica · relieve «W» · NTC 2289"
+          ],
+          [
+            "Paquetes sin etiqueta",
+            "Sin marca de fabricante legible · relieve «S»"
+          ],
+          [
+            "Diámetros sin etiqueta",
+            "N.º 4 y N.º 5"
+          ],
+          [
+            "Cantidad estimada sin etiqueta",
+            "≈ 2,1 t (≈ 0,8 t ya instaladas)"
+          ],
+          [
+            "Certificado de calidad",
+            "NO EXISTE"
+          ]
+        ],
+        "notes": [
+          "El relieve de una barra corrugada identifica al fabricante, el diámetro y el tipo de acero."
+        ]
+      },
+      "technical": [
+        "NSR-10, comentario CR3.5.3.1 (folio C-45): en Colombia solo se permite acero corrugado fabricado bajo NTC 2289 (ASTM A706M), marcado con la letra «W»; las barras NTC 248 (ASTM A615M), generalmente marcadas con «S», NO están permitidas.",
+        "La diferencia no es solo de resistencia: el acero NTC 2289 tiene propiedades de tracción controladas (ductilidad, relación entre resistencia última y fluencia, soldabilidad) que son esenciales para que la estructura disipe energía en un sismo."
+      ],
+      "relevance": "Evidencia determinante: identifica el material no conforme."
+    },
+    {
+      "id": "E02",
+      "name": "Escaneo de columnas del eje C",
+      "type": "Ensayo de laboratorio",
+      "summary": "Estimación con pachómetro del refuerzo longitudinal de las columnas C1 a C4 del piso 1. DATOS SIMULADOS.",
+      "doc": {
+        "illustration": "columnSection",
+        "table": {
+          "headers": [
+            "Columna",
+            "Barras detectadas",
+            "Diámetro estimado",
+            "Marca en arranques"
+          ],
+          "rows": [
+            [
+              "C1",
+              "8",
+              "N.º 4",
+              "S"
+            ],
+            [
+              "C2",
+              "8",
+              "N.º 4",
+              "S"
+            ],
+            [
+              "C3",
+              "8",
+              "N.º 4",
+              "S"
+            ],
+            [
+              "C4",
+              "8",
+              "N.º 4",
+              "S"
+            ]
+          ],
+          "flagRows": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "fields": [
+          [
+            "Especificado en plano",
+            "8 N.º 5 · As = 1 592 mm²"
+          ],
+          [
+            "Instalado",
+            "8 N.º 4 · As = 1 032 mm²"
+          ],
+          [
+            "Reducción de área",
+            "≈ 35 %"
+          ],
+          [
+            "Cuantía instalada (30 × 40 cm)",
+            "1 032 / 120 000 ≈ 0,86 %"
+          ]
+        ],
+        "notes": [
+          "Confirmar el diámetro con una regata puntual: el pachómetro estima, no mide con exactitud."
+        ]
+      },
+      "technical": [
+        "NSR-10, C.10.9.1 (folio C-148): el área de refuerzo longitudinal de columnas no debe ser menor que 0,01 Ag.",
+        "Cambiar el diámetro «porque no había» es una sustitución de diseño: solo el ingeniero diseñador puede aprobarla tras verificar la capacidad."
+      ],
+      "relevance": "Muestra que, además del tipo de acero, se cambió el diámetro sin aprobación."
+    },
+    {
+      "id": "E03",
+      "name": "Escaneo de columnas del eje B",
+      "type": "Ensayo de laboratorio",
+      "summary": "Columnas de control fundidas antes del retraso. DATOS SIMULADOS.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Barras detectadas",
+            "8 N.º 5 por columna"
+          ],
+          [
+            "Marca en arranques",
+            "W"
+          ],
+          [
+            "Fecha de fundida",
+            "Antes del paro de transportadores"
+          ]
+        ]
+      },
+      "technical": [
+        "El eje B sirve de control: muestra que la obra sí sabía armar según el plano mientras tuvo el material contratado."
+      ],
+      "relevance": "Permite fechar el problema: empezó con el retraso del suministro."
+    },
+    {
+      "id": "E04",
+      "name": "Plano estructural · cuadro de columnas",
+      "type": "Documento de diseño",
+      "summary": "Cuadro de columnas y notas de materiales de la plancha E-02.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Columnas ejes B y C, piso 1",
+            "30 × 40 cm · 8 N.º 5 · estribos N.º 3"
+          ],
+          [
+            "Cuantía de diseño",
+            "1 592 / 120 000 ≈ 1,33 %"
+          ],
+          [
+            "Acero",
+            "fy = 420 MPa · NTC 2289"
+          ],
+          [
+            "Nota de materiales",
+            "«Todo cambio de material o diámetro requiere aprobación escrita del diseñador estructural»"
+          ]
+        ]
+      },
+      "technical": [
+        "El diseño cumple la cuantía mínima de C.10.9.1 y especifica el acero permitido por C.3.5.3.1.",
+        "La nota de sustituciones es una especificación del proyecto que obliga al constructor."
+      ],
+      "relevance": "Establece lo especificado para compararlo con lo instalado."
+    },
+    {
+      "id": "E05",
+      "name": "Correos con la siderúrgica y orden de compra",
+      "type": "Documento de obra",
+      "summary": "Cronología del pedido de acero y del retraso.",
+      "doc": {
+        "illustration": "supplyTimeline",
+        "table": {
+          "headers": [
+            "Fecha",
+            "Evento"
+          ],
+          "rows": [
+            [
+              "Semana 8",
+              "Orden de compra de acero para pisos 1 y 2 (pedido único, sin stock de reserva)"
+            ],
+            [
+              "Semana 10",
+              "Siderúrgica confirma despacho para semana 11"
+            ],
+            [
+              "Semana 11",
+              "Paro de transportadores: despacho suspendido"
+            ],
+            [
+              "Semana 12",
+              "Siderúrgica ofrece despacho parcial por otra ruta: NO RESPONDIDO por la obra"
+            ],
+            [
+              "Semana 12",
+              "Compra en ferretería local (ver E06)"
+            ],
+            [
+              "Semana 14",
+              "Llega el pedido completo de la siderúrgica"
+            ]
+          ],
+          "flagRows": [
+            0,
+            3,
+            4
+          ]
+        },
+        "notes": [
+          "Correo de la siderúrgica, semana 12: «Podemos despachar 3 t por la vía alterna con recargo de flete. Favor confirmar». Sin respuesta."
+        ]
+      },
+      "technical": [
+        "Un retraso de suministro es un riesgo previsible en obra: se gestiona con pedidos anticipados, inventario de reserva para actividades críticas y alternativas aprobadas de antemano.",
+        "Existía una alternativa conforme (despacho parcial con recargo) que no se tomó."
+      ],
+      "relevance": "Muestra el origen del problema y que había opciones conformes."
+    },
+    {
+      "id": "E06",
+      "name": "Remisión de la ferretería local",
+      "type": "Documento de obra",
+      "summary": "Remisión de compra de acero a un proveedor no contratado.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Proveedor",
+            "Ferretería del municipio (no contratada)"
+          ],
+          [
+            "Descripción",
+            "«Varilla corrugada nacional 1/2 y 5/8»"
+          ],
+          [
+            "Cantidad",
+            "2,1 t"
+          ],
+          [
+            "Precio",
+            "≈ 30 % menor que el contrato"
+          ],
+          [
+            "Certificado de conformidad",
+            "NO ENTREGADO"
+          ],
+          [
+            "Recibido por",
+            "Almacenista · autorizado por el residente"
+          ]
+        ],
+        "notes": [
+          "Nota de la almacenista: «No había 5/8 suficiente; el ingeniero dijo que en las columnas del eje C se usara 1/2»."
+        ]
+      },
+      "technical": [
+        "NSR-10, C.3.5.10.2 (folio C-51): los ensayos deben demostrar que el acero cumple la norma NTC correspondiente, y los certificados de conformidad deben remitirse al supervisor técnico y al diseñador estructural.",
+        "Un precio mucho menor al del mercado es una señal de alerta sobre el origen o la norma de fabricación del material."
+      ],
+      "relevance": "Prueba documental de la compra no conforme y de la sustitución de diámetro."
+    },
+    {
+      "id": "E07",
+      "name": "Cronograma y cláusula de multa",
+      "type": "Documento de obra",
+      "summary": "Avance de obra y condiciones del contrato.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Plazo contractual",
+            "22 semanas · entrega antes del inicio del año escolar"
+          ],
+          [
+            "Atraso acumulado",
+            "9 días"
+          ],
+          [
+            "Multa por día de atraso",
+            "0,1 % del valor del contrato"
+          ],
+          [
+            "Actividad crítica",
+            "Estructura del piso 2"
+          ]
+        ]
+      },
+      "technical": [
+        "La presión de plazo explica la decisión, pero no la justifica: el contrato público también puede prorrogarse por causas ajenas al contratista, como un paro de transporte, si se documentan a tiempo."
+      ],
+      "relevance": "Contexto de la presión que llevó a la compra de emergencia."
+    },
+    {
+      "id": "E08",
+      "name": "Entrevista al residente de obra",
+      "type": "Entrevista",
+      "summary": "Conversación con el Ing. Andrés Pulido sobre la compra de acero.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Entrevistado",
+            "Ing. Andrés Pulido · residente"
+          ],
+          [
+            "Motivo de la compra",
+            "Evitar parar la obra y la multa"
+          ],
+          [
+            "Conocía la diferencia W / S",
+            "«Sabía que había dos tipos, pero pensé que era lo mismo»"
+          ],
+          [
+            "Consulta al diseñador",
+            "No"
+          ],
+          [
+            "Aviso al supervisor anterior",
+            "Verbal"
+          ],
+          [
+            "Pedido de prórroga",
+            "No"
+          ]
+        ],
+        "notes": [
+          "«Si paraba dos semanas nos comíamos la multa. El acero se veía igual y aguantó el doblado».",
+          "«El de 5/8 no alcanzaba, entonces en el eje C pusimos 1/2; son ocho barras igual».",
+          "«El supervisor anterior me dijo que siguiera, que después mirábamos los papeles»."
+        ]
+      },
+      "technical": [
+        "«Son ocho barras igual» confunde número de barras con área de acero: el área depende del cuadrado del diámetro.",
+        "Que el acero «aguante el doblado» no prueba su ductilidad ni su conformidad con NTC 2289."
+      ],
+      "relevance": "Explica la decisión y revela creencias técnicas equivocadas."
+    },
+    {
+      "id": "E09",
+      "name": "Ensayos de tracción de las barras",
+      "type": "Ensayo de laboratorio",
+      "summary": "Ensayos de tracción sobre muestras de barras «S» y «W». DATOS SIMULADOS.",
+      "doc": {
+        "illustration": "tensileChart",
+        "table": {
+          "headers": [
+            "Muestra",
+            "fy (MPa)",
+            "fu (MPa)",
+            "fu / fy",
+            "Alargamiento"
+          ],
+          "rows": [
+            [
+              "W-1 (proveedor)",
+              "446",
+              "612",
+              "1,37",
+              "17 %"
+            ],
+            [
+              "W-2 (proveedor)",
+              "452",
+              "620",
+              "1,37",
+              "16 %"
+            ],
+            [
+              "S-1 (ferretería)",
+              "468",
+              "552",
+              "1,18",
+              "9 %"
+            ],
+            [
+              "S-2 (ferretería)",
+              "455",
+              "546",
+              "1,20",
+              "10 %"
+            ]
+          ],
+          "flagRows": [
+            2,
+            3
+          ]
+        },
+        "notes": [
+          "Las barras «S» superan fy = 420 MPa, pero son menos dúctiles: menor alargamiento y menor relación fu/fy.",
+          "Valores de referencia de NTC 2289: consulte la norma vigente para los mínimos exactos."
+        ]
+      },
+      "technical": [
+        "La fluencia alta no basta: en una estructura sismorresistente el acero debe poder deformarse mucho después de fluir sin romperse. Esa ductilidad es lo que controla NTC 2289.",
+        "NSR-10, C.3.5.3.1 (folio C-45) no permite el acero NTC 248 aunque su ensayo de fluencia sea satisfactorio."
+      ],
+      "relevance": "Cuantifica la diferencia de comportamiento entre ambos aceros."
+    },
+    {
+      "id": "E10",
+      "name": "Bitácora de la supervisión técnica",
+      "type": "Documento de obra",
+      "summary": "Registros del supervisor anterior y de la supervisora actual.",
+      "doc": {
+        "illustration": null,
+        "table": {
+          "headers": [
+            "Fecha",
+            "Supervisor",
+            "Anotación"
+          ],
+          "rows": [
+            [
+              "Semana 2",
+              "Anterior",
+              "«Constructor presentará certificados de materiales»"
+            ],
+            [
+              "Semana 12",
+              "Anterior",
+              "«Se recibe acero adicional por retraso de proveedor. Pendiente certificado»"
+            ],
+            [
+              "Semana 13",
+              "Anterior",
+              "«Se liberan columnas eje C piso 1»"
+            ],
+            [
+              "Semana 14",
+              "Ing. Gaitán",
+              "«Se detecta acero marca S sin certificado. Se suspende uso y fundida de columnas piso 2»"
+            ]
+          ],
+          "flagRows": [
+            1,
+            2
+          ]
+        },
+        "notes": [
+          "No existe comunicación escrita del supervisor anterior al constructor sobre el certificado pendiente."
+        ]
+      },
+      "technical": [
+        "NSR-10, I.4.3.5 (folio I-17): antes del inicio de la obra el supervisor debe exigir que los materiales cumplan las especificaciones, con ensayos de lotes recientes y los certificados de conformidad cuando el Reglamento los exija.",
+        "NSR-10, I.2.3.1 (k) y (l) (folio I-5): el supervisor debe rechazar las partes que no cumplan y ordenar los estudios para evaluar su seguridad. La supervisora actual actuó conforme a esto."
+      ],
+      "relevance": "Muestra la falla de control que permitió incorporar el acero y la reacción correcta posterior."
+    },
+    {
+      "id": "E11",
+      "name": "Óxido superficial en el acero del proveedor",
+      "type": "Observación de campo",
+      "summary": "Capa delgada de óxido en barras llegadas ayer.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Tipo",
+            "Óxido superficial uniforme, sin escamas"
+          ],
+          [
+            "Pérdida de sección",
+            "No apreciable"
+          ],
+          [
+            "Origen",
+            "Lluvia de la noche anterior"
+          ]
+        ],
+        "notes": [
+          "Se recomienda almacenar sobre durmientes y cubrir con plástico."
+        ]
+      },
+      "technical": [
+        "Una película ligera de óxido que no se desprende al cepillar no suele afectar la adherencia; las escamas sueltas o la pérdida de sección sí deben evaluarse.",
+        "No guarda relación con el problema de conformidad del acero «S»."
+      ],
+      "relevance": "Elemento observado en el acopio. Evalúe si guarda relación con el problema investigado."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "Error de despacho del proveedor contratado",
+      "question": "¿Envió la siderúrgica un acero distinto al pedido?",
+      "arguments": {
+        "for": [
+          {
+            "text": "En el acopio hay dos tipos de acero mezclados.",
+            "requires": "E01"
+          }
+        ],
+        "against": [
+          {
+            "text": "Las barras «S» vienen de una ferretería local, según la remisión.",
+            "requires": "E06"
+          },
+          {
+            "text": "Los paquetes de la siderúrgica tienen etiqueta y marca «W».",
+            "requires": "E01"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.3,
+        "contribuyente": 0.1,
+        "principal": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E06",
+          "E01"
+        ]
+      },
+      "explanation": "El material no conforme no vino del proveedor contratado. Se DESCARTA."
+    },
+    {
+      "id": "H2",
+      "title": "Error en los planos estructurales",
+      "question": "¿Especificaban los planos el acero o el diámetro que se instaló?",
+      "arguments": {
+        "for": [],
+        "against": [
+          {
+            "text": "El plano especifica 8 N.º 5 y acero NTC 2289.",
+            "requires": "E04"
+          },
+          {
+            "text": "Las columnas del eje B se armaron correctamente con el mismo plano.",
+            "requires": "E03"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.3,
+        "principal": 0,
+        "contribuyente": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E04",
+          "E03"
+        ]
+      },
+      "explanation": "El plano es correcto y completo. Se DESCARTA."
+    },
+    {
+      "id": "H3",
+      "title": "Compra de emergencia sin control técnico",
+      "question": "¿Se compró e instaló acero no conforme para no detener la obra?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Remisión de ferretería sin certificado, con sustitución de diámetro ordenada por el residente.",
+            "requires": "E06"
+          },
+          {
+            "text": "El residente reconoce la compra para evitar la multa.",
+            "requires": "E08"
+          },
+          {
+            "text": "Las columnas del eje C tienen barras «S» N.º 4.",
+            "requires": "E02"
+          },
+          {
+            "text": "Las barras «S» son menos dúctiles.",
+            "requires": "E09"
+          },
+          {
+            "text": "El supervisor anterior liberó las columnas con el certificado pendiente.",
+            "requires": "E10"
+          }
+        ],
+        "against": [
+          {
+            "text": "Las barras «S» superan la fluencia de 420 MPa.",
+            "requires": "E09"
+          }
+        ]
+      },
+      "best": "principal",
+      "partial": {
+        "contribuyente": 0.5,
+        "requiere_info": 0.2,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E06",
+          "E08",
+          "E02",
+          "E09",
+          "E10",
+          "E01"
+        ],
+        "contradict": []
+      },
+      "explanation": "La compra en ferretería, la sustitución de diámetro y la liberación sin certificado explican el hallazgo. Es la hipótesis PRINCIPAL."
+    },
+    {
+      "id": "H4",
+      "title": "Planeación deficiente del suministro",
+      "question": "¿Hizo la obra vulnerable al retraso una mala gestión del abastecimiento?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Se pidió todo el acero en un solo pedido, sin inventario de reserva.",
+            "requires": "E05"
+          },
+          {
+            "text": "La alternativa conforme de despacho parcial no se respondió.",
+            "requires": "E05"
+          },
+          {
+            "text": "No se solicitó prórroga por una causa ajena al contratista.",
+            "requires": "E07"
+          }
+        ],
+        "against": [
+          {
+            "text": "El paro de transportadores no era controlable por la obra.",
+            "requires": "E05"
+          }
+        ]
+      },
+      "best": "contribuyente",
+      "partial": {
+        "principal": 0.4,
+        "requiere_info": 0.3,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E05",
+          "E07"
+        ],
+        "contradict": []
+      },
+      "explanation": "El retraso no era controlable, pero la falta de reserva, de respuesta a la alternativa y de gestión contractual convirtió un imprevisto en una crisis. Es CONTRIBUYENTE."
+    }
+  ],
+  "report": {
+    "steps": [
+      {
+        "id": "anomaly",
+        "title": "Identificación de la anomalía",
+        "prompt": "¿Qué anomalías identifica?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "a1",
+            "text": "Acero con marca «S» (NTC 248), sin certificado, en el acopio.",
+            "correct": true,
+            "feedback": "Correcto: identificado con calibrador."
+          },
+          {
+            "id": "a2",
+            "text": "Columnas del eje C con 8 N.º 4 en lugar de 8 N.º 5.",
+            "correct": true,
+            "feedback": "Correcto: detectado con pachómetro."
+          },
+          {
+            "id": "a3",
+            "text": "Barras de arranque «S» en las columnas del eje C.",
+            "correct": true,
+            "feedback": "Correcto: el acero no conforme ya está incorporado."
+          },
+          {
+            "id": "a4",
+            "text": "Fisuras en las columnas del eje C.",
+            "correct": false,
+            "feedback": "No observadas: el problema es de conformidad y capacidad, aún sin síntomas."
+          },
+          {
+            "id": "a5",
+            "text": "Corrosión grave del acero del proveedor oficial.",
+            "correct": false,
+            "feedback": "Incorrecto: es óxido superficial ligero sin pérdida de sección."
+          }
+        ]
+      },
+      {
+        "id": "concepts",
+        "title": "Síntoma, causa y consecuencia",
+        "prompt": "Clasifique cada enunciado.",
+        "type": "classify",
+        "categories": [
+          {
+            "id": "sintoma",
+            "name": "Síntoma"
+          },
+          {
+            "id": "anomalia",
+            "name": "Anomalía"
+          },
+          {
+            "id": "mecanismo",
+            "name": "Mecanismo de deterioro"
+          },
+          {
+            "id": "directa",
+            "name": "Causa directa"
+          },
+          {
+            "id": "contribuyente",
+            "name": "Causa contribuyente"
+          },
+          {
+            "id": "consecuencia",
+            "name": "Consecuencia"
+          },
+          {
+            "id": "correctiva",
+            "name": "Medida correctiva"
+          }
+        ],
+        "items": [
+          {
+            "id": "c1",
+            "text": "Paquetes sin etiqueta y barras más oscuras en el acopio.",
+            "answer": "sintoma",
+            "feedback": "Es lo observable que dispara la investigación."
+          },
+          {
+            "id": "c2",
+            "text": "Columnas con 35 % menos acero y de un tipo no permitido.",
+            "answer": "anomalia",
+            "feedback": "Es la desviación respecto a lo especificado."
+          },
+          {
+            "id": "c3",
+            "text": "Menor ductilidad y menor capacidad: ante un sismo las columnas podrían fallar de forma frágil.",
+            "answer": "mecanismo",
+            "feedback": "Describe el comportamiento físico esperado."
+          },
+          {
+            "id": "c4",
+            "text": "Compra en ferretería sin certificado y cambio de diámetro sin aprobación.",
+            "answer": "directa",
+            "feedback": "Es la acción que produjo la anomalía."
+          },
+          {
+            "id": "c5",
+            "text": "Pedido único sin reserva y liberación de columnas con certificado pendiente.",
+            "answer": "contribuyente",
+            "feedback": "Hicieron posible el problema."
+          },
+          {
+            "id": "c6",
+            "text": "Riesgo para la vida de estudiantes en una edificación de atención a la comunidad.",
+            "answer": "consecuencia",
+            "feedback": "Es el efecto potencial."
+          },
+          {
+            "id": "c7",
+            "text": "Reforzar o demoler las columnas del eje C según la evaluación del diseñador.",
+            "answer": "correctiva",
+            "feedback": "Es la medida de corrección."
+          }
+        ]
+      },
+      {
+        "id": "hypothesis",
+        "title": "Hipótesis principal",
+        "prompt": "¿Qué hipótesis explica mejor el hallazgo? Justifique.",
+        "type": "single-hypothesis",
+        "justification": {
+          "minLength": 60,
+          "keywords": [
+            [
+              "ferretería",
+              "compra",
+              "remisión"
+            ],
+            [
+              "certificado",
+              "2289",
+              "248",
+              "marca s",
+              "« s »",
+              "\"s\""
+            ],
+            [
+              "n.º 4",
+              "no. 4",
+              "1/2",
+              "diámetro",
+              "cuantía"
+            ],
+            [
+              "retraso",
+              "paro",
+              "suministro",
+              "multa"
+            ],
+            [
+              "dúctil",
+              "ductilidad",
+              "alargamiento",
+              "tracción"
+            ],
+            [
+              "supervis",
+              "liberó",
+              "bitácora"
+            ]
+          ],
+          "hint": "Un buen argumento menciona la compra sin certificado de acero NTC 248, la sustitución de diámetro, la menor ductilidad medida, el retraso y la presión de plazo, y la falla del control de la supervisión."
+        }
+      },
+      {
+        "id": "evidence",
+        "title": "Evidencias de soporte",
+        "prompt": "Seleccione las evidencias que sustentan su conclusión.",
+        "type": "evidence-select",
+        "weights": {
+          "E01": 1,
+          "E02": 1,
+          "E03": 0.6,
+          "E04": 0.6,
+          "E05": 1,
+          "E06": 1,
+          "E07": 0.6,
+          "E08": 1,
+          "E09": 1,
+          "E10": 1,
+          "E11": -1
+        },
+        "feedback": {
+          "E11": "El óxido superficial del acero oficial no tiene relación con la conformidad del acero «S»."
+        }
+      },
+      {
+        "id": "causes",
+        "title": "Causas probables",
+        "prompt": "Seleccione las causas probables.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "k1",
+            "text": "Compra de acero NTC 248 sin certificado a un proveedor no contratado.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "k2",
+            "text": "Sustitución de N.º 5 por N.º 4 sin aprobación del diseñador.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "k3",
+            "text": "Pedido único sin inventario de reserva ni respuesta a la alternativa del proveedor.",
+            "correct": true,
+            "feedback": "Correcto: causa contribuyente de gestión."
+          },
+          {
+            "id": "k4",
+            "text": "Liberación de columnas con el certificado pendiente.",
+            "correct": true,
+            "feedback": "Correcto: falla del control."
+          },
+          {
+            "id": "k5",
+            "text": "Error en los planos.",
+            "correct": false,
+            "feedback": "Incorrecto: el plano es correcto."
+          },
+          {
+            "id": "k6",
+            "text": "Óxido del acero del proveedor.",
+            "correct": false,
+            "feedback": "Incorrecto: no tiene relación."
+          }
+        ]
+      },
+      {
+        "id": "consequences",
+        "title": "Consecuencias potenciales",
+        "prompt": "¿Qué consecuencias tiene lo encontrado?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "q1",
+            "text": "Columnas con menor capacidad a flexocompresión que la de diseño.",
+            "correct": true,
+            "feedback": "Correcto: 35 % menos de acero longitudinal."
+          },
+          {
+            "id": "q2",
+            "text": "Comportamiento sísmico menos dúctil en una edificación del grupo III.",
+            "correct": true,
+            "feedback": "Correcto: la ductilidad es la base del diseño sismorresistente."
+          },
+          {
+            "id": "q3",
+            "text": "Sobrecostos y atraso adicional por reforzar o demoler lo construido.",
+            "correct": true,
+            "feedback": "Correcto: el ahorro inicial resulta mucho más caro."
+          },
+          {
+            "id": "q4",
+            "text": "Ninguna: el acero «S» resiste más de 420 MPa.",
+            "correct": false,
+            "feedback": "Incorrecto: la fluencia no es la única propiedad que importa, y además se redujo el área."
+          }
+        ]
+      },
+      {
+        "id": "certainty",
+        "title": "Nivel de certeza",
+        "prompt": "¿Cómo debe presentarse el diagnóstico?",
+        "type": "single",
+        "options": [
+          {
+            "id": "s1",
+            "text": "Definitivo en cuanto a la no conformidad; pendiente la evaluación de capacidad para decidir sobre lo construido.",
+            "correct": true,
+            "feedback": "Correcto: la no conformidad está probada; la decisión estructural requiere evaluación."
+          },
+          {
+            "id": "s2",
+            "text": "Indeterminado: hay que esperar a que aparezcan fisuras.",
+            "correct": false,
+            "feedback": "Incorrecto: no se espera a un sismo para actuar."
+          },
+          {
+            "id": "s3",
+            "text": "Definitivo: hay que demoler todo el colegio.",
+            "correct": false,
+            "feedback": "Desproporcionado: el problema está localizado en el eje C y en el acopio."
+          }
+        ]
+      },
+      {
+        "id": "recommendations",
+        "title": "Recomendaciones técnicas",
+        "prompt": "Seleccione las medidas que recomendaría.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "r1",
+            "text": "Suspender la fundida de las columnas del piso 2 y retirar del acopio todo el acero «S».",
+            "correct": true,
+            "feedback": "Correcto: I.2.3.1 (k)."
+          },
+          {
+            "id": "r2",
+            "text": "Confirmar con regatas el diámetro y tipo de acero en las columnas del eje C.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "r3",
+            "text": "Que el diseñador evalúe las columnas del eje C (C.20) y defina reforzamiento o demolición.",
+            "correct": true,
+            "feedback": "Correcto: I.2.3.1 (l) y C.20.1.1."
+          },
+          {
+            "id": "r4",
+            "text": "Solicitar prórroga documentando el paro como causa ajena al contratista.",
+            "correct": true,
+            "feedback": "Correcto: es la vía contractual que debió usarse."
+          },
+          {
+            "id": "r5",
+            "text": "Continuar usando el acero «S» porque pasó el ensayo de fluencia.",
+            "correct": false,
+            "feedback": "Incorrecto: C.3.5.3.1 lo prohíbe."
+          },
+          {
+            "id": "r6",
+            "text": "Agregar más concreto alrededor de las columnas «para compensar» sin diseño.",
+            "correct": false,
+            "feedback": "Incorrecto: cualquier reforzamiento debe diseñarse."
+          }
+        ]
+      },
+      {
+        "id": "prevention",
+        "title": "Medidas preventivas",
+        "prompt": "¿Qué evitaría que se repita?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "p1",
+            "text": "Plan de suministro con pedidos anticipados e inventario de reserva para actividades críticas.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p2",
+            "text": "Proveedores alternos precalificados con certificados vigentes.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p3",
+            "text": "Recepción de material condicionada a certificado y verificación de marca en el almacén.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p4",
+            "text": "Procedimiento escrito para sustituciones con aprobación del diseñador.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p5",
+            "text": "Comprar siempre al proveedor más barato disponible.",
+            "correct": false,
+            "feedback": "Incorrecto: el precio no puede primar sobre la conformidad."
+          }
+        ]
+      }
+    ]
+  },
+  "scoring": {
+    "keyEvidences": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "anomalyHotspots": [
+      "hs-acopio",
+      "hs-colC"
+    ],
+    "verificationWeight": 0.45,
+    "mustCite": [
+      "E01",
+      "E02",
+      "E06",
+      "E09",
+      "E10"
+    ],
+    "mainHypothesis": {
+      "H3": 1,
+      "H4": 0.5,
+      "H1": 0,
+      "H2": 0
+    },
+    "minEvidence": 8,
+    "reviewSet": [
+      "E04",
+      "E05",
+      "E06",
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "reviewMin": 5,
+    "mainExplanation": "La hipótesis más consistente es H3 (compra de emergencia sin control técnico), con H4 (planeación deficiente del suministro) como contribuyente.",
+    "mustCiteWhy": "Es una evidencia determinante para demostrar la no conformidad o su origen.",
+    "distractors": [
+      "E11"
+    ]
+  },
+  "reveal": {
+    "title": "Lo que realmente ocurrió",
+    "paragraphs": [
+      "La obra pidió todo su acero en un solo pedido, sin reserva. Cuando el paro de transportadores detuvo el despacho, la siderúrgica ofreció enviar 3 toneladas por otra ruta con recargo. Nadie respondió el correo.",
+      "Con la multa contando, el residente compró 2,1 toneladas a una ferretería del municipio: barras marcadas «S», fabricadas bajo una norma que el NSR-10 no permite en Colombia, sin certificado y un 30 % más baratas. Como no alcanzaba el 5/8, ordenó armar las columnas del eje C con 1/2: «son ocho barras igual».",
+      "El supervisor anterior anotó «pendiente certificado» y liberó las columnas. Las barras «S» resistían más de 420 MPa, pero se alargaban la mitad antes de romperse: justo la propiedad que una columna necesita en un sismo.",
+      "La nueva supervisora suspendió la fundida al ver la letra en el relieve. Lo construido debe evaluarse y, probablemente, reforzarse o demolerse. El ahorro del 30 % terminará costando varias veces más.",
+      "La lección: un retraso de material es un riesgo previsible. Se gestiona con planeación, reservas, proveedores alternos certificados y la vía contractual, nunca cambiando el material sin control."
+    ]
+  },
+  "verificationOptions": [
+    {
+      "id": "cumple",
+      "name": "Cumple"
+    },
+    {
+      "id": "no_cumple",
+      "name": "No cumple"
+    },
+    {
+      "id": "requiere",
+      "name": "Requiere verificación adicional"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "V1",
+      "evidence": "E01",
+      "title": "Tipo de acero permitido",
+      "clause": "C.3.5.3.1 y CR3.5.3.1",
+      "ref": "NSR-10, Título C, numeral C.3.5.3.1 y comentario · folio C-45",
+      "requirement": "Las barras corrugadas deben cumplir NTC 2289 (ASTM A706M). El comentario indica que no se permite acero fabricado bajo NTC 248 (ASTM A615M), generalmente marcado con «S».",
+      "data": [
+        [
+          "Marca de las barras de ferretería",
+          "S"
+        ],
+        [
+          "Norma probable",
+          "NTC 248"
+        ],
+        [
+          "Certificado",
+          "No existe"
+        ]
+      ],
+      "question": "¿El acero de la ferretería es un material permitido?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "Barras marcadas «S» sin certificado: no hay ninguna prueba de conformidad con NTC 2289 y la marca indica NTC 248, no permitida. NO CUMPLE."
+    },
+    {
+      "id": "V2",
+      "evidence": "E06",
+      "title": "Certificados de conformidad del acero",
+      "clause": "C.3.5.10.2",
+      "ref": "NSR-10, Título C, numeral C.3.5.10.2 · folio C-51",
+      "requirement": "Los ensayos deben demostrar inequívocamente que el acero cumple la NTC correspondiente; el laboratorio debe certificar la conformidad y las copias deben remitirse al supervisor técnico y al diseñador estructural.",
+      "data": [
+        [
+          "Certificado del proveedor",
+          "No entregado"
+        ],
+        [
+          "Ensayos previos al uso",
+          "No realizados"
+        ],
+        [
+          "Copia al diseñador",
+          "No"
+        ]
+      ],
+      "question": "¿Se cumplió el requisito de certificación antes de usar el acero?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "El acero se instaló sin certificado ni ensayos. NO CUMPLE."
+    },
+    {
+      "id": "V3",
+      "evidence": "E02",
+      "title": "Cuantía mínima de las columnas construidas",
+      "clause": "C.10.9.1",
+      "ref": "NSR-10, Título C, numeral C.10.9.1 · folio C-148",
+      "requirement": "El área de refuerzo longitudinal de elementos a compresión no debe ser menor que 0,01 Ag ni mayor que 0,04 Ag.",
+      "data": [
+        [
+          "Sección",
+          "30 × 40 cm · Ag = 120 000 mm²"
+        ],
+        [
+          "Instalado",
+          "8 N.º 4 · 1 032 mm²"
+        ],
+        [
+          "Mínimo 0,01 Ag",
+          "1 200 mm²"
+        ]
+      ],
+      "question": "¿Las columnas del eje C cumplen la cuantía mínima?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "1 032 mm² < 1 200 mm² (0,86 % < 1 %). NO CUMPLE, independientemente del tipo de acero."
+    },
+    {
+      "id": "V4",
+      "evidence": "E04",
+      "title": "Cuantía de las columnas en el diseño",
+      "clause": "C.10.9.1",
+      "ref": "NSR-10, Título C, numeral C.10.9.1 · folio C-148",
+      "requirement": "El área de refuerzo longitudinal de elementos a compresión no debe ser menor que 0,01 Ag ni mayor que 0,04 Ag.",
+      "data": [
+        [
+          "Especificado",
+          "8 N.º 5 · 1 592 mm²"
+        ],
+        [
+          "Ag",
+          "120 000 mm²"
+        ],
+        [
+          "Cuantía",
+          "1,33 %"
+        ]
+      ],
+      "question": "¿El diseño de las columnas cumple la cuantía?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "1,33 % está entre 1 % y 4 %: el diseño CUMPLE. El problema es la sustitución."
+    },
+    {
+      "id": "V5",
+      "evidence": "E10",
+      "title": "Exigencia de conformidad de materiales por la supervisión",
+      "clause": "I.4.3.5",
+      "ref": "NSR-10, Título I, numeral I.4.3.5 · folio I-17",
+      "requirement": "El supervisor técnico debe exigir al constructor que los materiales cumplan las especificaciones, con ensayos de lotes recientes y certificados de conformidad cuando el Reglamento los exija.",
+      "data": [
+        [
+          "Anotación semana 12",
+          "«Pendiente certificado»"
+        ],
+        [
+          "Acción del supervisor anterior",
+          "Liberó las columnas del eje C"
+        ],
+        [
+          "Comunicación escrita al constructor",
+          "No"
+        ]
+      ],
+      "question": "¿El control de materiales de la supervisión anterior cumplió?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "Anotar «pendiente» y liberar igual no es exigir conformidad. NO CUMPLE."
+    },
+    {
+      "id": "V6",
+      "evidence": "E09",
+      "title": "¿Basta el ensayo de fluencia para aceptar el acero «S»?",
+      "clause": "C.3.5.3.1",
+      "ref": "NSR-10, Título C, numeral C.3.5.3.1 y comentario · folio C-45",
+      "requirement": "Solo se permite acero NTC 2289; el comentario excluye expresamente el acero NTC 248.",
+      "data": [
+        [
+          "fy de las barras S",
+          "455 – 468 MPa"
+        ],
+        [
+          "Alargamiento",
+          "9 – 10 %"
+        ],
+        [
+          "fu / fy",
+          "1,18 – 1,20"
+        ]
+      ],
+      "question": "¿Puede aceptarse el acero «S» porque su fluencia supera 420 MPa?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "No: el Reglamento exige un tipo de acero, no solo una resistencia. Además, sus resultados muestran menor ductilidad. NO CUMPLE."
+    },
+    {
+      "id": "V7",
+      "evidence": "E02",
+      "title": "Decisión sobre las columnas ya fundidas",
+      "clause": "I.2.3.1 (k) (l) · C.20.1.1",
+      "ref": "NSR-10, Título I, numeral I.2.3.1 (folio I-5) y Título C, numeral C.20.1.1 (folio C-351)",
+      "requirement": "El supervisor debe rechazar las partes que no cumplan y ordenar los estudios para evaluar su seguridad; cuando hay dudas sobre la seguridad, se realiza una evaluación de resistencia.",
+      "data": [
+        [
+          "Columnas afectadas",
+          "4 (eje C, piso 1)"
+        ],
+        [
+          "Evaluación de resistencia",
+          "No realizada"
+        ]
+      ],
+      "question": "¿Puede decidirse ya si las columnas se refuerzan o se demuelen?",
+      "answer": "requiere",
+      "partial": {
+        "no_cumple": 0.4
+      },
+      "explanation": "Las columnas no cumplen, pero la solución (reforzar o demoler) depende de la evaluación del diseñador. REQUIERE verificación adicional."
+    }
+  ]
+}

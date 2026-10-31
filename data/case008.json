@@ -1,0 +1,1462 @@
+{
+  "id": "008",
+  "code": "EXP-008",
+  "title": "LA COLUMNA QUE NO BAJA",
+  "category": "Auditoría técnica",
+  "difficulty": "Avanzado",
+  "location": "Edificio «Torre Alameda» (ficticio) · 6 pisos de uso mixto · parqueaderos en piso 1 y vivienda en pisos 2 a 6 · 4 100 m² · zona de amenaza sísmica intermedia",
+  "date": "Auditoría técnica solicitada por la aseguradora · 8 meses después de la entrega",
+  "disclaimer": "Caso ficticio con fines educativos. Todos los nombres, registros, mediciones y resultados de ensayos son DATOS SIMULADOS. Las citas del Reglamento NSR-10 indican numeral y folio del texto oficial; los requisitos se transcriben de forma resumida. Consulte siempre el texto vigente: esta herramienta no reemplaza al ingeniero diseñador, al supervisor técnico ni a la autoridad competente.",
+  "briefing": {
+    "summary": "Una aseguradora contrató una auditoría técnica antes de renovar la póliza de un edificio: en el techo del parqueadero hay fisuras en estrella y en el apartamento 201 las puertas se traban. Su tarea es auditar lo construido contra lo aprobado.",
+    "cover": {
+      "illustration": "slabStar",
+      "caption": "IMAGEN DEL HALLAZGO · LOSA PISO 2 · CARA INFERIOR"
+    },
+    "narrative": [
+      "La administración reportó «grietas en el techo del parqueadero». En el apartamento 201, justo encima, el piso cerámico se levantó y dos puertas ya no cierran. La constructora atribuye todo a «asentamientos normales».",
+      "La aseguradora no quiere opiniones: quiere una AUDITORÍA. Eso significa comparar, punto por punto, lo que aprobó la curaduría, lo que se decidió en obra y lo que realmente se construyó, y dejar trazabilidad de cada hallazgo.",
+      "Tiene acceso al parqueadero, al apartamento 201, al archivo de la constructora, a las actas de comité y a la bitácora de la supervisión técnica. Empiece por mirar hacia arriba."
+    ],
+    "objectives": [
+      {
+        "id": "obj-scene",
+        "text": "Inspeccionar la losa del piso 2 y localizar el origen de las fisuras."
+      },
+      {
+        "id": "obj-evidence",
+        "text": "Recopilar al menos 8 evidencias de campo y documentales."
+      },
+      {
+        "id": "obj-review",
+        "text": "Auditar los planos aprobados, el plano de obra, las actas y la bitácora."
+      },
+      {
+        "id": "obj-norm",
+        "text": "Verificar lo construido frente al NSR-10 (Títulos A, C e I)."
+      },
+      {
+        "id": "obj-hyp",
+        "text": "Evaluar las cinco hipótesis y establecer la trazabilidad del cambio."
+      },
+      {
+        "id": "obj-report",
+        "text": "Emitir el informe de auditoría con hallazgos, responsables de proceso y recomendaciones."
+      }
+    ],
+    "inspectables": [
+      "Cara inferior de la losa del piso 2 (parqueadero)",
+      "Zona de máxima flecha",
+      "Dado de cimentación del eje B-2",
+      "Apartamento 201 (muros divisorios)",
+      "Mesa de auditoría: planos aprobados y actas",
+      "Archivo de la constructora",
+      "Carpeta de la supervisión técnica",
+      "Laboratorio (núcleos)",
+      "Piso del parqueadero"
+    ],
+    "people": [
+      {
+        "name": "Arq. Felipe Arango",
+        "role": "Gerente del proyecto (promotora)"
+      },
+      {
+        "name": "Ing. Natalia Cuervo",
+        "role": "Diseñadora estructural original"
+      },
+      {
+        "name": "Ing. Óscar Medina",
+        "role": "Supervisor técnico de la obra"
+      },
+      {
+        "name": "Lab. Geocontrol (ficticio)",
+        "role": "Extracción y ensayo de núcleos"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "id": "visual",
+      "name": "Inspección visual",
+      "desc": "Observación directa del elemento."
+    },
+    {
+      "id": "linterna",
+      "name": "Linterna",
+      "desc": "Ilumina zonas oscuras del parqueadero."
+    },
+    {
+      "id": "fisurometro",
+      "name": "Fisurómetro",
+      "desc": "Regla con patrones de ancho para medir la abertura de fisuras."
+    },
+    {
+      "id": "nivel",
+      "name": "Nivel láser",
+      "desc": "Proyecta una línea horizontal para medir la flecha de losas y vigas."
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hs-losa",
+      "name": "Losa del piso 2 · cara inferior",
+      "evidence": "E01",
+      "anomaly": true,
+      "requiresTool": "fisurometro",
+      "toolHint": "Las fisuras del techo del parqueadero deben medirse con el fisurómetro.",
+      "description": "Losa nervada de 35 cm del piso 2, vista desde el parqueadero, en el vano entre los ejes A-C y 1-3.",
+      "observation": "Fisuras que irradian desde un punto central, como una estrella, y otras paralelas a los nervios. El punto central queda exactamente bajo el sitio donde, en el piso de arriba, nace una columna.",
+      "toolObservation": "Fisurómetro: 0,6 a 2,0 mm en las fisuras radiales cerca del centro; 0,2 a 0,4 mm en los nervios alejados. Eflorescencia leve en dos fisuras.",
+      "pos3d": [
+        -2.5,
+        2.62,
+        0.9
+      ],
+      "pos2d": [
+        42,
+        77
+      ]
+    },
+    {
+      "id": "hs-flecha",
+      "name": "Zona de máxima flecha",
+      "evidence": "E02",
+      "anomaly": true,
+      "requiresTool": "nivel",
+      "toolHint": "La losa parece «colgada» en el centro del vano. Mida con el nivel láser.",
+      "description": "Centro del vano donde se concentran las fisuras.",
+      "observation": "A simple vista el cielo raso parece curvo.",
+      "toolObservation": "Nivel láser: flecha de 41 mm en el punto bajo la columna que nace arriba, en un vano de 10 m entre columnas existentes (L/244). En el vano gemelo del eje D: 9 mm.",
+      "pos3d": [
+        -1,
+        2.62,
+        -1
+      ],
+      "pos2d": [
+        50,
+        76
+      ]
+    },
+    {
+      "id": "hs-arranque",
+      "name": "Dado de cimentación del eje B-2",
+      "evidence": "E03",
+      "anomaly": true,
+      "requiresTool": "linterna",
+      "toolHint": "El rincón del parqueadero está oscuro. Use la linterna.",
+      "description": "Zona del parqueadero bajo el centro de las fisuras, hoy ocupada por dos celdas de parqueo.",
+      "observation": "Con la linterna se ve, bajo una capa de pintura de demarcación, un dado de cimentación con barras de arranque cortadas a ras del piso. Justo encima, en la losa, no hay columna.",
+      "toolObservation": "",
+      "pos3d": [
+        -2.5,
+        0.3,
+        0
+      ],
+      "pos2d": [
+        44,
+        87
+      ]
+    },
+    {
+      "id": "hs-aprobados",
+      "name": "Planos aprobados (licencia)",
+      "evidence": "E04",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Juego de planos estructurales aprobados con la licencia de construcción, en la mesa de auditoría.",
+      "observation": "La planta de columnas muestra C-B2 continua desde la cimentación hasta la cubierta.",
+      "toolObservation": "",
+      "pos3d": [
+        12.5,
+        1.1,
+        9
+      ],
+      "pos2d": [
+        82,
+        83
+      ]
+    },
+    {
+      "id": "hs-constructora",
+      "name": "Archivo de la constructora",
+      "evidence": "E05",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Contenedor con el archivo de planos de obra de la promotora.",
+      "observation": "Hay una carpeta «Modificaciones de obra» con planos arquitectónicos de ajuste del parqueadero.",
+      "toolObservation": "",
+      "pos3d": [
+        -13.6,
+        1.6,
+        7.3
+      ],
+      "pos2d": [
+        6,
+        78
+      ]
+    },
+    {
+      "id": "hs-actas",
+      "name": "Actas de comité de obra",
+      "evidence": "E06",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Portátil con las actas digitalizadas de los comités semanales.",
+      "observation": "El acta del comité 31 trata «celdas de parqueo adicionales».",
+      "toolObservation": "",
+      "pos3d": [
+        10.6,
+        1.15,
+        9
+      ],
+      "pos2d": [
+        75,
+        83
+      ]
+    },
+    {
+      "id": "hs-supervision",
+      "name": "Bitácora de la supervisión técnica",
+      "evidence": "E07",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Archivo de la supervisión técnica entregado al final de la obra.",
+      "observation": "La bitácora tiene anotaciones manuscritas semanales.",
+      "toolObservation": "",
+      "pos3d": [
+        15.5,
+        1.3,
+        7.15
+      ],
+      "pos2d": [
+        92,
+        80
+      ]
+    },
+    {
+      "id": "hs-muros",
+      "name": "Apartamento 201 · muros divisorios",
+      "evidence": "E08",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Apartamento del piso 2, sobre la zona fisurada.",
+      "observation": "La columna C-B2 nace en el piso del apartamento. Además, varios muros de mampostería de los pisos 2 a 6 están apoyados directamente sobre la losa, fuera de las vigas, siguiendo la misma línea.",
+      "toolObservation": "",
+      "pos3d": [
+        -2.5,
+        4.6,
+        6.1
+      ],
+      "pos2d": [
+        44,
+        67
+      ]
+    },
+    {
+      "id": "hs-lab",
+      "name": "Laboratorio · núcleos de la losa",
+      "evidence": "E09",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Resultados de los núcleos extraídos de la losa del piso 2 durante la auditoría.",
+      "observation": "El técnico entrega el informe de tres núcleos.",
+      "toolObservation": "",
+      "pos3d": [
+        8,
+        0.8,
+        11
+      ],
+      "pos2d": [
+        70,
+        90
+      ]
+    },
+    {
+      "id": "hs-piso",
+      "name": "Piso del parqueadero",
+      "evidence": "E10",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Placa de contrapiso del parqueadero.",
+      "observation": "Fisuras finas en forma de malla en el acabado del piso, en toda el área de parqueo.",
+      "toolObservation": "",
+      "pos3d": [
+        4,
+        0.1,
+        2
+      ],
+      "pos2d": [
+        58,
+        88
+      ]
+    }
+  ],
+  "evidences": [
+    {
+      "id": "E01",
+      "name": "Fisuras en estrella en la losa del piso 2",
+      "type": "Registro fotográfico",
+      "summary": "Mapeo y medición de las fisuras de la cara inferior de la losa.",
+      "doc": {
+        "illustration": "slabStar",
+        "fields": [
+          [
+            "Elemento",
+            "Losa nervada h = 35 cm · vano ejes A-C / 1-3"
+          ],
+          [
+            "Patrón",
+            "Fisuras radiales desde un punto + fisuras paralelas a los nervios"
+          ],
+          [
+            "Centro del patrón",
+            "Bajo el arranque de la columna C-B2 del piso 2"
+          ],
+          [
+            "Abertura máxima",
+            "2,0 mm (centro) · 0,2 mm (bordes)"
+          ],
+          [
+            "Otros vanos del piso 2",
+            "Sin fisuras de este tipo"
+          ]
+        ],
+        "notes": [
+          "Un patrón radial con centro definido indica una carga concentrada en ese punto."
+        ]
+      },
+      "technical": [
+        "Una losa está pensada para cargas repartidas que llegan a vigas y columnas. Una columna que «nace» sobre ella le entrega, en un solo punto, la carga de varios pisos.",
+        "Las fisuras radiales en la cara inferior aparecen cuando la losa se flexiona en todas las direcciones alrededor de un punto cargado."
+      ],
+      "relevance": "Ubica el origen del problema en un punto preciso."
+    },
+    {
+      "id": "E02",
+      "name": "Flecha de la losa",
+      "type": "Observación de campo",
+      "summary": "Medición con nivel láser de la flecha de la losa del piso 2.",
+      "doc": {
+        "illustration": null,
+        "table": {
+          "headers": [
+            "Vano",
+            "Luz entre columnas existentes",
+            "Flecha medida"
+          ],
+          "rows": [
+            [
+              "A-C / 1-3 (bajo C-B2)",
+              "10,0 m",
+              "41 mm"
+            ],
+            [
+              "C-D / 1-3 (gemelo, con columna)",
+              "5,0 m",
+              "9 mm"
+            ]
+          ],
+          "flagRows": [
+            0
+          ]
+        },
+        "notes": [
+          "Al suprimir C-B2, el vano real pasó de 5 m a 10 m."
+        ]
+      },
+      "technical": [
+        "Quitar una columna duplica la luz del vano. La flecha de una losa crece aproximadamente con la cuarta potencia de la luz: el doble de luz puede significar hasta 16 veces más flecha para la misma carga repartida.",
+        "Las puertas que se traban y el enchape levantado en el 201 son consecuencias de esa flecha."
+      ],
+      "relevance": "Cuantifica el efecto y relaciona los daños del apartamento 201."
+    },
+    {
+      "id": "E03",
+      "name": "Dado de cimentación con arranques cortados",
+      "type": "Observación de campo",
+      "summary": "Hallazgo con linterna de la cimentación de la columna C-B2 en el parqueadero.",
+      "doc": {
+        "illustration": "cutStub",
+        "fields": [
+          [
+            "Elemento",
+            "Dado de cimentación eje B-2"
+          ],
+          [
+            "Barras de arranque",
+            "8 N.º 6 cortadas a ras del piso"
+          ],
+          [
+            "Columna sobre el dado",
+            "NO EXISTE"
+          ],
+          [
+            "Uso actual",
+            "2 celdas de parqueo (demarcadas)"
+          ]
+        ],
+        "notes": [
+          "La cimentación se construyó según el plano aprobado: la columna se eliminó DESPUÉS, durante la obra."
+        ]
+      },
+      "technical": [
+        "El dado y los arranques prueban que el diseño aprobado tenía la columna y que se construyó hasta la cimentación.",
+        "La columna C-B2 sí existe en los pisos 2 a 6: la estructura quedó con un elemento vertical discontinuo."
+      ],
+      "relevance": "Evidencia determinante: prueba física de que la columna se suprimió en obra."
+    },
+    {
+      "id": "E04",
+      "name": "Planos estructurales aprobados",
+      "type": "Documento de diseño",
+      "summary": "Planta de columnas y memoria de la licencia de construcción.",
+      "doc": {
+        "illustration": "planCompare",
+        "fields": [
+          [
+            "Columna C-B2",
+            "Continua desde cimentación hasta cubierta"
+          ],
+          [
+            "Carga axial de servicio de C-B2 en piso 1 (memoria)",
+            "≈ 1 050 kN"
+          ],
+          [
+            "Losa piso 2",
+            "Nervada h = 35 cm · vanos de 5 m"
+          ],
+          [
+            "Firma",
+            "Ing. Natalia Cuervo · matrícula vigente"
+          ],
+          [
+            "Revisión",
+            "Aprobada por la curaduría"
+          ]
+        ],
+        "notes": [
+          "El diseño aprobado es regular en altura: no tiene elementos verticales discontinuos."
+        ]
+      },
+      "technical": [
+        "La losa del piso 2 se diseñó para vanos de 5 m y cargas repartidas, no para recibir una columna de cinco pisos."
+      ],
+      "relevance": "Es la línea base de la auditoría: lo aprobado."
+    },
+    {
+      "id": "E05",
+      "name": "Plano arquitectónico de modificación del parqueadero",
+      "type": "Documento de obra",
+      "summary": "Plano de ajuste de celdas de parqueo del archivo de la constructora.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Título",
+            "«Ajuste celdas de parqueo · versión obra»"
+          ],
+          [
+            "Cambio",
+            "Eliminación de la columna C-B2 en piso 1 · +2 celdas"
+          ],
+          [
+            "Firma",
+            "Arquitecto del proyecto"
+          ],
+          [
+            "Firma del diseñador estructural",
+            "NO EXISTE"
+          ],
+          [
+            "Rediseño estructural",
+            "No existe"
+          ],
+          [
+            "Radicación ante la curaduría",
+            "No registra"
+          ]
+        ]
+      },
+      "technical": [
+        "NSR-10, C.1.2.1 (folio C-7): los planos de diseño de toda construcción de concreto estructural deben llevar la firma de un profesional facultado para diseñar e incluir dimensiones y localización de todos los elementos estructurales.",
+        "Un plano arquitectónico no puede modificar un elemento estructural."
+      ],
+      "relevance": "Prueba documental de que el cambio se hizo sin diseño estructural."
+    },
+    {
+      "id": "E06",
+      "name": "Acta del comité de obra n.º 31",
+      "type": "Documento de obra",
+      "summary": "Decisión del comité sobre celdas de parqueo adicionales.",
+      "doc": {
+        "illustration": null,
+        "table": {
+          "headers": [
+            "Tema",
+            "Decisión",
+            "Responsable",
+            "Estado"
+          ],
+          "rows": [
+            [
+              "Celdas de parqueo adicionales (ventas)",
+              "Eliminar columna C-B2 en piso 1",
+              "Gerente del proyecto",
+              "Aprobado"
+            ],
+            [
+              "Consulta a la diseñadora estructural",
+              "«Pendiente»",
+              "Residente",
+              "SIN CERRAR"
+            ],
+            [
+              "Supervisión técnica",
+              "«Se deja observación»",
+              "Supervisor",
+              "—"
+            ]
+          ],
+          "flagRows": [
+            0,
+            1
+          ]
+        },
+        "notes": [
+          "Comentario del gerente: «Dos celdas más se venden en 80 millones. La losa es robusta, eso aguanta»."
+        ]
+      },
+      "technical": [
+        "Una decisión comercial modificó la estructura. La consulta a la diseñadora quedó pendiente y nunca se cerró.",
+        "En una auditoría, la trazabilidad (quién decidió, cuándo, con qué soporte) es tan importante como el hallazgo técnico."
+      ],
+      "relevance": "Establece el origen y el responsable de la decisión."
+    },
+    {
+      "id": "E07",
+      "name": "Bitácora de la supervisión técnica",
+      "type": "Documento de obra",
+      "summary": "Anotaciones del supervisor sobre la columna C-B2.",
+      "doc": {
+        "illustration": null,
+        "table": {
+          "headers": [
+            "Fecha",
+            "Anotación"
+          ],
+          "rows": [
+            [
+              "Semana 18",
+              "«Comité 31 propone eliminar C-B2 en piso 1. Se recomienda consultar a estructural»"
+            ],
+            [
+              "Semana 19",
+              "«Se observa C-B2 no construida en piso 1. Consultar»"
+            ],
+            [
+              "Semana 21",
+              "«Se funde losa piso 2»"
+            ]
+          ],
+          "flagRows": [
+            1,
+            2
+          ]
+        },
+        "notes": [
+          "No hay comunicación escrita al constructor, ni recomendación de suspensión, ni informe a la autoridad competente."
+        ]
+      },
+      "technical": [
+        "NSR-10, I.2.3.1 (folio I-5): la supervisión debe prevenir por escrito al constructor sobre procedimientos inadecuados (i), recomendar la suspensión cuando no se cumplan los planos e informar por escrito a la autoridad competente (j), y rechazar las partes que no cumplan (k).",
+        "El supervisor vio el problema, pero lo registró como una nota y no ejerció sus facultades."
+      ],
+      "relevance": "Muestra que el control detectó el cambio pero no lo detuvo."
+    },
+    {
+      "id": "E08",
+      "name": "Muros divisorios fuera de las vigas",
+      "type": "Observación de campo",
+      "summary": "Ubicación de los muros de mampostería de los pisos 2 a 6 respecto a las vigas.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Muros sobre la losa, fuera de vigas",
+            "Pisos 2 a 6, sobre el eje B"
+          ],
+          [
+            "Carga adicional estimada",
+            "≈ 3,5 kN/m de muro por piso (dato simulado)"
+          ],
+          [
+            "Planos aprobados",
+            "Muros previstos sobre vigas"
+          ],
+          [
+            "Cambio",
+            "Redistribución de apartamentos (sin rediseño)"
+          ]
+        ]
+      },
+      "technical": [
+        "Los muros que se apoyan en la losa lejos de las vigas también son cargas concentradas: suman a la columna suprimida en el mismo vano.",
+        "Por sí solos no explican el patrón radial, pero agravan la flecha."
+      ],
+      "relevance": "Segunda discontinuidad de cargas, contribuyente."
+    },
+    {
+      "id": "E09",
+      "name": "Núcleos de concreto de la losa",
+      "type": "Ensayo de laboratorio",
+      "summary": "Tres núcleos extraídos de la losa del piso 2 lejos de la zona fisurada. DATOS SIMULADOS.",
+      "doc": {
+        "illustration": null,
+        "table": {
+          "headers": [
+            "Núcleo",
+            "Resistencia (MPa)"
+          ],
+          "rows": [
+            [
+              "N-1",
+              "22,8"
+            ],
+            [
+              "N-2",
+              "21,4"
+            ],
+            [
+              "N-3",
+              "23,1"
+            ]
+          ],
+          "flagRows": []
+        },
+        "fields": [
+          [
+            "f'c especificado",
+            "21 MPa"
+          ],
+          [
+            "Promedio de núcleos",
+            "22,4 MPa (≥ 0,85 f'c = 17,9)"
+          ],
+          [
+            "Núcleo más bajo",
+            "21,4 MPa (≥ 0,75 f'c = 15,8)"
+          ]
+        ]
+      },
+      "technical": [
+        "NSR-10, C.5.6.5.4 (folio C-79): el concreto de la zona se considera estructuralmente adecuado si el promedio de tres núcleos es al menos 0,85 f'c y ningún núcleo es menor que 0,75 f'c."
+      ],
+      "relevance": "Permite descartar el material como causa."
+    },
+    {
+      "id": "E10",
+      "name": "Fisuras en el acabado del piso del parqueadero",
+      "type": "Observación de campo",
+      "summary": "Fisuras en malla en la capa de acabado del contrapiso.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Patrón",
+            "Malla irregular, toda el área"
+          ],
+          [
+            "Abertura",
+            "< 0,1 mm"
+          ],
+          [
+            "Relación con la losa del piso 2",
+            "Ninguna (placa sobre terreno)"
+          ]
+        ]
+      },
+      "technical": [
+        "Las fisuras en malla de un acabado suelen deberse a retracción por secado. Se presentan en toda el área y no siguen ningún patrón de carga."
+      ],
+      "relevance": "Elemento observado en el entorno. Evalúe si guarda relación con el problema investigado."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "Asentamiento de la cimentación",
+      "question": "¿Se hundió algún apoyo del edificio?",
+      "arguments": {
+        "for": [
+          {
+            "text": "La constructora atribuye el daño a «asentamientos normales».",
+            "requires": null
+          }
+        ],
+        "against": [
+          {
+            "text": "El patrón radial está centrado en un punto de la losa, no en un apoyo.",
+            "requires": "E01"
+          },
+          {
+            "text": "El dado de B-2 no tiene columna: no puede asentarse lo que no carga.",
+            "requires": "E03"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.3,
+        "contribuyente": 0.1,
+        "principal": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E01",
+          "E03"
+        ]
+      },
+      "explanation": "El patrón de daño no corresponde a un asentamiento. Se DESCARTA."
+    },
+    {
+      "id": "H2",
+      "title": "Concreto de baja resistencia",
+      "question": "¿Es deficiente el concreto de la losa?",
+      "arguments": {
+        "for": [],
+        "against": [
+          {
+            "text": "Los núcleos cumplen el criterio de C.5.6.5.4.",
+            "requires": "E09"
+          },
+          {
+            "text": "Los demás vanos, con el mismo concreto, están sanos.",
+            "requires": "E01"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.3,
+        "principal": 0,
+        "contribuyente": 0.1
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E09"
+        ]
+      },
+      "explanation": "Los núcleos cumplen. Se DESCARTA."
+    },
+    {
+      "id": "H3",
+      "title": "Error del diseño estructural aprobado",
+      "question": "¿Estaba mal el diseño que aprobó la curaduría?",
+      "arguments": {
+        "for": [],
+        "against": [
+          {
+            "text": "El diseño aprobado tiene C-B2 continua y losas con vanos de 5 m.",
+            "requires": "E04"
+          },
+          {
+            "text": "El vano gemelo construido según el diseño funciona bien.",
+            "requires": "E02"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.3,
+        "principal": 0,
+        "contribuyente": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E04",
+          "E02"
+        ]
+      },
+      "explanation": "El diseño aprobado es regular y adecuado; el problema es que no se construyó. Se DESCARTA."
+    },
+    {
+      "id": "H4",
+      "title": "Supresión no diseñada de la columna C-B2",
+      "question": "¿Se eliminó un elemento vertical sin rediseño, dejando una carga puntual sobre la losa?",
+      "arguments": {
+        "for": [
+          {
+            "text": "El dado de cimentación con arranques cortados prueba la supresión en obra.",
+            "requires": "E03"
+          },
+          {
+            "text": "El patrón radial está centrado bajo el arranque de C-B2 en el piso 2.",
+            "requires": "E01"
+          },
+          {
+            "text": "El plano de modificación no tiene firma ni rediseño estructural.",
+            "requires": "E05"
+          },
+          {
+            "text": "El comité aprobó el cambio por razones comerciales.",
+            "requires": "E06"
+          },
+          {
+            "text": "La flecha del vano duplicado es 4,5 veces la del vano gemelo.",
+            "requires": "E02"
+          }
+        ],
+        "against": []
+      },
+      "best": "principal",
+      "partial": {
+        "contribuyente": 0.5,
+        "requiere_info": 0.2,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E03",
+          "E01",
+          "E05",
+          "E06",
+          "E02",
+          "E07"
+        ],
+        "contradict": []
+      },
+      "explanation": "La columna se eliminó en el piso 1 sin diseño: la carga de cinco pisos baja por C-B2 y se entrega como carga puntual a una losa que no fue diseñada para ello. Es la hipótesis PRINCIPAL."
+    },
+    {
+      "id": "H5",
+      "title": "Muros divisorios apoyados fuera de las vigas",
+      "question": "¿Aportan cargas concentradas adicionales los muros de los pisos superiores?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Muros de los pisos 2 a 6 apoyados en la losa, fuera de vigas, sobre el mismo eje.",
+            "requires": "E08"
+          }
+        ],
+        "against": [
+          {
+            "text": "Por sí solos no producen un patrón radial centrado en un punto.",
+            "requires": "E01"
+          }
+        ]
+      },
+      "best": "contribuyente",
+      "partial": {
+        "principal": 0.3,
+        "requiere_info": 0.4,
+        "descartada": 0.1
+      },
+      "links": {
+        "support": [
+          "E08"
+        ],
+        "contradict": []
+      },
+      "explanation": "Agravan la carga sobre el mismo vano, pero no explican el patrón principal. Es CONTRIBUYENTE."
+    }
+  ],
+  "report": {
+    "steps": [
+      {
+        "id": "anomaly",
+        "title": "Hallazgos de la auditoría",
+        "prompt": "¿Qué hallazgos técnicos están respaldados por la inspección?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "a1",
+            "text": "Fisuras radiales de hasta 2 mm en la cara inferior de la losa del piso 2.",
+            "correct": true,
+            "feedback": "Correcto: medidas con fisurómetro."
+          },
+          {
+            "id": "a2",
+            "text": "Flecha de 41 mm en un vano que pasó de 5 a 10 m de luz.",
+            "correct": true,
+            "feedback": "Correcto: medida con nivel láser."
+          },
+          {
+            "id": "a3",
+            "text": "Columna C-B2 suprimida en el piso 1, con su dado de cimentación y arranques cortados.",
+            "correct": true,
+            "feedback": "Correcto: hallazgo con linterna."
+          },
+          {
+            "id": "a4",
+            "text": "Asentamiento diferencial de la cimentación.",
+            "correct": false,
+            "feedback": "Sin evidencia: el patrón no corresponde a un asentamiento."
+          },
+          {
+            "id": "a5",
+            "text": "Fisuras en malla en el piso del parqueadero causadas por la columna.",
+            "correct": false,
+            "feedback": "Incorrecto: son retracción del acabado, en toda el área."
+          }
+        ]
+      },
+      {
+        "id": "concepts",
+        "title": "Síntoma, causa y consecuencia",
+        "prompt": "Clasifique cada enunciado.",
+        "type": "classify",
+        "categories": [
+          {
+            "id": "sintoma",
+            "name": "Síntoma"
+          },
+          {
+            "id": "anomalia",
+            "name": "Anomalía"
+          },
+          {
+            "id": "mecanismo",
+            "name": "Mecanismo de deterioro"
+          },
+          {
+            "id": "directa",
+            "name": "Causa directa"
+          },
+          {
+            "id": "contribuyente",
+            "name": "Causa contribuyente"
+          },
+          {
+            "id": "consecuencia",
+            "name": "Consecuencia"
+          },
+          {
+            "id": "correctiva",
+            "name": "Medida correctiva"
+          }
+        ],
+        "items": [
+          {
+            "id": "c1",
+            "text": "Grietas en estrella en el techo del parqueadero y puertas trabadas en el 201.",
+            "answer": "sintoma",
+            "feedback": "Es lo observable."
+          },
+          {
+            "id": "c2",
+            "text": "Elemento vertical discontinuo: C-B2 existe arriba pero no en el piso 1.",
+            "answer": "anomalia",
+            "feedback": "Es la desviación respecto al diseño aprobado."
+          },
+          {
+            "id": "c3",
+            "text": "La carga de cinco pisos llega como carga puntual a una losa que se flexiona en todas las direcciones.",
+            "answer": "mecanismo",
+            "feedback": "Es el proceso físico."
+          },
+          {
+            "id": "c4",
+            "text": "Eliminar la columna para ganar dos celdas de parqueo, sin rediseño.",
+            "answer": "directa",
+            "feedback": "Es la decisión que produjo la anomalía."
+          },
+          {
+            "id": "c5",
+            "text": "Muros fuera de vigas y una supervisión que no previno por escrito.",
+            "answer": "contribuyente",
+            "feedback": "Agravaron o permitieron el problema."
+          },
+          {
+            "id": "c6",
+            "text": "Riesgo de falla de la losa o de la columna ante un sismo.",
+            "answer": "consecuencia",
+            "feedback": "Es el efecto potencial."
+          },
+          {
+            "id": "c7",
+            "text": "Reconstruir la columna en el piso 1 sobre el dado existente, según diseño.",
+            "answer": "correctiva",
+            "feedback": "Es la medida de corrección."
+          }
+        ]
+      },
+      {
+        "id": "hypothesis",
+        "title": "Hipótesis principal",
+        "prompt": "¿Qué hipótesis explica mejor los hallazgos? Justifique.",
+        "type": "single-hypothesis",
+        "justification": {
+          "minLength": 60,
+          "keywords": [
+            [
+              "columna",
+              "c-b2",
+              "suprim",
+              "elimin"
+            ],
+            [
+              "dado",
+              "arranque",
+              "cimentación"
+            ],
+            [
+              "carga puntual",
+              "concentrada",
+              "radial",
+              "estrella"
+            ],
+            [
+              "discontinu",
+              "irregular",
+              "4a"
+            ],
+            [
+              "acta",
+              "comité",
+              "plano de obra",
+              "modificación",
+              "firma"
+            ],
+            [
+              "supervis",
+              "bitácora"
+            ]
+          ],
+          "hint": "Un buen informe menciona la columna suprimida y el dado con arranques cortados, el patrón radial por carga concentrada, la discontinuidad vertical (irregularidad 4A), la trazabilidad del cambio (acta y plano sin firma) y la actuación de la supervisión."
+        }
+      },
+      {
+        "id": "evidence",
+        "title": "Evidencias de soporte",
+        "prompt": "Seleccione las evidencias que sustentan el informe.",
+        "type": "evidence-select",
+        "weights": {
+          "E01": 1,
+          "E02": 1,
+          "E03": 1,
+          "E04": 1,
+          "E05": 1,
+          "E06": 1,
+          "E07": 1,
+          "E08": 0.6,
+          "E09": 0.4,
+          "E10": -1
+        },
+        "feedback": {
+          "E10": "Las fisuras del acabado del parqueadero son retracción y no tienen relación con la losa del piso 2."
+        }
+      },
+      {
+        "id": "causes",
+        "title": "Causas probables",
+        "prompt": "Seleccione las causas probables.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "k1",
+            "text": "Supresión de la columna C-B2 en el piso 1 sin diseño estructural.",
+            "correct": true,
+            "feedback": "Correcto: causa directa."
+          },
+          {
+            "id": "k2",
+            "text": "Decisión comercial del comité sin cerrar la consulta a la diseñadora.",
+            "correct": true,
+            "feedback": "Correcto: origen de la decisión."
+          },
+          {
+            "id": "k3",
+            "text": "Muros divisorios apoyados en la losa fuera de vigas.",
+            "correct": true,
+            "feedback": "Correcto: contribuyente."
+          },
+          {
+            "id": "k4",
+            "text": "Supervisión que registró el cambio pero no previno por escrito ni informó a la autoridad.",
+            "correct": true,
+            "feedback": "Correcto: falla de control."
+          },
+          {
+            "id": "k5",
+            "text": "Concreto deficiente.",
+            "correct": false,
+            "feedback": "Incorrecto: los núcleos cumplen."
+          },
+          {
+            "id": "k6",
+            "text": "Error del diseño aprobado.",
+            "correct": false,
+            "feedback": "Incorrecto: el diseño aprobado era regular y adecuado."
+          }
+        ]
+      },
+      {
+        "id": "consequences",
+        "title": "Consecuencias potenciales",
+        "prompt": "¿Qué consecuencias tiene lo encontrado?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "q1",
+            "text": "Falla por flexión o punzonamiento de la losa bajo la carga de la columna.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "q2",
+            "text": "Comportamiento sísmico irregular: concentración de daño en el piso 1.",
+            "correct": true,
+            "feedback": "Correcto: la irregularidad 4A penaliza el diseño sísmico."
+          },
+          {
+            "id": "q3",
+            "text": "Daños crecientes en acabados, puertas y muros de los pisos superiores.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "q4",
+            "text": "Ninguna: la losa «es robusta».",
+            "correct": false,
+            "feedback": "Incorrecto: la flecha y las fisuras prueban lo contrario."
+          }
+        ]
+      },
+      {
+        "id": "certainty",
+        "title": "Nivel de certeza",
+        "prompt": "¿Cómo debe presentarse la conclusión de la auditoría?",
+        "type": "single",
+        "options": [
+          {
+            "id": "s1",
+            "text": "Hallazgo comprobado (supresión de la columna) con evaluación de capacidad pendiente.",
+            "correct": true,
+            "feedback": "Correcto: la discontinuidad está probada física y documentalmente; el nivel de riesgo requiere evaluación."
+          },
+          {
+            "id": "s2",
+            "text": "Opinión: no puede probarse sin el testimonio del gerente.",
+            "correct": false,
+            "feedback": "Incorrecto: el dado, el plano y el acta son pruebas objetivas."
+          },
+          {
+            "id": "s3",
+            "text": "Definitivo: el edificio debe demolerse.",
+            "correct": false,
+            "feedback": "Desproporcionado: la columna puede reconstruirse."
+          }
+        ]
+      },
+      {
+        "id": "recommendations",
+        "title": "Recomendaciones de la auditoría",
+        "prompt": "Seleccione las recomendaciones.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "r1",
+            "text": "Apuntalar de inmediato la losa bajo C-B2 y clausurar las dos celdas de parqueo.",
+            "correct": true,
+            "feedback": "Correcto: medida de seguridad inmediata."
+          },
+          {
+            "id": "r2",
+            "text": "Que la diseñadora estructural evalúe la estructura (C.20) y diseñe la reconstrucción de C-B2 sobre el dado existente.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "r3",
+            "text": "Revisar en los planos de toda la obra otros cambios no diseñados (muros, aberturas, columnas).",
+            "correct": true,
+            "feedback": "Correcto: un cambio no controlado sugiere otros."
+          },
+          {
+            "id": "r4",
+            "text": "Informar a la autoridad competente y a la aseguradora con trazabilidad documental.",
+            "correct": true,
+            "feedback": "Correcto: es el propósito de la auditoría."
+          },
+          {
+            "id": "r5",
+            "text": "Inyectar las fisuras y pintar el techo del parqueadero.",
+            "correct": false,
+            "feedback": "Incorrecto: oculta el síntoma sin corregir la causa."
+          },
+          {
+            "id": "r6",
+            "text": "Mantener las celdas de parqueo porque ya se vendieron.",
+            "correct": false,
+            "feedback": "Incorrecto: la seguridad prima sobre el compromiso comercial."
+          }
+        ]
+      },
+      {
+        "id": "prevention",
+        "title": "Medidas preventivas",
+        "prompt": "¿Qué evitaría que se repita en otros proyectos?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "p1",
+            "text": "Procedimiento de control de cambios: todo cambio que afecte la estructura requiere rediseño firmado.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p2",
+            "text": "Que la supervisión prevenga por escrito y recomiende la suspensión ante cambios no diseñados.",
+            "correct": true,
+            "feedback": "Correcto: I.2.3.1 (i) y (j)."
+          },
+          {
+            "id": "p3",
+            "text": "Coordinar planos arquitectónicos y estructurales antes de vender inmuebles.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p4",
+            "text": "Que el comité de obra decida cambios estructurales por mayoría.",
+            "correct": false,
+            "feedback": "Incorrecto: un cambio estructural es una decisión técnica del diseñador."
+          }
+        ]
+      }
+    ]
+  },
+  "scoring": {
+    "keyEvidences": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09"
+    ],
+    "anomalyHotspots": [
+      "hs-losa",
+      "hs-flecha",
+      "hs-arranque"
+    ],
+    "verificationWeight": 0.45,
+    "mustCite": [
+      "E01",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "mainHypothesis": {
+      "H4": 1,
+      "H5": 0.4,
+      "H1": 0,
+      "H2": 0,
+      "H3": 0
+    },
+    "minEvidence": 8,
+    "reviewSet": [
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E09"
+    ],
+    "reviewMin": 5,
+    "mainExplanation": "La hipótesis más consistente es H4 (supresión no diseñada de la columna C-B2), con H5 (muros fuera de vigas) como contribuyente.",
+    "mustCiteWhy": "En una auditoría, cada hallazgo debe estar respaldado por evidencia física o documental trazable.",
+    "distractors": [
+      "E10"
+    ]
+  },
+  "reveal": {
+    "title": "Lo que realmente ocurrió",
+    "paragraphs": [
+      "El diseño aprobado era regular: la columna C-B2 bajaba desde la cubierta hasta su dado de cimentación. La obra construyó el dado y dejó los arranques.",
+      "En el comité 31, el área comercial pidió dos celdas de parqueo más: «se venden en 80 millones». El gerente aprobó eliminar C-B2 en el piso 1 «porque la losa es robusta». La consulta a la diseñadora quedó pendiente para siempre; un arquitecto dibujó el ajuste y nadie lo firmó como diseño estructural.",
+      "El supervisor anotó dos veces «consultar» en su bitácora, pero no previno por escrito, no recomendó suspender ni informó a la autoridad. Se cortaron los arranques, se fundió la losa y C-B2 siguió subiendo desde el piso 2.",
+      "Desde entonces, la carga de cinco pisos llega a un punto de una losa diseñada para vanos de 5 m. La losa se flexiona en estrella, la flecha llegó a 41 mm y los muros mal apoyados de los pisos superiores suman más carga. Las puertas del 201 dejaron de cerrar.",
+      "Una auditoría no busca culpables: busca trazabilidad. Aquí el hallazgo está probado por el concreto (el dado), por el papel (el acta y el plano sin firma) y por la medición (la flecha). La solución técnica es clara: reconstruir la columna, con diseño."
+    ]
+  },
+  "verificationOptions": [
+    {
+      "id": "cumple",
+      "name": "Cumple"
+    },
+    {
+      "id": "no_cumple",
+      "name": "No cumple"
+    },
+    {
+      "id": "requiere",
+      "name": "Requiere verificación adicional"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "V1",
+      "evidence": "E03",
+      "title": "Irregularidad en altura tipo 4A",
+      "clause": "Tabla A.3-7 · tipo 4A",
+      "ref": "NSR-10, Título A, Tabla A.3-7 · folio A-60",
+      "requirement": "La estructura es irregular cuando existen desplazamientos en el alineamiento de elementos verticales del sistema de resistencia sísmica, dentro del mismo plano, mayores que la dimensión horizontal del elemento (φa = 0,8).",
+      "data": [
+        [
+          "Columna C-B2",
+          "Existe en pisos 2 a 6, no en piso 1"
+        ],
+        [
+          "Desplazamiento de la carga",
+          "Hasta columnas a 5 m"
+        ],
+        [
+          "Diseño aprobado",
+          "Regular (sin discontinuidades)"
+        ]
+      ],
+      "question": "¿La estructura construida conserva la regularidad en altura del diseño aprobado?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "La supresión de C-B2 crea una discontinuidad del elemento vertical mucho mayor que su dimensión: la estructura construida es irregular tipo 4A y no corresponde al diseño aprobado. NO CUMPLE."
+    },
+    {
+      "id": "V2",
+      "evidence": "E05",
+      "title": "Elementos que llevan la carga del vertical discontinuo",
+      "clause": "A.3.6.12 (b)",
+      "ref": "NSR-10, Título A, numeral A.3.6.12 · folio A-49",
+      "requirement": "En zonas de amenaza sísmica intermedia y alta, cuando hay elementos verticales discontinuos, debe garantizarse que los elementos (como vigas) que llevan sus fuerzas axiales hasta los elementos verticales que los soportan sean capaces de resistirlas, con fuerzas amplificadas según A.3.6.12 (a).",
+      "data": [
+        [
+          "Elemento que recibe C-B2",
+          "Losa nervada h = 35 cm"
+        ],
+        [
+          "Viga de transferencia",
+          "No existe"
+        ],
+        [
+          "Diseño de la transferencia",
+          "No existe"
+        ]
+      ],
+      "question": "¿Se garantizó la capacidad de los elementos que reciben la columna discontinua?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "No hay viga de transferencia ni diseño alguno; la carga va a una losa no diseñada para ello. NO CUMPLE A.3.6.12 (b)."
+    },
+    {
+      "id": "V3",
+      "evidence": "E05",
+      "title": "Firma del profesional en el plano de modificación",
+      "clause": "C.1.2.1",
+      "ref": "NSR-10, Título C, numeral C.1.2.1 · folio C-7",
+      "requirement": "Los planos de toda construcción de concreto estructural deben llevar la firma o sello de un profesional facultado para diseñar e incluir dimensiones y localización de todos los elementos estructurales.",
+      "data": [
+        [
+          "Plano que elimina C-B2",
+          "Arquitectónico «versión obra»"
+        ],
+        [
+          "Firma del diseñador estructural",
+          "No existe"
+        ]
+      ],
+      "question": "¿El cambio estructural cuenta con planos firmados por un profesional facultado para diseñar?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "El único soporte es un plano arquitectónico sin firma estructural. NO CUMPLE."
+    },
+    {
+      "id": "V4",
+      "evidence": "E07",
+      "title": "Actuación de la supervisión técnica ante el cambio",
+      "clause": "I.2.3.1 (i) (j) (k)",
+      "ref": "NSR-10, Título I, numeral I.2.3.1 · folio I-5",
+      "requirement": "La supervisión debe prevenir por escrito al constructor, recomendar la suspensión e informar a la autoridad competente cuando no se cumplan los planos, y rechazar las partes que no cumplan.",
+      "data": [
+        [
+          "Registro en bitácora",
+          "«Consultar» (dos veces)"
+        ],
+        [
+          "Prevención escrita al constructor",
+          "No"
+        ],
+        [
+          "Recomendación de suspensión / aviso a la autoridad",
+          "No"
+        ]
+      ],
+      "question": "¿La supervisión cumplió sus obligaciones frente a la supresión de C-B2?",
+      "answer": "no_cumple",
+      "partial": {
+        "requiere": 0.2
+      },
+      "explanation": "Detectó el cambio y solo lo anotó. NO CUMPLE: registrar no es controlar."
+    },
+    {
+      "id": "V5",
+      "evidence": "E09",
+      "title": "Resistencia del concreto por núcleos",
+      "clause": "C.5.6.5.4",
+      "ref": "NSR-10, Título C, numeral C.5.6.5.4 · folio C-79",
+      "requirement": "El concreto de la zona es estructuralmente adecuado si el promedio de tres núcleos es al menos 0,85 f'c y ningún núcleo es menor que 0,75 f'c.",
+      "data": [
+        [
+          "Núcleos",
+          "22,8 · 21,4 · 23,1 MPa"
+        ],
+        [
+          "Promedio",
+          "22,4 MPa ≥ 17,9"
+        ],
+        [
+          "Mínimo",
+          "21,4 MPa ≥ 15,8"
+        ]
+      ],
+      "question": "¿El concreto de la losa es estructuralmente adecuado?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "Promedio y mínimo superan los límites: CUMPLE. El material no es la causa."
+    },
+    {
+      "id": "V6",
+      "evidence": "E02",
+      "title": "Seguridad de la losa en su estado actual",
+      "clause": "C.20.1.1",
+      "ref": "NSR-10, Título C, numeral C.20.1.1 · folio C-351",
+      "requirement": "Cuando existan dudas sobre la seguridad de una estructura o elemento, debe realizarse una evaluación de resistencia.",
+      "data": [
+        [
+          "Flecha",
+          "41 mm"
+        ],
+        [
+          "Fisuras",
+          "Hasta 2 mm, radiales"
+        ],
+        [
+          "Evaluación de resistencia",
+          "No realizada"
+        ]
+      ],
+      "question": "¿Puede la auditoría dictaminar el nivel de seguridad sin evaluación de resistencia?",
+      "answer": "requiere",
+      "partial": {
+        "no_cumple": 0.4
+      },
+      "explanation": "La auditoría prueba la causa y justifica apuntalar, pero el nivel de seguridad y la solución exigen la evaluación de resistencia de la diseñadora. REQUIERE verificación adicional."
+    }
+  ]
+}

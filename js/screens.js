@@ -13,9 +13,10 @@ import { themeToggle } from './theme.js';
 import { menuScene, caseThumb, columnCracks } from './illustrations.js';
 import { ILLUSTRATIONS_004 } from './illustrations004.js';
 import { ILLUSTRATIONS_005 } from './illustrations005.js';
+import { ILLUSTRATIONS_678 } from './illustrations678.js';
 
 // Imagen de portada del briefing de cada expediente (data.briefing.cover)
-const COVERS = { ...ILLUSTRATIONS_004, ...ILLUSTRATIONS_005 };
+const COVERS = { ...ILLUSTRATIONS_004, ...ILLUSTRATIONS_005, ...ILLUSTRATIONS_678 };
 
 export const VERSION = 'v0.4';
 

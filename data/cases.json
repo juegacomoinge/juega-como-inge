@@ -41,43 +41,6 @@
       "inDevelopment": false
     },
     {
-      "id": "005",
-      "code": "EXP-005",
-      "title": "LA PARRILLA PISADA",
-      "category": "Proceso constructivo",
-      "specialties": [
-        "estructuras",
-        "materiales"
-      ],
-      "difficulty": "Intermedio",
-      "difficultyLevel": 2,
-      "teaser": "El balcón del 402 se descolgó en un edificio recién entregado. Los otros balcones, idénticos, están bien. El maestro de obra jura que «quedó igualito».",
-      "data": "data/case005.json",
-      "scene": "case005",
-      "requires": null,
-      "inDevelopment": false
-    },
-    {
-      "id": "004",
-      "code": "EXP-004",
-      "title": "CUENTA REGRESIVA",
-      "category": "Evaluación postsísmica",
-      "specialties": [
-        "estructuras"
-      ],
-      "difficulty": "Avanzado",
-      "difficultyLevel": 3,
-      "realtime": true,
-      "teaser": "Tras un sismo moderado, una torre de 8 pisos ocupada cruje desde el sótano. Cada minuto que pase sin actuar la acerca al colapso.",
-      "data": "data/case004.json",
-      "scene": "case004",
-      "requires": {
-        "case": "001",
-        "minScore": 60
-      },
-      "inDevelopment": false
-    },
-    {
       "id": "002",
       "code": "EXP-002",
       "title": "EL TERRENO INESTABLE",
@@ -114,6 +77,92 @@
         "minScore": 60
       },
       "inDevelopment": true
+    },
+    {
+      "id": "004",
+      "code": "EXP-004",
+      "title": "CUENTA REGRESIVA",
+      "category": "Evaluación postsísmica",
+      "specialties": [
+        "estructuras"
+      ],
+      "difficulty": "Avanzado",
+      "difficultyLevel": 3,
+      "realtime": true,
+      "teaser": "Tras un sismo moderado, una torre de 8 pisos ocupada cruje desde el sótano. Cada minuto que pase sin actuar la acerca al colapso.",
+      "data": "data/case004.json",
+      "scene": "case004",
+      "requires": {
+        "case": "001",
+        "minScore": 60
+      },
+      "inDevelopment": false
+    },
+    {
+      "id": "005",
+      "code": "EXP-005",
+      "title": "LA PARRILLA PISADA",
+      "category": "Proceso constructivo",
+      "specialties": [
+        "estructuras",
+        "materiales"
+      ],
+      "difficulty": "Intermedio",
+      "difficultyLevel": 2,
+      "teaser": "El balcón del 402 se descolgó en un edificio recién entregado. Los otros balcones, idénticos, están bien. El maestro de obra jura que «quedó igualito».",
+      "data": "data/case005.json",
+      "scene": "case005",
+      "requires": null,
+      "inDevelopment": false
+    },
+    {
+      "id": "006",
+      "code": "EXP-006",
+      "title": "EL TRASLAPO CORTO",
+      "category": "Planos y ejecución",
+      "specialties": [
+        "estructuras"
+      ],
+      "difficulty": "Intermedio",
+      "difficultyLevel": 2,
+      "teaser": "Una viga sobre el pasaje de un centro comercial se agrieta a mitad de luz. El calculista dice que su diseño está sobrado; el armador, que hizo lo que decía el plano.",
+      "data": "data/case006.json",
+      "scene": "case006",
+      "requires": null,
+      "inDevelopment": false
+    },
+    {
+      "id": "007",
+      "code": "EXP-007",
+      "title": "EL ACERO QUE NO LLEGÓ",
+      "category": "Suministro de materiales",
+      "specialties": [
+        "materiales",
+        "estructuras"
+      ],
+      "difficulty": "Intermedio",
+      "difficultyLevel": 2,
+      "teaser": "Un paro retrasó el acero de un colegio con multa por atraso. En el acopio aparecen barras con otra marca… y algunas ya están dentro de las columnas.",
+      "data": "data/case007.json",
+      "scene": "case007",
+      "requires": null,
+      "inDevelopment": false
+    },
+    {
+      "id": "008",
+      "code": "EXP-008",
+      "title": "LA COLUMNA QUE NO BAJA",
+      "category": "Auditoría técnica",
+      "specialties": [
+        "estructuras"
+      ],
+      "difficulty": "Avanzado",
+      "difficultyLevel": 3,
+      "teaser": "Auditoría para una aseguradora: fisuras en estrella en el techo de un parqueadero y puertas que no cierran en el piso de arriba.",
+      "data": "data/case008.json",
+      "scene": "case008",
+      "requires": null,
+      "inDevelopment": false
     }
   ]
 }
