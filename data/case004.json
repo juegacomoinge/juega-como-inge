@@ -9,6 +9,10 @@
   "disclaimer": "Caso ficticio con fines educativos. El sismo, los registros, las mediciones y las velocidades de deterioro del juego son DATOS SIMULADOS: en una estructura real no existe un «índice de estabilidad» observable ni tiempos de colapso predecibles. Las citas del Reglamento NSR-10 indican numeral y folio del texto oficial y se transcriben de forma resumida. Esta herramienta no reemplaza al ingeniero estructural, al supervisor técnico ni a los organismos de gestión del riesgo.",
   "briefing": {
     "summary": "Dos horas después de un sismo moderado, la administración de la Torre Alameda reporta crujidos en el sótano y fisuras en el piso de la zona de comidas. El centro comercial sigue abierto.",
+    "cover": {
+      "illustration": "shortColumn",
+      "caption": "IMAGEN DEL INCIDENTE · SÓTANO 1 · COLUMNA CORTA"
+    },
     "narrative": [
       "El sismo duró apenas veinte segundos y en la ciudad casi nadie lo sintió con fuerza. En la Torre Alameda, sin embargo, los vigilantes escuchan desde hace una hora crujidos secos en el sótano 1. En la zona de comidas, alguien notó una grieta circular en el piso alrededor de una columna.",
       "La gerencia quiere reabrir por completo esta misma tarde: «fue un temblorcito, el edificio está bien». Hay cerca de 180 personas dentro. El Servicio Geológico (simulado) anuncia réplicas en las próximas horas.",

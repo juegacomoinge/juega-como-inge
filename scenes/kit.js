@@ -110,6 +110,74 @@ export function signTex(lines, { bg = '#ffc21a', fg = '#111', w = 512, h = 256, 
 }
 
 /**
+ * Capa de inspección para escenas construidas con baseScene:
+ * marcadores HTML proyectados, selección por clic sobre geometría y enfoque.
+ * Devuelve la API que espera la pantalla de investigación.
+ */
+export function inspectionLayer(K, { container, hotspots = [], isFound = () => false, onSelect = () => {} }) {
+  const { THREE, camera, controls, renderer, flyTo } = K;
+  const pickables = [];
+  const layer = document.createElement('div');
+  layer.className = 'scene-markers';
+  container.append(layer);
+  const markers = hotspots.map(hs => {
+    const el = document.createElement('button');
+    el.type = 'button'; el.className = 'marker';
+    el.setAttribute('aria-label', 'Inspeccionar: ' + hs.name);
+    el.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"></svg><span class="lbl">${hs.name}</span>`;
+    el.addEventListener('click', (e) => { e.stopPropagation(); focus(hs.id); onSelect(hs.id); });
+    layer.append(el);
+    return { hs, el, pos: new THREE.Vector3(...hs.pos3d) };
+  });
+  function refresh() {
+    markers.forEach(m => {
+      const f = isFound(m.hs.id);
+      m.el.classList.toggle('found', f);
+      m.el.querySelector('svg').innerHTML = f ? '<path d="M5 12.5l4.5 4.5L19 7.5"/>' : '<circle cx="11" cy="11" r="6"/><path d="M16 16l5 5"/>';
+    });
+  }
+  refresh();
+  const v = new THREE.Vector3();
+  K.onFrame(() => {
+    const w = container.clientWidth || 800, hh = container.clientHeight || 500;
+    markers.forEach(m => {
+      v.copy(m.pos).project(camera);
+      const x = (v.x * .5 + .5) * w, y = (-v.y * .5 + .5) * hh;
+      m.el.classList.toggle('hidden', v.z > 1 || x < -20 || y < -20 || x > w + 20 || y > hh + 20);
+      m.el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+    });
+  });
+  const ray = new THREE.Raycaster(), ptr = new THREE.Vector2();
+  let downAt = null;
+  const onDown = (e) => { downAt = [e.clientX, e.clientY]; };
+  const onUp = (e) => {
+    if (!downAt || Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) > 5) return;
+    const r = renderer.domElement.getBoundingClientRect();
+    ptr.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+    ray.setFromCamera(ptr, camera);
+    const hit = ray.intersectObjects(pickables, false)[0];
+    if (hit) { focus(hit.object.userData.hotspot); onSelect(hit.object.userData.hotspot); }
+  };
+  renderer.domElement.addEventListener('pointerdown', onDown);
+  renderer.domElement.addEventListener('pointerup', onUp);
+  function focus(id, dist = 6) {
+    const m = markers.find(x => x.hs.id === id); if (!m) return;
+    const dir = camera.position.clone().sub(controls.target).normalize();
+    const p = m.pos.clone().add(dir.multiplyScalar(m.hs.focusDist || dist));
+    p.y = Math.max(p.y, m.pos.y + 1);
+    flyTo(p.toArray(), m.pos.toArray(), 900);
+  }
+  /** Marca una malla como seleccionable para un punto de inspección */
+  const pick = (mesh, id) => { mesh.traverse(o => { if (o.isMesh) { o.userData.hotspot = id; pickables.push(o); } }); return mesh; };
+  function dispose() {
+    renderer.domElement.removeEventListener('pointerdown', onDown);
+    renderer.domElement.removeEventListener('pointerup', onUp);
+    layer.remove();
+  }
+  return { focus, refresh, pick, dispose };
+}
+
+/**
  * Escena base para modelos sin puntos de inspección (visor y modo historia).
  * opts: { home:{pos,target}, env:{day,night}, themes:{day,night}, maxDist, fogDensity }
  * Devuelve helpers de construcción, un registro de animaciones y la API común.

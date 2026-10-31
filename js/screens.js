@@ -11,8 +11,13 @@ import { loadRegistry, loadCase, caseStatus, objectives, caseProgress } from './
 import { topbar } from './layout.js';
 import { themeToggle } from './theme.js';
 import { menuScene, caseThumb, columnCracks } from './illustrations.js';
+import { ILLUSTRATIONS_004 } from './illustrations004.js';
+import { ILLUSTRATIONS_005 } from './illustrations005.js';
 
-export const VERSION = 'v0.3';
+// Imagen de portada del briefing de cada expediente (data.briefing.cover)
+const COVERS = { ...ILLUSTRATIONS_004, ...ILLUSTRATIONS_005 };
+
+export const VERSION = 'v0.4';
 
 /* =========================================================
    PANTALLA 1 · MENÚ PRINCIPAL
@@ -315,8 +320,9 @@ export async function briefingScreen(id) {
         h('p', { class: 'muted', style: { fontSize: '.8rem', marginTop: '1.4rem', marginBottom: 0 } }, data.disclaimer)),
 
       h('aside', { class: 'brief-side' },
-        h('figure', { class: 'photo-frame rise', style: { margin: 0, animationDelay: '.15s' } }, raw(columnCracks({ annotate: false })),
-          h('figcaption', { class: 'cap' }, 'IMAGEN DEL INCIDENTE · COLUMNA C-B2 · NIVEL 1')),
+        h('figure', { class: 'photo-frame rise', style: { margin: 0, animationDelay: '.15s' } },
+          raw(COVERS[data.briefing.cover?.illustration] ? COVERS[data.briefing.cover.illustration]() : columnCracks({ annotate: false })),
+          h('figcaption', { class: 'cap' }, data.briefing.cover?.caption || 'IMAGEN DEL INCIDENTE · COLUMNA C-B2 · NIVEL 1')),
         h('section', { class: 'panel rise', style: { animationDelay: '.25s' } },
           h('div', { class: 'panel-head' }, h('h3', {}, 'Objetivos de investigación')),
           h('div', { class: 'panel-body' }, h('ul', { class: 'check-list' },

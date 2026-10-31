@@ -1,4 +1,4 @@
-# OBRA · Expedientes Ocultos — v0.3
+# OBRA · Expedientes Ocultos — v0.4
 
 Videojuego web educativo de investigación forense de anomalías en obras civiles.
 *Cada estructura cuenta una historia. Descubre qué salió mal.*
@@ -48,13 +48,13 @@ js/
   story.js            Modo historia «72 horas»
 scenes/
   kit.js              Texturas fotográficas, panoramas, escena base, rayos X
-  case001.js / case004.js   Escenas 3D de los expedientes jugables
+  case001.js / case004.js / case005.js   Escenas 3D de los expedientes jugables
   case002.js / case003.js   Modelos preliminares (expedientes en desarrollo)
   story.js            Refugio modular que se construye por etapas
   fallback2d.js       Vista 2D equivalente
 data/
   cases.json          Registro de expedientes, requisitos de desbloqueo, especialidades
-  case001.json / case004.json   Contenido de los expedientes
+  case001.json / case004.json / case005.json   Contenido de los expedientes
   story.json          Guion, fichas técnicas y decisiones del modo historia
 assets/textures/      Texturas y panoramas CC0 (Poly Haven) · ver assets/CREDITOS.md
 ```
@@ -67,6 +67,15 @@ La pestaña **Normativa** presenta 11 requisitos del Reglamento NSR-10 vinculado
 
 - **Inventario** (botón en la barra del expediente o tecla **I**): búsqueda y consulta de cualquier evidencia en ventana flotante, sin salir de la sección actual.
 - **Ver evidencia** desde: la ventana de inspección (*Registrar y ver*), la notificación de registro, las fichas del tablero de hipótesis, las referencias de los argumentos, los chips de relación, el paso de evidencias del informe y cada verificación normativa.
+
+## EXP-005 · La parrilla pisada (disponible desde el inicio)
+
+El balcón en voladizo del apartamento 402 de un edificio recién entregado se descolgó (flecha de 38 mm y fisura superior en el empotramiento), mientras los balcones idénticos de los otros pisos están bien. La investigación revela un mal procedimiento constructivo del maestro de obra: fundir sin silletas, «levantar la malla con el gancho» y dejar que obreros y carretillas pisaran la parrilla superior, lo que bajó el acero de 40 a 85 mm de profundidad. Se suma el retiro de puntales a los 7 días y una lista de chequeo de la supervisión sin firmar.
+
+- Herramientas nuevas: **nivel láser** (flecha) y **pachómetro** (posición del acero).
+- Evidencias con entrevista al maestro, fotos del chat de obra y un balcón «gemelo» de control (502).
+- Verificaciones NSR-10: C.7.5.1 y CR7.5.1, C.7.5.2.1, Tabla C.9.5(a), C.7.7.1, C.5.6.3.3, Tabla B.4.2.1-1, C.6.2.2.1, C.1.3.2 y Tabla I.4.3-2, Capítulo C.20.
+- Lección: la decisión fue del maestro, pero el error pasó por un sistema de control que no funcionó.
 
 ## EXP-004 · Cuenta regresiva (misión en tiempo real)
 
@@ -93,7 +102,7 @@ Cada capítulo tiene diálogo, una ficha técnica con el proceso constructivo, c
 
 ## Visor de modelos 3D
 
-`#/modelos`: acceso libre a los cinco modelos (EXP-001, EXP-004, EXP-002 y EXP-003 preliminares, y el refugio de la historia), sin importar desbloqueos. Tiene rotación automática, **rayos X**, puntos de inspección opcionales en los expedientes jugables, control de etapas de obra en el refugio y captura PNG. Es de solo lectura y no altera el progreso.
+`#/modelos`: acceso libre a los seis modelos (EXP-001, EXP-005, EXP-004, EXP-002 y EXP-003 preliminares, y el refugio de la historia), sin importar desbloqueos. Tiene rotación automática, **rayos X**, puntos de inspección opcionales en los expedientes jugables, control de etapas de obra en el refugio y captura PNG. Es de solo lectura y no altera el progreso.
 
 ## Tema día / noche y estilo «terminal de campo»
 

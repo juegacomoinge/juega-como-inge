@@ -11,9 +11,10 @@ import { store } from './storage.js';
 import { go } from './navigation.js';
 import { ILLUSTRATIONS as ILL_BASE } from './illustrations.js';
 import { ILLUSTRATIONS_004 } from './illustrations004.js';
+import { ILLUSTRATIONS_005 } from './illustrations005.js';
 
 // Registro unificado de ilustraciones de todos los expedientes
-const ILLUSTRATIONS = { ...ILL_BASE, ...ILLUSTRATIONS_004 };
+const ILLUSTRATIONS = { ...ILL_BASE, ...ILLUSTRATIONS_004, ...ILLUSTRATIONS_005 };
 
 const TYPE_ICON = { 'Registro fotográfico': 'camera', 'Documento de obra': 'doc', 'Documento de diseño': 'doc', 'Ensayo de laboratorio': 'flask', 'Observación de campo': 'eye', 'Documento técnico': 'report', 'Entrevista': 'user' };
 export const typeIcon = (t) => TYPE_ICON[t] || 'doc';

@@ -41,6 +41,23 @@
       "inDevelopment": false
     },
     {
+      "id": "005",
+      "code": "EXP-005",
+      "title": "LA PARRILLA PISADA",
+      "category": "Proceso constructivo",
+      "specialties": [
+        "estructuras",
+        "materiales"
+      ],
+      "difficulty": "Intermedio",
+      "difficultyLevel": 2,
+      "teaser": "El balcón del 402 se descolgó en un edificio recién entregado. Los otros balcones, idénticos, están bien. El maestro de obra jura que «quedó igualito».",
+      "data": "data/case005.json",
+      "scene": "case005",
+      "requires": null,
+      "inDevelopment": false
+    },
+    {
       "id": "004",
       "code": "EXP-004",
       "title": "CUENTA REGRESIVA",

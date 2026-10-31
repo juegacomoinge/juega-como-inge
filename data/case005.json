@@ -1,0 +1,1998 @@
+{
+  "id": "005",
+  "code": "EXP-005",
+  "title": "LA PARRILLA PISADA",
+  "category": "Proceso constructivo",
+  "difficulty": "Intermedio",
+  "location": "Edificio residencial «Balcones del Río» (ficticio) · 5 pisos en concreto reforzado · 3 400 m² · entregado hace 4 meses",
+  "date": "Día +130 desde la fundida de la losa del piso 4",
+  "disclaimer": "Caso ficticio con fines educativos. Todos los nombres, registros, mediciones y resultados de ensayos son DATOS SIMULADOS. Las citas del Reglamento NSR-10 indican numeral y folio del texto oficial; los requisitos se transcriben de forma resumida. Consulte siempre el texto vigente: esta herramienta no reemplaza al ingeniero diseñador, al supervisor técnico ni a la autoridad competente.",
+  "briefing": {
+    "summary": "El balcón del apartamento 402 de un edificio recién entregado «se ve caído»: su punta bajó, apareció una fisura a lo largo del muro y el agua de lluvia gotea sobre el balcón del 302. Los demás balcones, del mismo diseño, están bien.",
+    "cover": {
+      "illustration": "balconyCrack",
+      "caption": "IMAGEN DEL INCIDENTE · BALCÓN 402 · EMPOTRAMIENTO"
+    },
+    "narrative": [
+      "La propietaria del 402 lo notó al barrer: el agua ya no corre hacia el sifón, se empoza contra la baranda. Días después, una línea fina atravesó el enchape justo donde el balcón sale del edificio, y el vecino del 302 encontró manchas blancas y goteo en su techo.",
+      "La constructora envió a su equipo de posventa. El ingeniero residente que llevó la obra ya no trabaja con la empresa, pero el maestro de obra, don Rubén Cárdenas, sigue en el proyecto vecino. «Ese balcón quedó igualito a los otros», asegura.",
+      "La administración del edificio cerró el balcón con cinta y pidió un dictamen independiente: ¿por qué solo este balcón? ¿Es seguro? ¿Quién se equivocó y cómo se evita en la próxima obra? El expediente es suyo."
+    ],
+    "objectives": [
+      {
+        "id": "obj-scene",
+        "text": "Inspeccionar el balcón y su entorno, y medir las anomalías con las herramientas adecuadas."
+      },
+      {
+        "id": "obj-evidence",
+        "text": "Recopilar al menos 8 evidencias de campo, documentales y testimoniales."
+      },
+      {
+        "id": "obj-review",
+        "text": "Revisar los documentos de obra, la entrevista al maestro y las fotos del día de la fundida."
+      },
+      {
+        "id": "obj-norm",
+        "text": "Verificar lo ejecutado frente a los requisitos del NSR-10."
+      },
+      {
+        "id": "obj-hyp",
+        "text": "Evaluar las cinco hipótesis y relacionarlas con evidencias."
+      },
+      {
+        "id": "obj-report",
+        "text": "Emitir un informe técnico con diagnóstico, responsabilidades de proceso y recomendaciones."
+      }
+    ],
+    "inspectables": [
+      "Balcón del apartamento 402 (empotramiento, punta y losa)",
+      "Balcón del apartamento 502 (mismo diseño)",
+      "Contenedor de la obra vecina (maestro de obra)",
+      "Mesa de posventa: planos y archivo fotográfico",
+      "Caseta de portería: carpeta de la supervisión técnica",
+      "Puntales y registro de desencofrado",
+      "Carro del laboratorio",
+      "Muro de la escalera"
+    ],
+    "people": [
+      {
+        "name": "Rubén Cárdenas («don Rubén»)",
+        "role": "Maestro de obra · 28 años de oficio"
+      },
+      {
+        "name": "Ing. Paola Ríos",
+        "role": "Posventa de la constructora"
+      },
+      {
+        "name": "Ing. Mauricio León",
+        "role": "Supervisor técnico (itinerante) de la obra"
+      },
+      {
+        "name": "Yeison Ortiz",
+        "role": "Ayudante de obra el día de la fundida"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "id": "visual",
+      "name": "Inspección visual",
+      "desc": "Observación directa del elemento."
+    },
+    {
+      "id": "fisurometro",
+      "name": "Fisurómetro",
+      "desc": "Regla con patrones de ancho para medir la abertura de fisuras."
+    },
+    {
+      "id": "nivel",
+      "name": "Nivel láser",
+      "desc": "Proyecta una línea horizontal para medir cuánto ha bajado un elemento (flecha)."
+    },
+    {
+      "id": "pachometro",
+      "name": "Pachómetro",
+      "desc": "Detector de armaduras (ferroscan): localiza las barras y mide a qué profundidad están sin romper el concreto."
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hs-empotramiento",
+      "name": "Empotramiento del balcón 402",
+      "evidence": "E01",
+      "anomaly": true,
+      "requiresTool": "fisurometro",
+      "toolHint": "Hay una fisura a lo largo del borde del balcón. Para registrarla debe medir su abertura con el fisurómetro.",
+      "description": "Línea donde la losa del balcón sale de la fachada (borde de la viga). Es la sección más exigida de un voladizo.",
+      "observation": "Una fisura recta y continua recorre la cara SUPERIOR del balcón, paralela a la fachada, a unos 5 cm del muro. Atraviesa el enchape en los 3,60 m de ancho. Por debajo, en la cara inferior, hay manchas blancas (eflorescencias) y rastros de goteo.",
+      "toolObservation": "Medición con fisurómetro: abertura de 0,8 a 1,2 mm en la cara superior. En la cara inferior no hay fisuras de flexión visibles. El patrón corresponde a tracción en la cara superior del empotramiento.",
+      "pos3d": [
+        2.4,
+        8.16,
+        0.1
+      ],
+      "pos2d": [
+        59.2,
+        51
+      ]
+    },
+    {
+      "id": "hs-punta",
+      "name": "Punta del balcón 402",
+      "evidence": "E02",
+      "anomaly": true,
+      "requiresTool": "nivel",
+      "toolHint": "A simple vista el balcón «se ve caído», pero hay que cuantificarlo. Use el nivel láser.",
+      "description": "Borde libre del voladizo, con la baranda metálica y el gotero.",
+      "observation": "La baranda se ve ligeramente inclinada hacia afuera y el agua se empoza contra el borde en lugar de correr al sifón.",
+      "toolObservation": "Con el nivel láser apoyado en la fachada: la punta está 38 mm por debajo del nivel del empotramiento, en un voladizo de 1,50 m. En el balcón 502, medido igual, la diferencia es de 6 mm.",
+      "pos3d": [
+        2.6,
+        7.9,
+        1.55
+      ],
+      "pos2d": [
+        63.6,
+        48
+      ]
+    },
+    {
+      "id": "hs-scan",
+      "name": "Losa del balcón 402 (escaneo)",
+      "evidence": "E03",
+      "anomaly": true,
+      "requiresTool": "pachometro",
+      "toolHint": "El acero no se ve: está dentro del concreto. Use el pachómetro para saber dónde quedó.",
+      "description": "Losa maciza del balcón, de 150 mm de espesor según planos, con enchape cerámico encima.",
+      "observation": "La superficie no muestra a simple vista nada distinto a la fisura del borde.",
+      "toolObservation": "El pachómetro detecta las barras superiores N.º 4 cada 15 cm, pero a una profundidad de 78 a 92 mm desde la cara superior del concreto (promedio 85 mm). El plano especifica 40 mm. La parrilla superior quedó casi en la mitad de la losa.",
+      "pos3d": [
+        3.7,
+        8.16,
+        0.8
+      ],
+      "pos2d": [
+        60.6,
+        45.5
+      ]
+    },
+    {
+      "id": "hs-502",
+      "name": "Balcón del apartamento 502",
+      "evidence": "E04",
+      "anomaly": false,
+      "requiresTool": "pachometro",
+      "toolHint": "Para comparar con el 402 necesita medir el refuerzo de este balcón con el pachómetro.",
+      "description": "Balcón idéntico al 402 en el piso de arriba, del mismo plano, fundido otro día.",
+      "observation": "Sin fisuras en el empotramiento. El agua corre normalmente hacia el sifón.",
+      "toolObservation": "Pachómetro: barras superiores N.º 4 cada 15 cm a 40–46 mm de profundidad. Flecha medida con nivel: 6 mm. Este balcón se construyó con silletas («panelas»).",
+      "pos3d": [
+        4.6,
+        10.9,
+        0.8
+      ],
+      "pos2d": [
+        61.5,
+        33.5
+      ]
+    },
+    {
+      "id": "hs-maestro",
+      "name": "Contenedor de la obra vecina",
+      "evidence": "E05",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Contenedor-oficina del proyecto vecino de la misma constructora, donde trabaja ahora el maestro de obra.",
+      "observation": "Don Rubén Cárdenas accede a conversar. Se muestra tranquilo y orgulloso de su trabajo, pero recuerda bien el día de la fundida del piso 4.",
+      "toolObservation": "",
+      "pos3d": [
+        -13,
+        1.6,
+        7
+      ],
+      "pos2d": [
+        9,
+        72
+      ]
+    },
+    {
+      "id": "hs-chat",
+      "name": "Archivo fotográfico de la obra",
+      "evidence": "E06",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Portátil de posventa con el respaldo del chat de obra y las fotos tomadas por el personal durante la construcción.",
+      "observation": "Hay una carpeta con fecha de la fundida de la losa del piso 4. El ayudante Yeison Ortiz subió varias fotos y un video corto al grupo de la obra ese día.",
+      "toolObservation": "",
+      "pos3d": [
+        -6.5,
+        1.15,
+        9
+      ],
+      "pos2d": [
+        23,
+        80
+      ]
+    },
+    {
+      "id": "hs-plans",
+      "name": "Planos estructurales",
+      "evidence": "E07",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Juego de planos aprobados del edificio, en la mesa de posventa.",
+      "observation": "La plancha de losas incluye el detalle del balcón tipo, usado en los pisos 2 a 5, con su nota de construcción resaltada.",
+      "toolObservation": "",
+      "pos3d": [
+        -8.6,
+        1.15,
+        9
+      ],
+      "pos2d": [
+        16.5,
+        80
+      ]
+    },
+    {
+      "id": "hs-supervision",
+      "name": "Carpeta de la supervisión técnica",
+      "evidence": "E08",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Archivo de la supervisión técnica entregado a la administración junto con el edificio.",
+      "observation": "Contiene las listas de chequeo previas a cada fundida. La del piso 4 es distinta a las demás: tiene menos firmas y una anotación a mano.",
+      "toolObservation": "",
+      "pos3d": [
+        11,
+        1.3,
+        7
+      ],
+      "pos2d": [
+        90,
+        75
+      ]
+    },
+    {
+      "id": "hs-puntales",
+      "name": "Puntales y registro de desencofrado",
+      "evidence": "E09",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Puntales metálicos traídos por posventa para apuntalar el balcón, con la bitácora de desencofrado de la obra.",
+      "observation": "La bitácora registra cuándo se retiraron los puntales de cada losa y de los balcones.",
+      "toolObservation": "",
+      "pos3d": [
+        -11,
+        0.7,
+        2.5
+      ],
+      "pos2d": [
+        27,
+        87
+      ]
+    },
+    {
+      "id": "hs-lab",
+      "name": "Carro del laboratorio",
+      "evidence": "E10",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Archivo del laboratorio de concretos que atendió la obra.",
+      "observation": "El técnico entrega los resultados de los cilindros de la losa del piso 4, incluidos los de 7 y 28 días.",
+      "toolObservation": "",
+      "pos3d": [
+        8,
+        0.8,
+        10
+      ],
+      "pos2d": [
+        78,
+        84
+      ]
+    },
+    {
+      "id": "hs-macetas",
+      "name": "Materas sobre el balcón 402",
+      "evidence": "E11",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Materas con plantas colocadas por la propietaria.",
+      "observation": "Hay cuatro materas medianas contra la baranda. La administración sugiere que «el peso de las materas dobló el balcón».",
+      "toolObservation": "",
+      "pos3d": [
+        5.5,
+        8.45,
+        1.2
+      ],
+      "pos2d": [
+        62.8,
+        44
+      ]
+    },
+    {
+      "id": "hs-escalera",
+      "name": "Muro de la escalera",
+      "evidence": "E12",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Muro de mampostería no estructural del punto fijo, en la fachada lateral.",
+      "observation": "El pañete tiene fisuras finas en forma de malla en el tramo del piso 1 al 2.",
+      "toolObservation": "",
+      "pos3d": [
+        -8.06,
+        2.4,
+        -5
+      ],
+      "pos2d": [
+        40,
+        70
+      ]
+    }
+  ],
+  "evidences": [
+    {
+      "id": "E01",
+      "name": "Fisura en el empotramiento del balcón 402",
+      "type": "Registro fotográfico",
+      "summary": "Fotografías y medición de la fisura superior en el arranque del voladizo, y de las eflorescencias en su cara inferior.",
+      "doc": {
+        "illustration": "balconyCrack",
+        "fields": [
+          [
+            "Elemento",
+            "Losa en voladizo · balcón 402 · L = 1,50 m · ancho 3,60 m"
+          ],
+          [
+            "Ubicación de la fisura",
+            "Cara SUPERIOR, paralela a la fachada, a ≈ 5 cm del muro"
+          ],
+          [
+            "Longitud",
+            "Continua en los 3,60 m de ancho"
+          ],
+          [
+            "Abertura medida",
+            "0,8 – 1,2 mm (fisurómetro)"
+          ],
+          [
+            "Cara inferior",
+            "Sin fisuras de flexión · eflorescencias y goteo"
+          ],
+          [
+            "Otros balcones (pisos 2, 3 y 5)",
+            "Sin fisura en el empotramiento"
+          ]
+        ],
+        "notes": [
+          "La propietaria reporta que el agua de lluvia se filtra por la fisura y gotea sobre el balcón del 302.",
+          "Las eflorescencias (sales blancas) indican que el agua atraviesa la losa."
+        ]
+      },
+      "technical": [
+        "Un voladizo trabaja «al revés» que una losa apoyada: el momento máximo está en el empotramiento y tracciona la cara SUPERIOR. Por eso su refuerzo principal va ARRIBA, y por eso la fisura aparece arriba, junto al muro.",
+        "Una fisura superior ancha y continua en el empotramiento indica que el acero superior está trabajando con poca eficiencia: o hay poco acero, o está mal ubicado, o la carga es excesiva.",
+        "El agua que entra por la fisura llega directamente al acero de refuerzo: en un elemento exterior esto acelera la corrosión.",
+        "El NSR-10 no fija un ancho máximo de fisura para aceptar o rechazar un elemento construido; el diagnóstico exige encontrar la causa y evaluar la capacidad."
+      ],
+      "relevance": "Documenta el síntoma principal y su ubicación. La posición de la fisura (cara superior) orienta hacia el refuerzo superior."
+    },
+    {
+      "id": "E02",
+      "name": "Medición de la flecha del voladizo",
+      "type": "Observación de campo",
+      "summary": "Medición con nivel láser del descenso de la punta del balcón 402, comparada con el balcón 502.",
+      "doc": {
+        "illustration": "deflection",
+        "table": {
+          "headers": [
+            "Balcón",
+            "Voladizo",
+            "Flecha en la punta",
+            "Relación flecha / L"
+          ],
+          "rows": [
+            [
+              "402",
+              "1,50 m",
+              "38 mm",
+              "≈ 1/39"
+            ],
+            [
+              "502",
+              "1,50 m",
+              "6 mm",
+              "≈ 1/250"
+            ],
+            [
+              "302",
+              "1,50 m",
+              "7 mm",
+              "≈ 1/214"
+            ],
+            [
+              "202",
+              "1,50 m",
+              "5 mm",
+              "≈ 1/300"
+            ]
+          ],
+          "flagRows": [
+            0
+          ]
+        },
+        "fields": [
+          [
+            "Método",
+            "Nivel láser apoyado en la fachada · lectura en la punta"
+          ],
+          [
+            "Pendiente de diseño del piso hacia el sifón",
+            "1 % (15 mm hacia afuera)"
+          ],
+          [
+            "Efecto observado",
+            "El agua se empoza contra la baranda del 402"
+          ]
+        ],
+        "notes": [
+          "El balcón 402 tiene una flecha entre 5 y 7 veces mayor que la de los balcones idénticos de los otros pisos."
+        ]
+      },
+      "technical": [
+        "La flecha es cuánto baja un elemento al cargarse. En concreto aumenta con el tiempo (flujo plástico), sobre todo si el elemento se cargó cuando el concreto era joven.",
+        "La rigidez de una losa depende mucho de la altura efectiva d (distancia de la cara comprimida al acero de tracción). Si el acero superior queda más abajo, d disminuye y el voladizo se vuelve mucho más flexible.",
+        "Comparar con elementos «gemelos» (mismo diseño, mismos materiales) es una técnica forense poderosa: aísla la variable que cambió."
+      ],
+      "relevance": "Cuantifica la anomalía y demuestra que el problema es exclusivo del balcón 402."
+    },
+    {
+      "id": "E03",
+      "name": "Escaneo de refuerzo del balcón 402",
+      "type": "Ensayo de laboratorio",
+      "summary": "Ubicación del acero superior con pachómetro (detector de armaduras) en la losa del balcón 402. DATOS SIMULADOS.",
+      "doc": {
+        "illustration": "coverScan",
+        "table": {
+          "headers": [
+            "Línea de escaneo",
+            "Distancia al muro",
+            "Barras detectadas",
+            "Separación",
+            "Profundidad (recubrimiento)"
+          ],
+          "rows": [
+            [
+              "L-1",
+              "0,10 m",
+              "N.º 4 · 24 barras",
+              "15 cm",
+              "84 – 92 mm"
+            ],
+            [
+              "L-2",
+              "0,50 m",
+              "N.º 4 · 24 barras",
+              "15 cm",
+              "80 – 90 mm"
+            ],
+            [
+              "L-3",
+              "1,00 m",
+              "N.º 4 · 24 barras",
+              "15 cm",
+              "78 – 88 mm"
+            ]
+          ],
+          "flagRows": [
+            0,
+            1,
+            2
+          ]
+        },
+        "fields": [
+          [
+            "Espesor de la losa (medido en el borde)",
+            "150 mm"
+          ],
+          [
+            "Recubrimiento superior especificado",
+            "40 mm"
+          ],
+          [
+            "Recubrimiento superior medido (promedio)",
+            "85 mm"
+          ],
+          [
+            "Altura efectiva d de diseño",
+            "≈ 104 mm (150 − 40 − 6)"
+          ],
+          [
+            "Altura efectiva d real",
+            "≈ 59 mm (150 − 85 − 6)"
+          ],
+          [
+            "Diámetro y separación del acero",
+            "Coinciden con el plano"
+          ]
+        ],
+        "notes": [
+          "La cantidad de acero es la correcta. Lo que cambió es su ALTURA: la parrilla superior quedó 45 mm más abajo de lo previsto.",
+          "Se recomienda confirmar con una regata pequeña en una zona no crítica (verificación destructiva puntual)."
+        ]
+      },
+      "technical": [
+        "La resistencia a flexión es aproximadamente proporcional a la altura efectiva d. Pasar de d ≈ 104 mm a d ≈ 59 mm reduce la capacidad del voladizo a cerca del 55 % de la de diseño, y su rigidez aún más.",
+        "Más recubrimiento NO es «más seguro» en este caso: el acero alejado de la cara traccionada deja una franja de concreto sin refuerzo justo donde se abre la fisura.",
+        "NSR-10, C.7.5.2.1 (folio C-94): para d ≤ 200 mm la tolerancia en d es ± 10 mm."
+      ],
+      "relevance": "Evidencia determinante: muestra QUÉ quedó mal construido, aunque no explica todavía POR QUÉ."
+    },
+    {
+      "id": "E04",
+      "name": "Escaneo y flecha del balcón 502",
+      "type": "Ensayo de laboratorio",
+      "summary": "Balcón de control: mismo diseño que el 402, fundido otro día. DATOS SIMULADOS.",
+      "doc": {
+        "illustration": "coverScanOk",
+        "fields": [
+          [
+            "Diseño",
+            "Idéntico al 402 (mismo plano y detalle)"
+          ],
+          [
+            "Recubrimiento superior medido",
+            "40 – 46 mm"
+          ],
+          [
+            "Altura efectiva d real",
+            "≈ 100 mm"
+          ],
+          [
+            "Flecha en la punta",
+            "6 mm"
+          ],
+          [
+            "Fisura en el empotramiento",
+            "No"
+          ],
+          [
+            "Silletas («panelas») en la fundida",
+            "Sí, según fotos y bitácora"
+          ]
+        ],
+        "notes": [
+          "El 502 tiene las mismas materas y un uso similar al 402."
+        ]
+      },
+      "technical": [
+        "Un elemento gemelo en buen estado funciona como «grupo de control»: si el diseño fuera insuficiente o el concreto fuera malo en toda la obra, el 502 también fallaría.",
+        "La diferencia entre ambos balcones está en cómo se colocó y sostuvo el acero superior durante la fundida."
+      ],
+      "relevance": "Permite descartar causas generales (diseño, materiales, uso) y aislar la causa propia del balcón 402."
+    },
+    {
+      "id": "E05",
+      "name": "Entrevista al maestro de obra",
+      "type": "Entrevista",
+      "summary": "Conversación con don Rubén Cárdenas sobre la fundida de la losa del piso 4 y el desencofrado del balcón.",
+      "doc": {
+        "illustration": "interview",
+        "fields": [
+          [
+            "Entrevistado",
+            "Rubén Cárdenas · maestro de obra · 28 años de oficio"
+          ],
+          [
+            "Tema",
+            "Fundida de la losa del piso 4 y del balcón 402"
+          ],
+          [
+            "Silletas («panelas») de 10 cm",
+            "El pedido no llegó ese día"
+          ],
+          [
+            "Decisión tomada",
+            "Fundir igual y «levantar la malla con el gancho» mientras se vaciaba"
+          ],
+          [
+            "Tránsito sobre la parrilla",
+            "Obreros y carretillas por encima del acero superior"
+          ],
+          [
+            "Consulta al residente o al supervisor",
+            "«Le avisé al ingeniero por WhatsApp»"
+          ],
+          [
+            "Desencofrado del balcón",
+            "A los 7 días, para subir la formaleta al piso 5"
+          ]
+        ],
+        "notes": [
+          "«Las panelas no llegaron y el concreto ya venía en camino. Si devolvía el mixer, la constructora me lo cobraba. Así que puse a dos muchachos con el gancho a ir levantando la malla mientras se fundía. Toda la vida lo hemos hecho así».",
+          "«Sí, los muchachos caminaban por encima del hierro, ¿por dónde más? Pero se levantaba después».",
+          "«Los puntales del balcón los quité a la semana porque los necesitaba arriba. El concreto ya estaba duro».",
+          "«Ese balcón quedó igualito a los otros. Si se cayó un poquito es porque le pusieron matas»."
+        ]
+      },
+      "technical": [
+        "Levantar la parrilla «con el gancho» durante el vaciado es una práctica informal muy difundida y poco confiable: la malla se levanta un instante y vuelve a bajar con el peso de los obreros y del concreto fresco; nadie verifica dónde queda finalmente.",
+        "Las silletas (también llamadas «panelas», «burritos» o «caballetes») son soportes que mantienen el acero a la altura del diseño. Para el acero superior de losas deben ser rígidas y estar lo bastante cerca para resistir el tránsito.",
+        "El testimonio tiene valor, pero debe CONTRASTARSE con evidencias físicas y documentales: la frase «quedó igualito» contradice el escaneo (E03)."
+      ],
+      "relevance": "Explica POR QUÉ el acero quedó abajo y revela además el retiro temprano de puntales. Es testimonial: úselo junto con E03 y E06."
+    },
+    {
+      "id": "E06",
+      "name": "Fotos del día de la fundida (chat de obra)",
+      "type": "Registro fotográfico",
+      "summary": "Fotos y video subidos por el ayudante Yeison Ortiz al grupo de la obra durante la fundida de la losa del piso 4.",
+      "doc": {
+        "illustration": "pourPhotos",
+        "table": {
+          "headers": [
+            "Hora",
+            "Contenido",
+            "Observación"
+          ],
+          "rows": [
+            [
+              "7:52",
+              "Parrilla superior del balcón 402 armada",
+              "Barras apoyadas directamente sobre la malla inferior · sin silletas"
+            ],
+            [
+              "9:18",
+              "Mensaje del maestro: «Panelas no llegaron, fundimos y levantamos con gancho»",
+              "Sin respuesta del ingeniero en el chat"
+            ],
+            [
+              "10:05",
+              "Dos obreros y una carretilla sobre la malla del balcón",
+              "Barras superiores visiblemente hundidas"
+            ],
+            [
+              "10:07",
+              "Video de 12 s: obrero levantando la malla con un gancho",
+              "La malla vuelve a bajar al pisarla"
+            ],
+            [
+              "11:40",
+              "Losa del piso 4 terminada",
+              "«Lista la 4 🙌»"
+            ]
+          ],
+          "flagRows": [
+            0,
+            2,
+            3
+          ]
+        },
+        "notes": [
+          "En la foto de las 10:05 se ve la parrilla superior en contacto con la malla inferior en la zona del empotramiento.",
+          "Las fotos de la fundida del piso 5 muestran silletas plásticas cada 60 cm."
+        ]
+      },
+      "technical": [
+        "Las fotos de proceso son evidencia valiosa: muestran el estado del refuerzo en el momento en que ya no se podrá ver.",
+        "NSR-10, comentario CR7.5.1 (folio C-93): el refuerzo debe estar adecuadamente apoyado para prevenir que sea desplazado por la colocación del concreto o por los obreros."
+      ],
+      "relevance": "Confirma con imágenes de la fecha lo que dice el maestro y lo que mide el pachómetro."
+    },
+    {
+      "id": "E07",
+      "name": "Plano estructural del balcón tipo",
+      "type": "Documento de diseño",
+      "summary": "Detalle del balcón en voladizo de los pisos 2 a 5 y notas de construcción.",
+      "doc": {
+        "illustration": "balconyPlan",
+        "fields": [
+          [
+            "Tipo",
+            "Losa maciza en voladizo · L = 1,50 m"
+          ],
+          [
+            "Espesor h",
+            "150 mm"
+          ],
+          [
+            "Refuerzo superior (principal)",
+            "N.º 4 c/ 15 cm, anclado en la viga y la losa interior"
+          ],
+          [
+            "Refuerzo inferior",
+            "N.º 3 c/ 20 cm (repartición)"
+          ],
+          [
+            "Recubrimiento superior",
+            "40 mm (elemento expuesto a la intemperie)"
+          ],
+          [
+            "Concreto / acero",
+            "f'c = 21 MPa · fy = 420 MPa"
+          ],
+          [
+            "Carga viva de diseño",
+            "5,0 kN/m² (balcones)"
+          ]
+        ],
+        "notes": [
+          "Nota resaltada: «Acero superior de voladizos sobre silletas rígidas de 10 cm a máximo 60 cm en ambos sentidos. NO caminar sobre la parrilla superior: usar tablones. Verificación de altura del refuerzo por la supervisión antes de fundir».",
+          "Nota: «No retirar puntales de voladizos antes de 14 días y con 75 % de f'c verificado en cilindros curados en obra»."
+        ]
+      },
+      "technical": [
+        "El diseño especifica la cantidad correcta de acero, el recubrimiento adecuado para un elemento a la intemperie y un procedimiento claro para sostener la parrilla.",
+        "NSR-10, Tabla C.9.5(a) (folio C-129): espesor mínimo de losas macizas en una dirección en voladizo = ℓ/10, a menos que se calculen las deflexiones.",
+        "Las notas de construcción son ESPECIFICACIONES DEL PROYECTO: no son un numeral de la norma, pero obligan a quien construye."
+      ],
+      "relevance": "Permite contrastar la hipótesis de error de diseño y comparar lo especificado con lo ejecutado."
+    },
+    {
+      "id": "E08",
+      "name": "Lista de chequeo previa a la fundida del piso 4",
+      "type": "Documento de obra",
+      "summary": "Formato de liberación de vaciado de la supervisión técnica para la losa del piso 4.",
+      "doc": {
+        "illustration": "checklist",
+        "table": {
+          "headers": [
+            "Ítem",
+            "Verificado por",
+            "Estado"
+          ],
+          "rows": [
+            [
+              "Formaleta y puntales",
+              "Maestro de obra",
+              "OK"
+            ],
+            [
+              "Diámetros y cantidad de acero",
+              "Residente (fotos)",
+              "OK"
+            ],
+            [
+              "Altura del acero superior y recubrimientos",
+              "—",
+              "SIN FIRMA"
+            ],
+            [
+              "Silletas y separadores",
+              "—",
+              "SIN FIRMA"
+            ],
+            [
+              "Limpieza y humedecimiento",
+              "Maestro de obra",
+              "OK"
+            ],
+            [
+              "Autorización de vaciado",
+              "Supervisor técnico",
+              "«Verbal por WhatsApp»"
+            ]
+          ],
+          "flagRows": [
+            2,
+            3,
+            5
+          ]
+        },
+        "fields": [
+          [
+            "Grado de supervisión del proyecto",
+            "Itinerante (visitas 2 veces por semana)"
+          ],
+          [
+            "Visita del supervisor el día de la fundida",
+            "No registra"
+          ],
+          [
+            "Listas de chequeo de los pisos 2, 3 y 5",
+            "Completas y firmadas en sitio"
+          ]
+        ],
+        "notes": [
+          "Anotación a mano: «Se libera con fotos del residente. Pendiente panelas balcones — maestro confirma que se levanta con gancho»."
+        ]
+      },
+      "technical": [
+        "El maestro tomó la decisión en obra, pero el sistema de control falló: nadie verificó la altura del acero antes de fundir, que es precisamente el ítem que habría detectado el problema.",
+        "NSR-10, C.1.3.2 (folio C-9): los registros de supervisión técnica deben incluir la colocación del refuerzo. Tabla I.4.3-2 (I.4.3.7, folio I-17): la verificación de «colocación, recubrimientos, distancia entre barras, sujeción» aplica tanto a supervisión continua como itinerante.",
+        "El comentario CR1.3.2 aclara que la supervisión técnica no libera al constructor de su obligación de seguir los planos y especificaciones."
+      ],
+      "relevance": "Muestra que el error del maestro no fue detectado porque se omitió el control previo al vaciado."
+    },
+    {
+      "id": "E09",
+      "name": "Registro de desencofrado de balcones",
+      "type": "Documento de obra",
+      "summary": "Bitácora de retiro de puntales de los balcones de los pisos 2 a 5.",
+      "doc": {
+        "illustration": "shoringLog",
+        "table": {
+          "headers": [
+            "Balcón (piso)",
+            "Edad al retirar puntales",
+            "Resistencia verificada",
+            "Autorizó"
+          ],
+          "rows": [
+            [
+              "Piso 2",
+              "16 días",
+              "Sí · cilindros de obra 17,1 MPa",
+              "Residente"
+            ],
+            [
+              "Piso 3",
+              "15 días",
+              "Sí · cilindros de obra 16,4 MPa",
+              "Residente"
+            ],
+            [
+              "Piso 4",
+              "7 días",
+              "NO REGISTRA",
+              "Maestro de obra"
+            ],
+            [
+              "Piso 5",
+              "14 días",
+              "Sí · cilindros de obra 16,0 MPa",
+              "Residente"
+            ]
+          ],
+          "flagRows": [
+            2
+          ]
+        },
+        "notes": [
+          "Anotación del maestro, piso 4: «Se suben puntales al piso 5 para no atrasar»."
+        ]
+      },
+      "technical": [
+        "Retirar los puntales temprano carga el voladizo cuando el concreto todavía es joven: la flecha inicial es mayor y el flujo plástico la hace crecer durante meses.",
+        "Por sí solo, este retiro no explica una flecha 6 veces mayor ni la fisura superior: los demás balcones resistieron bien con 14–16 días. Pero sobre un voladizo con d reducido, agrava el daño.",
+        "NSR-10, C.6.2.2.1 (folio C-86): solo puede descimbrarse cuando un análisis estructural y la resistencia de probetas curadas en obra demuestren que la estructura soporta las cargas."
+      ],
+      "relevance": "Revela una segunda decisión del maestro, contribuyente al daño."
+    },
+    {
+      "id": "E10",
+      "name": "Ensayos de resistencia del concreto · losa piso 4",
+      "type": "Ensayo de laboratorio",
+      "summary": "Resistencia a la compresión de cilindros de la losa del piso 4 (NTC 673). DATOS SIMULADOS.",
+      "doc": {
+        "illustration": "cylinders005",
+        "table": {
+          "headers": [
+            "Ensayo",
+            "Edad",
+            "Cilindro A (MPa)",
+            "Cilindro B (MPa)",
+            "Resultado (MPa)"
+          ],
+          "rows": [
+            [
+              "T-1",
+              "7 días",
+              "15,0",
+              "15,4",
+              "15,2"
+            ],
+            [
+              "T-2",
+              "28 días",
+              "23,4",
+              "22,8",
+              "23,1"
+            ],
+            [
+              "T-3",
+              "28 días",
+              "22,0",
+              "22,8",
+              "22,4"
+            ],
+            [
+              "T-4",
+              "28 días",
+              "24,3",
+              "23,7",
+              "24,0"
+            ]
+          ],
+          "flagRows": []
+        },
+        "fields": [
+          [
+            "f'c especificado",
+            "21,0 MPa"
+          ],
+          [
+            "Promedio de los 3 ensayos a 28 días",
+            "23,2 MPa"
+          ],
+          [
+            "Ensayo más bajo",
+            "22,4 MPa (límite f'c − 3,5 = 17,5 MPa)"
+          ],
+          [
+            "Cilindros",
+            "150 × 300 mm · curado estándar en laboratorio"
+          ]
+        ],
+        "notes": [
+          "El ensayo de 7 días (T-1) corresponde a cilindros curados en LABORATORIO: no sirve para autorizar el descimbrado, que exige probetas curadas en obra."
+        ]
+      },
+      "technical": [
+        "NSR-10, C.5.6.3.3 (folio C-77), para f'c ≤ 35 MPa: (a) el promedio de tres ensayos consecutivos debe ser ≥ f'c y (b) ningún ensayo debe ser menor que f'c − 3,5 MPa.",
+        "Descartar con datos también es avanzar: si el concreto cumple, el problema no está en el material."
+      ],
+      "relevance": "Permite evaluar la hipótesis de concreto deficiente."
+    },
+    {
+      "id": "E11",
+      "name": "Materas sobre el balcón 402",
+      "type": "Observación de campo",
+      "summary": "Pesaje de las materas y comparación con la carga viva de diseño del balcón.",
+      "doc": {
+        "illustration": "planters",
+        "fields": [
+          [
+            "Materas",
+            "4 unidades medianas con tierra húmeda"
+          ],
+          [
+            "Peso total medido",
+            "≈ 180 kg ≈ 1,8 kN"
+          ],
+          [
+            "Área del balcón",
+            "1,50 × 3,60 = 5,4 m²"
+          ],
+          [
+            "Carga equivalente",
+            "1,8 / 5,4 ≈ 0,33 kN/m²"
+          ],
+          [
+            "Carga viva de diseño (balcones)",
+            "5,0 kN/m²"
+          ],
+          [
+            "Balcón 502",
+            "Tiene 5 materas similares y no presenta daños"
+          ]
+        ],
+        "notes": [
+          "Aunque las materas estén cerca del borde, su efecto es una pequeña fracción de la carga para la que se diseñó el balcón."
+        ]
+      },
+      "technical": [
+        "Cuando aparece un daño, es común culpar al uso. Antes de hacerlo, hay que cuantificar la carga y compararla con la de diseño.",
+        "NSR-10, Tabla B.4.2.1-1 (folio B-15): carga viva mínima para balcones en uso residencial = 5,0 kN/m²."
+      ],
+      "relevance": "Permite contrastar la hipótesis de sobrecarga de uso."
+    },
+    {
+      "id": "E12",
+      "name": "Fisuras en el pañete del muro de la escalera",
+      "type": "Observación de campo",
+      "summary": "Fisuras finas en malla en el pañete de un muro no estructural de la fachada lateral.",
+      "doc": {
+        "illustration": "wallCracks",
+        "fields": [
+          [
+            "Elemento",
+            "Muro de mampostería no estructural del punto fijo"
+          ],
+          [
+            "Patrón",
+            "Malla irregular de fisuras muy finas"
+          ],
+          [
+            "Abertura",
+            "< 0,1 mm"
+          ],
+          [
+            "Relación física con el balcón 402",
+            "Ninguna (otra fachada, pisos 1 y 2)"
+          ]
+        ],
+        "notes": [
+          "Patrón típico de retracción del mortero de pañete."
+        ]
+      },
+      "technical": [
+        "Las fisuras en mapa del pañete suelen originarse por retracción del mortero (exceso de agua, secado rápido o capas gruesas).",
+        "Un buen investigador también documenta lo que NO está relacionado con el incidente: descartar es parte del análisis."
+      ],
+      "relevance": "Elemento observado en el edificio. Evalúe si guarda relación con el problema investigado."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "Sobrecarga de uso",
+      "question": "¿Cargaron los ocupantes el balcón por encima de lo previsto en el diseño?",
+      "arguments": {
+        "for": [
+          {
+            "text": "La propietaria colocó materas pesadas contra la baranda, cerca de la punta.",
+            "requires": "E11"
+          },
+          {
+            "text": "El daño apareció meses después de la entrega, ya con el balcón en uso.",
+            "requires": "E01"
+          }
+        ],
+        "against": [
+          {
+            "text": "Las materas equivalen a ≈ 0,33 kN/m², frente a 5,0 kN/m² de diseño.",
+            "requires": "E11"
+          },
+          {
+            "text": "El balcón 502 tiene más materas y no presenta daños.",
+            "requires": "E04"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "contribuyente": 0.3,
+        "requiere_info": 0.3,
+        "principal": 0
+      },
+      "links": {
+        "support": [
+          "E01"
+        ],
+        "contradict": [
+          "E11",
+          "E04"
+        ]
+      },
+      "explanation": "La carga de uso es una pequeña fracción de la de diseño y el balcón gemelo con más materas está sano. Se DESCARTA: culpar al usuario sin cuantificar es un error frecuente."
+    },
+    {
+      "id": "H2",
+      "title": "Concreto de baja resistencia",
+      "question": "¿Tiene el concreto del balcón una resistencia inferior a la especificada?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Se desencofró temprano y el ensayo de 7 días era bajo (15,2 MPa).",
+            "requires": "E09"
+          }
+        ],
+        "against": [
+          {
+            "text": "Los ensayos a 28 días cumplen ambos criterios de aceptación (promedio 23,2 MPa ≥ 21 MPa).",
+            "requires": "E10"
+          },
+          {
+            "text": "El balcón 502, con concreto del mismo proveedor y mezcla, está en buen estado.",
+            "requires": "E04"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.4,
+        "contribuyente": 0.2,
+        "principal": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E10",
+          "E04"
+        ]
+      },
+      "explanation": "El concreto cumple los criterios de aceptación de C.5.6.3.3. El valor bajo a 7 días es normal a esa edad. Se DESCARTA como causa."
+    },
+    {
+      "id": "H3",
+      "title": "Error de diseño del voladizo",
+      "question": "¿Está mal dimensionado o mal detallado el balcón en los planos?",
+      "arguments": {
+        "for": [
+          {
+            "text": "El espesor de 150 mm está justo en el mínimo de la Tabla C.9.5(a) para L = 1,50 m.",
+            "requires": "E07"
+          }
+        ],
+        "against": [
+          {
+            "text": "El plano especifica acero superior, recubrimiento y silletas adecuados, y cumple el espesor mínimo.",
+            "requires": "E07"
+          },
+          {
+            "text": "Los balcones de los pisos 2, 3 y 5, con el mismo diseño, funcionan bien.",
+            "requires": "E04"
+          },
+          {
+            "text": "El diámetro y la separación del acero instalado coinciden con el plano.",
+            "requires": "E03"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.5,
+        "contribuyente": 0.2,
+        "principal": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E07",
+          "E04"
+        ]
+      },
+      "explanation": "El diseño cumple y tres balcones idénticos lo demuestran en servicio. El problema no está en el papel sino en la ejecución. Se DESCARTA."
+    },
+    {
+      "id": "H4",
+      "title": "Acero superior hundido durante la fundida",
+      "question": "¿Quedó el refuerzo superior por debajo de su posición de diseño por la forma en que se fundió?",
+      "arguments": {
+        "for": [
+          {
+            "text": "El pachómetro ubica el acero superior a 85 mm de profundidad en lugar de 40 mm.",
+            "requires": "E03"
+          },
+          {
+            "text": "El maestro decidió fundir sin silletas y «levantar con gancho», con obreros caminando sobre la parrilla.",
+            "requires": "E05"
+          },
+          {
+            "text": "Las fotos del día muestran la parrilla hundida bajo los obreros y la carretilla.",
+            "requires": "E06"
+          },
+          {
+            "text": "La altura del acero no se verificó antes de fundir.",
+            "requires": "E08"
+          },
+          {
+            "text": "La fisura está en la cara superior del empotramiento, donde trabaja ese acero.",
+            "requires": "E01"
+          }
+        ],
+        "against": [
+          {
+            "text": "El maestro afirma que «la malla se levantaba después».",
+            "requires": "E05"
+          }
+        ]
+      },
+      "best": "principal",
+      "partial": {
+        "contribuyente": 0.5,
+        "requiere_info": 0.3,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E03",
+          "E05",
+          "E06",
+          "E08",
+          "E01",
+          "E02"
+        ],
+        "contradict": []
+      },
+      "explanation": "Tres fuentes independientes (escaneo, testimonio y fotos) coinciden: el acero superior quedó 45 mm abajo y la altura efectiva cayó a cerca de la mitad. Es la hipótesis PRINCIPAL."
+    },
+    {
+      "id": "H5",
+      "title": "Retiro prematuro de los puntales del voladizo",
+      "question": "¿Se cargó el balcón antes de que el concreto tuviera la resistencia suficiente?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Los puntales del balcón del piso 4 se retiraron a los 7 días sin verificar resistencia.",
+            "requires": "E09"
+          },
+          {
+            "text": "El maestro reconoce que los subió al piso 5 «para no atrasar».",
+            "requires": "E05"
+          }
+        ],
+        "against": [
+          {
+            "text": "El concreto cumple a 28 días: la resistencia final no se vio afectada.",
+            "requires": "E10"
+          },
+          {
+            "text": "Por sí solo no explica la fisura superior ni una flecha 6 veces mayor que la de los otros balcones.",
+            "requires": "E02"
+          }
+        ]
+      },
+      "best": "contribuyente",
+      "partial": {
+        "principal": 0.4,
+        "requiere_info": 0.4,
+        "descartada": 0.1
+      },
+      "links": {
+        "support": [
+          "E09",
+          "E05"
+        ],
+        "contradict": [
+          "E10"
+        ]
+      },
+      "explanation": "Cargar el voladizo a los 7 días aumentó la flecha inicial y el flujo plástico, sobre una sección ya debilitada. Es una causa CONTRIBUYENTE."
+    }
+  ],
+  "report": {
+    "steps": [
+      {
+        "id": "anomaly",
+        "title": "Identificación de la anomalía",
+        "prompt": "¿Qué anomalías identifica en el balcón 402? Seleccione todas las respaldadas por la inspección.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "a1",
+            "text": "Fisura continua de 0,8–1,2 mm en la cara superior del empotramiento.",
+            "correct": true,
+            "feedback": "Correcto: es el síntoma principal, medido con fisurómetro."
+          },
+          {
+            "id": "a2",
+            "text": "Flecha de 38 mm en la punta del voladizo (≈ 6 veces la de los balcones gemelos).",
+            "correct": true,
+            "feedback": "Correcto: cuantificada con nivel láser."
+          },
+          {
+            "id": "a3",
+            "text": "Acero superior a 85 mm de profundidad en lugar de 40 mm.",
+            "correct": true,
+            "feedback": "Correcto: es la anomalía constructiva detectada con el pachómetro."
+          },
+          {
+            "id": "a4",
+            "text": "Filtración de agua y eflorescencias en la cara inferior.",
+            "correct": true,
+            "feedback": "Correcto: consecuencia de la fisura pasante."
+          },
+          {
+            "id": "a5",
+            "text": "Fisuras de flexión en la cara inferior del voladizo.",
+            "correct": false,
+            "feedback": "Incorrecto: en un voladizo la tracción está ARRIBA. La cara inferior no presenta fisuras de flexión."
+          },
+          {
+            "id": "a6",
+            "text": "Corrosión avanzada con pérdida de sección del acero.",
+            "correct": false,
+            "feedback": "Sin evidencia: el edificio tiene meses. El riesgo de corrosión es futuro, no un hallazgo actual."
+          }
+        ]
+      },
+      {
+        "id": "concepts",
+        "title": "Síntoma, causa y consecuencia",
+        "prompt": "Un buen diagnóstico distingue conceptos. Clasifique cada enunciado.",
+        "type": "classify",
+        "categories": [
+          {
+            "id": "sintoma",
+            "name": "Síntoma"
+          },
+          {
+            "id": "anomalia",
+            "name": "Anomalía"
+          },
+          {
+            "id": "mecanismo",
+            "name": "Mecanismo de deterioro"
+          },
+          {
+            "id": "directa",
+            "name": "Causa directa"
+          },
+          {
+            "id": "contribuyente",
+            "name": "Causa contribuyente"
+          },
+          {
+            "id": "consecuencia",
+            "name": "Consecuencia"
+          },
+          {
+            "id": "correctiva",
+            "name": "Medida correctiva"
+          }
+        ],
+        "items": [
+          {
+            "id": "c1",
+            "text": "Fisura de 1 mm sobre el balcón y agua que se empoza contra la baranda.",
+            "answer": "sintoma",
+            "feedback": "Es lo que se observa: el síntoma."
+          },
+          {
+            "id": "c2",
+            "text": "Parrilla superior a 85 mm de profundidad (diseño: 40 mm).",
+            "answer": "anomalia",
+            "feedback": "Es la desviación respecto a lo especificado: la anomalía."
+          },
+          {
+            "id": "c3",
+            "text": "Pérdida de altura efectiva d: el acero trabaja con menor brazo, la sección se fisura arriba y el voladizo se vuelve flexible.",
+            "answer": "mecanismo",
+            "feedback": "Describe el proceso físico: el mecanismo."
+          },
+          {
+            "id": "c4",
+            "text": "Fundir sin silletas, con obreros y carretillas sobre la parrilla superior.",
+            "answer": "directa",
+            "feedback": "Es la acción que hundió el acero: causa directa."
+          },
+          {
+            "id": "c5",
+            "text": "Retiro de puntales a los 7 días y liberación del vaciado sin verificar la altura del acero.",
+            "answer": "contribuyente",
+            "feedback": "Agravaron el daño o impidieron detectarlo: causas contribuyentes."
+          },
+          {
+            "id": "c6",
+            "text": "Corrosión futura del acero por el agua que entra por la fisura.",
+            "answer": "consecuencia",
+            "feedback": "Es un efecto potencial: consecuencia."
+          },
+          {
+            "id": "c7",
+            "text": "Reforzar el empotramiento con acero adicional en la cara superior, según diseño del ingeniero estructural.",
+            "answer": "correctiva",
+            "feedback": "Es una acción de reparación: medida correctiva."
+          }
+        ]
+      },
+      {
+        "id": "hypothesis",
+        "title": "Hipótesis principal",
+        "prompt": "¿Qué hipótesis explica mejor el conjunto de evidencias? Justifique su elección.",
+        "type": "single-hypothesis",
+        "justification": {
+          "minLength": 60,
+          "keywords": [
+            [
+              "silleta",
+              "panela",
+              "separador",
+              "soporte"
+            ],
+            [
+              "pis",
+              "camina",
+              "obrero",
+              "carretilla",
+              "gancho"
+            ],
+            [
+              "pachómetro",
+              "pachometro",
+              "escaneo",
+              "recubrimiento",
+              "profundidad",
+              "85"
+            ],
+            [
+              "altura efectiva",
+              " d ",
+              "brazo",
+              "peralte"
+            ],
+            [
+              "502",
+              "gemelo",
+              "comparación",
+              "otros balcones"
+            ],
+            [
+              "supervis",
+              "chequeo",
+              "verific"
+            ]
+          ],
+          "hint": "Un buen argumento menciona la falta de silletas y el tránsito sobre la parrilla, la profundidad medida con pachómetro, la pérdida de altura efectiva, la comparación con el balcón 502 y la falla del control previo al vaciado."
+        }
+      },
+      {
+        "id": "evidence",
+        "title": "Evidencias de soporte",
+        "prompt": "Seleccione las evidencias que sustentan su conclusión. Solo aparecen las que ha recolectado.",
+        "type": "evidence-select",
+        "weights": {
+          "E01": 0.6,
+          "E02": 0.6,
+          "E03": 1,
+          "E04": 1,
+          "E05": 1,
+          "E06": 1,
+          "E07": 0.6,
+          "E08": 1,
+          "E09": 0.6,
+          "E10": 0.4,
+          "E11": 0.2,
+          "E12": -1
+        },
+        "feedback": {
+          "E12": "Las fisuras del pañete de la escalera son retracción del mortero y están en otra fachada: incluirlas debilita el informe."
+        }
+      },
+      {
+        "id": "causes",
+        "title": "Causas probables",
+        "prompt": "Seleccione las causas probables respaldadas por la evidencia.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "k1",
+            "text": "Fundida sin silletas, con tránsito de obreros y carretillas sobre la parrilla superior.",
+            "correct": true,
+            "feedback": "Correcto: causa directa, documentada por testimonio, fotos y escaneo."
+          },
+          {
+            "id": "k2",
+            "text": "Práctica de «levantar la malla con gancho» en lugar de soportarla.",
+            "correct": true,
+            "feedback": "Correcto: es un procedimiento informal que no garantiza la posición final del acero."
+          },
+          {
+            "id": "k3",
+            "text": "Liberación del vaciado sin verificar la altura del acero ni los separadores.",
+            "correct": true,
+            "feedback": "Correcto: la falla del control permitió que el error quedara oculto en el concreto."
+          },
+          {
+            "id": "k4",
+            "text": "Retiro de puntales del voladizo a los 7 días sin verificar resistencia.",
+            "correct": true,
+            "feedback": "Correcto: causa contribuyente que aumentó la flecha."
+          },
+          {
+            "id": "k5",
+            "text": "Peso de las materas de la propietaria.",
+            "correct": false,
+            "feedback": "Incorrecto: 0,33 kN/m² frente a 5,0 kN/m² de diseño; el 502 tiene más materas y está sano."
+          },
+          {
+            "id": "k6",
+            "text": "Error de cálculo del ingeniero diseñador.",
+            "correct": false,
+            "feedback": "Sin sustento: el plano cumple y tres balcones idénticos funcionan bien."
+          },
+          {
+            "id": "k7",
+            "text": "Concreto de mala calidad.",
+            "correct": false,
+            "feedback": "Incorrecto: los ensayos a 28 días cumplen C.5.6.3.3."
+          }
+        ]
+      },
+      {
+        "id": "consequences",
+        "title": "Consecuencias potenciales",
+        "prompt": "¿Qué consecuencias podría tener la anomalía si no se atiende?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "q1",
+            "text": "Capacidad del voladizo reducida a cerca del 55 % de la de diseño: margen de seguridad insuficiente ante una reunión de personas.",
+            "correct": true,
+            "feedback": "Correcto: la carga viva de diseño de un balcón supone personas, no solo materas."
+          },
+          {
+            "id": "q2",
+            "text": "Corrosión del acero superior por el agua que entra por la fisura.",
+            "correct": true,
+            "feedback": "Correcto: es un elemento expuesto a la intemperie."
+          },
+          {
+            "id": "q3",
+            "text": "Aumento progresivo de la flecha por flujo plástico.",
+            "correct": true,
+            "feedback": "Correcto: debe monitorearse."
+          },
+          {
+            "id": "q4",
+            "text": "Colapso inmediato del edificio.",
+            "correct": false,
+            "feedback": "Alarmista: el problema es local a un voladizo. Requiere apuntalamiento y restricción de uso, no evacuación del edificio."
+          },
+          {
+            "id": "q5",
+            "text": "Ninguna: es una fisura estética que se tapa con sellante.",
+            "correct": false,
+            "feedback": "Incorrecto: la sección tiene la mitad de altura efectiva; sellar no restituye capacidad."
+          }
+        ]
+      },
+      {
+        "id": "certainty",
+        "title": "Nivel de certeza",
+        "prompt": "Con la información disponible, ¿cómo debe presentarse el diagnóstico?",
+        "type": "single",
+        "options": [
+          {
+            "id": "s1",
+            "text": "Definitivo: ya no hace falta ningún estudio adicional.",
+            "correct": false,
+            "feedback": "Falta confirmar con una regata puntual y evaluar la capacidad real (C.20) para definir el reforzamiento."
+          },
+          {
+            "id": "s2",
+            "text": "Probable con alta confianza: tres fuentes independientes coinciden; pendiente de confirmación puntual y evaluación de capacidad.",
+            "correct": true,
+            "feedback": "Correcto: la convergencia de evidencias da alta confianza, pero el dictamen de seguridad exige la evaluación."
+          },
+          {
+            "id": "s3",
+            "text": "Indeterminado: es la palabra del maestro contra la del residente.",
+            "correct": false,
+            "feedback": "Incorrecto: no depende de testimonios; el escaneo y las fotos son evidencia física."
+          }
+        ]
+      },
+      {
+        "id": "recommendations",
+        "title": "Recomendaciones técnicas",
+        "prompt": "Seleccione las medidas inmediatas y correctivas que recomendaría.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "r1",
+            "text": "Apuntalar el balcón 402 desde el 302 y restringir su uso de inmediato.",
+            "correct": true,
+            "feedback": "Correcto: es la medida de seguridad inmediata."
+          },
+          {
+            "id": "r2",
+            "text": "Confirmar la posición del acero con una regata puntual y escanear también los demás voladizos del piso 4.",
+            "correct": true,
+            "feedback": "Correcto: la fundida del piso 4 pudo afectar otros elementos (aleros, losa en el borde)."
+          },
+          {
+            "id": "r3",
+            "text": "Evaluación de resistencia por el ingeniero estructural con d real medido (Capítulo C.20), para definir el reforzamiento.",
+            "correct": true,
+            "feedback": "Correcto: C.20.1.1 (folio C-351) exige evaluar cuando hay dudas sobre la seguridad."
+          },
+          {
+            "id": "r4",
+            "text": "Sellar la fisura e impermeabilizar después del reforzamiento, y monitorear la flecha.",
+            "correct": true,
+            "feedback": "Correcto: protege el acero, pero solo después de restituir la capacidad."
+          },
+          {
+            "id": "r5",
+            "text": "Que la constructora asuma la reparación y documente la lección en su sistema de calidad.",
+            "correct": true,
+            "feedback": "Correcto: el defecto es de ejecución; la responsabilidad es del constructor, no de la propietaria."
+          },
+          {
+            "id": "r6",
+            "text": "Retirar las materas y cerrar el caso.",
+            "correct": false,
+            "feedback": "Incorrecto: las materas no son la causa; el balcón seguiría con la mitad de su altura efectiva."
+          },
+          {
+            "id": "r7",
+            "text": "Rellenar el balcón con una sobrelosa de mortero para nivelarlo.",
+            "correct": false,
+            "feedback": "Peligroso: agrega peso a un voladizo debilitado."
+          },
+          {
+            "id": "r8",
+            "text": "Despedir al maestro de obra y no hacer nada más.",
+            "correct": false,
+            "feedback": "Incorrecto: no repara el balcón y deja intacto el sistema de control que falló."
+          }
+        ]
+      },
+      {
+        "id": "prevention",
+        "title": "Medidas preventivas",
+        "prompt": "¿Qué medidas evitarían que esto se repita en la próxima obra?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "p1",
+            "text": "Prohibir fundir losas sin silletas: si no hay separadores, se reprograma la fundida.",
+            "correct": true,
+            "feedback": "Correcto: el costo de devolver un mixer es mínimo frente a reforzar un balcón."
+          },
+          {
+            "id": "p2",
+            "text": "Usar tablones o pasarelas sobre la parrilla superior durante el vaciado.",
+            "correct": true,
+            "feedback": "Correcto: reparte el peso de obreros y carretillas."
+          },
+          {
+            "id": "p3",
+            "text": "Lista de chequeo con medición de la altura del acero, firmada en sitio antes de liberar cada fundida.",
+            "correct": true,
+            "feedback": "Correcto: es el control que habría detectado el error."
+          },
+          {
+            "id": "p4",
+            "text": "Capacitar a maestros y cuadrillas en el «porqué» del acero superior en voladizos.",
+            "correct": true,
+            "feedback": "Correcto: don Rubén no actuó de mala fe; no conocía el efecto de su decisión."
+          },
+          {
+            "id": "p5",
+            "text": "Canal claro para que el maestro escale imprevistos y espere una respuesta escrita antes de fundir.",
+            "correct": true,
+            "feedback": "Correcto: el mensaje de las 9:18 nunca fue respondido."
+          },
+          {
+            "id": "p6",
+            "text": "Aumentar el espesor de todos los voladizos «por si acaso».",
+            "correct": false,
+            "feedback": "Incorrecto: el diseño era adecuado; el problema fue de ejecución y control."
+          },
+          {
+            "id": "p7",
+            "text": "Confiar en la experiencia del maestro y eliminar la lista de chequeo.",
+            "correct": false,
+            "feedback": "Incorrecto: la experiencia no reemplaza la verificación."
+          }
+        ]
+      }
+    ]
+  },
+  "scoring": {
+    "keyEvidences": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "anomalyHotspots": [
+      "hs-empotramiento",
+      "hs-punta",
+      "hs-scan"
+    ],
+    "verificationWeight": 0.45,
+    "mustCite": [
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E08"
+    ],
+    "mainHypothesis": {
+      "H4": 1,
+      "H5": 0.4,
+      "H3": 0.1,
+      "H1": 0,
+      "H2": 0
+    },
+    "minEvidence": 8,
+    "reviewSet": [
+      "E05",
+      "E06",
+      "E07",
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "reviewMin": 5,
+    "mainExplanation": "La hipótesis más consistente es H4: acero superior hundido durante la fundida, con H5 (retiro temprano de puntales) como contribuyente.",
+    "mustCiteWhy": "Es una evidencia determinante para demostrar la causa o descartar las alternativas.",
+    "distractors": [
+      "E12"
+    ]
+  },
+  "reveal": {
+    "title": "Lo que realmente ocurrió",
+    "paragraphs": [
+      "El día de la fundida del piso 4, las silletas de 10 cm para los balcones no llegaron. El concreto ya venía en camino y devolver el mixer «costaba». Don Rubén tomó la decisión que había tomado muchas veces: fundir y «levantar la malla con el gancho» mientras se vaciaba.",
+      "Dos obreros y una carretilla pasaron una y otra vez sobre la parrilla superior del balcón 402. El gancho la subía un instante; el siguiente paso la volvía a bajar. Cuando el concreto endureció, el acero quedó a 85 mm de la superficie, casi en la mitad de la losa.",
+      "El maestro escribió al chat de obra a las 9:18. Nadie respondió. La supervisión, itinerante, liberó la fundida con fotos del residente y sin medir la altura del acero: el único control que habría detectado el error quedó sin firma.",
+      "Una semana después, los puntales del balcón subieron al piso 5. Con la mitad de su altura efectiva y cargado a los 7 días, el voladizo se fisuró arriba, junto al muro, y siguió bajando durante meses hasta que la propietaria notó el agua empozada.",
+      "El diagnóstico es PROBABLE CON ALTA CONFIANZA. La lección no es «el maestro tiene la culpa»: una decisión de obra tomada bajo presión pasó por un sistema de control que no funcionó. Una silleta de plástico habría evitado un reforzamiento estructural."
+    ]
+  },
+  "verificationOptions": [
+    {
+      "id": "cumple",
+      "name": "Cumple"
+    },
+    {
+      "id": "no_cumple",
+      "name": "No cumple"
+    },
+    {
+      "id": "requiere",
+      "name": "Requiere verificación adicional"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "V1",
+      "evidence": "E03",
+      "title": "Tolerancia en la altura efectiva d",
+      "clause": "C.7.5.2.1",
+      "ref": "NSR-10, Título C, numeral C.7.5.2.1 · folio C-94",
+      "requirement": "En elementos a flexión, la tolerancia para la altura d es ± 10 mm cuando d ≤ 200 mm (± 13 mm cuando d > 200 mm). La tolerancia en el recubrimiento es − 10 mm y no puede exceder 1/3 del recubrimiento especificado.",
+      "data": [
+        [
+          "d de diseño",
+          "≈ 104 mm"
+        ],
+        [
+          "d real (escaneo)",
+          "≈ 59 mm"
+        ],
+        [
+          "Diferencia",
+          "− 45 mm"
+        ],
+        [
+          "Tolerancia permitida",
+          "± 10 mm"
+        ]
+      ],
+      "question": "¿La posición del acero superior del balcón 402 está dentro de la tolerancia?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "La altura efectiva quedó 45 mm por debajo de la de diseño, más de cuatro veces la tolerancia de ± 10 mm. NO CUMPLE. Ojo: el exceso de recubrimiento no está limitado por la tolerancia «− 10 mm», pero sí la pérdida de d, que es lo que reduce la capacidad."
+    },
+    {
+      "id": "V2",
+      "evidence": "E06",
+      "title": "Apoyo y fijación del refuerzo antes del vaciado",
+      "clause": "C.7.5.1 y CR7.5.1",
+      "ref": "NSR-10, Título C, numeral C.7.5.1 y comentario CR7.5.1 · folio C-93",
+      "requirement": "El refuerzo debe colocarse con precisión y estar adecuadamente asegurado antes de colocar el concreto, fijándolo para evitar su desplazamiento fuera de las tolerancias. El comentario indica que debe apoyarse para prevenir que sea desplazado por la colocación del concreto o por los obreros.",
+      "data": [
+        [
+          "Silletas en el balcón 402",
+          "Ninguna"
+        ],
+        [
+          "Método usado",
+          "«Levantar con gancho» durante el vaciado"
+        ],
+        [
+          "Tránsito sobre la parrilla",
+          "Obreros y carretilla"
+        ],
+        [
+          "Tablones o pasarelas",
+          "No"
+        ]
+      ],
+      "question": "¿Se cumplió el requisito de apoyo y fijación del refuerzo?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "No hubo ningún apoyo del acero superior y se transitó sobre él: exactamente la situación que el comentario CR7.5.1 advierte. NO CUMPLE."
+    },
+    {
+      "id": "V3",
+      "evidence": "E07",
+      "title": "Espesor mínimo del voladizo",
+      "clause": "Tabla C.9.5(a)",
+      "ref": "NSR-10, Título C, numeral C.9.5.2.1 y Tabla C.9.5(a) · folio C-129",
+      "requirement": "Para losas macizas en una dirección en voladizo, que no soporten elementos susceptibles de dañarse por deflexiones grandes, el espesor mínimo es ℓ/10 (concreto de peso normal, fy = 420 MPa), a menos que se calculen las deflexiones.",
+      "data": [
+        [
+          "Luz del voladizo ℓ",
+          "1 500 mm"
+        ],
+        [
+          "Espesor mínimo ℓ/10",
+          "150 mm"
+        ],
+        [
+          "Espesor de diseño",
+          "150 mm"
+        ],
+        [
+          "Acero",
+          "fy = 420 MPa · concreto de peso normal"
+        ]
+      ],
+      "question": "¿El espesor de diseño del balcón cumple la tabla?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "1 500 / 10 = 150 mm = espesor de diseño: CUMPLE, justo en el límite. Estar en el límite no es un error, pero sí significa que el elemento no tiene holgura para tolerar una pérdida de altura efectiva."
+    },
+    {
+      "id": "V4",
+      "evidence": "E07",
+      "title": "Recubrimiento especificado en el diseño",
+      "clause": "C.7.7.1 (b)",
+      "ref": "NSR-10, Título C, numeral C.7.7.1 · folio C-96",
+      "requirement": "Concreto construido en sitio expuesto a la intemperie, barras N.º 5 y menores: recubrimiento no menor de 40 mm.",
+      "data": [
+        [
+          "Exposición",
+          "Balcón exterior (intemperie)"
+        ],
+        [
+          "Barra",
+          "N.º 4"
+        ],
+        [
+          "Recubrimiento en el plano",
+          "40 mm"
+        ]
+      ],
+      "question": "¿El recubrimiento especificado en los planos cumple?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "El plano especifica 40 mm para un elemento a la intemperie con barras N.º 4: CUMPLE. El diseño previó correctamente la exposición."
+    },
+    {
+      "id": "V5",
+      "evidence": "E10",
+      "title": "Aceptación del concreto de la losa del piso 4",
+      "clause": "C.5.6.3.3",
+      "ref": "NSR-10, Título C, numeral C.5.6.3.3 · folio C-77",
+      "requirement": "Para f'c ≤ 35 MPa: (a) cada promedio de tres ensayos consecutivos ≥ f'c y (b) ningún ensayo individual menor que f'c − 3,5 MPa.",
+      "data": [
+        [
+          "Ensayos a 28 días",
+          "23,1 · 22,4 · 24,0 MPa"
+        ],
+        [
+          "Promedio",
+          "23,2 MPa"
+        ],
+        [
+          "f'c",
+          "21,0 MPa"
+        ],
+        [
+          "Límite individual",
+          "17,5 MPa"
+        ]
+      ],
+      "question": "¿El concreto de la losa del piso 4 cumple los criterios de aceptación?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "23,2 MPa ≥ 21,0 MPa y el ensayo más bajo (22,4) supera 17,5 MPa: CUMPLE ambos criterios. El material no es la causa."
+    },
+    {
+      "id": "V6",
+      "evidence": "E11",
+      "title": "Carga de uso frente a la carga viva de diseño",
+      "clause": "Tabla B.4.2.1-1",
+      "ref": "NSR-10, Título B, Tabla B.4.2.1-1 · folio B-15",
+      "requirement": "Carga viva mínima uniformemente distribuida para balcones de uso residencial: 5,0 kN/m².",
+      "data": [
+        [
+          "Peso de las materas",
+          "≈ 1,8 kN"
+        ],
+        [
+          "Área del balcón",
+          "5,4 m²"
+        ],
+        [
+          "Carga equivalente",
+          "≈ 0,33 kN/m²"
+        ],
+        [
+          "Carga viva de diseño",
+          "5,0 kN/m²"
+        ]
+      ],
+      "question": "¿La carga de las materas excede la carga viva de diseño del balcón?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "0,33 kN/m² es menos del 7 % de los 5,0 kN/m² de diseño: el uso CUMPLE. Aun concentrando las materas cerca de la punta, no explican el daño."
+    },
+    {
+      "id": "V7",
+      "evidence": "E09",
+      "title": "Retiro de puntales del balcón 402",
+      "clause": "C.6.2.2.1",
+      "ref": "NSR-10, Título C, numeral C.6.2.2.1 · folio C-86",
+      "requirement": "Solo cuando la estructura tenga resistencia suficiente pueden retirarse apuntalamientos. La demostración debe basarse en un análisis estructural y en la resistencia de probetas curadas en obra (u otro procedimiento aprobado).",
+      "data": [
+        [
+          "Edad al retiro",
+          "7 días"
+        ],
+        [
+          "Probetas curadas en obra ensayadas",
+          "No"
+        ],
+        [
+          "Análisis estructural del retiro",
+          "No existe"
+        ],
+        [
+          "Especificación del proyecto",
+          "14 días y 75 % de f'c"
+        ]
+      ],
+      "question": "¿El retiro de puntales cumplió el Reglamento?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "Se retiraron sin probetas curadas en obra ni análisis: NO CUMPLE C.6.2.2.1. El ensayo de 7 días del laboratorio no sirve para este fin porque se curó en condiciones estándar."
+    },
+    {
+      "id": "V8",
+      "evidence": "E08",
+      "title": "Control de la colocación del refuerzo por la supervisión",
+      "clause": "C.1.3.2 (c) · Tabla I.4.3-2",
+      "ref": "NSR-10, Título C, numeral C.1.3.2 (folio C-9) y Título I, numeral I.4.3.7, Tabla I.4.3-2 (folio I-17)",
+      "requirement": "Los registros de supervisión técnica deben incluir la colocación del refuerzo. La Tabla I.4.3-2 incluye, para supervisión continua e itinerante, el control de «colocación, recubrimientos, distancia entre barras, sujeción».",
+      "data": [
+        [
+          "Supervisión obligatoria",
+          "Sí · 3 400 m² > 3 000 m² (I.1.2.1)"
+        ],
+        [
+          "Grado",
+          "Itinerante"
+        ],
+        [
+          "Ítem «altura del acero y recubrimientos»",
+          "SIN FIRMA"
+        ],
+        [
+          "Liberación del vaciado",
+          "Verbal por WhatsApp"
+        ]
+      ],
+      "question": "¿Se cumplió el control de colocación del refuerzo antes de la fundida?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "El control de recubrimientos y sujeción aplica también a la supervisión itinerante, y quedó sin ejecutar ni registrar: NO CUMPLE. El supervisor no tenía que estar todo el día en la obra, pero sí verificar ese punto antes de liberar la fundida."
+    },
+    {
+      "id": "V9",
+      "evidence": "E02",
+      "title": "Seguridad del voladizo en su estado actual",
+      "clause": "C.20.1.1 · C.20.3",
+      "ref": "NSR-10, Título C, numerales C.20.1.1 (folio C-351) y C.20.3.1 (folio C-353)",
+      "requirement": "Cuando existan dudas sobre la seguridad de una estructura o elemento, debe realizarse una evaluación de resistencia, analítica (con dimensiones y propiedades reales) o mediante prueba de carga.",
+      "data": [
+        [
+          "Flecha medida",
+          "38 mm"
+        ],
+        [
+          "d real",
+          "≈ 59 mm"
+        ],
+        [
+          "Capacidad estimada",
+          "≈ 55 % de la de diseño (aproximación)"
+        ],
+        [
+          "Evaluación de resistencia",
+          "No realizada"
+        ]
+      ],
+      "question": "¿Puede declararse seguro o inseguro el balcón solo con estas mediciones?",
+      "answer": "requiere",
+      "partial": {
+        "no_cumple": 0.4
+      },
+      "explanation": "Las mediciones justifican apuntalar y restringir el uso, pero el dictamen formal exige una evaluación de resistencia (Capítulo C.20) por el ingeniero estructural con los datos reales. REQUIERE verificación adicional."
+    }
+  ]
+}

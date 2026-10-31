@@ -14,7 +14,7 @@ import { caseShell, discoverEvidence } from './layout.js';
 import { openEvidence } from './evidenceViewer.js';
 import { actionList, onCrisisTick, occupants } from './crisis.js';
 
-const TOOL_ICONS = { visual: 'eye', linterna: 'torch', fisurometro: 'ruler' };
+const TOOL_ICONS = { visual: 'eye', linterna: 'torch', fisurometro: 'ruler', nivel: 'flash', pachometro: 'layers' };
 
 function webglAvailable() {
   try {
@@ -175,7 +175,9 @@ export async function sceneScreen(id) {
       if (want3d) {
         const mod = await import(`../scenes/${data.meta.scene}.js`);
         if (disposed) return;
-        scene = mod.mountScene(opts);
+        const s = await mod.mountScene(opts); // algunas escenas se construyen de forma asíncrona
+        if (disposed) { s.dispose(); return; }
+        scene = s;
       }
     } catch (e) {
       console.warn('[OBRA] Vista 3D no disponible, se usa la vista 2D:', e);
