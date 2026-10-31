@@ -1,0 +1,218 @@
+/* =========================================================
+   OBRA · modes.css
+   Visor de modelos 3D, galería y modo historia «72 horas».
+   ========================================================= */
+
+.menu-bg::after { z-index: 2; }
+
+/* ---------- Accesos en el centro de operaciones ---------- */
+.ops-shortcuts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.shortcut {
+  position: relative; display: grid; gap: .3rem; align-content: end; text-align: left;
+  min-height: 130px; padding: 1.1rem 1.2rem; cursor: pointer; overflow: hidden;
+  border: 1px solid var(--line-2); border-radius: 2px; color: #f4f1ea;
+  background: linear-gradient(0deg, rgba(8, 10, 13, .92) 10%, rgba(8, 10, 13, .35) 75%), var(--photo) center 60% / cover;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.shortcut:hover { transform: translateY(-2px); border-color: var(--orange); }
+.shortcut .eyebrow { color: #ffb21e; }
+.shortcut b { font-family: "Saira Stencil One", var(--font-display); font-weight: 400; font-size: 1.35rem; letter-spacing: .06em; }
+.shortcut span:last-child { font-size: .88rem; color: #cfd5dc; max-width: 46ch; }
+.sc-story::after {
+  content: "72:00"; position: absolute; top: .8rem; right: 1rem;
+  font-family: var(--font-mono); font-size: 1.5rem; color: var(--phosphor); text-shadow: 0 0 10px rgba(255, 178, 30, .6);
+}
+@media (max-width: 720px) { .ops-shortcuts { grid-template-columns: 1fr; } }
+
+/* ---------- Galería de modelos ---------- */
+.gallery { max-width: 1400px; margin: 0 auto; padding: 1.4rem; }
+.gallery-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.3rem; }
+.gallery-head h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: .2rem 0; letter-spacing: .04em; }
+.gallery-head p { max-width: 70ch; margin: 0; }
+.model-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.1rem; }
+.model-card {
+  display: grid; text-align: left; padding: 0; cursor: pointer; overflow: hidden; color: var(--text);
+  border: 1px solid var(--line-2); border-radius: 2px; background: var(--panel);
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.model-card:hover { transform: translateY(-3px); border-color: var(--orange); }
+.mc-photo {
+  position: relative; height: 150px; display: flex; justify-content: space-between; align-items: flex-end; padding: .8rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, .7), transparent 70%), var(--photo) center 58% / cover;
+}
+.mc-photo::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(rgba(143, 176, 207, .14) 1px, transparent 1px) 0 0 / 100% 18px, linear-gradient(90deg, rgba(143, 176, 207, .14) 1px, transparent 1px) 0 0 / 18px 100%;
+}
+.mc-code { position: relative; font-family: "Saira Stencil One", var(--font-display); font-size: 1.7rem; color: #fff; letter-spacing: .06em; text-shadow: 0 2px 6px rgba(0, 0, 0, .6); }
+.mc-photo .tag { position: relative; background: rgba(0, 0, 0, .55); }
+.mc-info { display: grid; gap: .25rem; padding: .9rem 1rem 1rem; }
+.mc-info b { font-size: 1.05rem; }
+.mc-info .muted { font-size: .85rem; }
+.mc-open { display: inline-flex; align-items: center; gap: .4rem; margin-top: .4rem; color: var(--orange); font-family: var(--font-mono); font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; }
+.mc-open svg { width: 16px; height: 16px; }
+
+/* ---------- Visor ---------- */
+.viewer-body { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 1rem; padding: 1rem; height: calc(100vh - 70px); min-height: 520px; }
+.viewer-stage { position: relative; border: 1px solid var(--line-2); border-radius: 2px; overflow: hidden; background: var(--stage-bg); min-height: 360px; }
+.viewer-stage canvas { display: block; width: 100% !important; height: 100% !important; }
+.viewer-loading { position: absolute; inset: 0; display: grid; place-items: center; padding: 2rem; text-align: center; color: var(--muted); font-family: var(--font-mono); letter-spacing: .1em; }
+.viewer-panel { overflow: auto; }
+.vp-title { margin: 0 0 .3rem; font-size: 1.5rem; }
+.vp-sub { margin: 1rem 0 .45rem; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.vp-list { margin: 0; padding-left: 1.1rem; display: grid; gap: .35rem; font-size: .92rem; }
+.vp-tools { display: flex; flex-wrap: wrap; gap: .45rem; }
+.vp-tools .btn[aria-pressed="true"] { color: #fff; }
+.vp-stage input[type="range"] { width: 100%; accent-color: var(--orange); }
+.vp-nav { display: flex; justify-content: space-between; gap: .5rem; margin-top: 1rem; flex-wrap: wrap; }
+.small { font-size: .82rem; }
+@media (max-width: 900px) {
+  .viewer-body { grid-template-columns: 1fr; height: auto; }
+  .viewer-stage { height: 60vh; }
+}
+
+/* ---------- Modo historia: portada ---------- */
+.story-home { max-width: 1400px; margin: 0 auto; padding: 1.4rem; display: grid; gap: 1.2rem; }
+.sh-hero {
+  position: relative; min-height: 360px; display: grid; align-items: end; overflow: hidden; border: 1px solid var(--line-2);
+  background: linear-gradient(90deg, rgba(8, 10, 13, .95) 0%, rgba(8, 10, 13, .75) 45%, rgba(8, 10, 13, .1) 100%), var(--photo) center 55% / cover;
+  clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+  color: #eef0f2;
+}
+.sh-hero::after {
+  content: "72:00:00"; position: absolute; right: 1.6rem; top: 1.2rem;
+  font-family: var(--font-mono); font-size: clamp(1.6rem, 4vw, 3rem); color: #ffb21e; text-shadow: 0 0 14px rgba(255, 178, 30, .6);
+}
+.sh-hero-in { padding: 2rem 2.2rem; max-width: 760px; display: grid; gap: .6rem; }
+.sh-title { font-size: clamp(3rem, 9vw, 6rem); line-height: .9; margin: 0; letter-spacing: .04em; }
+.sh-sub { font-family: var(--font-display); font-size: 1.4rem; letter-spacing: .2em; text-transform: uppercase; color: #ffb21e; }
+.sh-syn { color: #d5dae0; max-width: 64ch; line-height: 1.55; margin: .2rem 0; }
+.sh-meta { display: flex; flex-wrap: wrap; gap: .4rem; }
+.sh-meta .tag { background: rgba(0, 0, 0, .5); }
+.sh-meta .tag svg { width: 13px; height: 13px; }
+.sh-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .6rem; }
+.sh-actions .btn:not(.btn-primary) { color: #eef0f2; background: rgba(0, 0, 0, .45); }
+.sh-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 1.2rem; }
+@media (max-width: 1000px) { .sh-grid { grid-template-columns: 1fr; } }
+.st-chapters { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+.st-ch { display: grid; grid-template-columns: 42px 1fr 20px; align-items: center; gap: .7rem; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 2px; background: rgba(0, 0, 0, .12); }
+.st-ch .n { font-family: var(--font-mono); color: var(--phosphor); text-shadow: var(--phosphor-glow); font-size: 1rem; }
+.st-ch div { display: grid; }
+.st-ch .muted { font-size: .8rem; }
+.st-ch svg { width: 18px; height: 18px; }
+.st-ch.done svg { color: var(--ok); }
+.st-ch.current { border-color: var(--orange); }
+.st-ch.locked { opacity: .55; }
+.st-team { display: grid; gap: .7rem; }
+.st-person { display: flex; align-items: center; gap: .7rem; }
+.st-person div { display: grid; }
+.st-person .muted { font-size: .82rem; }
+.avatar {
+  flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 2px;
+  font-family: "Saira Stencil One", var(--font-display); font-size: .95rem; color: #111;
+  background: var(--c); box-shadow: inset 0 -3px 0 rgba(0, 0, 0, .25);
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+.sh-best { display: flex; align-items: baseline; gap: .7rem; margin: 1rem 0 .5rem; flex-wrap: wrap; }
+.sh-best b { font-family: var(--font-mono); font-size: 1.4rem; color: var(--phosphor); }
+.stars { color: #ffb21e; letter-spacing: .1em; }
+.stars.big { font-size: 1.8rem; }
+
+/* ---------- Modo historia: partida ---------- */
+.story-play { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 1rem; padding: 1rem; height: calc(100vh - 70px); min-height: 560px; }
+.story-stage-wrap { position: relative; border: 1px solid var(--line-2); border-radius: 2px; overflow: hidden; background: var(--stage-bg); }
+.story-stage { position: absolute; inset: 0; }
+.story-stage canvas { display: block; width: 100% !important; height: 100% !important; }
+.story-hud {
+  position: absolute; left: 14px; right: 14px; top: 14px; z-index: 3;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem;
+  padding: .55rem .9rem; color: #e8ebef;
+  background: rgba(10, 12, 15, .78); border: 1px solid rgba(255, 178, 30, .35); border-radius: 2px;
+  backdrop-filter: blur(4px);
+}
+.sh-clock { display: flex; align-items: center; gap: .55rem; }
+.sh-clock svg { width: 22px; height: 22px; color: #ffb21e; }
+.sh-clock div { display: grid; line-height: 1.1; }
+.sh-clock b { font-family: var(--font-mono); font-size: 1.15rem; color: #ffb21e; text-shadow: 0 0 8px rgba(255, 178, 30, .5); }
+.sh-bar { position: relative; height: 10px; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .15); overflow: hidden; }
+.sh-bar i { position: absolute; left: 0; top: 0; bottom: 0; background: repeating-linear-gradient(-45deg, #ffb21e 0 6px, #e08a00 6px 12px); transition: width .6s ease; }
+.sh-bar i.warn { background: repeating-linear-gradient(-45deg, #ff7a1a 0 6px, #c95400 6px 12px); }
+.sh-bar i.bad { background: repeating-linear-gradient(-45deg, #ff5a4f 0 6px, #b3261e 6px 12px); }
+.sh-chap { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .14em; color: #c9d0d8; white-space: nowrap; }
+.story-panel { overflow: auto; padding: 1.2rem 1.3rem; display: flex; flex-direction: column; gap: .9rem; }
+.sp-head h2 { margin: .2rem 0 0; font-family: "Saira Stencil One", var(--font-display); font-weight: 400; font-size: 1.9rem; letter-spacing: .04em; }
+.sp-actions { display: flex; justify-content: flex-end; gap: .5rem; flex-wrap: wrap; margin-top: auto; padding-top: .4rem; }
+.dialog { display: grid; gap: .7rem; }
+.dl { display: flex; gap: .7rem; align-items: flex-start; }
+.dl.me { flex-direction: row-reverse; text-align: right; }
+.dl-b { display: grid; gap: .15rem; padding: .6rem .8rem; background: rgba(0, 0, 0, .18); border: 1px solid var(--line); border-radius: 2px; max-width: 100%; }
+:root[data-theme="day"] .dl-b { background: rgba(255, 255, 255, .55); }
+.dl-n { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+.dl-b p { margin: 0; line-height: 1.5; }
+.dl.nar .dl-b { width: 100%; background: transparent; border-style: dashed; font-style: italic; color: var(--text-2); }
+.dl.fresh { animation: rise .45s var(--ease) both; }
+.lesson { display: grid; gap: .3rem; padding: 1rem 1.1rem; border: 1px solid var(--line-2); border-left: 4px solid var(--phosphor); background: rgba(0, 0, 0, .14); }
+:root[data-theme="day"] .lesson { background: rgba(255, 255, 255, .5); }
+.lesson h3 { margin: 0; font-size: 1.25rem; }
+.lesson-steps { margin: 0; padding-left: 1.2rem; display: grid; gap: .3rem; font-size: .93rem; }
+.lesson-norms { display: grid; gap: .5rem; }
+.norm-chip { display: grid; grid-template-columns: 1fr auto; gap: .1rem .6rem; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 2px; background: var(--steel-dim); }
+.norm-chip p { grid-column: 1 / -1; margin: .15rem 0 0; font-size: .9rem; }
+.nc-ref { font-family: var(--font-mono); font-size: .8rem; color: var(--steel-2); font-weight: 600; }
+.nc-folio { font-family: var(--font-mono); font-size: .72rem; color: var(--muted); }
+.speed { display: flex; gap: .5rem; align-items: flex-start; margin: .4rem 0 0; padding: .6rem .75rem; border: 1px dashed rgba(255, 178, 30, .5); background: rgba(255, 178, 30, .07); font-size: .92rem; }
+.speed svg { flex: none; width: 18px; height: 18px; color: var(--phosphor); margin-top: .1rem; }
+.decide { display: grid; gap: .5rem; }
+.dq { margin: 0 0 .3rem; font-size: 1.2rem; line-height: 1.35; }
+.opts { display: grid; gap: .5rem; }
+.opt {
+  display: grid; grid-template-columns: 30px 1fr; gap: .7rem; align-items: center; text-align: left; cursor: pointer;
+  padding: .7rem .8rem; color: var(--text); font: inherit; font-size: .95rem; line-height: 1.4;
+  background: var(--panel-2); border: 1px solid var(--line-2); border-radius: 2px;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  transition: border-color .15s ease, transform .15s ease, background .15s ease;
+}
+.opt:hover, .opt:focus-visible { border-color: var(--orange); background: var(--orange-dim); transform: translateX(3px); }
+.ol { display: grid; place-items: center; width: 30px; height: 30px; font-family: var(--font-mono); font-weight: 700; color: var(--phosphor); border: 1px solid currentColor; border-radius: 2px; }
+.seq-picked { margin: 0; padding: .6rem .6rem .6rem 2rem; display: grid; gap: .3rem; min-height: 60px; border: 1px dashed var(--line-2); font-size: .92rem; }
+.seq-picked .ph { list-style: none; margin-left: -1.4rem; }
+.verdict-card { display: grid; gap: .45rem; padding: 1rem 1.1rem; border: 1px solid var(--line-2); border-left: 5px solid var(--muted); background: rgba(0, 0, 0, .14); }
+:root[data-theme="day"] .verdict-card { background: rgba(255, 255, 255, .55); }
+.verdict-card.ok { border-left-color: var(--ok); }
+.verdict-card.partial { border-left-color: var(--yellow); }
+.verdict-card.bad { border-left-color: var(--bad); }
+.verdict-card p { margin: 0; line-height: 1.5; }
+.vc-top { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.vc-badge { font-family: "Saira Stencil One", var(--font-display); letter-spacing: .1em; text-transform: uppercase; }
+.verdict-card.ok .vc-badge { color: var(--ok); }
+.verdict-card.partial .vc-badge { color: var(--yellow); }
+.verdict-card.bad .vc-badge { color: var(--bad); }
+.vc-h { display: inline-flex; align-items: center; gap: .3rem; font-family: var(--font-mono); color: var(--phosphor); }
+.vc-h svg, .vc-def svg { width: 16px; height: 16px; }
+.vc-def { display: flex; gap: .4rem; align-items: center; color: var(--bad); font-size: .88rem; }
+.built-card { display: grid; gap: .4rem; padding: 1rem 1.1rem; border: 1px solid var(--line-2); background: repeating-linear-gradient(-45deg, rgba(255, 194, 26, .06) 0 12px, transparent 12px 24px); }
+.built-card > b { font-family: "Saira Stencil One", var(--font-display); font-weight: 400; font-size: 1.5rem; letter-spacing: .05em; }
+.built-card p { margin: 0; }
+.story-score { display: flex; align-items: center; gap: 1.3rem; padding: 1rem; border: 1px solid var(--line-2); background: rgba(0, 0, 0, .18); }
+.ss-n { font-family: var(--font-mono); font-size: 3.4rem; line-height: 1; }
+.ss-n small { font-size: 1.1rem; opacity: .7; }
+.consequences { display: grid; gap: .5rem; }
+.cq { padding: .7rem .8rem; border: 1px solid rgba(255, 90, 79, .35); border-left: 4px solid var(--bad); background: var(--bad-dim); }
+.cq b { display: flex; align-items: center; gap: .4rem; color: var(--bad); }
+.cq b svg { width: 16px; height: 16px; }
+.cq p { margin: .3rem 0 0; font-size: .92rem; line-height: 1.45; }
+.res-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; }
+.res-list li { display: grid; gap: .1rem; padding: .5rem .7rem; border-left: 3px solid var(--line-2); background: rgba(0, 0, 0, .1); font-size: .9rem; }
+.res-list li.ok { border-left-color: var(--ok); }
+.res-list li.partial { border-left-color: var(--yellow); }
+.res-list li.bad { border-left-color: var(--bad); }
+.closing { font-style: italic; color: var(--text-2); border-top: 1px solid var(--line); padding-top: .8rem; }
+@media (max-width: 1000px) {
+  .story-play { grid-template-columns: 1fr; height: auto; }
+  .story-stage-wrap { height: 52vh; }
+  .story-hud { grid-template-columns: auto 1fr; }
+  .sh-chap { display: none; }
+}
+.ops-shortcuts { grid-column: 1 / -1; }

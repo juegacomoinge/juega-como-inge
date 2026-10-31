@@ -1,0 +1,263 @@
+/* =========================================================
+   OBRA · main.css
+   Tokens de diseño, base tipográfica, botones y utilidades
+   ========================================================= */
+
+:root {
+  /* Paleta: carbón, grafito, acero + acentos industriales */
+  --bg: #0a0c0f;
+  --bg-2: #0f1216;
+  --panel: #13171c;
+  --panel-2: #191e25;
+  --panel-3: #20262e;
+  --line: #2a313a;
+  --line-2: #38414c;
+  --text: #e7eaee;
+  --text-2: #c3c9d1;
+  --muted: #8a94a0;
+  --steel: #5d7d9c;
+  --steel-2: #8fb0cf;
+  --steel-dim: rgba(93, 125, 156, .16);
+  --orange: #ff7a1a;
+  --orange-dim: rgba(255, 122, 26, .14);
+  --yellow: #ffc21a;
+  --yellow-dim: rgba(255, 194, 26, .12);
+  --ok: #46c48a;
+  --ok-dim: rgba(70, 196, 138, .14);
+  --bad: #ff5a4f;
+  --bad-dim: rgba(255, 90, 79, .14);
+  --info: #6fb7ff;
+
+  --font-display: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", ui-monospace, monospace;
+  --font-hand: "Kalam", "Segoe Print", cursive;
+
+  --radius: 6px;
+  --radius-lg: 10px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, .55);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --topbar-h: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body { overflow-x: hidden; }
+
+#app { position: relative; min-height: 100vh; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1.1;
+  margin: 0 0 .4em;
+}
+
+p { margin: 0 0 .9em; }
+a { color: var(--steel-2); }
+button { font: inherit; color: inherit; }
+
+::selection { background: var(--orange); color: #000; }
+
+:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+/* Scrollbar discreta */
+* { scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 4px; }
+
+/* ---------- Capas de atmósfera ---------- */
+.fx-grain {
+  pointer-events: none;
+  position: fixed; inset: -50%;
+  z-index: 900;
+  opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1.2s steps(6) infinite;
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 3%); }
+  100% { transform: translate(0, 0); }
+}
+.fx-vignette {
+  pointer-events: none;
+  position: fixed; inset: 0;
+  z-index: 899;
+  background: var(--vignette);
+}
+
+/* ---------- Tipografía utilitaria ---------- */
+.mono { font-family: var(--font-mono); }
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--steel-2);
+}
+.eyebrow.orange { color: var(--orange); }
+.muted { color: var(--muted); }
+.hand { font-family: var(--font-hand); font-size: 1.08rem; color: var(--hand); }
+
+/* ---------- Botones ---------- */
+.btn {
+  --b: var(--line-2);
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+  min-height: 46px;
+  padding: .7em 1.3em;
+  border: 1px solid var(--b);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color .2s, background .2s, transform .15s var(--ease), color .2s, box-shadow .2s;
+  user-select: none;
+}
+.btn svg { width: 18px; height: 18px; flex: none; }
+.btn:hover { border-color: var(--steel-2); background: var(--panel-3); }
+.btn:active { transform: translateY(1px); }
+.btn[disabled] { opacity: .45; cursor: not-allowed; }
+
+.btn-primary {
+  --b: var(--orange);
+  background: linear-gradient(180deg, #ff8a33, #e8650a);
+  color: #120800;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px rgba(255, 122, 26, .3), 0 10px 30px rgba(255, 122, 26, .18);
+}
+.btn-primary:hover {
+  background: linear-gradient(180deg, #ff9b4f, #f26f12);
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 1px rgba(255, 194, 26, .5), 0 12px 36px rgba(255, 122, 26, .3);
+}
+.btn-ghost { background: transparent; }
+.btn-ghost:hover { background: rgba(255, 255, 255, .04); }
+.btn-sm { min-height: 36px; padding: .4em .9em; font-size: .95rem; }
+.btn-danger { --b: rgba(255, 90, 79, .5); color: #ffb3ad; }
+.btn-danger:hover { border-color: var(--bad); background: var(--bad-dim); }
+.btn-icon {
+  width: 42px; height: 42px; min-height: 42px; padding: 0;
+}
+
+/* Esquinas técnicas para paneles */
+.corners { position: relative; }
+.corners::before, .corners::after {
+  content: ""; position: absolute; width: 12px; height: 12px;
+  border-color: var(--orange); border-style: solid; pointer-events: none;
+}
+.corners::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.corners::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.panel {
+  background: linear-gradient(180deg, rgba(25, 30, 37, .92), rgba(19, 23, 28, .92));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+.panel-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .9rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+.panel-head h3 { margin: 0; font-size: 1.25rem; letter-spacing: .08em; text-transform: uppercase; }
+.panel-body { padding: 1.1rem 1.2rem; }
+
+/* Etiquetas de estado */
+.tag {
+  display: inline-flex; align-items: center; gap: .4em;
+  padding: .18em .6em;
+  border: 1px solid var(--line-2);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  white-space: nowrap;
+}
+.tag.orange { border-color: rgba(255, 122, 26, .5); color: var(--orange); background: var(--orange-dim); }
+.tag.yellow { border-color: rgba(255, 194, 26, .45); color: var(--yellow); background: var(--yellow-dim); }
+.tag.ok { border-color: rgba(70, 196, 138, .45); color: var(--ok); background: var(--ok-dim); }
+.tag.bad { border-color: rgba(255, 90, 79, .45); color: var(--bad); background: var(--bad-dim); }
+.tag.steel { border-color: rgba(143, 176, 207, .4); color: var(--steel-2); background: var(--steel-dim); }
+
+/* Barra de progreso */
+.bar {
+  position: relative; height: 8px; border-radius: 4px;
+  background: rgba(255, 255, 255, .06);
+  overflow: hidden;
+}
+.bar > i {
+  position: absolute; inset: 0 auto 0 0;
+  width: var(--v, 0%);
+  background: linear-gradient(90deg, var(--orange), var(--yellow));
+  border-radius: inherit;
+  transition: width .8s var(--ease);
+}
+.bar.steel > i { background: linear-gradient(90deg, var(--steel), var(--steel-2)); }
+
+/* Cinta de advertencia */
+.hazard {
+  height: 8px;
+  background: repeating-linear-gradient(-45deg, var(--yellow) 0 12px, #111 12px 24px);
+  opacity: .85;
+}
+
+/* Estampa de datos simulados */
+.sim-stamp {
+  display: inline-block;
+  padding: .25em .7em;
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  transform: rotate(-2deg);
+  opacity: .9;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+/* Transiciones de pantalla */
+.screen {
+  min-height: 100vh;
+  animation: screen-in .55s var(--ease) both;
+}
+.screen.leaving { animation: screen-out .25s ease both; }
+@keyframes screen-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes screen-out { to { opacity: 0; } }
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .7s var(--ease) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

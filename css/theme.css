@@ -1,0 +1,360 @@
+/* =========================================================
+   OBRA · theme.css
+   1) Temas NOCHE (por defecto) y DÍA.
+   2) Acabado «futurista-rústico»: placas de acero con
+      remaches, textura de concreto, costuras de soldadura,
+      rotulación estarcida, esquinas biseladas y líneas HUD.
+   Se carga después de main / interface / game.
+   ========================================================= */
+
+/* ---------- Tokens de tema: NOCHE ---------- */
+:root,
+:root[data-theme="night"] {
+  color-scheme: dark;
+  --topbar-bg: rgba(10, 12, 15, .9);
+  --tabs-bg: rgba(13, 16, 20, .94);
+  --toast-bg: rgba(19, 23, 28, .97);
+  --input-bg: #0c0f13;
+  --board-bg: #0d1014;
+  --stage-bg: #07090b;
+  --badge-bg: radial-gradient(circle at 30% 30%, #2a3440, #12161b);
+  --crisis-bg: linear-gradient(90deg, rgba(40, 14, 12, .96), rgba(16, 18, 22, .96));
+  --hand: #f0d58a;
+  --vignette: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, .55) 100%);
+  --menu-overlay-a: linear-gradient(90deg, rgba(10, 12, 15, .96) 0%, rgba(10, 12, 15, .78) 38%, rgba(10, 12, 15, .15) 75%);
+  --menu-overlay-b: linear-gradient(0deg, rgba(10, 12, 15, .95) 0%, transparent 35%);
+  --sky-a: #0a0e14; --sky-b: #1a2330; --sky-c: #3a2a22; --glow-op: 1;
+  --rivet: #4a535e;
+  --rivet-hi: rgba(255, 255, 255, .25);
+  --plate-noise-op: .05;
+  --grid-line: rgba(143, 176, 207, .045);
+  --seam: rgba(255, 122, 26, .35);
+}
+
+/* ---------- Tokens de tema: DÍA ---------- */
+:root[data-theme="day"] {
+  color-scheme: light;
+  --bg: #e4dfd4;
+  --bg-2: #ebe7de;
+  --panel: #f5f2eb;
+  --panel-2: #efebe3;
+  --panel-3: #e4ded2;
+  --line: #cdc5b6;
+  --line-2: #b6ad9c;
+  --text: #1c1f23;
+  --text-2: #3b4148;
+  --muted: #646b74;
+  --steel: #3d5f80;
+  --steel-2: #2c5679;
+  --steel-dim: rgba(44, 86, 121, .1);
+  --orange: #d45a00;
+  --orange-dim: rgba(212, 90, 0, .1);
+  --yellow: #a87800;
+  --yellow-dim: rgba(196, 140, 0, .12);
+  --ok: #1d8455;
+  --ok-dim: rgba(29, 132, 85, .1);
+  --bad: #c2362c;
+  --bad-dim: rgba(194, 54, 44, .09);
+  --info: #2a67a8;
+  --shadow: 0 16px 40px rgba(60, 50, 30, .22);
+
+  --topbar-bg: rgba(238, 234, 226, .92);
+  --tabs-bg: rgba(231, 226, 216, .95);
+  --toast-bg: rgba(250, 248, 243, .98);
+  --input-bg: #fbfaf6;
+  --board-bg: #ddd6c7;
+  --stage-bg: #b9c7d3;
+  --badge-bg: radial-gradient(circle at 30% 30%, #ffffff, #d9d2c3);
+  --crisis-bg: linear-gradient(90deg, rgba(250, 222, 216, .97), rgba(240, 236, 228, .97));
+  --hand: #7a4b00;
+  --vignette: radial-gradient(ellipse at center, transparent 60%, rgba(90, 70, 40, .18) 100%);
+  --menu-overlay-a: linear-gradient(90deg, rgba(240, 236, 228, .95) 0%, rgba(240, 236, 228, .75) 38%, rgba(240, 236, 228, .05) 75%);
+  --menu-overlay-b: linear-gradient(0deg, rgba(228, 223, 212, .95) 0%, transparent 35%);
+  --sky-a: #8fb3d1; --sky-b: #c9dceb; --sky-c: #efe3cf; --glow-op: .25;
+  --rivet: #a39a88;
+  --rivet-hi: rgba(255, 255, 255, .8);
+  --plate-noise-op: .07;
+  --grid-line: rgba(44, 86, 121, .06);
+  --seam: rgba(212, 90, 0, .4);
+}
+
+/* Ajustes puntuales del tema día */
+:root[data-theme="day"] .btn-primary { color: #fff; background: linear-gradient(180deg, #e06a12, #c45200); }
+:root[data-theme="day"] .btn-primary:hover { background: linear-gradient(180deg, #ec7a22, #d05b05); }
+:root[data-theme="day"] .modal-backdrop { background: rgba(60, 52, 38, .45); }
+:root[data-theme="day"] .fx-grain { opacity: .035; }
+:root[data-theme="day"] .logo { text-shadow: none; }
+:root[data-theme="day"] .menu-unit .dot { box-shadow: none; }
+:root[data-theme="day"] .crisis-bar { border-bottom-color: rgba(194, 54, 44, .45); }
+:root[data-theme="day"] .crisis-bar.ok { background: linear-gradient(90deg, rgba(214, 240, 225, .97), rgba(240, 236, 228, .97)); }
+:root[data-theme="day"] .collapse-banner { background: rgba(250, 226, 222, .95); }
+:root[data-theme="day"] .menu-scan { background: repeating-linear-gradient(0deg, rgba(0, 0, 0, .025) 0 1px, transparent 1px 4px); }
+:root[data-theme="day"] .marker { background: rgba(255, 255, 255, .75); color: #8a5a00; border-color: #c48a00; }
+:root[data-theme="day"] .marker::before { border-color: #c48a00; }
+:root[data-theme="day"] .marker.found { color: var(--ok); border-color: var(--ok); }
+:root[data-theme="day"] .crisis-pause { background: rgba(232, 228, 219, .98); }
+:root[data-theme="day"] .menu-bg svg { filter: saturate(.8); }
+
+/* Transición suave al cambiar de tema */
+body, .panel, .topbar, .case-tabs, .modal, .btn, .doc, .case-card, .toast {
+  transition: background-color .4s ease, color .4s ease, border-color .4s ease;
+}
+
+/* =========================================================
+   ACABADO «TERMINAL DE CAMPO»
+   Materiales reales (fotografías CC0 de Poly Haven en
+   assets/textures): concreto, chapa diamantada, acero pintado
+   y desgastado, OSB. Encima, una capa de instrumentación:
+   lecturas en fósforo ámbar, corchetes HUD y cinta rotuladora.
+   ========================================================= */
+
+:root, :root[data-theme="night"] {
+  --tx-body: url(../assets/textures/concrete_raw.jpg);
+  --tx-body-tint: linear-gradient(rgba(9, 11, 14, .88), rgba(9, 11, 14, .93));
+  --tx-plate: url(../assets/textures/rusty_plate.jpg);
+  --plate-tint: linear-gradient(180deg, rgba(24, 28, 33, .93), rgba(17, 20, 24, .95));
+  --tx-bar: url(../assets/textures/steel_plate.jpg);
+  --bar-tint: linear-gradient(180deg, rgba(14, 16, 19, .82), rgba(10, 12, 15, .9));
+  --tx-paint: url(../assets/textures/painted_metal.jpg);
+  --tx-board: url(../assets/textures/osb.jpg);
+  --board-tint: linear-gradient(rgba(20, 16, 10, .62), rgba(20, 16, 10, .7));
+  --phosphor: #ffb21e;
+  --phosphor-glow: 0 0 6px rgba(255, 178, 30, .55), 0 0 18px rgba(255, 140, 0, .25);
+  --dymo-bg: linear-gradient(180deg, #1c1f22, #0d0f11);
+  --dymo-fg: #f2f2ee;
+  --hazard-a: #ffc21a;
+  --hazard-b: #15171a;
+  --hud: rgba(255, 178, 30, .7);
+}
+:root[data-theme="day"] {
+  --tx-body: url(../assets/textures/concrete_wall.jpg);
+  --tx-body-tint: linear-gradient(rgba(236, 232, 224, .72), rgba(228, 223, 212, .8));
+  --tx-plate: url(../assets/textures/painted_metal.jpg);
+  --plate-tint: linear-gradient(180deg, rgba(247, 245, 240, .93), rgba(238, 235, 228, .95));
+  --bar-tint: linear-gradient(180deg, rgba(240, 237, 230, .86), rgba(228, 224, 215, .9));
+  --board-tint: linear-gradient(rgba(255, 248, 235, .25), rgba(255, 248, 235, .32));
+  --phosphor: #b45f00;
+  --phosphor-glow: none;
+  --dymo-bg: linear-gradient(180deg, #1f4f86, #163c68);
+  --dymo-fg: #ffffff;
+  --hazard-b: #222;
+  --hud: rgba(180, 95, 0, .75);
+}
+
+/* Fondo: concreto fotográfico + retícula de plano */
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    var(--tx-body-tint),
+    var(--tx-body);
+  background-size: 48px 48px, 48px 48px, auto, 512px 512px;
+  background-attachment: fixed;
+}
+
+/* ---------- Placas: acero pintado sobre chapa real, con remaches ---------- */
+.panel, .modal, .doc, .story-panel {
+  position: relative;
+  background-image:
+    radial-gradient(circle at 9px 9px, var(--rivet-hi) 0 1px, var(--rivet) 1.6px 3px, transparent 3.6px),
+    radial-gradient(circle at calc(100% - 9px) 9px, var(--rivet-hi) 0 1px, var(--rivet) 1.6px 3px, transparent 3.6px),
+    radial-gradient(circle at 9px calc(100% - 9px), var(--rivet-hi) 0 1px, var(--rivet) 1.6px 3px, transparent 3.6px),
+    radial-gradient(circle at calc(100% - 9px) calc(100% - 9px), var(--rivet-hi) 0 1px, var(--rivet) 1.6px 3px, transparent 3.6px),
+    var(--plate-tint),
+    var(--tx-plate);
+  background-size: auto, auto, auto, auto, auto, 420px 420px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), inset 0 0 0 1px rgba(0, 0, 0, .25), 0 10px 30px rgba(0, 0, 0, .25);
+}
+.case-card .info, .norm-card, .em-item, .kpi { position: relative; }
+
+/* Cabecera de placa: franja de lámina pintada con rótulo estarcido */
+.panel-head {
+  position: relative;
+  background:
+    linear-gradient(90deg, var(--orange) 0 4px, transparent 4px),
+    linear-gradient(180deg, rgba(0, 0, 0, .22), rgba(0, 0, 0, .08)),
+    var(--tx-paint) center / 300px auto;
+  background-blend-mode: normal, normal, soft-light;
+  border-bottom: 1px solid var(--line);
+}
+:root[data-theme="day"] .panel-head { background-blend-mode: normal, normal, multiply; background-color: #ece7dc; }
+.panel-head::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; pointer-events: none;
+  background: repeating-linear-gradient(90deg, var(--line-2) 0 1px, transparent 1px 10px);
+  opacity: .6;
+}
+.panel-head h3 { font-family: "Saira Stencil One", var(--font-display); font-weight: 400; letter-spacing: .14em; }
+.panel-head h3::before { content: "▮ "; font-size: .7em; color: var(--phosphor); text-shadow: var(--phosphor-glow); vertical-align: .1em; }
+
+/* ---------- Barra superior: chapa diamantada + borde de peligro ---------- */
+.topbar { background-image: var(--bar-tint), var(--tx-bar); background-size: auto, 220px 220px; }
+.topbar::after, .case-tabs::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 4px; pointer-events: none;
+  background: repeating-linear-gradient(-45deg, var(--hazard-a) 0 8px, var(--hazard-b) 8px 16px);
+  opacity: .85;
+}
+.case-tabs { position: sticky; background-image: var(--bar-tint), var(--tx-bar); background-size: auto, 220px 220px; }
+.case-tabs::after { opacity: .35; height: 3px; bottom: -3px; }
+
+/* Indicadores: cinta rotuladora en relieve */
+.topbar .stat-chip {
+  background: var(--dymo-bg); color: var(--dymo-fg); border: 0; border-radius: 2px;
+  font-family: var(--font-mono); letter-spacing: .14em; text-transform: uppercase;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), inset 0 -2px 0 rgba(0, 0, 0, .4), 0 2px 4px rgba(0, 0, 0, .35);
+  transform: rotate(-.6deg);
+}
+.topbar .stat-chip b { color: var(--dymo-fg); text-shadow: 0 1px 0 rgba(0, 0, 0, .6), 0 -1px 0 rgba(255, 255, 255, .2); }
+.topbar .stat-chip + .stat-chip { transform: rotate(.5deg); }
+
+/* ---------- Lecturas de instrumento: fósforo ámbar ---------- */
+.kpi .v, .sh-clock b, .ss-n { color: var(--phosphor); text-shadow: var(--phosphor-glow); font-variant-numeric: tabular-nums; }
+.kpi {
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .35), rgba(0, 0, 0, .15)), repeating-linear-gradient(0deg, rgba(255, 255, 255, .025) 0 1px, transparent 1px 3px);
+  border: 1px solid var(--line); border-radius: 2px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, .35);
+}
+:root[data-theme="day"] .kpi { background: linear-gradient(180deg, #fffdf6, #f1ece0); box-shadow: inset 0 2px 6px rgba(80, 60, 20, .12); }
+.kpi::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: linear-gradient(90deg, var(--phosphor), transparent); opacity: .7; }
+
+/* Barras de progreso con escala */
+.bar::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 1px), rgba(0, 0, 0, .35) calc(10% - 1px) 10%);
+}
+
+/* ---------- Botones biselados; primario = acero pintado naranja de seguridad ---------- */
+.btn { clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); border-radius: 2px; }
+.btn-icon, .btn-sm { clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px); }
+.btn::after {
+  content: ""; position: absolute; right: 3px; bottom: 3px; width: 5px; height: 5px;
+  border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; opacity: .35;
+}
+.btn-primary {
+  background-image: linear-gradient(180deg, rgba(255, 138, 40, .88), rgba(214, 88, 0, .9)), var(--tx-paint) !important;
+  background-size: auto, 260px auto !important;
+  font-family: "Saira Stencil One", var(--font-display); font-weight: 400; letter-spacing: .1em;
+}
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-story {
+  border-color: rgba(255, 178, 30, .55) !important;
+  background-image: linear-gradient(90deg, rgba(255, 178, 30, .18), transparent 70%), repeating-linear-gradient(-45deg, rgba(255, 194, 26, .1) 0 10px, transparent 10px 20px);
+}
+
+.tag { border-radius: 1px; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), inset 0 -1px 0 rgba(0, 0, 0, .2); }
+
+/* Titulares estarcidos */
+.logo-sub, .classified, .grade, .collapse-banner h1, .cp-box h2, .sh-title, .gallery-head h1 { font-family: "Saira Stencil One", var(--font-display); font-weight: 400; }
+.logo { position: relative; }
+.logo::after {
+  content: "SN-0001 · UNIDAD FORENSE";
+  position: absolute; right: 0; top: .3em;
+  font-family: var(--font-mono); font-size: .7rem; letter-spacing: .3em; color: var(--muted);
+  writing-mode: vertical-rl; transform: rotate(180deg);
+}
+
+/* ---------- Menú: panorama fotográfico real + marco HUD ---------- */
+.menu-bg::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background: url(../assets/textures/env_night.jpg) 62% 62% / cover;
+  filter: grayscale(.3) contrast(1.1) brightness(.8);
+}
+:root[data-theme="day"] .menu-bg::before { background-image: url(../assets/textures/env_day.jpg); background-position: 35% 52%; filter: sepia(.2) saturate(.85); }
+.menu-bg svg { position: relative; z-index: 1; opacity: .5; mix-blend-mode: screen; }
+:root[data-theme="day"] .menu-bg svg { opacity: .3; mix-blend-mode: multiply; }
+.menu::after {
+  content: ""; position: absolute; inset: 18px; pointer-events: none; z-index: 1;
+  background:
+    linear-gradient(var(--hud), var(--hud)) left top / 28px 2px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) left top / 2px 28px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) right top / 28px 2px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) right top / 2px 28px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) left bottom / 28px 2px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) left bottom / 2px 28px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) right bottom / 28px 2px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) right bottom / 2px 28px no-repeat;
+}
+
+/* ---------- Tarjetas de expediente: carpeta con cinta de enmascarar ---------- */
+.case-card { position: relative; overflow: visible; }
+.case-card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; z-index: 2;
+  background: repeating-linear-gradient(180deg, var(--yellow) 0 10px, transparent 10px 14px); opacity: .45;
+}
+.case-card.available::before { background: repeating-linear-gradient(180deg, var(--orange) 0 10px, transparent 10px 14px); opacity: .8; }
+.case-card::after {
+  content: ""; position: absolute; top: -7px; left: 38%; width: 74px; height: 18px; z-index: 3;
+  background: linear-gradient(180deg, rgba(232, 218, 178, .85), rgba(214, 198, 152, .85));
+  transform: rotate(-3deg); box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  clip-path: polygon(0 8%, 4% 0, 9% 10%, 14% 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
+}
+
+/* Tablero de hipótesis sobre tablero OSB real */
+.board { background-image: var(--board-tint), var(--tx-board) !important; background-size: auto, 380px 380px !important; }
+
+/* ---------- Escenas 3D: corchetes HUD y retícula central ---------- */
+.scene-stage, .viewer-stage, .story-stage-wrap { position: relative; }
+.scene-stage::after, .viewer-stage::after, .story-stage-wrap::after {
+  content: ""; position: absolute; inset: 10px; pointer-events: none; z-index: 2;
+  background:
+    linear-gradient(var(--hud), var(--hud)) left top / 22px 2px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) left top / 2px 22px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) right top / 22px 2px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) right top / 2px 22px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) left bottom / 22px 2px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) left bottom / 2px 22px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) right bottom / 22px 2px no-repeat,
+    linear-gradient(var(--hud), var(--hud)) right bottom / 2px 22px no-repeat;
+  opacity: .75;
+}
+
+/* Ventanas modales: barrido de escaneo */
+.modal { overflow: hidden; }
+.modal::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; z-index: 2;
+  background: linear-gradient(90deg, transparent, var(--phosphor), transparent);
+  animation: scanline 3.5s linear infinite;
+}
+@keyframes scanline { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+
+/* Notificaciones: tiquete de obra */
+.toast { border-radius: 2px; background-image: repeating-linear-gradient(-45deg, transparent 0 14px, rgba(127, 127, 127, .05) 14px 15px); }
+
+/* Pestaña activa con piloto luminoso */
+.tab.active::before {
+  content: ""; position: absolute; top: 10px; right: 6px; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--phosphor); box-shadow: var(--phosphor-glow);
+}
+
+textarea, input[type="text"], select { border-radius: 2px; box-shadow: inset 0 2px 6px rgba(0, 0, 0, .18); }
+
+/* ---------- Selector de tema ---------- */
+.theme-toggle {
+  position: relative;
+  display: inline-flex; align-items: center; gap: .1rem;
+  padding: 3px; border: 1px solid var(--line-2); border-radius: 2px;
+  background: var(--panel-2);
+  clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
+}
+.theme-toggle button {
+  display: inline-flex; align-items: center; gap: .35rem;
+  min-height: 32px; padding: 0 .65rem;
+  border: 0; border-radius: 1px; background: transparent; cursor: pointer;
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+}
+.theme-toggle button svg { width: 16px; height: 16px; }
+.theme-toggle button[aria-pressed="true"] { background: var(--orange); color: #fff; }
+:root[data-theme="night"] .theme-toggle button[aria-pressed="true"] { color: #120800; }
+@media (max-width: 720px) { .theme-toggle button span { display: none; } }
+
+.doc-modal { background-image: none !important; }
+
+/* Los controles superpuestos a la escena 3D conservan su panel oscuro en ambos temas */
+:root[data-theme="day"] .hud-card { color: #dfe4ea; background: rgba(20, 24, 30, .8); }
+:root[data-theme="day"] .scene-tools { background: rgba(20, 24, 30, .85); }
+:root[data-theme="day"] .scene-tools .tool-btn { color: #dfe4ea; }
+:root[data-theme="day"] .scene-tools .tool-btn.active { color: #ff8a33; border-color: #ff8a33; background: rgba(255, 122, 26, .15); }
+
+/* El pie del menú no debe tapar los botones en pantallas bajas */
+.menu-inner { padding-bottom: clamp(5.5rem, 10vh, 7rem); }

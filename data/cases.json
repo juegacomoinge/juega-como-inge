@@ -1,0 +1,102 @@
+{
+  "version": "0.1",
+  "specialties": [
+    {
+      "id": "estructuras",
+      "name": "Estructuras"
+    },
+    {
+      "id": "materiales",
+      "name": "Materiales y concreto"
+    },
+    {
+      "id": "geotecnia",
+      "name": "Geotecnia"
+    },
+    {
+      "id": "hidraulica",
+      "name": "Hidráulica y saneamiento"
+    },
+    {
+      "id": "vias",
+      "name": "Vías y pavimentos"
+    }
+  ],
+  "cases": [
+    {
+      "id": "001",
+      "code": "EXP-001",
+      "title": "EL SILENCIO DEL CONCRETO",
+      "category": "Patología de estructuras",
+      "specialties": [
+        "estructuras",
+        "materiales"
+      ],
+      "difficulty": "Principiante",
+      "difficultyLevel": 1,
+      "teaser": "Fisuras diagonales aparecen en una columna de un edificio en construcción. Nadie sabe por qué.",
+      "data": "data/case001.json",
+      "scene": "case001",
+      "requires": null,
+      "inDevelopment": false
+    },
+    {
+      "id": "004",
+      "code": "EXP-004",
+      "title": "CUENTA REGRESIVA",
+      "category": "Evaluación postsísmica",
+      "specialties": [
+        "estructuras"
+      ],
+      "difficulty": "Avanzado",
+      "difficultyLevel": 3,
+      "realtime": true,
+      "teaser": "Tras un sismo moderado, una torre de 8 pisos ocupada cruje desde el sótano. Cada minuto que pase sin actuar la acerca al colapso.",
+      "data": "data/case004.json",
+      "scene": "case004",
+      "requires": {
+        "case": "001",
+        "minScore": 60
+      },
+      "inDevelopment": false
+    },
+    {
+      "id": "002",
+      "code": "EXP-002",
+      "title": "EL TERRENO INESTABLE",
+      "category": "Geotecnia",
+      "specialties": [
+        "geotecnia"
+      ],
+      "difficulty": "Intermedio",
+      "difficultyLevel": 2,
+      "teaser": "Tras una temporada de lluvias, un muro de contención de una vía de acceso comienza a inclinarse.",
+      "data": null,
+      "scene": null,
+      "requires": {
+        "case": "001",
+        "minScore": 60
+      },
+      "inDevelopment": true
+    },
+    {
+      "id": "003",
+      "code": "EXP-003",
+      "title": "LA RED QUE NO FUNCIONA",
+      "category": "Hidráulica y saneamiento",
+      "specialties": [
+        "hidraulica"
+      ],
+      "difficulty": "Avanzado",
+      "difficultyLevel": 3,
+      "teaser": "Una red de acueducto recién entregada no lleva agua suficiente a los usuarios del sector alto.",
+      "data": null,
+      "scene": null,
+      "requires": {
+        "case": "002",
+        "minScore": 60
+      },
+      "inDevelopment": true
+    }
+  ]
+}

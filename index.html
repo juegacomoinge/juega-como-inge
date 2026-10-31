@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OBRA · Expedientes Ocultos</title>
+  <meta name="description" content="OBRA: Expedientes Ocultos. Videojuego educativo de investigación forense de anomalías en obras civiles.">
+  <meta name="theme-color" content="#0b0d10">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230b0d10'/%3E%3Cpath d='M14 50V22l18-10 18 10v28' fill='none' stroke='%23ff7a1a' stroke-width='5'/%3E%3Cpath d='M26 50V34h12v16' fill='none' stroke='%23ffc21a' stroke-width='4'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Kalam:wght@400&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/interface.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/modes.css">
+
+  <!-- Three.js se carga como módulo ES desde CDN. Si no hay conexión, el juego usa la vista 2D. -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Capas de atmósfera (grano y viñeta) -->
+  <div class="fx-grain" aria-hidden="true"></div>
+  <div class="fx-vignette" aria-hidden="true"></div>
+
+  <!-- Contenedor de pantallas (SPA) -->
+  <main id="app" aria-live="polite"></main>
+
+  <!-- Capa de ventanas modales y notificaciones -->
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="assertive"></div>
+
+  <noscript>
+    <p style="padding:2rem;color:#fff">OBRA requiere JavaScript activado.</p>
+  </noscript>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

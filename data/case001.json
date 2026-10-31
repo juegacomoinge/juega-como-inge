@@ -1,0 +1,1794 @@
+{
+  "id": "001",
+  "code": "EXP-001",
+  "title": "EL SILENCIO DEL CONCRETO",
+  "category": "Patología de estructuras",
+  "difficulty": "Principiante",
+  "location": "Proyecto residencial «Mirador del Parque» (ficticio) · Edificio de 3 niveles en concreto reforzado",
+  "date": "Día +35 desde el vaciado de columnas del nivel 1",
+  "disclaimer": "Caso ficticio con fines educativos. Todos los nombres, registros, mediciones y resultados de ensayos son DATOS SIMULADOS. Las citas del Reglamento NSR-10 indican numeral y folio del texto oficial; los requisitos se transcriben de forma resumida. Consulte siempre el texto vigente: esta herramienta no reemplaza al ingeniero diseñador, al supervisor técnico ni a la autoridad competente.",
+  "briefing": {
+    "summary": "Un edificio de tres niveles se encuentra en proceso de construcción. Durante una inspección rutinaria, un trabajador identifica fisuras diagonales en una columna del primer nivel.",
+    "narrative": [
+      "Son las 6:40 a. m. El ruido de la obra todavía no empieza. Durante el recorrido de seguridad, un ayudante de obra se detiene frente a la columna C-B2 del primer nivel y llama al maestro: hay líneas finas e inclinadas que atraviesan el concreto.",
+      "La residente de obra, Ing. Laura Méndez, reporta que las fisuras fueron observadas por primera vez después del desencofrado. Desde entonces nadie se ha atrevido a decir qué las produjo. El cronograma presiona: el vaciado del nivel 3 está programado para la próxima semana.",
+      "No se conoce con certeza el origen del problema. La gerencia del proyecto solicitó una investigación independiente antes de continuar. El expediente ha sido asignado a usted."
+    ],
+    "objectives": [
+      {
+        "id": "obj-scene",
+        "text": "Inspeccionar el escenario e identificar las anomalías visibles."
+      },
+      {
+        "id": "obj-evidence",
+        "text": "Recopilar al menos 6 evidencias de campo y documentales."
+      },
+      {
+        "id": "obj-review",
+        "text": "Revisar la documentación técnica de la obra."
+      },
+      {
+        "id": "obj-norm",
+        "text": "Verificar las anomalías frente a los requisitos del NSR-10."
+      },
+      {
+        "id": "obj-hyp",
+        "text": "Evaluar las cuatro hipótesis iniciales y relacionarlas con evidencias."
+      },
+      {
+        "id": "obj-report",
+        "text": "Emitir un informe técnico con diagnóstico y recomendaciones."
+      }
+    ],
+    "inspectables": [
+      "Columna C-B2 del nivel 1",
+      "Losa del nivel 2 y zona de acopio",
+      "Zona de puntales y encofrados",
+      "Mesa de planos de la residencia",
+      "Camión mezclador y remisiones",
+      "Carro de muestras del laboratorio",
+      "Tanque de agua de curado",
+      "Muros divisorios del nivel 1"
+    ],
+    "people": [
+      {
+        "name": "Ing. Laura Méndez",
+        "role": "Residente de obra"
+      },
+      {
+        "name": "Arturo Rincón",
+        "role": "Maestro de obra"
+      },
+      {
+        "name": "Lab. ConcreTest (ficticio)",
+        "role": "Laboratorio de ensayos"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "id": "visual",
+      "name": "Inspección visual",
+      "desc": "Observación directa del elemento."
+    },
+    {
+      "id": "linterna",
+      "name": "Linterna",
+      "desc": "Ilumina zonas oscuras bajo losas y en la base de elementos."
+    },
+    {
+      "id": "fisurometro",
+      "name": "Fisurómetro",
+      "desc": "Regla con patrones de ancho para medir la abertura de fisuras."
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hs-col",
+      "name": "Columna C-B2 · Nivel 1",
+      "evidence": "E01",
+      "anomaly": true,
+      "requiresTool": "fisurometro",
+      "toolHint": "Las fisuras son muy finas. Para registrar el hallazgo necesita medir su abertura con el fisurómetro.",
+      "description": "Columna interior del eje B, sección cuadrada de concreto reforzado. Sostiene las vigas y la losa del nivel 2.",
+      "observation": "Se observan fisuras inclinadas (aprox. 45° a 60°) concentradas en el tercio superior de la columna, cerca del nudo con las vigas. También hay fisuras superficiales finas en forma de malla irregular («en mapa»). Las demás columnas del nivel 1 no presentan fisuras inclinadas.",
+      "toolObservation": "Medición con fisurómetro: abertura entre 0,30 y 0,60 mm en las fisuras inclinadas; las fisuras en mapa son inferiores a 0,10 mm. Las fisuras inclinadas aparecen en las caras este y norte.",
+      "pos3d": [
+        0,
+        2.25,
+        4.24
+      ],
+      "pos2d": [
+        50,
+        42
+      ]
+    },
+    {
+      "id": "hs-base",
+      "name": "Base de la columna C-B2",
+      "evidence": "E08",
+      "anomaly": true,
+      "requiresTool": "linterna",
+      "toolHint": "La base de la columna está en sombra bajo la losa. Use la linterna para examinarla.",
+      "description": "Zona inferior de la columna, junto a la junta con la placa de piso.",
+      "observation": "Con la linterna se distinguen cavidades con agregado grueso expuesto (hormigueros) en los primeros 25 cm de la columna, con un área aproximada de 15 × 20 cm en la cara sur.",
+      "toolObservation": "",
+      "pos3d": [
+        0,
+        0.45,
+        4.24
+      ],
+      "pos2d": [
+        50,
+        79
+      ]
+    },
+    {
+      "id": "hs-puntales",
+      "name": "Pila de puntales y encofrados",
+      "evidence": "E02",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Puntales metálicos y tableros de encofrado apilados en el patio de la obra.",
+      "observation": "Todos los puntales de la losa del nivel 2 están desmontados y apilados aquí. Sobre la pila hay una carpeta plastificada con el registro de desencofrado firmado por el maestro de obra.",
+      "toolObservation": "",
+      "pos3d": [
+        -3.2,
+        0.9,
+        8.2
+      ],
+      "pos2d": [
+        31,
+        86
+      ]
+    },
+    {
+      "id": "hs-plans",
+      "name": "Mesa de planos de la residencia",
+      "evidence": "E03",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Mesa de trabajo junto al contenedor de la residencia de obra, con planos impresos.",
+      "observation": "Sobre la mesa está el plano estructural de columnas y el resumen de la memoria de cálculo. El juego de planos tiene sello de aprobación y la nota de desencofrado está resaltada con marcador.",
+      "toolObservation": "",
+      "pos3d": [
+        -10,
+        1.35,
+        6
+      ],
+      "pos2d": [
+        11,
+        72
+      ]
+    },
+    {
+      "id": "hs-truck",
+      "name": "Camión mezclador",
+      "evidence": "E04",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Camión de concreto premezclado. En la guantera se archivan copias de las remisiones del proveedor.",
+      "observation": "El conductor entrega la copia de la remisión del vaciado de columnas del nivel 1 y el formato de control de recepción diligenciado por la obra.",
+      "toolObservation": "",
+      "pos3d": [
+        14,
+        2.4,
+        -6
+      ],
+      "pos2d": [
+        88,
+        70
+      ]
+    },
+    {
+      "id": "hs-lab",
+      "name": "Carro de muestras del laboratorio",
+      "evidence": "E05",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Moldes cilíndricos para muestras de concreto y una nevera de transporte del laboratorio.",
+      "observation": "El técnico del laboratorio entrega el reporte de resistencia a la compresión de los cilindros de las columnas del nivel 1, incluido el resultado a 28 días.",
+      "toolObservation": "",
+      "pos3d": [
+        7.6,
+        0.8,
+        9
+      ],
+      "pos2d": [
+        72,
+        83
+      ]
+    },
+    {
+      "id": "hs-tank",
+      "name": "Tanque de agua de curado",
+      "evidence": "E06",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Tanque plástico de 1000 L con manguera para el riego de curado de elementos de concreto.",
+      "observation": "El tanque está casi vacío y la manguera está reseca. Amarrada al tanque hay una planilla de curado con varias casillas sin diligenciar.",
+      "toolObservation": "",
+      "pos3d": [
+        -9,
+        1.9,
+        -3
+      ],
+      "pos2d": [
+        7,
+        55
+      ]
+    },
+    {
+      "id": "hs-pallets",
+      "name": "Acopio sobre la losa del nivel 2",
+      "evidence": "E07",
+      "anomaly": true,
+      "requiresTool": null,
+      "description": "Materiales almacenados sobre la losa del nivel 2, justo encima de la columna C-B2.",
+      "observation": "Hay tres estibas de bloque de arcilla y un paquete de barras de acero apoyados sobre la losa, todos al costado este de la columna C-B2. No existe señalización de cargas máximas ni registro de autorización del acopio.",
+      "toolObservation": "",
+      "pos3d": [
+        2,
+        4.5,
+        4
+      ],
+      "pos2d": [
+        58,
+        18
+      ]
+    },
+    {
+      "id": "hs-wall",
+      "name": "Muro divisorio del eje A",
+      "evidence": "E09",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Muro de mampostería no estructural entre las columnas A1 y A2, parcialmente pañetado.",
+      "observation": "El pañete (revoque) del muro presenta fisuras muy finas en forma de malla. El muro no está conectado a la columna C-B2 y fue pañetado hace cinco días.",
+      "toolObservation": "",
+      "pos3d": [
+        -6,
+        1.6,
+        0
+      ],
+      "pos2d": [
+        34,
+        60
+      ]
+    }
+  ],
+  "evidences": [
+    {
+      "id": "E01",
+      "name": "Fotografías de las fisuras",
+      "type": "Registro fotográfico",
+      "summary": "Registro fotográfico y medición de las fisuras de la columna C-B2 del nivel 1.",
+      "doc": {
+        "illustration": "columnCracks",
+        "fields": [
+          [
+            "Elemento",
+            "Columna C-B2 · Nivel 1 · Sección 40 × 40 cm"
+          ],
+          [
+            "Patrón principal",
+            "Fisuras inclinadas 45°–60°, tercio superior"
+          ],
+          [
+            "Abertura medida",
+            "0,30 – 0,60 mm (fisurómetro)"
+          ],
+          [
+            "Patrón secundario",
+            "Fisuración superficial «en mapa» < 0,10 mm"
+          ],
+          [
+            "Caras afectadas",
+            "Este y norte (inclinadas) · Todas (en mapa)"
+          ],
+          [
+            "Otras columnas N1",
+            "Sin fisuras inclinadas"
+          ]
+        ],
+        "notes": [
+          "Las fisuras inclinadas no atraviesan toda la sección según la inspección visual.",
+          "No hay desprendimientos de concreto ni barras expuestas en la zona fisurada."
+        ]
+      },
+      "technical": [
+        "Una fisura es el SÍNTOMA visible: indica que en esa zona el concreto se tracciona más de lo que puede resistir. Por sí sola no dice cuál fue la causa.",
+        "Las fisuras inclinadas suelen asociarse a combinaciones de esfuerzo cortante y flexión. La fisuración fina en mapa suele asociarse a retracción en superficie, frecuentemente relacionada con un secado rápido del concreto joven.",
+        "Medir la abertura y repetir la medición en el tiempo permite saber si la fisura está activa (crece) o estabilizada.",
+        "El NSR-10 no fija un ancho máximo de fisura para aceptar o rechazar un elemento construido: controla la fisuración en el diseño mediante el espaciamiento del refuerzo (C.10.6.4, folio C-145). El dictamen exige ensayos y evaluación, no solo una medida."
+      ],
+      "relevance": "Documenta el síntoma. Úselo para describir la anomalía, no para concluir la causa."
+    },
+    {
+      "id": "E02",
+      "name": "Registro de desencofrado",
+      "type": "Documento de obra",
+      "summary": "Formato de control de desencofrado y retiro de puntales de los elementos del nivel 1 y la losa del nivel 2.",
+      "doc": {
+        "illustration": "timeline",
+        "table": {
+          "headers": [
+            "Día",
+            "Actividad",
+            "Responsable",
+            "¿Resistencia verificada?"
+          ],
+          "rows": [
+            [
+              "D+0",
+              "Vaciado de columnas del nivel 1",
+              "Maestro de obra",
+              "—"
+            ],
+            [
+              "D+1 (18 h)",
+              "Retiro de formaletas de columnas N1",
+              "Maestro de obra",
+              "No aplica"
+            ],
+            [
+              "D+7",
+              "Vaciado de vigas y losa del nivel 2",
+              "Maestro de obra",
+              "—"
+            ],
+            [
+              "D+11",
+              "Retiro TOTAL de puntales de la losa N2 (4 días de edad)",
+              "Maestro de obra",
+              "NO REGISTRA"
+            ],
+            [
+              "D+11",
+              "Acopio de materiales del nivel 3 sobre losa N2",
+              "Almacenista",
+              "NO REGISTRA"
+            ],
+            [
+              "D+12",
+              "Reporte de fisuras en columna C-B2",
+              "Ayudante de obra",
+              "—"
+            ]
+          ],
+          "flagRows": [
+            3,
+            4
+          ]
+        },
+        "notes": [
+          "Anotación manuscrita: «Se retiran puntales para adelantar encofrado del N3 por atraso en cronograma».",
+          "No hay firma del ingeniero estructural ni de la residente en la autorización de retiro de puntales."
+        ]
+      },
+      "technical": [
+        "Los puntales sostienen la losa mientras el concreto gana resistencia. Si se retiran antes de tiempo, el peso de la losa y las cargas de construcción pasan de golpe a vigas y columnas cuyo concreto aún es joven.",
+        "El Título C del NSR-10, sección C.6.2 «Descimbrado, puntales y reapuntalamiento» (folios C-85 y C-86), exige retirar la cimbra sin afectar la seguridad (C.6.2.1) y solo retirar apuntalamientos o apoyar cargas de construcción cuando un análisis estructural y la resistencia de probetas curadas en obra demuestren que la estructura las soporta (C.6.2.2.1).",
+        "El comentario CR6.2.2 indica que los encofrados laterales de columnas pueden retirarse generalmente después de 12 h de tiempo de curado acumulado. El problema crítico aquí es el retiro de puntales de la losa."
+      ],
+      "relevance": "Permite reconstruir la secuencia constructiva y verificar si se cumplió el procedimiento de desencofrado."
+    },
+    {
+      "id": "E03",
+      "name": "Plano estructural y memoria",
+      "type": "Documento de diseño",
+      "summary": "Plano de despiece de la columna C-B2 y resumen de la verificación de la memoria de cálculo.",
+      "doc": {
+        "illustration": "columnPlan",
+        "fields": [
+          [
+            "Sección",
+            "40 × 40 cm"
+          ],
+          [
+            "Refuerzo longitudinal",
+            "8 barras N.º 6 (3/4\")"
+          ],
+          [
+            "Refuerzo transversal",
+            "Estribos N.º 3 @ 10 cm en zonas de confinamiento · @ 15 cm en zona central"
+          ],
+          [
+            "Concreto especificado",
+            "f'c = 28 MPa"
+          ],
+          [
+            "Acero",
+            "fy = 420 MPa"
+          ],
+          [
+            "Relación demanda/capacidad (diseño)",
+            "0,62 — cumple (dato simulado)"
+          ],
+          [
+            "Verificación de refuerzo instalado",
+            "PENDIENTE — sin registro de inspección de estribos"
+          ]
+        ],
+        "notes": [
+          "Nota de proyecto resaltada: «No retirar puntales de losas sin autorización escrita del ingeniero estructural y sin verificar, mediante cilindros curados en obra, una resistencia mínima del 70 % de f'c».",
+          "El plano tiene sello de aprobación de la revisión estructural."
+        ]
+      },
+      "technical": [
+        "El diseño es adecuado en el papel, pero un plano correcto no garantiza que la obra lo haya ejecutado igual. Verificar la separación real de los estribos requiere un escaneo de refuerzo (pachómetro / ferroscan) o una inspección por regatas.",
+        "La nota de desencofrado es una ESPECIFICACIÓN DEL PROYECTO, no un numeral de la norma: cada proyecto define sus criterios con base en el Reglamento y en su propio análisis.",
+        "NSR-10, C.7.10.5.2 (folio C-103): la separación de estribos no debe exceder 16 diámetros de barra longitudinal, 48 diámetros del estribo ni la menor dimensión del elemento. En DMO/DES aplican además los requisitos de confinamiento del Capítulo C.21."
+      ],
+      "relevance": "Permite contrastar la hipótesis de deficiencia de diseño y comparar lo especificado con lo ejecutado."
+    },
+    {
+      "id": "E04",
+      "name": "Registro de vaciado de concreto",
+      "type": "Documento de obra",
+      "summary": "Remisión del proveedor y formato de recepción del concreto de las columnas del nivel 1.",
+      "doc": {
+        "illustration": "slumpTest",
+        "fields": [
+          [
+            "Concreto solicitado",
+            "f'c 28 MPa · asentamiento 100 ± 25 mm"
+          ],
+          [
+            "Volumen",
+            "7,0 m³"
+          ],
+          [
+            "Hora de llegada / descargue",
+            "12:40 / 13:05 – 14:30"
+          ],
+          [
+            "Temperatura ambiente",
+            "31 °C · viento moderado"
+          ],
+          [
+            "Asentamiento a la llegada",
+            "90 mm (NTC 396)"
+          ],
+          [
+            "Agua adicionada en obra",
+            "≈ 120 L, NO AUTORIZADA por el proveedor"
+          ],
+          [
+            "Asentamiento tras adición",
+            "NO MEDIDO («visualmente fluido»)"
+          ],
+          [
+            "Vibración",
+            "1 vibrador; se averió a mitad del vaciado de C-B2"
+          ],
+          [
+            "Toma de cilindros",
+            "Después de adicionar el agua"
+          ]
+        ],
+        "notes": [
+          "Observación del maestro: «Se le echó agua al mixer porque la mezcla venía dura y no bajaba por la canoa».",
+          "La remisión del proveedor indica: «Cualquier adición de agua en obra anula la garantía de resistencia»."
+        ]
+      },
+      "technical": [
+        "Agregar agua al concreto aumenta la relación agua/cemento. A mayor relación agua/cemento, menor resistencia y mayor porosidad: el concreto se vuelve más débil y menos durable.",
+        "La vibración elimina el aire atrapado. Si es insuficiente aparecen hormigueros (vacíos con agregado expuesto), sobre todo en la base de los elementos.",
+        "El ensayo de asentamiento (NTC 396) es un control de recepción. El NSR-10, Título I (I.2.3.1, folio I-5), asigna a la supervisión técnica aprobar el programa de control de calidad y prevenir por escrito sobre procedimientos y materiales inadecuados."
+      ],
+      "relevance": "Documenta cómo se colocó el concreto y qué alteraciones sufrió la mezcla."
+    },
+    {
+      "id": "E05",
+      "name": "Resultados de ensayos de resistencia",
+      "type": "Ensayo de laboratorio",
+      "summary": "Resistencia a la compresión de cilindros de concreto de las columnas del nivel 1 (NTC 673). DATOS SIMULADOS.",
+      "doc": {
+        "illustration": "strengthChart",
+        "table": {
+          "headers": [
+            "Ensayo",
+            "Edad",
+            "Cilindro A (MPa)",
+            "Cilindro B (MPa)",
+            "Resultado (MPa)"
+          ],
+          "rows": [
+            [
+              "T-1",
+              "7 días",
+              "13,6",
+              "14,2",
+              "13,9"
+            ],
+            [
+              "T-2",
+              "7 días",
+              "14,9",
+              "14,3",
+              "14,6"
+            ],
+            [
+              "T-3",
+              "28 días",
+              "23,8",
+              "23,0",
+              "23,4"
+            ],
+            [
+              "T-4",
+              "28 días",
+              "22,5",
+              "21,7",
+              "22,1"
+            ],
+            [
+              "T-5",
+              "28 días",
+              "21,9",
+              "21,3",
+              "21,6"
+            ]
+          ],
+          "flagRows": [
+            2,
+            3,
+            4
+          ]
+        },
+        "fields": [
+          [
+            "f'c especificado",
+            "28,0 MPa"
+          ],
+          [
+            "Promedio de los 3 ensayos a 28 días",
+            "22,4 MPa"
+          ],
+          [
+            "Criterio 1: promedio de 3 consecutivos ≥ f'c",
+            "NO CUMPLE"
+          ],
+          [
+            "Criterio 2: ningún ensayo < f'c − 3,5 MPa (24,5)",
+            "NO CUMPLE"
+          ],
+          [
+            "Cilindros",
+            "150 × 300 mm · curado estándar en laboratorio"
+          ]
+        ],
+        "notes": [
+          "Losa N2: no se ensayaron cilindros antes del retiro de puntales (D+11). El primer resultado de la losa es del D+14.",
+          "Los cilindros se curan en condiciones estándar: si el curado en obra fue deficiente, el concreto en sitio puede ser aún más débil que los cilindros."
+        ]
+      },
+      "technical": [
+        "Un «ensayo» es el promedio de al menos dos cilindros de 150 × 300 mm de la misma muestra (NSR-10, C.5.6.2.4, folio C-76). Para f'c ≤ 35 MPa, C.5.6.3.3 (folio C-77) exige: (a) promedio de tres ensayos consecutivos ≥ f'c y (b) ningún ensayo menor que f'c − 3,5 MPa.",
+        "Si no se cumple (b), C.5.6.5 (folio C-79) ordena tomar medidas para asegurar la capacidad de carga y la durabilidad. Si se confirma baja resistencia y los cálculos indican una reducción significativa de capacidad, se extraen tres núcleos por cada ensayo deficiente (NTC 3658 / ASTM C42M), conservados en bolsas herméticas y ensayados entre 48 h y 7 días después de extraídos.",
+        "La zona se considera estructuralmente adecuada si el promedio de tres núcleos es al menos 0,85 f'c y ningún núcleo es menor de 0,75 f'c (C.5.6.5.4). Si no se cumple y la seguridad sigue en duda, puede ordenarse una prueba de carga según el Capítulo C.20 (C.5.6.5.5)."
+      ],
+      "relevance": "Cuantifica las propiedades reales del concreto respecto a lo especificado."
+    },
+    {
+      "id": "E06",
+      "name": "Registro de curado",
+      "type": "Documento de obra",
+      "summary": "Planilla de curado de los elementos de concreto del nivel 1 encontrada en el tanque de agua.",
+      "doc": {
+        "illustration": "curingChart",
+        "table": {
+          "headers": [
+            "Día",
+            "Riegos programados",
+            "Riegos registrados",
+            "Observación"
+          ],
+          "rows": [
+            [
+              "D+1",
+              "3",
+              "2",
+              "Tras retirar formaletas"
+            ],
+            [
+              "D+2",
+              "3",
+              "1",
+              "—"
+            ],
+            [
+              "D+3",
+              "3",
+              "0",
+              "Corte de agua en el sector. Tanque vacío"
+            ],
+            [
+              "D+4",
+              "3",
+              "0",
+              "Sin registro"
+            ],
+            [
+              "D+5",
+              "3",
+              "0",
+              "Sin registro"
+            ],
+            [
+              "D+6",
+              "3",
+              "0",
+              "Sin registro"
+            ],
+            [
+              "D+7",
+              "3",
+              "0",
+              "Vaciado de losa N2"
+            ]
+          ],
+          "flagRows": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "fields": [
+          [
+            "Plan de curado del proyecto",
+            "Curado húmedo continuo durante 7 días"
+          ],
+          [
+            "Cumplimiento",
+            "3 de 21 riegos (14 %)"
+          ],
+          [
+            "Compuesto curador",
+            "No aplicado"
+          ],
+          [
+            "Temperatura máxima registrada",
+            "31 – 33 °C"
+          ]
+        ],
+        "notes": [
+          "Nota en la planilla: «Sin agua desde el miércoles, se pidió carrotanque pero no llegó»."
+        ]
+      },
+      "technical": [
+        "El curado mantiene el concreto húmedo y a temperatura adecuada para que el cemento se hidrate. Sin curado, la superficie se seca, se retrae y gana menos resistencia.",
+        "NSR-10, C.5.11.1 (folio C-83): salvo curado acelerado, el concreto debe mantenerse por encima de 10 °C y en condiciones de humedad por lo menos durante los primeros 7 días después de la colocación (excepto concreto de alta resistencia inicial).",
+        "Clima cálido y ventoso + falta de curado = mayor riesgo de fisuración por retracción y menor resistencia."
+      ],
+      "relevance": "Permite evaluar si el concreto se protegió adecuadamente durante su primera semana."
+    },
+    {
+      "id": "E07",
+      "name": "Acopio de materiales sobre la losa N2",
+      "type": "Observación de campo",
+      "summary": "Croquis y descripción del material almacenado sobre la losa del nivel 2, junto a la columna C-B2.",
+      "doc": {
+        "illustration": "loadSketch",
+        "fields": [
+          [
+            "Material",
+            "3 estibas de bloque de arcilla + 1 paquete de barras N.º 5"
+          ],
+          [
+            "Peso estimado",
+            "≈ 4,2 t en total (dato simulado)"
+          ],
+          [
+            "Ubicación",
+            "Costado ESTE de la columna C-B2, entre 0,5 y 3,5 m de su eje"
+          ],
+          [
+            "Fecha del acopio",
+            "D+11, el mismo día del retiro de puntales"
+          ],
+          [
+            "Señalización de carga máxima",
+            "No existe"
+          ],
+          [
+            "Autorización del acopio",
+            "No registra"
+          ]
+        ],
+        "notes": [
+          "La carga está concentrada en un solo lado del nudo de la columna.",
+          "La losa tenía 4 días de edad cuando recibió el acopio."
+        ]
+      },
+      "technical": [
+        "Las cargas de construcción (materiales, equipos, personas) pueden ser mayores que las cargas de uso de un edificio terminado, y actúan cuando el concreto es más débil.",
+        "Una carga concentrada a un solo lado del nudo genera un momento desbalanceado: la columna recibe flexión y cortante además de compresión, lo que favorece fisuras inclinadas en la zona cercana al nudo."
+      ],
+      "relevance": "Identifica cargas presentes en el momento en que aparecieron las fisuras."
+    },
+    {
+      "id": "E08",
+      "name": "Hormigueros en la base de la columna",
+      "type": "Observación de campo",
+      "summary": "Cavidades con agregado expuesto en la base de la columna C-B2, observadas con linterna.",
+      "doc": {
+        "illustration": "honeycomb",
+        "fields": [
+          [
+            "Ubicación",
+            "Base de la columna C-B2, cara sur, 0 – 25 cm"
+          ],
+          [
+            "Área afectada",
+            "≈ 15 × 20 cm"
+          ],
+          [
+            "Profundidad aparente",
+            "2 – 3 cm (sin refuerzo expuesto)"
+          ],
+          [
+            "Coincidencia con el registro",
+            "Avería del vibrador durante el vaciado de C-B2"
+          ]
+        ],
+        "notes": [
+          "Los hormigueros no explican las fisuras inclinadas, pero revelan problemas de colocación y compactación."
+        ]
+      },
+      "technical": [
+        "Un hormiguero es un defecto de compactación: reduce la sección efectiva de concreto y el recubrimiento que protege al acero.",
+        "Suele repararse retirando el concreto suelto y reponiéndolo con un mortero de reparación adecuado, según evaluación técnica.",
+        "NSR-10, C.7.7.1 (c) (folio C-96): en columnas no expuestas a la intemperie ni en contacto con el suelo, el recubrimiento de la armadura principal y estribos no debe ser menor de 40 mm."
+      ],
+      "relevance": "Aporta información sobre la calidad del proceso de colocación y vibrado."
+    },
+    {
+      "id": "E09",
+      "name": "Fisuras en el pañete del muro del eje A",
+      "type": "Observación de campo",
+      "summary": "Fisuras finas en malla en el pañete de un muro divisorio no estructural.",
+      "doc": {
+        "illustration": "wallCracks",
+        "fields": [
+          [
+            "Elemento",
+            "Muro divisorio de mampostería, no estructural"
+          ],
+          [
+            "Patrón",
+            "Malla irregular de fisuras muy finas"
+          ],
+          [
+            "Abertura",
+            "< 0,1 mm"
+          ],
+          [
+            "Edad del pañete",
+            "5 días"
+          ],
+          [
+            "Relación física con C-B2",
+            "Ninguna (otro eje, sin contacto)"
+          ]
+        ],
+        "notes": [
+          "Patrón típico de retracción del mortero de pañete."
+        ]
+      },
+      "technical": [
+        "Las fisuras en mapa del pañete suelen originarse por retracción del mortero (exceso de agua, secado rápido o capas muy gruesas).",
+        "Un buen investigador también documenta lo que NO está relacionado con el incidente: descartar es parte del análisis."
+      ],
+      "relevance": "Elemento observado en el entorno del incidente. Evalúe si guarda relación con el problema investigado."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "Sobrecarga estructural",
+      "question": "¿Recibió la columna cargas mayores a las que podía resistir en ese momento?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Sobre la losa del nivel 2 se acopiaron materiales pesados, concentrados a un solo lado de la columna.",
+            "requires": "E07"
+          },
+          {
+            "text": "Al retirar los puntales, el peso de la losa y del acopio pasó de golpe a vigas y columnas.",
+            "requires": "E02"
+          }
+        ],
+        "against": [
+          {
+            "text": "El edificio no está en servicio: no existen cargas de uso superiores a las de diseño.",
+            "requires": null
+          },
+          {
+            "text": "La verificación de diseño indica que la columna cumple para las cargas previstas.",
+            "requires": "E03"
+          }
+        ]
+      },
+      "best": "contribuyente",
+      "partial": {
+        "requiere_info": 0.5,
+        "principal": 0.5,
+        "descartada": 0.1
+      },
+      "links": {
+        "support": [
+          "E07",
+          "E02"
+        ],
+        "contradict": [
+          "E03"
+        ]
+      },
+      "explanation": "Hubo una sobrecarga, pero de construcción y sobre un concreto joven, no una sobrecarga de servicio. Es una causa CONTRIBUYENTE originada en el proceso constructivo."
+    },
+    {
+      "id": "H2",
+      "title": "Deficiencia en las propiedades del concreto",
+      "question": "¿Tiene el concreto la resistencia y calidad especificadas?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Los ensayos a 28 días no cumplen los criterios de aceptación (promedio 22,4 MPa frente a 28 MPa).",
+            "requires": "E05"
+          },
+          {
+            "text": "Se añadió agua no autorizada al concreto antes de colocarlo.",
+            "requires": "E04"
+          },
+          {
+            "text": "El curado se interrumpió desde el tercer día en clima cálido.",
+            "requires": "E06"
+          },
+          {
+            "text": "Hay hormigueros que evidencian compactación deficiente.",
+            "requires": "E08"
+          }
+        ],
+        "against": [
+          {
+            "text": "El concreto provino de una planta con diseño de mezcla aprobado.",
+            "requires": null
+          },
+          {
+            "text": "Los cilindros miden el concreto curado en laboratorio; la resistencia en sitio debe confirmarse con núcleos.",
+            "requires": "E05"
+          }
+        ]
+      },
+      "best": "contribuyente",
+      "partial": {
+        "principal": 0.6,
+        "requiere_info": 0.4,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E05",
+          "E04",
+          "E06",
+          "E08"
+        ],
+        "contradict": []
+      },
+      "explanation": "El concreto quedó por debajo de lo especificado, pero esa deficiencia fue PRODUCIDA por decisiones de obra (agua añadida, curado interrumpido, mala vibración). Es una causa contribuyente que debe confirmarse con núcleos."
+    },
+    {
+      "id": "H3",
+      "title": "Deficiencia de diseño o detallado estructural",
+      "question": "¿Está mal diseñada o mal detallada la columna?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Las fisuras inclinadas pueden relacionarse con esfuerzos cortantes, que los estribos deben controlar.",
+            "requires": null
+          },
+          {
+            "text": "No existe verificación en obra de la separación real de los estribos instalados.",
+            "requires": "E03"
+          }
+        ],
+        "against": [
+          {
+            "text": "El plano está aprobado y la verificación de diseño cumple (relación 0,62).",
+            "requires": "E03"
+          },
+          {
+            "text": "Las demás columnas, con el mismo diseño, no presentan fisuras inclinadas.",
+            "requires": "E01"
+          }
+        ]
+      },
+      "best": "requiere_info",
+      "partial": {
+        "descartada": 0.6,
+        "contribuyente": 0.2,
+        "principal": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E03"
+        ]
+      },
+      "explanation": "El diseño en planos es adecuado, pero no se ha verificado el refuerzo realmente instalado. Lo correcto es dejarla PENDIENTE y solicitar un escaneo de refuerzo, no darla por cierta ni descartarla del todo."
+    },
+    {
+      "id": "H4",
+      "title": "Error durante el proceso constructivo",
+      "question": "¿Se apartó la obra de los procedimientos especificados?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Los puntales se retiraron a los 4 días sin verificar resistencia ni autorización del ingeniero.",
+            "requires": "E02"
+          },
+          {
+            "text": "Se añadió agua al concreto y el vibrador se averió durante el vaciado.",
+            "requires": "E04"
+          },
+          {
+            "text": "El plan de curado se cumplió solo en un 14 %.",
+            "requires": "E06"
+          },
+          {
+            "text": "Se acopió material sobre una losa de 4 días sin autorización.",
+            "requires": "E07"
+          }
+        ],
+        "against": [
+          {
+            "text": "Retirar formaletas de columnas a las 18 h puede ser aceptable si no se daña el concreto y se cura después.",
+            "requires": "E02"
+          }
+        ]
+      },
+      "best": "principal",
+      "partial": {
+        "contribuyente": 0.5,
+        "requiere_info": 0.2,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E02",
+          "E04",
+          "E06",
+          "E07",
+          "E08"
+        ],
+        "contradict": []
+      },
+      "explanation": "La cadena de decisiones de obra explica el conjunto de evidencias: concreto debilitado por agua y falta de curado, cargado prematuramente al retirar puntales y acopiar material a un lado del nudo. Es la hipótesis PRINCIPAL más consistente."
+    }
+  ],
+  "report": {
+    "steps": [
+      {
+        "id": "anomaly",
+        "title": "Identificación de la anomalía",
+        "prompt": "¿Qué anomalías identifica en la columna C-B2? Seleccione todas las que estén respaldadas por la inspección.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "a1",
+            "text": "Fisuras inclinadas de 0,3–0,6 mm en el tercio superior de la columna.",
+            "correct": true,
+            "feedback": "Correcto: es la anomalía principal, documentada y medida con fisurómetro."
+          },
+          {
+            "id": "a2",
+            "text": "Fisuración superficial fina «en mapa».",
+            "correct": true,
+            "feedback": "Correcto: es un síntoma secundario asociado a retracción por secado."
+          },
+          {
+            "id": "a3",
+            "text": "Hormigueros en la base de la columna.",
+            "correct": true,
+            "feedback": "Correcto: defecto de compactación observado con linterna."
+          },
+          {
+            "id": "a4",
+            "text": "Corrosión avanzada del acero de refuerzo.",
+            "correct": false,
+            "feedback": "Incorrecto: el concreto tiene apenas 35 días y no hay manchas de óxido ni barras expuestas."
+          },
+          {
+            "id": "a5",
+            "text": "Asentamiento diferencial de la cimentación.",
+            "correct": false,
+            "feedback": "Sin evidencia: no se observaron desniveles ni fisuras en la placa de piso. Afirmarlo sería una conclusión sin sustento."
+          },
+          {
+            "id": "a6",
+            "text": "Fisuras de flexión en el centro de la losa del nivel 2.",
+            "correct": false,
+            "feedback": "No fue observado en la inspección del expediente."
+          }
+        ]
+      },
+      {
+        "id": "concepts",
+        "title": "Síntoma, causa y consecuencia",
+        "prompt": "Un buen diagnóstico distingue conceptos. Clasifique cada enunciado.",
+        "type": "classify",
+        "categories": [
+          {
+            "id": "sintoma",
+            "name": "Síntoma"
+          },
+          {
+            "id": "anomalia",
+            "name": "Anomalía"
+          },
+          {
+            "id": "mecanismo",
+            "name": "Mecanismo de deterioro"
+          },
+          {
+            "id": "directa",
+            "name": "Causa directa"
+          },
+          {
+            "id": "contribuyente",
+            "name": "Causa contribuyente"
+          },
+          {
+            "id": "consecuencia",
+            "name": "Consecuencia"
+          },
+          {
+            "id": "correctiva",
+            "name": "Medida correctiva"
+          }
+        ],
+        "items": [
+          {
+            "id": "c1",
+            "text": "Líneas inclinadas visibles de 0,3 a 0,6 mm en la superficie de la columna.",
+            "answer": "sintoma",
+            "feedback": "Es lo que se observa: el síntoma."
+          },
+          {
+            "id": "c2",
+            "text": "Concreto con resistencia inferior a la especificada (22,4 frente a 28 MPa).",
+            "answer": "anomalia",
+            "feedback": "Es una desviación respecto a lo especificado: una anomalía del material."
+          },
+          {
+            "id": "c3",
+            "text": "Esfuerzos de tracción diagonal que superan la resistencia de un concreto joven.",
+            "answer": "mecanismo",
+            "feedback": "Describe el proceso físico que produce la fisura: el mecanismo."
+          },
+          {
+            "id": "c4",
+            "text": "Retiro prematuro de puntales con acopio de materiales a un lado del nudo.",
+            "answer": "directa",
+            "feedback": "Es el evento que desencadenó la carga: causa directa."
+          },
+          {
+            "id": "c5",
+            "text": "Agua añadida al concreto y curado interrumpido.",
+            "answer": "contribuyente",
+            "feedback": "Debilitaron el concreto y facilitaron el daño: causas contribuyentes."
+          },
+          {
+            "id": "c6",
+            "text": "Ingreso de humedad hacia el refuerzo y riesgo de corrosión futura.",
+            "answer": "consecuencia",
+            "feedback": "Es un efecto potencial a futuro: consecuencia."
+          },
+          {
+            "id": "c7",
+            "text": "Inyección de fisuras con resina epóxica tras verificar que estén estabilizadas.",
+            "answer": "correctiva",
+            "feedback": "Es una acción de reparación: medida correctiva."
+          }
+        ]
+      },
+      {
+        "id": "hypothesis",
+        "title": "Hipótesis principal",
+        "prompt": "¿Qué hipótesis explica mejor el conjunto de evidencias? Justifique su elección.",
+        "type": "single-hypothesis",
+        "justification": {
+          "minLength": 60,
+          "keywords": [
+            [
+              "puntal",
+              "desencofr",
+              "apuntal"
+            ],
+            [
+              "curado",
+              "curar"
+            ],
+            [
+              "agua"
+            ],
+            [
+              "resistencia",
+              "mpa",
+              "ensayo",
+              "cilindro"
+            ],
+            [
+              "acopio",
+              "estiba",
+              "material",
+              "carga"
+            ],
+            [
+              "núcleo",
+              "nucleo",
+              "verific",
+              "confirm"
+            ]
+          ],
+          "hint": "Un buen argumento menciona la secuencia de desencofrado, el agua añadida, el curado, los resultados de resistencia, las cargas de acopio y la necesidad de verificación."
+        }
+      },
+      {
+        "id": "evidence",
+        "title": "Evidencias de soporte",
+        "prompt": "Seleccione las evidencias que sustentan su conclusión. Solo aparecen las que ha recolectado.",
+        "type": "evidence-select",
+        "weights": {
+          "E01": 0.6,
+          "E02": 1,
+          "E03": 0.6,
+          "E04": 1,
+          "E05": 1,
+          "E06": 1,
+          "E07": 1,
+          "E08": 0.6,
+          "E09": -1
+        },
+        "feedback": {
+          "E09": "Las fisuras del pañete del muro del eje A no tienen relación con la columna: incluirlas debilita el informe."
+        }
+      },
+      {
+        "id": "causes",
+        "title": "Causas probables",
+        "prompt": "Seleccione las causas probables respaldadas por la evidencia.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "k1",
+            "text": "Retiro de puntales de la losa N2 a los 4 días, sin verificar resistencia.",
+            "correct": true,
+            "feedback": "Correcto: causa directa documentada en el registro de desencofrado."
+          },
+          {
+            "id": "k2",
+            "text": "Acopio de materiales concentrado a un lado de la columna sobre una losa joven.",
+            "correct": true,
+            "feedback": "Correcto: generó un momento desbalanceado en el nudo."
+          },
+          {
+            "id": "k3",
+            "text": "Adición de agua no autorizada al concreto.",
+            "correct": true,
+            "feedback": "Correcto: elevó la relación agua/cemento y redujo la resistencia."
+          },
+          {
+            "id": "k4",
+            "text": "Curado deficiente en clima cálido.",
+            "correct": true,
+            "feedback": "Correcto: solo se cumplió el 14 % del plan de curado."
+          },
+          {
+            "id": "k5",
+            "text": "Vibración insuficiente por avería del equipo.",
+            "correct": true,
+            "feedback": "Correcto: explica los hormigueros, aunque no las fisuras inclinadas."
+          },
+          {
+            "id": "k6",
+            "text": "Error en el cálculo estructural de la columna.",
+            "correct": false,
+            "feedback": "Sin sustento: la memoria cumple. Lo pendiente es verificar el refuerzo instalado."
+          },
+          {
+            "id": "k7",
+            "text": "Acero de refuerzo de mala calidad.",
+            "correct": false,
+            "feedback": "No hay ninguna evidencia sobre el acero en el expediente."
+          },
+          {
+            "id": "k8",
+            "text": "Un sismo reciente.",
+            "correct": false,
+            "feedback": "No se reportó ningún evento sísmico, y solo una columna presenta el daño."
+          }
+        ]
+      },
+      {
+        "id": "consequences",
+        "title": "Consecuencias potenciales",
+        "prompt": "¿Qué consecuencias podría tener la anomalía si no se atiende?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "q1",
+            "text": "Reducción de rigidez y capacidad de la columna.",
+            "correct": true,
+            "feedback": "Correcto: debe cuantificarse con la evaluación estructural."
+          },
+          {
+            "id": "q2",
+            "text": "Ingreso de humedad y riesgo de corrosión del refuerzo a largo plazo.",
+            "correct": true,
+            "feedback": "Correcto: las fisuras abiertas son vías de ingreso de agentes agresivos."
+          },
+          {
+            "id": "q3",
+            "text": "Afectación de vigas y losas que se apoyan en la columna si el daño progresa.",
+            "correct": true,
+            "feedback": "Correcto: la columna hace parte de un sistema."
+          },
+          {
+            "id": "q4",
+            "text": "Colapso inminente de todo el edificio.",
+            "correct": false,
+            "feedback": "Alarmista y sin sustento: las fisuras son localizadas y no hay desprendimientos ni deformaciones visibles."
+          },
+          {
+            "id": "q5",
+            "text": "Ninguna: son fisuras estéticas.",
+            "correct": false,
+            "feedback": "Incorrecto: fisuras inclinadas de hasta 0,6 mm en un elemento estructural requieren evaluación."
+          }
+        ]
+      },
+      {
+        "id": "certainty",
+        "title": "Nivel de certeza",
+        "prompt": "Con la información disponible, ¿cómo debe presentarse el diagnóstico?",
+        "type": "single",
+        "options": [
+          {
+            "id": "s1",
+            "text": "Definitivo: la causa está demostrada y no se requieren más estudios.",
+            "correct": false,
+            "feedback": "La resistencia en sitio y el refuerzo instalado aún no se han verificado. Afirmarlo como definitivo es una conclusión injustificada."
+          },
+          {
+            "id": "s2",
+            "text": "Probable: consistente con las evidencias, pendiente de confirmación con ensayos adicionales.",
+            "correct": true,
+            "feedback": "Correcto: un diagnóstico responsable reconoce lo que falta por verificar y solicita investigaciones adicionales."
+          },
+          {
+            "id": "s3",
+            "text": "Indeterminado: no es posible formular ninguna hipótesis.",
+            "correct": false,
+            "feedback": "Hay evidencia suficiente para formular una hipótesis principal fundamentada."
+          }
+        ]
+      },
+      {
+        "id": "recommendations",
+        "title": "Recomendaciones técnicas",
+        "prompt": "Seleccione las medidas inmediatas y correctivas que recomendaría.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "r1",
+            "text": "Reapuntalar la losa del nivel 2 y retirar de inmediato el acopio de materiales.",
+            "correct": true,
+            "feedback": "Correcto: es la medida de seguridad inmediata."
+          },
+          {
+            "id": "r2",
+            "text": "Extraer núcleos de la columna (NTC 3658 / ASTM C42M) y evaluarlos con el criterio de C.5.6.5.4: promedio ≥ 0,85 f'c y ningún núcleo < 0,75 f'c.",
+            "correct": true,
+            "feedback": "Correcto: es la investigación que el NSR-10 prevé ante resultados de baja resistencia (C.5.6.5.2 a C.5.6.5.4, folio C-79)."
+          },
+          {
+            "id": "r3",
+            "text": "Escanear el refuerzo (pachómetro / ferroscan) para verificar los estribos instalados.",
+            "correct": true,
+            "feedback": "Correcto: resuelve la hipótesis H3 pendiente."
+          },
+          {
+            "id": "r4",
+            "text": "Instalar testigos y monitorear la abertura de las fisuras.",
+            "correct": true,
+            "feedback": "Correcto: permite saber si las fisuras están activas."
+          },
+          {
+            "id": "r5",
+            "text": "Realizar una evaluación de resistencia (Capítulo C.20) por el ingeniero estructural, con las dimensiones, refuerzo y resistencia reales, para definir reparación o reforzamiento.",
+            "correct": true,
+            "feedback": "Correcto: C.20.1.1 y C.20.1.2 (folio C-351) exigen la evaluación cuando hay dudas sobre la seguridad, con datos medidos en obra."
+          },
+          {
+            "id": "r6",
+            "text": "Suspender el vaciado del nivel 3 hasta contar con la evaluación.",
+            "correct": true,
+            "feedback": "Correcto: evita cargar más una estructura con dudas."
+          },
+          {
+            "id": "r10",
+            "correct": true,
+            "text": "Que la supervisión técnica deje constancia escrita, prevenga al constructor y ordene los estudios de la parte afectada.",
+            "feedback": "Correcto: NSR-10, Título I, I.2.3.1 literales (g), (i) y (l) (folio I-5)."
+          },
+          {
+            "id": "r7",
+            "text": "Resanar con pañete y pintar para ocultar las fisuras.",
+            "correct": false,
+            "feedback": "Incorrecto: ocultar el síntoma no corrige el problema e impide el monitoreo."
+          },
+          {
+            "id": "r8",
+            "text": "Demoler de inmediato todo el edificio.",
+            "correct": false,
+            "feedback": "Desproporcionado: no hay evidencia que lo justifique antes de la evaluación."
+          },
+          {
+            "id": "r9",
+            "text": "Continuar con el cronograma sin cambios.",
+            "correct": false,
+            "feedback": "Incorrecto: ignora un riesgo estructural documentado."
+          },
+          {
+            "id": "r11",
+            "correct": false,
+            "text": "Aceptar la columna porque las fisuras miden menos de 1 mm, que es el límite del NSR-10.",
+            "feedback": "Incorrecto: el NSR-10 no fija un ancho de fisura admisible para dictaminar elementos construidos (ver C.10.6.4 y su comentario)."
+          }
+        ]
+      },
+      {
+        "id": "prevention",
+        "title": "Medidas preventivas",
+        "prompt": "¿Qué medidas evitarían que esto se repita en el resto de la obra?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "p1",
+            "text": "Plan de desencofrado y reapuntalamiento aprobado, con retiro sujeto a resistencia verificada con cilindros de obra.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p2",
+            "text": "Prohibir la adición de agua en obra y medir el asentamiento a cada carga.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p3",
+            "text": "Plan de curado con responsable, registro diario y reserva de agua o compuesto curador.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p4",
+            "text": "Controlar y autorizar el acopio de materiales sobre losas, con cargas máximas señalizadas.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p5",
+            "text": "Disponer de un vibrador de respaldo en cada vaciado.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p6",
+            "text": "Aumentar el cemento «a ojo» en la mezcla para compensar.",
+            "correct": false,
+            "feedback": "Incorrecto: modificar una mezcla diseñada sin control técnico genera otros problemas (calor de hidratación, retracción)."
+          },
+          {
+            "id": "p7",
+            "text": "Reducir la cantidad de ensayos de laboratorio para ganar tiempo.",
+            "correct": false,
+            "feedback": "Incorrecto: los ensayos son la herramienta de control que permitió detectar el problema."
+          }
+        ]
+      }
+    ]
+  },
+  "scoring": {
+    "keyEvidences": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06",
+      "E07",
+      "E08"
+    ],
+    "anomalyHotspots": [
+      "hs-col",
+      "hs-base",
+      "hs-pallets"
+    ],
+    "verificationWeight": 0.45,
+    "mustCite": [
+      "E02",
+      "E04",
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "mainHypothesis": {
+      "H4": 1,
+      "H2": 0.5,
+      "H1": 0.3,
+      "H3": 0
+    },
+    "minEvidence": 6,
+    "reviewSet": [
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06"
+    ],
+    "reviewMin": 4,
+    "mainExplanation": "La hipótesis más consistente es H4: error durante el proceso constructivo, con H1 y H2 como contribuyentes.",
+    "mustCiteWhy": "Es una evidencia determinante para sustentar la causa.",
+    "distractors": [
+      "E09"
+    ]
+  },
+  "reveal": {
+    "title": "Lo que realmente ocurrió",
+    "paragraphs": [
+      "El día del vaciado de las columnas, la mezcla llegó con un asentamiento algo bajo. Para que «bajara» por la canoa, se le añadieron unos 120 litros de agua sin autorización. A mitad del vaciado de la columna C-B2 el vibrador se averió y la base quedó mal compactada.",
+      "Al día siguiente se retiraron las formaletas. Un corte de agua dejó el tanque vacío desde el tercer día y la columna pasó su primera semana expuesta al sol y al viento, sin curado. El concreto quedó más débil de lo especificado: los ensayos a 28 días lo confirmaron.",
+      "Para recuperar el atraso, el día 11 se retiraron todos los puntales de la losa del nivel 2 —con apenas 4 días de edad— y, ese mismo día, se acopiaron cerca de 4 toneladas de bloque y acero junto a la columna C-B2, en un solo costado.",
+      "La columna, con un concreto joven y debilitado, recibió de golpe compresión, flexión y cortante por la carga desbalanceada. Al día siguiente aparecieron las fisuras inclinadas cerca del nudo.",
+      "El diagnóstico sigue siendo PROBABLE: los núcleos y el escaneo de refuerzo dirán si la columna puede repararse con inyección y protección, o si requiere reforzamiento."
+    ]
+  },
+  "verificationOptions": [
+    {
+      "id": "cumple",
+      "name": "Cumple"
+    },
+    {
+      "id": "no_cumple",
+      "name": "No cumple"
+    },
+    {
+      "id": "requiere",
+      "name": "Requiere verificación adicional"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "V1",
+      "evidence": "E05",
+      "title": "Promedio de tres ensayos consecutivos",
+      "clause": "C.5.6.3.3 (a)",
+      "ref": "NSR-10, Título C, numeral C.5.6.3.3 (a) · folio C-77",
+      "requirement": "Cada promedio aritmético de tres ensayos de resistencia consecutivos debe ser igual o superior a f'c.",
+      "data": [
+        [
+          "Ensayo T-3 (28 d)",
+          "23,4 MPa"
+        ],
+        [
+          "Ensayo T-4 (28 d)",
+          "22,1 MPa"
+        ],
+        [
+          "Ensayo T-5 (28 d)",
+          "21,6 MPa"
+        ],
+        [
+          "f'c especificado",
+          "28,0 MPa"
+        ]
+      ],
+      "question": "¿El concreto de las columnas del nivel 1 cumple este criterio?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "Promedio = (23,4 + 22,1 + 21,6) / 3 = 22,4 MPa, inferior a 28,0 MPa. NO CUMPLE el criterio (a)."
+    },
+    {
+      "id": "V2",
+      "evidence": "E05",
+      "title": "Ensayo individual más bajo",
+      "clause": "C.5.6.3.3 (b)",
+      "ref": "NSR-10, Título C, numeral C.5.6.3.3 (b) · folio C-77",
+      "requirement": "Ningún resultado de ensayo de resistencia debe ser menor que f'c por más de 3,5 MPa cuando f'c es 35 MPa o menor.",
+      "data": [
+        [
+          "Ensayo más bajo a 28 d",
+          "21,6 MPa"
+        ],
+        [
+          "f'c especificado",
+          "28,0 MPa"
+        ]
+      ],
+      "question": "¿Los ensayos individuales cumplen este criterio?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "Límite = 28,0 − 3,5 = 24,5 MPa. Los tres ensayos (23,4; 22,1; 21,6 MPa) están por debajo: NO CUMPLE. Esto activa la investigación de resultados de baja resistencia (C.5.6.5)."
+    },
+    {
+      "id": "V3",
+      "evidence": "E05",
+      "title": "Validez de los ensayos",
+      "clause": "C.5.6.2.4",
+      "ref": "NSR-10, Título C, numeral C.5.6.2.4 · folio C-76",
+      "requirement": "Un ensayo de resistencia es el promedio de al menos dos probetas de 150 × 300 mm (o tres de 100 × 200 mm) de la misma muestra, ensayadas a 28 días o a la edad establecida para f'c.",
+      "data": [
+        [
+          "Probetas por ensayo",
+          "2 cilindros"
+        ],
+        [
+          "Dimensiones",
+          "150 × 300 mm"
+        ],
+        [
+          "Edad de ensayo",
+          "28 días"
+        ],
+        [
+          "Origen",
+          "Misma muestra por ensayo"
+        ]
+      ],
+      "question": "¿Los resultados de laboratorio son ensayos válidos según el Reglamento?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "Cada resultado promedia dos cilindros de 150 × 300 mm de la misma muestra a 28 días: son ensayos VÁLIDOS. Los resultados bajos no pueden descartarse como «error del laboratorio»."
+    },
+    {
+      "id": "V4",
+      "evidence": "E06",
+      "title": "Curado durante los primeros 7 días",
+      "clause": "C.5.11.1",
+      "ref": "NSR-10, Título C, numeral C.5.11.1 · folio C-83",
+      "requirement": "Salvo curado acelerado (C.5.11.3), el concreto debe mantenerse por encima de 10 °C y en condiciones de humedad por lo menos durante los primeros 7 días después de la colocación (excepto concreto de alta resistencia inicial).",
+      "data": [
+        [
+          "Riegos registrados",
+          "3 de 21 programados"
+        ],
+        [
+          "Días sin curado",
+          "D+3 a D+7"
+        ],
+        [
+          "Compuesto curador",
+          "No aplicado"
+        ],
+        [
+          "Temperatura",
+          "31 – 33 °C"
+        ]
+      ],
+      "question": "¿El curado de las columnas del nivel 1 cumple el requisito?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "La temperatura superó 10 °C, pero el concreto NO se mantuvo húmedo durante 7 días: desde el D+3 no hubo curado. NO CUMPLE."
+    },
+    {
+      "id": "V5",
+      "evidence": "E02",
+      "title": "Retiro de puntales de la losa N2",
+      "clause": "C.6.2.2.1 (b) y (c)",
+      "ref": "NSR-10, Título C, numeral C.6.2.2.1 · folio C-86",
+      "requirement": "Solo cuando la estructura tenga resistencia suficiente pueden apoyarse cargas de construcción o retirarse apuntalamientos. La demostración debe basarse en un análisis estructural y en la resistencia del concreto obtenida de probetas curadas en obra (u otro procedimiento aprobado). El constructor debe definir antes un procedimiento y programación de retiro y reapuntalamiento.",
+      "data": [
+        [
+          "Edad de la losa al retiro",
+          "4 días"
+        ],
+        [
+          "Resistencia verificada antes del retiro",
+          "No registra"
+        ],
+        [
+          "Análisis estructural del retiro",
+          "No existe"
+        ],
+        [
+          "Procedimiento de reapuntalamiento",
+          "No existe"
+        ]
+      ],
+      "question": "¿El retiro de puntales cumplió el Reglamento?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "No hubo análisis estructural ni probetas curadas en obra que demostraran resistencia suficiente, ni procedimiento de reapuntalamiento. NO CUMPLE C.6.2.2.1."
+    },
+    {
+      "id": "V6",
+      "evidence": "E07",
+      "title": "Cargas de construcción sobre la losa sin puntales",
+      "clause": "C.6.2.2.2",
+      "ref": "NSR-10, Título C, numeral C.6.2.2.2 · folio C-86",
+      "requirement": "No se pueden soportar en la estructura sin cimbra cargas de construcción que excedan la suma de las cargas muertas más vivas de diseño, a menos que un análisis estructural demuestre resistencia suficiente.",
+      "data": [
+        [
+          "Acopio",
+          "≈ 4,2 t concentradas junto a C-B2"
+        ],
+        [
+          "Comparación con D + L de diseño",
+          "No realizada"
+        ],
+        [
+          "Análisis estructural del acopio",
+          "No existe"
+        ]
+      ],
+      "question": "¿Puede concluirse si el acopio excedió el límite de este numeral?",
+      "answer": "requiere",
+      "partial": {
+        "no_cumple": 0.4
+      },
+      "explanation": "Con los datos disponibles NO se puede afirmar si 4,2 t concentradas superan las cargas D + L de diseño: hay que convertirlas a carga por área y compararlas con la memoria. Lo correcto es REQUERIR la verificación. (El retiro de puntales ya incumplió C.6.2.2.1, verificación V5.)"
+    },
+    {
+      "id": "V7",
+      "evidence": "E02",
+      "title": "Descimbrado lateral de columnas",
+      "clause": "C.6.2.1",
+      "ref": "NSR-10, Título C, numeral C.6.2.1 · folio C-85 (y comentario CR6.2.2)",
+      "requirement": "La cimbra debe retirarse sin afectar la seguridad o el funcionamiento de la estructura; el concreto expuesto debe tener resistencia suficiente para no ser dañado por el descimbrado. El comentario CR6.2.2 indica que los encofrados laterales de columnas pueden retirarse generalmente después de 12 h de tiempo de curado acumulado, si no soportan otras cargas.",
+      "data": [
+        [
+          "Retiro de formaletas de columnas",
+          "18 h después del vaciado"
+        ],
+        [
+          "Temperatura ambiente",
+          "> 10 °C"
+        ],
+        [
+          "Daños por descimbrado (aristas, desprendimientos)",
+          "No observados"
+        ],
+        [
+          "Cargas sobre las formaletas",
+          "Solo presión del concreto"
+        ]
+      ],
+      "question": "¿El descimbrado de las columnas cumplió el Reglamento?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "Las formaletas laterales se retiraron tras más de 12 h de curado acumulado sin dañar el concreto: CUMPLE. Los hormigueros son un defecto de vibración, no del descimbrado. Un buen investigador también reconoce lo que sí se hizo bien."
+    },
+    {
+      "id": "V8",
+      "evidence": "E03",
+      "title": "Separación de estribos en el diseño",
+      "clause": "C.7.10.5.1 y C.7.10.5.2",
+      "ref": "NSR-10, Título C, numerales C.7.10.5.1 y C.7.10.5.2 · folio C-103",
+      "requirement": "Barras longitudinales N.º 10 o menores: estribos de diámetro N.º 3 como mínimo. La separación vertical de estribos no debe exceder 16 diámetros de la barra longitudinal, 48 diámetros del estribo ni la menor dimensión del elemento.",
+      "data": [
+        [
+          "Barra longitudinal",
+          "N.º 6 · db = 19,1 mm"
+        ],
+        [
+          "Estribo",
+          "N.º 3 · 9,5 mm"
+        ],
+        [
+          "Menor dimensión",
+          "400 mm"
+        ],
+        [
+          "Separación máxima en el plano",
+          "150 mm"
+        ]
+      ],
+      "question": "¿El diseño de los estribos cumple estos numerales?",
+      "answer": "cumple",
+      "partial": {},
+      "explanation": "Límites: 16 × 19,1 = 306 mm; 48 × 9,5 = 456 mm; 400 mm. El menor es 306 mm y el plano indica 150 mm: CUMPLE. Ojo: en estructuras con capacidad de disipación moderada o especial (DMO/DES) el Capítulo C.21 exige además requisitos de confinamiento más estrictos, que el revisor estructural debe verificar."
+    },
+    {
+      "id": "V9",
+      "evidence": "E03",
+      "title": "Refuerzo realmente instalado",
+      "clause": "C.20.2.1 · C.7.10.5.2",
+      "ref": "NSR-10, Título C, numerales C.20.1.2 y C.20.2.1 · folios C-351 y C-352",
+      "requirement": "Para evaluar analíticamente una estructura existente deben establecerse las dimensiones y propiedades reales de los elementos en las secciones críticas, incluido el refuerzo colocado.",
+      "data": [
+        [
+          "Separación de estribos en obra",
+          "Sin verificar"
+        ],
+        [
+          "Registro de inspección de refuerzo",
+          "No existe"
+        ],
+        [
+          "Zona fisurada",
+          "Tercio superior, cerca del nudo"
+        ]
+      ],
+      "question": "¿Puede afirmarse que el refuerzo instalado en C-B2 cumple el plano?",
+      "answer": "requiere",
+      "partial": {
+        "cumple": 0.2
+      },
+      "explanation": "Un plano correcto no prueba la obra ejecutada. Hay que REQUERIR un escaneo de refuerzo (pachómetro/ferroscan) o regatas en la zona fisurada antes de concluir."
+    },
+    {
+      "id": "V10",
+      "evidence": "E08",
+      "title": "Recubrimiento en la zona con hormigueros",
+      "clause": "C.7.7.1 (c)",
+      "ref": "NSR-10, Título C, numeral C.7.7.1 · folio C-96",
+      "requirement": "Concreto construido en sitio, no expuesto a la intemperie ni en contacto con el suelo — vigas y columnas (armadura principal, estribos, espirales): recubrimiento no menor de 40 mm.",
+      "data": [
+        [
+          "Recubrimiento especificado",
+          "40 mm"
+        ],
+        [
+          "Profundidad del hormiguero",
+          "20 – 30 mm"
+        ],
+        [
+          "Refuerzo expuesto",
+          "No"
+        ],
+        [
+          "Recubrimiento remanente medido",
+          "Sin medir"
+        ]
+      ],
+      "question": "¿Se conserva el recubrimiento mínimo en la base de C-B2?",
+      "answer": "requiere",
+      "partial": {
+        "no_cumple": 0.4
+      },
+      "explanation": "Si el hormiguero tiene 20–30 mm de profundidad, el concreto sano sobre el acero podría quedar en 10–20 mm, pero no se ha medido. Hay que REQUERIR la medición (retirar el concreto suelto y medir con pachómetro) antes de definir la reparación."
+    },
+    {
+      "id": "V11",
+      "evidence": "E01",
+      "title": "Ancho de fisura medido",
+      "clause": "C.10.6.4 y comentario",
+      "ref": "NSR-10, Título C, numeral C.10.6.4 y CR10.6.4 · folio C-145",
+      "requirement": "El Título C controla la fisuración en el DISEÑO limitando el espaciamiento del refuerzo (ecuación C.10-4). El comentario aclara que el ancho de fisura es muy variable; el Reglamento no fija un ancho máximo admisible para aceptar o rechazar un elemento construido.",
+      "data": [
+        [
+          "Abertura medida",
+          "0,30 – 0,60 mm"
+        ],
+        [
+          "Ancho admisible fijado por el NSR-10",
+          "No establecido"
+        ],
+        [
+          "Monitoreo en el tiempo",
+          "No realizado"
+        ]
+      ],
+      "question": "¿Puede declararse cumplimiento o incumplimiento solo con el ancho medido?",
+      "answer": "requiere",
+      "partial": {},
+      "explanation": "No existe un «ancho límite» en el NSR-10 para dictaminar un elemento construido. Inventar un límite sería un error. La seguridad se evalúa con la investigación de C.5.6.5 y, si persisten dudas, con una evaluación de resistencia (Capítulo C.20), además del monitoreo de las fisuras."
+    }
+  ]
+}

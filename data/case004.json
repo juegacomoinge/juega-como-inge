@@ -1,0 +1,1730 @@
+{
+  "id": "004",
+  "code": "EXP-004",
+  "title": "CUENTA REGRESIVA",
+  "category": "Evaluación postsísmica de edificaciones",
+  "difficulty": "Avanzado · Misión en tiempo real",
+  "location": "Torre Alameda (ficticia) · 8 pisos + 2 sótanos · comercio en primer piso, oficinas y parqueaderos",
+  "date": "Día del evento · 2 horas después del sismo",
+  "disclaimer": "Caso ficticio con fines educativos. El sismo, los registros, las mediciones y las velocidades de deterioro del juego son DATOS SIMULADOS: en una estructura real no existe un «índice de estabilidad» observable ni tiempos de colapso predecibles. Las citas del Reglamento NSR-10 indican numeral y folio del texto oficial y se transcriben de forma resumida. Esta herramienta no reemplaza al ingeniero estructural, al supervisor técnico ni a los organismos de gestión del riesgo.",
+  "briefing": {
+    "summary": "Dos horas después de un sismo moderado, la administración de la Torre Alameda reporta crujidos en el sótano y fisuras en el piso de la zona de comidas. El centro comercial sigue abierto.",
+    "narrative": [
+      "El sismo duró apenas veinte segundos y en la ciudad casi nadie lo sintió con fuerza. En la Torre Alameda, sin embargo, los vigilantes escuchan desde hace una hora crujidos secos en el sótano 1. En la zona de comidas, alguien notó una grieta circular en el piso alrededor de una columna.",
+      "La gerencia quiere reabrir por completo esta misma tarde: «fue un temblorcito, el edificio está bien». Hay cerca de 180 personas dentro. El Servicio Geológico (simulado) anuncia réplicas en las próximas horas.",
+      "Usted es el inspector asignado por la unidad. A diferencia de otros expedientes, aquí el tiempo corre: cada amenaza crítica que no se identifique y controle a tiempo debilita la estructura. Si la estabilidad llega a cero, habrá un colapso parcial."
+    ],
+    "rules": [
+      "La ESTABILIDAD baja continuamente mientras existan amenazas críticas sin controlar. Las réplicas causan daños adicionales.",
+      "Para controlar una amenaza primero debe IDENTIFICARLA en el escenario (registrar la evidencia) y luego ORDENAR la medida de emergencia correcta.",
+      "Dispone de 2 cuadrillas de apuntalamiento y una brigada de evacuación. Cada medida tarda un tiempo real en ejecutarse.",
+      "Hay medidas inadecuadas que hacen perder estabilidad o tiempo. Piense como ingeniero, no como gerente.",
+      "Cuando todas las amenazas críticas estén controladas, el reloj se detiene y podrá completar el análisis y el informe sin presión.",
+      "Puede pausar con la tecla P (la información se oculta durante la pausa). Tecla M: medidas de emergencia. Tecla I: inventario."
+    ],
+    "objectives": [
+      {
+        "id": "obj-scene",
+        "text": "Identificar las amenazas críticas en sótanos, plataforma, fachada y cubierta."
+      },
+      {
+        "id": "obj-stabilize",
+        "text": "Estabilizar la estructura antes de que colapse."
+      },
+      {
+        "id": "obj-evidence",
+        "text": "Recopilar al menos 7 evidencias de campo y documentales."
+      },
+      {
+        "id": "obj-review",
+        "text": "Revisar los registros de remodelaciones, el reporte sísmico y los testimonios."
+      },
+      {
+        "id": "obj-norm",
+        "text": "Verificar las anomalías frente a los requisitos del NSR-10."
+      },
+      {
+        "id": "obj-hyp",
+        "text": "Evaluar las cuatro hipótesis sobre el origen de los daños."
+      },
+      {
+        "id": "obj-report",
+        "text": "Emitir el informe técnico de la evaluación postsísmica."
+      }
+    ],
+    "inspectables": [
+      "Sótano 1 · columna B-3 y muro de bodega",
+      "Sótano 1 · placa alrededor de la columna C-3",
+      "Sótano 2 · vigas y filtraciones",
+      "Zona de comidas · jardinera",
+      "Fachada · voladizo del piso 5",
+      "Fachada lateral · muros de mampostería",
+      "Junta con el edificio vecino",
+      "Cubierta · tanque elevado",
+      "Administración · planos y remodelaciones",
+      "Puesto de mando · reporte sísmico"
+    ],
+    "people": [
+      {
+        "name": "Marta Ríos",
+        "role": "Administradora del edificio"
+      },
+      {
+        "name": "Cap. Andrés Pardo",
+        "role": "Bomberos · puesto de mando"
+      },
+      {
+        "name": "Ing. Felipe Arango",
+        "role": "Calculista original (por teléfono)"
+      }
+    ]
+  },
+  "tools": [
+    {
+      "id": "visual",
+      "name": "Inspección visual",
+      "desc": "Observación directa del elemento."
+    },
+    {
+      "id": "linterna",
+      "name": "Linterna",
+      "desc": "Los sótanos quedaron sin energía: ilumine para ver los daños."
+    },
+    {
+      "id": "fisurometro",
+      "name": "Fisurómetro",
+      "desc": "Mide la abertura de fisuras y desplazamientos."
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "hs-b3",
+      "name": "Columna B-3 · Sótano 1",
+      "evidence": "E01",
+      "anomaly": true,
+      "requiresTool": "linterna",
+      "toolHint": "El sótano 1 está a oscuras desde el sismo. Use la linterna para ver la columna.",
+      "description": "Columna de concreto de 50 × 50 cm del sótano 1. Hace tres años se construyó un muro de bloque de 1,6 m de altura adosado a ella para cerrar una bodega.",
+      "observation": "Sobre el muro, en el tramo libre de 1,2 m, la columna tiene fisuras en forma de X de 1 a 3 mm, concreto descascarado y estribos visibles abiertos. Se escuchan crujidos intermitentes. Bajo el muro la columna está intacta.",
+      "toolObservation": "",
+      "pos3d": [
+        -3,
+        -2.2,
+        6.3
+      ],
+      "pos2d": [
+        38.8,
+        77
+      ]
+    },
+    {
+      "id": "hs-c3",
+      "name": "Placa alrededor de la columna C-3",
+      "evidence": "E02",
+      "anomaly": true,
+      "requiresTool": "linterna",
+      "toolHint": "La cara inferior de la placa está en la oscuridad del sótano 1. Use la linterna.",
+      "description": "Placa maciza de 22 cm (losa plana sin vigas) que forma el piso de la zona de comidas, apoyada directamente en la columna C-3.",
+      "observation": "Por debajo: fisuras radiales desde la columna y desprendimiento de recubrimiento. Por encima, en el piso de la zona de comidas: una fisura circular a unos 10–15 cm de la cara de la columna. Encima hay una jardinera llena de tierra húmeda.",
+      "toolObservation": "",
+      "pos3d": [
+        3,
+        -0.15,
+        6.3
+      ],
+      "pos2d": [
+        53.8,
+        72.5
+      ]
+    },
+    {
+      "id": "hs-tank",
+      "name": "Tanque elevado de cubierta",
+      "evidence": "E03",
+      "anomaly": true,
+      "requiresTool": "fisurometro",
+      "toolHint": "Para cuantificar el desplazamiento del tanque y el estado de los pernos use el fisurómetro (regla de medición).",
+      "description": "Tanque metálico de 30 m³ sobre una estructura de perfiles apoyada en la losa de cubierta. No aparece en los planos originales.",
+      "observation": "El tanque está ligeramente girado sobre su base y gotea agua por una conexión. La estructura de soporte muestra marcas de desplazamiento.",
+      "toolObservation": "Medición: desplazamiento de 4 cm de la base. Dos de los cuatro pernos de anclaje están cortados y uno está doblado. El tanque está lleno (≈ 30 t).",
+      "pos3d": [
+        5,
+        26.6,
+        -2.5
+      ],
+      "pos2d": [
+        60,
+        20
+      ]
+    },
+    {
+      "id": "hs-volado",
+      "name": "Voladizo del piso 5",
+      "evidence": "E04",
+      "anomaly": true,
+      "requiresTool": null,
+      "description": "Balcón en voladizo de 2 m sobre el acceso peatonal principal del centro comercial.",
+      "observation": "Fisura continua en el empotramiento del voladizo y piezas de enchape desprendidas. Varias cayeron sobre el andén de acceso, por donde sigue entrando gente.",
+      "toolObservation": "",
+      "pos3d": [
+        0,
+        13.6,
+        7.8
+      ],
+      "pos2d": [
+        73.7,
+        48.7
+      ]
+    },
+    {
+      "id": "hs-junta",
+      "name": "Junta con el edificio vecino",
+      "evidence": "E05",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Junta entre la Torre Alameda y el edificio vecino de 6 pisos, en el costado occidental.",
+      "observation": "La junta tiene unos 3 cm. A la altura del piso 6 hay marcas de impacto y concreto desportillado en ambos edificios.",
+      "toolObservation": "",
+      "pos3d": [
+        -9.6,
+        16.5,
+        2
+      ],
+      "pos2d": [
+        21,
+        37
+      ]
+    },
+    {
+      "id": "hs-fachada",
+      "name": "Muros de fachada · piso 2",
+      "evidence": "E06",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Muros de mampostería no estructural en la fachada oriental del piso 2.",
+      "observation": "Fisuras diagonales en forma de X en varios paños de mampostería. Algunos bloques sueltos en las esquinas de las ventanas.",
+      "toolObservation": "",
+      "pos3d": [
+        9.3,
+        4.5,
+        0
+      ],
+      "pos2d": [
+        70.5,
+        64
+      ]
+    },
+    {
+      "id": "hs-s2",
+      "name": "Viga del sótano 2",
+      "evidence": "E07",
+      "anomaly": false,
+      "requiresTool": "linterna",
+      "toolHint": "El sótano 2 está completamente oscuro. Use la linterna.",
+      "description": "Viga perimetral del sótano 2 junto al muro de contención.",
+      "observation": "Manchas de óxido, recubrimiento delaminado y una barra inferior expuesta con pérdida de sección. Hay humedad por una filtración antigua del muro de contención. Los vigilantes dicen que «eso está así hace años».",
+      "toolObservation": "",
+      "pos3d": [
+        -9,
+        -4.9,
+        0
+      ],
+      "pos2d": [
+        26.5,
+        86.5
+      ]
+    },
+    {
+      "id": "hs-admin",
+      "name": "Oficina de administración",
+      "evidence": "E08",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Oficina provisional de la administración en el primer piso.",
+      "observation": "La administradora entrega los planos originales (2004) y una carpeta con las remodelaciones realizadas desde entonces.",
+      "toolObservation": "",
+      "pos3d": [
+        -13,
+        1.6,
+        13.5
+      ],
+      "pos2d": [
+        5.3,
+        70.5
+      ]
+    },
+    {
+      "id": "hs-mando",
+      "name": "Puesto de mando de bomberos",
+      "evidence": "E09",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Carpa del puesto de mando unificado en la plazoleta.",
+      "observation": "El capitán de bomberos comparte el reporte del sismo (simulado) y el pronóstico de réplicas.",
+      "toolObservation": "",
+      "pos3d": [
+        13,
+        2.4,
+        14
+      ],
+      "pos2d": [
+        88.8,
+        70
+      ]
+    },
+    {
+      "id": "hs-testigos",
+      "name": "Vigilantes y administradora",
+      "evidence": "E10",
+      "anomaly": false,
+      "requiresTool": null,
+      "description": "Personal que estaba en el edificio durante el sismo.",
+      "observation": "Relatan lo que vieron y escucharon. La administradora insiste en reabrir hoy.",
+      "toolObservation": "",
+      "pos3d": [
+        -5,
+        1.6,
+        14.8
+      ],
+      "pos2d": [
+        16.8,
+        71
+      ]
+    }
+  ],
+  "evidences": [
+    {
+      "id": "E01",
+      "name": "Daño por cortante en la columna B-3",
+      "type": "Registro fotográfico",
+      "summary": "Fisuras en X, concreto descascarado y estribos abiertos en el tramo libre de la columna B-3, sobre el muro de bodega.",
+      "doc": {
+        "illustration": "shortColumn",
+        "fields": [
+          [
+            "Elemento",
+            "Columna B-3 · Sótano 1 · 50 × 50 cm"
+          ],
+          [
+            "Altura libre total",
+            "2,8 m"
+          ],
+          [
+            "Muro adosado",
+            "Bloque de concreto, 1,6 m de altura, construido en 2022"
+          ],
+          [
+            "Tramo libre sobre el muro",
+            "1,2 m"
+          ],
+          [
+            "Daño",
+            "Fisuras en X de 1–3 mm, recubrimiento perdido, estribos abiertos"
+          ],
+          [
+            "Estribos visibles",
+            "N.º 3 con separación aparente de 25 cm"
+          ],
+          [
+            "Bajo el muro",
+            "Sin daño"
+          ]
+        ],
+        "notes": [
+          "Crujidos intermitentes durante la inspección.",
+          "Las demás columnas del sótano 1, sin muro adosado, no presentan este daño."
+        ]
+      },
+      "technical": [
+        "Cuando un muro rígido restringe una parte de la columna, el tramo libre que queda es mucho más corto: la columna se vuelve más rígida, atrae más fuerza sísmica y falla por cortante (fisuras en X) en lugar de flexionarse. Es el llamado efecto de «columna corta».",
+        "El NSR-10, A.10.10.1.2 numeral 2 (folio A-110), reconoce los «daños estructurales imputables a interacción adversa con elementos no estructurales»: la reparación debe intervenir los elementos estructurales afectados eliminando la interacción adversa.",
+        "Una columna con falla por cortante y estribos abiertos pierde capacidad de carga vertical: es una amenaza crítica para la estabilidad."
+      ],
+      "relevance": "Documenta el daño estructural más grave del sótano 1."
+    },
+    {
+      "id": "E02",
+      "name": "Punzonamiento incipiente en la placa de C-3",
+      "type": "Registro fotográfico",
+      "summary": "Fisura circular alrededor de la columna C-3 en la zona de comidas y fisuras radiales en la cara inferior de la placa.",
+      "doc": {
+        "illustration": "punchingSlab",
+        "fields": [
+          [
+            "Elemento",
+            "Placa maciza (losa plana) de 22 cm · d ≈ 19 cm"
+          ],
+          [
+            "Columna",
+            "C-3 · 40 × 40 cm"
+          ],
+          [
+            "Cara superior",
+            "Fisura circular a 10–15 cm de la cara de la columna"
+          ],
+          [
+            "Cara inferior",
+            "Fisuras radiales y desprendimiento de recubrimiento"
+          ],
+          [
+            "Deflexión visible",
+            "≈ 2 cm hacia la columna (estimada con nivel)"
+          ],
+          [
+            "Carga sobre la placa",
+            "Jardinera de 3 × 2 m con 60 cm de tierra húmeda (2021)"
+          ]
+        ],
+        "notes": [
+          "La jardinera no aparece en los planos originales.",
+          "Ningún otro punto de la placa presenta fisuras circulares."
+        ]
+      },
+      "technical": [
+        "En losas sin vigas apoyadas directamente sobre columnas, la falla por punzonamiento se produce a lo largo de un cono o pirámide truncada alrededor de la columna. Es una falla frágil: puede ocurrir sin aviso.",
+        "El NSR-10, C.11.11.1 y C.11.11.1.2 (folio C-203), establece que la resistencia a cortante de losas cerca de las columnas se verifica en una sección crítica ubicada a no menos de d/2 de la cara de la columna.",
+        "La tierra húmeda pesa del orden de 18 a 20 kN/m³: 60 cm de tierra equivalen a unos 11 kN/m², varias veces la carga viva de una zona de comidas."
+      ],
+      "relevance": "Documenta un posible mecanismo de falla frágil en la placa de la zona de comidas."
+    },
+    {
+      "id": "E03",
+      "name": "Tanque elevado con anclajes fallados",
+      "type": "Observación de campo",
+      "summary": "Tanque de 30 m³ desplazado sobre su base, con dos pernos de anclaje cortados.",
+      "doc": {
+        "illustration": "tankAnchors",
+        "fields": [
+          [
+            "Capacidad",
+            "30 m³ · lleno (≈ 30 t de agua)"
+          ],
+          [
+            "Instalación",
+            "2019 · sin estudio estructural registrado"
+          ],
+          [
+            "Desplazamiento de la base",
+            "4 cm"
+          ],
+          [
+            "Pernos de anclaje",
+            "2 cortados · 1 doblado · 1 intacto"
+          ],
+          [
+            "Apoyo",
+            "Perfiles metálicos sobre la losa de cubierta"
+          ],
+          [
+            "En planos originales",
+            "No aparece"
+          ]
+        ],
+        "notes": [
+          "Una réplica podría hacerlo volcar sobre la losa de cubierta.",
+          "La bomba de llenado sigue funcionando automáticamente."
+        ]
+      },
+      "technical": [
+        "El Capítulo A.8 del NSR-10 (A.8.1.1, folio A-83) incluye explícitamente los tanques entre los elementos que deben diseñarse, junto con sus anclajes, para las fuerzas sísmicas (A.8.2).",
+        "Una masa grande en la cubierta aumenta las fuerzas sísmicas del edificio y, si se suelta, puede impactar y perforar la losa de cubierta.",
+        "Vaciar de forma controlada un tanque elevado reduce de inmediato la masa y el riesgo de volcamiento."
+      ],
+      "relevance": "Documenta una masa no prevista en el diseño y su estado después del sismo."
+    },
+    {
+      "id": "E04",
+      "name": "Voladizo del piso 5 sobre el acceso",
+      "type": "Observación de campo",
+      "summary": "Fisura en el empotramiento del balcón y caída de enchapes sobre el andén de acceso.",
+      "doc": {
+        "illustration": "cantilever",
+        "fields": [
+          [
+            "Elemento",
+            "Balcón en voladizo de 2,0 m · piso 5"
+          ],
+          [
+            "Daño",
+            "Fisura continua en el empotramiento (≈ 1 mm)"
+          ],
+          [
+            "Elementos sueltos",
+            "Enchape cerámico desprendido; varias piezas en el andén"
+          ],
+          [
+            "Bajo el voladizo",
+            "Acceso peatonal principal, en uso"
+          ]
+        ],
+        "notes": [
+          "Una pieza de enchape cayó a 1 m de una persona."
+        ]
+      },
+      "technical": [
+        "Los elementos que pueden caer sobre zonas de circulación son un riesgo directo para la vida aunque no comprometan la estabilidad global.",
+        "La primera medida es aislar la zona de caída (acordonar y desviar el acceso) antes de cualquier inspección detallada."
+      ],
+      "relevance": "Identifica un riesgo para las personas en el acceso al edificio."
+    },
+    {
+      "id": "E05",
+      "name": "Golpeteo con el edificio vecino",
+      "type": "Observación de campo",
+      "summary": "Marcas de impacto en la junta con el edificio vecino a la altura del piso 6.",
+      "doc": {
+        "illustration": "pounding",
+        "fields": [
+          [
+            "Ancho de la junta",
+            "≈ 3 cm"
+          ],
+          [
+            "Altura de las marcas",
+            "Piso 6 (último piso del vecino)"
+          ],
+          [
+            "Daño",
+            "Concreto desportillado en el borde de las losas de ambos edificios"
+          ],
+          [
+            "Riesgo inmediato",
+            "Local; no compromete la estabilidad global"
+          ]
+        ],
+        "notes": []
+      },
+      "technical": [
+        "El NSR-10, A.6.5 (folio A-77), exige separar las estructuras una distancia suficiente para evitar la colisión nociva durante un sismo, calculada a partir de los desplazamientos horizontales.",
+        "El golpeteo indica que la separación fue insuficiente para este evento. Requiere evaluación, pero no es la causa de los daños críticos del sótano ni de la cubierta."
+      ],
+      "relevance": "Daño real del sismo. Evalúe si es crítico o si puede atenderse después de la emergencia."
+    },
+    {
+      "id": "E06",
+      "name": "Fisuras en X en muros de fachada",
+      "type": "Registro fotográfico",
+      "summary": "Fisuras diagonales en muros de mampostería no estructural del piso 2.",
+      "doc": {
+        "illustration": "infillX",
+        "fields": [
+          [
+            "Elemento",
+            "Muros de mampostería no estructural · fachada oriental"
+          ],
+          [
+            "Patrón",
+            "Fisuras diagonales en X"
+          ],
+          [
+            "Bloques sueltos",
+            "En esquinas de ventanas"
+          ],
+          [
+            "Daño en columnas o vigas vecinas",
+            "No observado"
+          ]
+        ],
+        "notes": []
+      },
+      "technical": [
+        "Las fisuras en X en la mampostería de relleno son un daño frecuente en sismos moderados: muestran que el muro trabajó con la deformación del pórtico.",
+        "Según A.10.10.1.2 numeral 1 (folio A-110), los daños solo en elementos no estructurales se reparan conforme al Capítulo A.9. Los bloques sueltos son un riesgo de caída que debe asegurarse."
+      ],
+      "relevance": "Daño no estructural visible desde la calle."
+    },
+    {
+      "id": "E07",
+      "name": "Corrosión en viga del sótano 2",
+      "type": "Observación de campo",
+      "summary": "Deterioro antiguo por filtración: óxido, delaminación y barra expuesta con pérdida de sección.",
+      "doc": {
+        "illustration": "corrosion",
+        "fields": [
+          [
+            "Elemento",
+            "Viga perimetral · sótano 2"
+          ],
+          [
+            "Daño",
+            "Óxido, recubrimiento delaminado, barra inferior expuesta"
+          ],
+          [
+            "Pérdida de sección estimada",
+            "≈ 15 % en una barra"
+          ],
+          [
+            "Origen",
+            "Filtración antigua del muro de contención"
+          ],
+          [
+            "Relación con el sismo",
+            "No evidente: sin fisuras nuevas"
+          ]
+        ],
+        "notes": [
+          "Los vigilantes confirman que el daño existe desde hace años."
+        ]
+      },
+      "technical": [
+        "La corrosión del refuerzo es un deterioro progresivo: requiere reparación, pero se desarrolla en meses o años, no en minutos.",
+        "Durante una emergencia hay que priorizar lo que amenaza la estabilidad o la vida de forma inmediata."
+      ],
+      "relevance": "Deterioro existente en el edificio. Evalúe su prioridad."
+    },
+    {
+      "id": "E08",
+      "name": "Planos y registro de remodelaciones",
+      "type": "Documento de diseño",
+      "summary": "Planos originales de 2004 y carpeta de remodelaciones realizadas por la administración.",
+      "doc": {
+        "illustration": "remodelLog",
+        "table": {
+          "headers": [
+            "Año",
+            "Intervención",
+            "Estudio estructural",
+            "Licencia"
+          ],
+          "rows": [
+            [
+              "2004",
+              "Construcción original (diseño con el reglamento vigente entonces)",
+              "Sí",
+              "Sí"
+            ],
+            [
+              "2019",
+              "Tanque elevado de 30 m³ en cubierta",
+              "No registra",
+              "No"
+            ],
+            [
+              "2021",
+              "Jardinera con tierra en la zona de comidas (sobre la placa de C-3)",
+              "No registra",
+              "No"
+            ],
+            [
+              "2022",
+              "Muro de bodega de 1,6 m adosado a columnas del eje B, sótano 1",
+              "No registra",
+              "No"
+            ],
+            [
+              "2023",
+              "Cambio de enchape de fachada y balcones",
+              "No aplica",
+              "No registra"
+            ]
+          ],
+          "flagRows": [
+            1,
+            2,
+            3
+          ]
+        },
+        "fields": [
+          [
+            "Sistema estructural original",
+            "Pórticos de concreto con placa maciza en el piso 1"
+          ],
+          [
+            "Carga viva de diseño del piso 1",
+            "Comercio (según memoria original)"
+          ],
+          [
+            "Cargas de tanque y jardinera en la memoria",
+            "No incluidas"
+          ]
+        ],
+        "notes": [
+          "Nota de la administradora: «Lo hicimos con un maestro de confianza, eran arreglos menores»."
+        ]
+      },
+      "technical": [
+        "El NSR-10, A.10.1.3.4 (folio A-98), establece que los criterios del Capítulo A.10 deben emplearse en el diseño y construcción de ampliaciones y alteraciones, entendidas como cualquier construcción o renovación distinta de una ampliación.",
+        "Agregar masas (tanque), cargas (jardinera) o elementos rígidos que interactúan con la estructura (muro adosado) cambia el comportamiento previsto en el diseño original."
+      ],
+      "relevance": "Permite comparar el edificio diseñado con el edificio que realmente existía el día del sismo."
+    },
+    {
+      "id": "E09",
+      "name": "Reporte del sismo y pronóstico de réplicas",
+      "type": "Documento técnico",
+      "summary": "Reporte (simulado) del evento sísmico y del pronóstico de réplicas entregado por el puesto de mando.",
+      "doc": {
+        "illustration": "seismicReport",
+        "fields": [
+          [
+            "Magnitud",
+            "M 5,8 (dato simulado)"
+          ],
+          [
+            "Distancia epicentral",
+            "≈ 90 km"
+          ],
+          [
+            "Aceleración estimada en el sitio",
+            "≈ 0,12 g (dato simulado)"
+          ],
+          [
+            "Intensidad percibida",
+            "Moderada"
+          ],
+          [
+            "Daños reportados en el sector",
+            "Fisuras en acabados; ningún otro daño estructural"
+          ],
+          [
+            "Réplicas",
+            "Probables en las próximas horas"
+          ]
+        ],
+        "notes": [
+          "Los edificios vecinos de similar altura no reportan daño estructural."
+        ]
+      },
+      "technical": [
+        "Un sismo moderado no debería producir daños estructurales graves en un edificio bien diseñado y sin alteraciones. Cuando el daño se concentra en puntos específicos, hay que preguntarse qué los hace diferentes.",
+        "Las réplicas pueden llevar al colapso elementos que ya quedaron dañados por el sismo principal."
+      ],
+      "relevance": "Pone en contexto la severidad del evento frente a los daños observados."
+    },
+    {
+      "id": "E10",
+      "name": "Testimonios del personal",
+      "type": "Entrevista",
+      "summary": "Relatos de vigilantes y de la administradora sobre el sismo y las horas posteriores.",
+      "doc": {
+        "illustration": null,
+        "fields": [
+          [
+            "Ocupantes en el edificio",
+            "≈ 180 personas (comercio y oficinas)"
+          ],
+          [
+            "Crujidos en el sótano 1",
+            "Desde hace ≈ 1 h, cada vez más frecuentes"
+          ],
+          [
+            "Bomba del tanque",
+            "Se escuchó funcionar después del sismo"
+          ],
+          [
+            "Petición de la gerencia",
+            "Reabrir hoy todo el centro comercial"
+          ]
+        ],
+        "notes": [
+          "Vigilante: «El crujido viene de la bodega nueva, al lado de la columna».",
+          "Administradora: «Los clientes ya se están quejando; necesito su firma para reabrir»."
+        ]
+      },
+      "technical": [
+        "Los ruidos crecientes (crujidos) en elementos dañados pueden indicar un daño activo. No deben ignorarse.",
+        "El NSR-10, A.10.10.1.3 (folio A-110), permite ocupar una edificación durante su reparación solo si los profesionales encargados emiten un concepto positivo, con base en que no haya peligro para la vida de los ocupantes."
+      ],
+      "relevance": "Aporta información sobre la ocupación y la evolución del daño."
+    }
+  ],
+  "crisis": {
+    "start": 100,
+    "baseDecay": 0.02,
+    "occupants": 180,
+    "crews": 2,
+    "collapseCap": 25,
+    "collapseText": "La columna B-3 perdió su capacidad de carga y arrastró la placa de la zona de comidas, que falló por punzonamiento alrededor de C-3. El colapso se concentró en el sector de las remodelaciones sin estudio.",
+    "threats": [
+      {
+        "id": "T1",
+        "name": "Falla por cortante en la columna corta B-3",
+        "short": "Columna B-3",
+        "evidence": "E01",
+        "decay": 0.09,
+        "feedback": "Debió apuntalar el vano de B-3 para descargar la columna dañada."
+      },
+      {
+        "id": "T2",
+        "name": "Punzonamiento de la placa en C-3",
+        "short": "Placa C-3",
+        "evidence": "E02",
+        "decay": 0.07,
+        "feedback": "Debió apuntalar la placa alrededor de C-3 en ambos sótanos; retirar la jardinera ayuda, pero no basta."
+      },
+      {
+        "id": "T3",
+        "name": "Tanque elevado con anclajes fallados",
+        "short": "Tanque",
+        "evidence": "E03",
+        "decay": 0.05,
+        "feedback": "Debió vaciar el tanque de forma controlada y apagar la bomba."
+      }
+    ],
+    "hazards": [
+      {
+        "id": "P1",
+        "name": "Caída de enchapes desde el voladizo sobre el acceso",
+        "control": "A6",
+        "feedback": "Acordonar la zona de caída protege a las personas mientras se evalúa el voladizo."
+      }
+    ],
+    "aftershocks": [
+      {
+        "t": 110,
+        "damage": 7,
+        "text": "Réplica M 4,0 (simulada)"
+      },
+      {
+        "t": 270,
+        "damage": 9,
+        "text": "Réplica M 4,3 (simulada)"
+      },
+      {
+        "t": 450,
+        "damage": 12,
+        "text": "Réplica M 4,6 (simulada)"
+      }
+    ],
+    "actions": [
+      {
+        "id": "A1",
+        "kind": "correct",
+        "requires": null,
+        "evacuate": true,
+        "crew": false,
+        "duration": 50,
+        "name": "Evacuar el edificio y restringir el acceso",
+        "desc": "La brigada saca a los ocupantes por las salidas seguras y cierra los accesos.",
+        "feedback": "Con daño estructural activo y réplicas probables, nadie debe permanecer dentro (NSR-10, A.10.10.1.3)."
+      },
+      {
+        "id": "A2",
+        "kind": "correct",
+        "requires": "E01",
+        "duration": 40,
+        "controls": [
+          "T1"
+        ],
+        "name": "Apuntalar el vano de la columna B-3",
+        "desc": "Instalar puntales metálicos con vigas de reparto en los vanos que apoyan en B-3, desde el sótano 2.",
+        "feedback": "Correcto: descarga la columna dañada y da un camino alterno a las cargas."
+      },
+      {
+        "id": "A3",
+        "kind": "correct",
+        "requires": "E02",
+        "duration": 45,
+        "controls": [
+          "T2"
+        ],
+        "name": "Apuntalar la placa alrededor de C-3",
+        "desc": "Torres de carga bajo la placa, alrededor de C-3, en los sótanos 1 y 2.",
+        "feedback": "Correcto: proporciona apoyo adicional antes de que el punzonamiento progrese."
+      },
+      {
+        "id": "A4",
+        "kind": "correct",
+        "requires": "E02",
+        "duration": 30,
+        "reduce": {
+          "T2": 0.5
+        },
+        "effect": 3,
+        "name": "Retirar la tierra de la jardinera sobre C-3",
+        "desc": "Vaciar la jardinera manualmente para quitar la sobrecarga de la placa.",
+        "feedback": "Útil: reduce la carga sobre la placa, pero no sustituye el apuntalamiento."
+      },
+      {
+        "id": "A5",
+        "kind": "correct",
+        "requires": "E03",
+        "duration": 30,
+        "controls": [
+          "T3"
+        ],
+        "name": "Vaciar el tanque elevado y apagar la bomba",
+        "desc": "Descarga controlada del agua por la red y corte del bombeo automático.",
+        "feedback": "Correcto: elimina unas 30 t de masa en la cubierta y el riesgo de volcamiento."
+      },
+      {
+        "id": "A6",
+        "kind": "correct",
+        "requires": "E04",
+        "duration": 15,
+        "name": "Acordonar la zona bajo el voladizo y desviar el acceso",
+        "desc": "Cinta, vallas y desvío de peatones a un acceso lateral.",
+        "feedback": "Correcto: protege a las personas de la caída de elementos."
+      },
+      {
+        "id": "X1",
+        "kind": "wrong",
+        "requires": null,
+        "duration": 15,
+        "penalty": 6,
+        "reopen": true,
+        "name": "Autorizar la reapertura del centro comercial",
+        "desc": "Atender la petición de la gerencia y permitir el ingreso de clientes.",
+        "feedback": "Inadecuada: hay daño estructural activo y réplicas probables. El NSR-10 (A.10.10.1.3) solo permite la ocupación con un concepto profesional de que no hay peligro para la vida."
+      },
+      {
+        "id": "X2",
+        "kind": "wrong",
+        "requires": "E01",
+        "duration": 25,
+        "penalty": 15,
+        "name": "Demoler el muro de bodega adosado a B-3",
+        "desc": "Retirar a golpes el muro para «liberar» la columna.",
+        "feedback": "Inadecuada: eliminar la interacción es parte de la REPARACIÓN (A.10.10.1.2), con la estructura asegurada. Golpear el muro junto a una columna dañada, sin apuntalar, acelera la falla."
+      },
+      {
+        "id": "X3",
+        "kind": "wrong",
+        "requires": "E02",
+        "duration": 35,
+        "penalty": 0,
+        "name": "Inyectar resina epóxica en las fisuras de la placa",
+        "desc": "Sellar las fisuras de la zona de comidas.",
+        "feedback": "Inadecuada en emergencia: la inyección es una técnica de reparación, no estabiliza una placa en riesgo de punzonamiento. Consumió una cuadrilla."
+      },
+      {
+        "id": "X4",
+        "kind": "wrong",
+        "requires": "E03",
+        "duration": 20,
+        "penalty": 10,
+        "name": "Llenar el tanque para garantizar agua a los bomberos",
+        "desc": "Mantener la bomba encendida hasta completar el tanque.",
+        "feedback": "Inadecuada: aumenta la masa en la cubierta de un tanque con anclajes fallados."
+      },
+      {
+        "id": "X5",
+        "kind": "wrong",
+        "requires": "E07",
+        "duration": 50,
+        "penalty": 0,
+        "name": "Reparar la viga corroída del sótano 2",
+        "desc": "Limpiar el acero y aplicar mortero de reparación.",
+        "feedback": "Inadecuada como prioridad: es un deterioro antiguo, no una amenaza inmediata. Consumió una cuadrilla durante la emergencia."
+      }
+    ]
+  },
+  "verificationOptions": [
+    {
+      "id": "cumple",
+      "name": "Cumple"
+    },
+    {
+      "id": "no_cumple",
+      "name": "No cumple"
+    },
+    {
+      "id": "requiere",
+      "name": "Requiere verificación adicional"
+    }
+  ],
+  "verifications": [
+    {
+      "id": "V1",
+      "evidence": "E08",
+      "title": "Alteraciones sin estudio estructural",
+      "clause": "A.10.1.3.4",
+      "ref": "NSR-10, Título A, numeral A.10.1.3.4 · folio A-98",
+      "requirement": "Los criterios del Capítulo A.10 deben emplearse en el diseño y construcción de ampliaciones y alteraciones (cualquier construcción o renovación distinta de una ampliación).",
+      "data": [
+        [
+          "Tanque de 30 m³ (2019)",
+          "Sin estudio estructural"
+        ],
+        [
+          "Jardinera sobre la placa (2021)",
+          "Sin estudio estructural"
+        ],
+        [
+          "Muro adosado a columnas (2022)",
+          "Sin estudio estructural"
+        ]
+      ],
+      "question": "¿Las alteraciones realizadas cumplieron este numeral?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "Las tres alteraciones modificaron cargas, masas y rigideces sin ningún estudio conforme al Capítulo A.10: NO CUMPLE."
+    },
+    {
+      "id": "V2",
+      "evidence": "E03",
+      "title": "Anclaje del tanque elevado",
+      "clause": "A.8.1.1 (b) · A.8.2.3",
+      "ref": "NSR-10, Título A, numerales A.8.1.1 y A.8.2 · folios A-83 y A-84",
+      "requirement": "Los tanques están dentro del alcance del Capítulo A.8: deben diseñarse, junto con sus anclajes al sistema de resistencia sísmica, para las fuerzas sísmicas horizontales del Capítulo (A.8.2, incluidas las fuerzas sobre las uniones, A.8.2.3).",
+      "data": [
+        [
+          "Diseño del anclaje",
+          "No existe"
+        ],
+        [
+          "Pernos tras el sismo",
+          "2 cortados · 1 doblado"
+        ],
+        [
+          "Desplazamiento",
+          "4 cm"
+        ]
+      ],
+      "question": "¿El anclaje del tanque cumple el Capítulo A.8?",
+      "answer": "no_cumple",
+      "partial": {
+        "requiere": 0.4
+      },
+      "explanation": "No existe diseño del anclaje y los pernos fallaron ante un sismo moderado: NO CUMPLE."
+    },
+    {
+      "id": "V3",
+      "evidence": "E10",
+      "title": "Reapertura solicitada por la gerencia",
+      "clause": "A.10.10.1.3",
+      "ref": "NSR-10, Título A, numeral A.10.10.1.3 · folio A-110",
+      "requirement": "La edificación puede ocuparse durante su reparación solo si los profesionales encargados de su diseño y dirección emiten un concepto positivo, con base en que no haya peligro para la vida de los ocupantes.",
+      "data": [
+        [
+          "Daño estructural activo",
+          "Columna B-3 y placa C-3"
+        ],
+        [
+          "Concepto profesional de no peligro",
+          "No existe"
+        ],
+        [
+          "Réplicas",
+          "Probables"
+        ]
+      ],
+      "question": "¿La reapertura inmediata cumple este numeral?",
+      "answer": "no_cumple",
+      "partial": {},
+      "explanation": "Sin concepto profesional favorable y con daño activo, la ocupación NO CUMPLE: el edificio debe permanecer evacuado."
+    },
+    {
+      "id": "V4",
+      "evidence": "E01",
+      "title": "Alcance de la reparación de B-3",
+      "clause": "A.10.10.1.2",
+      "ref": "NSR-10, Título A, numeral A.10.10.1.2 · folio A-110",
+      "requirement": "Si los daños estructurales son imputables a interacción adversa con elementos no estructurales, la reparación puede limitarse a los elementos afectados eliminando la interacción (numeral 2). Para otro tipo de daños se requiere una evaluación general de la estructura (numeral 3).",
+      "data": [
+        [
+          "Daño en B-3",
+          "Imputable al muro adosado (columna corta)"
+        ],
+        [
+          "Otros daños estructurales",
+          "Placa C-3 (sobrecarga), anclaje del tanque"
+        ],
+        [
+          "Evaluación general",
+          "No realizada"
+        ]
+      ],
+      "question": "¿Puede limitarse la intervención del edificio a reparar B-3 y retirar el muro?",
+      "answer": "requiere",
+      "partial": {
+        "cumple": 0.2
+      },
+      "explanation": "El daño de B-3 sí encaja en el numeral 2, pero el edificio tiene otros daños estructurales con otro origen. Se REQUIERE la evaluación general (numeral 3) antes de definir el alcance."
+    },
+    {
+      "id": "V5",
+      "evidence": "E02",
+      "title": "Ubicación de la fisura en la placa",
+      "clause": "C.11.11.1.2",
+      "ref": "NSR-10, Título C, numerales C.11.11.1 y C.11.11.1.2 · folio C-203",
+      "requirement": "En losas en dos direcciones, la sección crítica a cortante (punzonamiento) se ubica de modo que su perímetro sea mínimo, a no menos de d/2 de los bordes de la columna.",
+      "data": [
+        [
+          "Espesor de la placa",
+          "22 cm"
+        ],
+        [
+          "Altura efectiva d",
+          "≈ 19 cm → d/2 ≈ 9,5 cm"
+        ],
+        [
+          "Fisura circular",
+          "A 10–15 cm de la cara de la columna"
+        ],
+        [
+          "Cara inferior",
+          "Fisuras radiales"
+        ]
+      ],
+      "question": "¿El patrón de fisuras es compatible con un mecanismo de punzonamiento?",
+      "options": [
+        {
+          "id": "cumple",
+          "name": "Compatible con punzonamiento"
+        },
+        {
+          "id": "no_cumple",
+          "name": "No compatible"
+        },
+        {
+          "id": "requiere",
+          "name": "No es posible saberlo"
+        }
+      ],
+      "answer": "cumple",
+      "partial": {
+        "requiere": 0.3
+      },
+      "explanation": "La fisura circular aparece cerca de la sección crítica (≈ d/2 de la cara) y hay fisuras radiales por debajo: el patrón es COMPATIBLE con punzonamiento incipiente. Es una falla frágil que justifica apuntalar de inmediato."
+    },
+    {
+      "id": "V6",
+      "evidence": "E05",
+      "title": "Separación con el edificio vecino",
+      "clause": "A.6.5",
+      "ref": "NSR-10, Título A, sección A.6.5 · folio A-77",
+      "requirement": "Las partes de una estructura deben actuar como una unidad o separarse una distancia suficiente para evitar la colisión nociva; la separación se calcula con los desplazamientos horizontales de cada porción.",
+      "data": [
+        [
+          "Ancho de la junta",
+          "≈ 3 cm"
+        ],
+        [
+          "Marcas de impacto",
+          "Sí, piso 6"
+        ],
+        [
+          "Cálculo de desplazamientos",
+          "No disponible"
+        ]
+      ],
+      "question": "¿La separación entre edificios evitó la colisión en este sismo?",
+      "answer": "no_cumple",
+      "partial": {
+        "requiere": 0.5
+      },
+      "explanation": "Las marcas de impacto demuestran que hubo colisión: la separación fue insuficiente para este evento. Su corrección se define en la evaluación general, después de la emergencia."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "El sismo superó la capacidad del edificio",
+      "question": "¿Fue el sismo tan fuerte que cualquier edificio similar habría sufrido estos daños?",
+      "arguments": {
+        "for": [
+          {
+            "text": "El sismo sí produjo daños reales: golpeteo con el vecino y fisuras en la mampostería.",
+            "requires": "E05"
+          },
+          {
+            "text": "Las réplicas pueden agravar cualquier daño existente.",
+            "requires": "E09"
+          }
+        ],
+        "against": [
+          {
+            "text": "La aceleración estimada fue moderada y los edificios vecinos no tienen daño estructural.",
+            "requires": "E09"
+          },
+          {
+            "text": "Los daños graves se concentran exactamente donde se hicieron remodelaciones sin estudio.",
+            "requires": "E08"
+          }
+        ]
+      },
+      "best": "contribuyente",
+      "partial": {
+        "principal": 0.4,
+        "requiere_info": 0.3,
+        "descartada": 0.2
+      },
+      "links": {
+        "support": [
+          "E05",
+          "E06"
+        ],
+        "contradict": [
+          "E09",
+          "E08"
+        ]
+      },
+      "explanation": "El sismo fue el DETONANTE (causa contribuyente), pero no explica por qué el daño se concentró en B-3, C-3 y el tanque."
+    },
+    {
+      "id": "H2",
+      "title": "Alteraciones sin estudio estructural",
+      "question": "¿Cambiaron las remodelaciones el comportamiento previsto de la estructura?",
+      "arguments": {
+        "for": [
+          {
+            "text": "El muro de bodega convirtió a B-3 en una columna corta, y es justo donde falló por cortante.",
+            "requires": "E01"
+          },
+          {
+            "text": "La jardinera agregó unos 11 kN/m² sobre la placa que hoy presenta punzonamiento.",
+            "requires": "E02"
+          },
+          {
+            "text": "El tanque de 30 t se instaló sin diseño de anclajes y sus pernos fallaron.",
+            "requires": "E03"
+          },
+          {
+            "text": "Ninguna de las tres alteraciones tuvo estudio estructural ni licencia.",
+            "requires": "E08"
+          }
+        ],
+        "against": [
+          {
+            "text": "Falta una evaluación cuantitativa: los cálculos deben confirmar la magnitud de cada efecto.",
+            "requires": null
+          }
+        ]
+      },
+      "best": "principal",
+      "partial": {
+        "contribuyente": 0.5,
+        "requiere_info": 0.2,
+        "descartada": 0
+      },
+      "links": {
+        "support": [
+          "E01",
+          "E02",
+          "E03",
+          "E08"
+        ],
+        "contradict": []
+      },
+      "explanation": "Las tres amenazas críticas coinciden con tres alteraciones sin estudio. Es la hipótesis PRINCIPAL: el sismo moderado reveló vulnerabilidades creadas por las remodelaciones."
+    },
+    {
+      "id": "H3",
+      "title": "Deterioro por corrosión preexistente",
+      "question": "¿La corrosión del sótano 2 explica los daños?",
+      "arguments": {
+        "for": [
+          {
+            "text": "Hay barras con pérdida de sección en el sótano 2.",
+            "requires": "E07"
+          }
+        ],
+        "against": [
+          {
+            "text": "La corrosión está en una viga perimetral del sótano 2, lejos de B-3, C-3 y la cubierta.",
+            "requires": "E07"
+          },
+          {
+            "text": "No hay fisuras nuevas en la zona corroída.",
+            "requires": "E07"
+          }
+        ]
+      },
+      "best": "descartada",
+      "partial": {
+        "requiere_info": 0.4,
+        "contribuyente": 0.1,
+        "principal": 0
+      },
+      "links": {
+        "support": [],
+        "contradict": [
+          "E07"
+        ]
+      },
+      "explanation": "Es un deterioro real que debe repararse, pero no explica los daños críticos: se DESCARTA como causa del incidente."
+    },
+    {
+      "id": "H4",
+      "title": "Deficiencia del diseño original",
+      "question": "¿Tenía el edificio de 2004 vulnerabilidades propias del diseño?",
+      "arguments": {
+        "for": [
+          {
+            "text": "El diseño es anterior al NSR-10 y los estribos visibles en B-3 parecen separados a 25 cm.",
+            "requires": "E01"
+          },
+          {
+            "text": "La junta con el vecino resultó insuficiente.",
+            "requires": "E05"
+          }
+        ],
+        "against": [
+          {
+            "text": "Las columnas sin muro adosado no presentan daño.",
+            "requires": "E01"
+          },
+          {
+            "text": "Los planos originales tienen estudio y licencia.",
+            "requires": "E08"
+          }
+        ]
+      },
+      "best": "requiere_info",
+      "partial": {
+        "contribuyente": 0.5,
+        "descartada": 0.3,
+        "principal": 0
+      },
+      "links": {
+        "support": [
+          "E05"
+        ],
+        "contradict": []
+      },
+      "explanation": "No puede confirmarse ni descartarse sin una evaluación de vulnerabilidad del edificio original (Capítulo A.10, A.10.1.3.3). Lo correcto es dejarla PENDIENTE."
+    }
+  ],
+  "report": {
+    "steps": [
+      {
+        "id": "anomaly",
+        "title": "Identificación de anomalías",
+        "prompt": "¿Qué anomalías críticas identificó en la Torre Alameda? Seleccione las respaldadas por la inspección.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "a1",
+            "text": "Falla por cortante en la columna B-3, en el tramo libre sobre el muro de bodega.",
+            "correct": true,
+            "feedback": "Correcto: efecto de columna corta."
+          },
+          {
+            "id": "a2",
+            "text": "Punzonamiento incipiente de la placa alrededor de C-3.",
+            "correct": true,
+            "feedback": "Correcto: fisura circular y fisuras radiales."
+          },
+          {
+            "id": "a3",
+            "text": "Tanque elevado desplazado con anclajes fallados.",
+            "correct": true,
+            "feedback": "Correcto: masa no prevista en el diseño."
+          },
+          {
+            "id": "a4",
+            "text": "Fisura en el empotramiento del voladizo del piso 5 con caída de enchapes.",
+            "correct": true,
+            "feedback": "Correcto: riesgo directo para las personas."
+          },
+          {
+            "id": "a5",
+            "text": "Volcamiento general de la torre hacia el vecino.",
+            "correct": false,
+            "feedback": "No observado: el golpeteo es local."
+          },
+          {
+            "id": "a6",
+            "text": "Licuación del suelo bajo la cimentación.",
+            "correct": false,
+            "feedback": "Sin evidencia: no se observaron asentamientos ni eyección de arena."
+          }
+        ]
+      },
+      {
+        "id": "concepts",
+        "title": "Síntoma, causa y consecuencia",
+        "prompt": "Clasifique cada enunciado.",
+        "type": "classify",
+        "categories": [
+          {
+            "id": "sintoma",
+            "name": "Síntoma"
+          },
+          {
+            "id": "anomalia",
+            "name": "Anomalía"
+          },
+          {
+            "id": "mecanismo",
+            "name": "Mecanismo de deterioro"
+          },
+          {
+            "id": "directa",
+            "name": "Causa directa"
+          },
+          {
+            "id": "contribuyente",
+            "name": "Causa contribuyente"
+          },
+          {
+            "id": "consecuencia",
+            "name": "Consecuencia"
+          },
+          {
+            "id": "correctiva",
+            "name": "Medida correctiva"
+          }
+        ],
+        "items": [
+          {
+            "id": "c1",
+            "text": "Fisuras en X de 1 a 3 mm y crujidos en la columna B-3.",
+            "answer": "sintoma",
+            "feedback": "Es lo observable."
+          },
+          {
+            "id": "c2",
+            "text": "Columna con un tramo libre de 1,2 m en lugar de 2,8 m por el muro adosado.",
+            "answer": "anomalia",
+            "feedback": "Es la desviación respecto a la condición de diseño."
+          },
+          {
+            "id": "c3",
+            "text": "Concentración de fuerza cortante en una columna rigidizada por un muro.",
+            "answer": "mecanismo",
+            "feedback": "Es el proceso físico de la falla."
+          },
+          {
+            "id": "c4",
+            "text": "Construcción del muro de bodega sin estudio estructural.",
+            "answer": "directa",
+            "feedback": "Es el origen de la anomalía de B-3."
+          },
+          {
+            "id": "c5",
+            "text": "Sismo moderado con réplicas.",
+            "answer": "contribuyente",
+            "feedback": "Detonó y agrava el daño, pero no lo explica por sí solo."
+          },
+          {
+            "id": "c6",
+            "text": "Pérdida de capacidad de carga vertical y riesgo de colapso local.",
+            "answer": "consecuencia",
+            "feedback": "Es el efecto potencial."
+          },
+          {
+            "id": "c7",
+            "text": "Encamisado de la columna y separación del muro, con diseño estructural.",
+            "answer": "correctiva",
+            "feedback": "Es la reparación definitiva."
+          }
+        ]
+      },
+      {
+        "id": "hypothesis",
+        "title": "Hipótesis principal",
+        "prompt": "¿Qué hipótesis explica mejor el conjunto de daños? Justifique su elección.",
+        "type": "single-hypothesis",
+        "justification": {
+          "minLength": 60,
+          "keywords": [
+            [
+              "muro",
+              "columna corta",
+              "b-3"
+            ],
+            [
+              "jardinera",
+              "tierra",
+              "placa",
+              "punzon"
+            ],
+            [
+              "tanque",
+              "anclaje",
+              "perno"
+            ],
+            [
+              "remodel",
+              "alteraci",
+              "sin estudio",
+              "licencia"
+            ],
+            [
+              "sismo",
+              "réplica",
+              "replica",
+              "moderado"
+            ],
+            [
+              "evaluaci",
+              "verific",
+              "cálculo",
+              "calculo"
+            ]
+          ],
+          "hint": "Un buen argumento relaciona cada daño crítico con su alteración (muro, jardinera, tanque), reconoce el papel del sismo como detonante y pide la evaluación general."
+        }
+      },
+      {
+        "id": "evidence",
+        "title": "Evidencias de soporte",
+        "prompt": "Seleccione las evidencias que sustentan su conclusión.",
+        "type": "evidence-select",
+        "weights": {
+          "E01": 1,
+          "E02": 1,
+          "E03": 1,
+          "E04": 0.3,
+          "E05": 0.3,
+          "E06": 0.2,
+          "E07": -0.6,
+          "E08": 1,
+          "E09": 0.8,
+          "E10": 0.5
+        },
+        "feedback": {
+          "E07": "La corrosión del sótano 2 no tiene relación con los daños críticos: citarla debilita el informe."
+        }
+      },
+      {
+        "id": "causes",
+        "title": "Causas probables",
+        "prompt": "Seleccione las causas respaldadas por la evidencia.",
+        "type": "multi",
+        "options": [
+          {
+            "id": "k1",
+            "text": "Muro de bodega adosado que creó una columna corta en B-3.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "k2",
+            "text": "Sobrecarga de la jardinera sobre la placa de C-3.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "k3",
+            "text": "Tanque de 30 t sin anclaje diseñado para fuerzas sísmicas.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "k4",
+            "text": "El sismo moderado como detonante.",
+            "correct": true,
+            "feedback": "Correcto, como causa contribuyente."
+          },
+          {
+            "id": "k5",
+            "text": "Corrosión del refuerzo en el sótano 2.",
+            "correct": false,
+            "feedback": "No relacionada con los daños críticos."
+          },
+          {
+            "id": "k6",
+            "text": "Licuación del suelo.",
+            "correct": false,
+            "feedback": "Sin evidencia."
+          },
+          {
+            "id": "k7",
+            "text": "Mala calidad del concreto de todo el edificio.",
+            "correct": false,
+            "feedback": "Sin evidencia: los daños son localizados."
+          }
+        ]
+      },
+      {
+        "id": "consequences",
+        "title": "Consecuencias potenciales",
+        "prompt": "¿Qué consecuencias podían producirse si no se actuaba?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "q1",
+            "text": "Colapso local de la placa de la zona de comidas por falla de B-3 o punzonamiento en C-3.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "q2",
+            "text": "Volcamiento del tanque y perforación de la losa de cubierta.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "q3",
+            "text": "Lesiones por caída de enchapes en el acceso.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "q4",
+            "text": "Ninguna: fue un temblor menor.",
+            "correct": false,
+            "feedback": "Incorrecto: había daño estructural activo."
+          },
+          {
+            "id": "q5",
+            "text": "Colapso de toda la manzana.",
+            "correct": false,
+            "feedback": "Alarmista y sin sustento."
+          }
+        ]
+      },
+      {
+        "id": "certainty",
+        "title": "Nivel de certeza",
+        "prompt": "¿Cómo debe presentarse el diagnóstico?",
+        "type": "single",
+        "options": [
+          {
+            "id": "s1",
+            "text": "Definitivo: no se requieren estudios adicionales.",
+            "correct": false,
+            "feedback": "Falta la evaluación general y cuantitativa de la estructura."
+          },
+          {
+            "id": "s2",
+            "text": "Probable: consistente con las evidencias; requiere la evaluación general de la estructura (A.10) y cálculos de cada efecto.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "s3",
+            "text": "Indeterminado: no puede formularse ninguna hipótesis.",
+            "correct": false,
+            "feedback": "Las evidencias permiten una hipótesis principal fundamentada."
+          }
+        ]
+      },
+      {
+        "id": "recommendations",
+        "title": "Recomendaciones técnicas",
+        "prompt": "¿Qué recomienda tras la fase de emergencia?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "r1",
+            "text": "Mantener la evacuación y el apuntalamiento hasta contar con concepto profesional de no peligro (A.10.10.1.3).",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "r2",
+            "text": "Evaluación general de la estructura según el Capítulo A.10 antes de definir el alcance de la reparación.",
+            "correct": true,
+            "feedback": "Correcto: hay daños de distinto origen (A.10.10.1.2 numeral 3)."
+          },
+          {
+            "id": "r3",
+            "text": "Reparar B-3 (por ejemplo, encamisado) y separar el muro de bodega para eliminar la interacción adversa, con diseño estructural.",
+            "correct": true,
+            "feedback": "Correcto (A.10.10.1.2 numeral 2)."
+          },
+          {
+            "id": "r4",
+            "text": "Retirar definitivamente la jardinera y verificar la placa a punzonamiento con las cargas reales.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "r5",
+            "text": "Diseñar el anclaje del tanque para fuerzas sísmicas (Capítulo A.8) o reubicarlo.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "r6",
+            "text": "Reabrir el centro comercial apenas se resanen las fisuras.",
+            "correct": false,
+            "feedback": "Incorrecto: resanar oculta el daño y no restablece la seguridad."
+          },
+          {
+            "id": "r7",
+            "text": "Demoler toda la torre de inmediato.",
+            "correct": false,
+            "feedback": "Desproporcionado sin evaluación."
+          }
+        ]
+      },
+      {
+        "id": "prevention",
+        "title": "Medidas preventivas",
+        "prompt": "¿Qué evitaría que esto se repita en otros edificios?",
+        "type": "multi",
+        "options": [
+          {
+            "id": "p1",
+            "text": "Exigir estudio estructural y licencia para toda alteración que cambie cargas, masas o rigideces.",
+            "correct": true,
+            "feedback": "Correcto (A.10.1.3.4)."
+          },
+          {
+            "id": "p2",
+            "text": "Mantener actualizados los planos «como construido» con cada remodelación.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p3",
+            "text": "Separar de la estructura los muros no estructurales que puedan restringir columnas.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p4",
+            "text": "Inspecciones periódicas y protocolo de inspección postsísmica con profesionales.",
+            "correct": true,
+            "feedback": "Correcto."
+          },
+          {
+            "id": "p5",
+            "text": "Confiar las remodelaciones a un maestro de obra experimentado sin diseño.",
+            "correct": false,
+            "feedback": "Incorrecto: es lo que originó el problema."
+          }
+        ]
+      }
+    ]
+  },
+  "scoring": {
+    "keyEvidences": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "anomalyHotspots": [
+      "hs-b3",
+      "hs-c3",
+      "hs-tank",
+      "hs-volado"
+    ],
+    "verificationWeight": 0.4,
+    "mustCite": [
+      "E01",
+      "E02",
+      "E03",
+      "E08"
+    ],
+    "mustCiteWhy": "Es una evidencia determinante para relacionar los daños con las alteraciones.",
+    "mainHypothesis": {
+      "H2": 1,
+      "H1": 0.4,
+      "H4": 0.3,
+      "H3": 0
+    },
+    "mainExplanation": "La hipótesis más consistente es H2: alteraciones sin estudio estructural, con el sismo (H1) como detonante.",
+    "distractors": [
+      "E07"
+    ],
+    "minEvidence": 7,
+    "reviewSet": [
+      "E08",
+      "E09",
+      "E10",
+      "E01",
+      "E02",
+      "E03"
+    ],
+    "reviewMin": 4
+  },
+  "reveal": {
+    "title": "Lo que realmente ocurrió",
+    "paragraphs": [
+      "La Torre Alameda se diseñó en 2004 con estudio y licencia. Quince años después, la administración empezó a «mejorar» el edificio sin consultar a ningún ingeniero: un tanque de 30 toneladas en la cubierta, una jardinera de tierra húmeda sobre la placa de la zona de comidas y un muro de bodega pegado a las columnas del sótano.",
+      "El sismo fue moderado. Los edificios vecinos apenas tuvieron daños en acabados. Pero en la torre, cada alteración se convirtió en un punto débil: el muro dejó a la columna B-3 con un tramo libre corto que absorbió el cortante y se fracturó; la placa sobrecargada empezó a punzonar alrededor de C-3; los pernos del tanque se cortaron.",
+      "Los crujidos del sótano eran el aviso. Con 180 personas dentro y réplicas en camino, cada minuto contaba: había que evacuar, apuntalar, descargar y aislar antes de pensar en reparar.",
+      "La lección: los daños no se distribuyen al azar. Cuando un sismo moderado produce daños graves y localizados, hay que buscar qué hace distintos esos puntos."
+    ]
+  }
+}

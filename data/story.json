@@ -1,0 +1,303 @@
+{
+  "id": "h72",
+  "title": "72 HORAS",
+  "subtitle": "Refugio modular de emergencia",
+  "synopsis": "Un sismo de magnitud 5,8 dejó inhabitable el colegio que servía de albergue en San Rafael de la Cuesta, un municipio andino a 2 350 m s. n. m. Hay 300 personas durmiendo en carpas y el pronóstico anuncia granizadas en tres días. Usted es la ingeniera o el ingeniero residente encargado de levantar un refugio de estructura metálica de 600 m² antes de que llegue la tormenta.",
+  "disclaimer": "Historia ficticia con fines educativos. Personajes, lugar, tiempos y datos son simulados. Las referencias al NSR-10 indican numeral y folio del texto oficial; consulte siempre la versión vigente.",
+  "budgetHours": 72,
+  "characters": {
+    "marta": { "name": "Ing. Marta Quintero", "role": "Coordinadora de gestión del riesgo", "color": "#ff7a1a" },
+    "aurelio": { "name": "Don Aurelio", "role": "Maestro de obra · 30 años de oficio", "color": "#ffc21a" },
+    "camilo": { "name": "Ing. Camilo Rueda", "role": "Supervisor técnico independiente", "color": "#5fa8e8" },
+    "alcaldesa": { "name": "Luz Dary Peña", "role": "Alcaldesa municipal", "color": "#e05a7a" },
+    "tu": { "name": "Usted", "role": "Ingeniería residente", "color": "#3fbf7f" },
+    "narrador": { "name": "Bitácora", "role": "", "color": "#8a96a3" }
+  },
+  "defects": {
+    "seismic": { "name": "Diseño sísmico subestimado", "consequence": "La réplica de magnitud 5,1 hace oscilar los pórticos más de lo esperado. La estructura se diseñó sin el coeficiente de importancia del Grupo IV y queda con deformaciones permanentes. A la medianoche hay que evacuar a las familias otra vez." },
+    "site": { "name": "Lote expuesto a la quebrada", "consequence": "El aguacero que acompaña al granizo hace crecer la quebrada. El lodo entra al refugio por el costado bajo y las familias pasan la noche sobre las colchonetas mojadas." },
+    "foundation": { "name": "Cimentación sin respaldo técnico", "consequence": "Con el suelo saturado, un dado de la esquina se asienta varios centímetros y la columna se inclina. El supervisor ordena desocupar el vano afectado." },
+    "connections": { "name": "Conexiones sin el apriete especificado", "consequence": "Durante la réplica, las riostras con pernos flojos se deslizan en sus perforaciones: los pórticos se desplazan lateralmente y se oyen golpes metálicos toda la noche." },
+    "bracing": { "name": "Montaje sin arriostramiento progresivo", "consequence": "Una ráfaga durante el montaje volteó dos pórticos que aún no estaban arriostrados. Se reconstruyeron a toda prisa, y quedaron con desplomes que la réplica empeora." },
+    "roof": { "name": "Cubierta sin verificar para granizo", "consequence": "El granizo se acumula en la cubierta casi plana. Las correas se deforman, varias láminas se levantan con el viento y el agua cae sobre las camas." },
+    "exits": { "name": "Una sola salida", "consequence": "La réplica corta la energía. Trescientas personas buscan en la oscuridad la única puerta; hay empujones y dos personas heridas leves." },
+    "supervision": { "name": "Entrega sin recibo técnico", "consequence": "Nadie revisó la obra antes de ocuparla. A las 2 a. m. se descubre una riostra sin pernos en el vano de la cocina; la supervisión cierra esa zona." },
+    "time": { "name": "Fuera de plazo", "consequence": "La tormenta llegó antes de terminar el refugio. Las familias enfrentaron el granizo en las carpas." }
+  },
+  "chapters": [
+    {
+      "id": "c1",
+      "clock": "Hora 0 · 03:40",
+      "title": "La llamada",
+      "stage": 0,
+      "baseHours": 1,
+      "lines": [
+        ["narrador", "El teléfono suena a las 3:40 de la madrugada. Afuera todavía huele a polvo de pañete."],
+        ["marta", "El colegio no se puede volver a ocupar. Tenemos 300 personas en carpas y el IDEAM anuncia granizadas para el jueves. Necesito un refugio techado en 72 horas."],
+        ["marta", "La gobernación nos presta pórticos metálicos de un diseño tipo. Usted dirige la obra. Antes de mover un solo camión, necesito que me diga cómo vamos a clasificar esta edificación."],
+        ["aurelio", "Ingeniero, con el respeto: esto es temporal. Si lo armamos liviano, terminamos en dos días."],
+        ["tu", "Temporal no significa que pueda fallar. Revisemos qué dice el Reglamento."]
+      ],
+      "lesson": {
+        "title": "Primero se clasifica, después se construye",
+        "process": [
+          "Defina el uso de la edificación y su grupo de uso según el Título A.",
+          "El grupo de uso fija el coeficiente de importancia I, que amplifica las fuerzas sísmicas de diseño.",
+          "Compruebe si el diseño tipo disponible fue calculado para ese grupo; si no, debe revisarse antes de construir.",
+          "Las edificaciones de atención a la comunidad requieren supervisión técnica sin importar su área."
+        ],
+        "norms": [
+          { "ref": "A.2.5.1.1 (c)", "folio": "A-25", "text": "Incluye en el Grupo IV, edificaciones indispensables, a las designadas como refugios para emergencias." },
+          { "ref": "Tabla A.2.5-1", "folio": "A-26", "text": "Coeficiente de importancia: Grupo IV = 1,50 · III = 1,25 · II = 1,10 · I = 1,00." },
+          { "ref": "I.1.2.3", "folio": "I-3", "text": "Las edificaciones de los Grupos de Uso III y IV deben someterse a supervisión técnica, independientemente de su área." }
+        ],
+        "speed": "Gane tiempo con un diseño tipo ya calculado, pero verifique que corresponda al grupo de uso real. No rediseñe desde cero: adapte y revise."
+      },
+      "decisions": [
+        {
+          "id": "d1",
+          "prompt": "¿En qué grupo de uso clasifica el refugio?",
+          "options": [
+            { "id": "a", "text": "Grupo I: es una obra provisional, basta con el mínimo.", "hours": 0, "grade": "bad", "defect": "seismic", "feedback": "El Reglamento no hace excepción por ser provisional. Un refugio para emergencias es Grupo IV (A.2.5.1.1 c): debe funcionar durante y después de un sismo." },
+            { "id": "b", "text": "Grupo II: ocupación normal de vivienda.", "hours": 0, "grade": "bad", "defect": "seismic", "feedback": "Las 300 personas no lo convierten en vivienda normal. El literal (c) de A.2.5.1.1 nombra expresamente los refugios para emergencias dentro del Grupo IV." },
+            { "id": "c", "text": "Grupo III: atención a la comunidad, como un colegio.", "hours": 0, "grade": "partial", "defect": "seismic", "feedback": "Se acerca, pero el refugio está nombrado expresamente en el Grupo IV. Con I = 1,25 en vez de 1,50, las fuerzas sísmicas de diseño quedarían un 17 % por debajo." },
+            { "id": "d", "text": "Grupo IV: refugio para emergencias, I = 1,50. Se revisa el diseño tipo para esas fuerzas.", "hours": 1, "grade": "ok", "feedback": "Correcto. La revisión del diseño tipo para I = 1,50 cuesta una hora de oficina y evita una estructura subdiseñada. También queda claro desde ya que la supervisión técnica es obligatoria (I.1.2.3)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "clock": "Hora 2 · 06:00",
+      "title": "El terreno",
+      "stage": 1,
+      "baseHours": 3,
+      "lines": [
+        ["alcaldesa", "Tengo tres lotes disponibles. Escoja rápido, que la gente está mirando."],
+        ["aurelio", "El de la quebrada es plano y tiene agua cerca. La cancha vieja la rellenaron el año pasado con escombro de la vía. Y la explanada del colegio agrícola queda más lejos, pero es tierra firme y entra la grúa."],
+        ["camilo", "Sea cual sea el lote, necesito exploración del subsuelo antes de fundir. No me firme nada sin sondeos."],
+        ["tu", "Mientras exploramos, el taller puede ir cortando y perforando los pórticos. No hay por qué hacer las cosas en fila."]
+      ],
+      "lesson": {
+        "title": "Exploración geotécnica proporcional a la obra",
+        "process": [
+          "Clasifique la unidad de construcción por número de niveles y cargas en columnas.",
+          "Defina el número mínimo y la profundidad de los sondeos según la categoría.",
+          "Evite rellenos no controlados y zonas inundables o de avenida torrencial.",
+          "Ejecute la exploración en paralelo con la prefabricación: los frentes simultáneos ahorran más tiempo que omitir controles."
+        ],
+        "norms": [
+          { "ref": "Tabla H.3.1-1", "folio": "H-9", "text": "Categoría Baja: hasta 3 niveles y cargas máximas de servicio en columnas menores de 800 kN." },
+          { "ref": "H.3.2.3 · Tabla H.3.2-1", "folio": "H-10", "text": "Categoría Baja: mínimo 3 sondeos con profundidad mínima de 6 m por unidad de construcción." }
+        ],
+        "speed": "Organice frentes paralelos: exploración, taller de pórticos y adecuación del acceso al mismo tiempo."
+      },
+      "decisions": [
+        {
+          "id": "d2",
+          "prompt": "¿Dónde se construye el refugio?",
+          "options": [
+            { "id": "a", "text": "Junto a la quebrada: plano, con agua y sin movimiento de tierra.", "hours": 0, "grade": "bad", "defect": "site", "feedback": "Un terreno plano junto a un cauce suele serlo porque la creciente lo formó. Un refugio no puede quedar expuesto a avenidas torrenciales." },
+            { "id": "b", "text": "La cancha vieja: está en el centro del pueblo.", "hours": 0, "grade": "bad", "defect": "foundation", "feedback": "Un relleno de escombro sin compactación controlada puede tener asentamientos grandes y desiguales. Exigiría una cimentación especial que no tenemos tiempo de diseñar." },
+            { "id": "c", "text": "La explanada del colegio agrícola: suelo natural firme y acceso para la grúa.", "hours": 1.5, "grade": "ok", "feedback": "Buena elección. Se pierde hora y media en traslados, pero el suelo es natural, no hay cauces cerca y entra el camión-grúa, lo que abre la puerta a prefabricar." }
+          ]
+        },
+        {
+          "id": "d3",
+          "prompt": "¿Qué exploración del subsuelo ordena?",
+          "options": [
+            { "id": "a", "text": "Ninguna: el terreno se ve firme y no hay tiempo.", "hours": 0, "grade": "bad", "defect": "foundation", "feedback": "«Se ve firme» no es un dato de diseño. Sin exploración no hay capacidad portante ni nivel freático con que verificar los dados." },
+            { "id": "b", "text": "Un solo apique a 1,5 m de profundidad.", "hours": 1.5, "grade": "partial", "feedback": "Es mejor que nada, pero queda por debajo del mínimo de la Tabla H.3.2-1 (3 sondeos a 6 m para categoría Baja). El supervisor deja una observación." },
+            { "id": "c", "text": "Tres sondeos a 6 m (categoría Baja), en paralelo con la fabricación de los pórticos.", "hours": 4, "grade": "ok", "feedback": "Correcto: categoría Baja según la Tabla H.3.1-1 y el mínimo de la Tabla H.3.2-1. Al hacerlo en paralelo con el taller, la exploración apenas retrasa la obra." },
+            { "id": "d", "text": "Estudio de categoría Alta: 4 sondeos a 25 m.", "hours": 18, "grade": "partial", "feedback": "Cumple de sobra, pero la exigencia no corresponde a un edificio de un nivel. Consume 18 horas que la emergencia no tiene." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "clock": "Hora 10 · 14:00",
+      "title": "Cimientos contra el reloj",
+      "stage": 2,
+      "baseHours": 6,
+      "lines": [
+        ["camilo", "El suelo es un limo arenoso firme y no hay agua hasta 4 metros. Sirven dados aislados unidos con vigas de amarre."],
+        ["aurelio", "El problema es el concreto. Si fundo hoy, mañana el dado todavía está verde y los pernos de anclaje no aguantan el pórtico."],
+        ["tu", "Entonces la pregunta no es cuánto esperamos, sino cómo conseguimos la resistencia necesaria en la etapa en que vamos a cargarlo."]
+      ],
+      "lesson": {
+        "title": "Curado no es lo mismo que espera",
+        "process": [
+          "Replanteo de ejes y excavación de los 12 dados.",
+          "Solado de limpieza, armado del acero y plantilla para los pernos de anclaje.",
+          "Vaciado y vibrado; curado húmedo inmediato.",
+          "Antes de cargar: ensayos que demuestren la resistencia necesaria en esa etapa."
+        ],
+        "norms": [
+          { "ref": "C.5.11.1", "folio": "C-83", "text": "Salvo curado acelerado (C.5.11.3), el concreto debe mantenerse por encima de 10 °C y húmedo al menos los primeros 7 días; exceptúa el concreto de alta resistencia inicial." },
+          { "ref": "C.5.11.3.1", "folio": "C-83", "text": "El curado con vapor, calor y humedad u otro proceso aceptado puede emplearse para acelerar el desarrollo de resistencia y reducir el tiempo de curado." },
+          { "ref": "C.5.11.3.2", "folio": "C-83", "text": "El curado acelerado debe dar, en la etapa de carga considerada, una resistencia a compresión por lo menos igual a la de diseño requerida en esa etapa." }
+        ],
+        "speed": "Prefabricar en planta con curado controlado traslada el tiempo de fraguado fuera de la ruta crítica de la obra."
+      },
+      "decisions": [
+        {
+          "id": "d4",
+          "prompt": "¿Cómo resuelve los dados de cimentación?",
+          "options": [
+            { "id": "a", "text": "Concreto convencional y montar los pórticos a las 8 horas.", "hours": 8, "grade": "bad", "defect": "foundation", "feedback": "A las 8 horas el concreto convencional tiene una fracción mínima de su resistencia. Los pernos de anclaje pueden aflojarse y el dado fisurarse al tensar el pórtico." },
+            { "id": "b", "text": "Concreto convencional y esperar los 7 días de curado antes de montar.", "hours": 40, "grade": "partial", "feedback": "Es seguro, pero confunde los conceptos: los 7 días de C.5.11.1 son de curado (humedad y temperatura), no un plazo fijo antes de cargar. Lo que manda es la resistencia en la etapa de carga, y ese tiempo tumba el plazo." },
+            { "id": "c", "text": "Concreto de alta resistencia inicial, curado húmedo y cilindros de control antes de cargar.", "hours": 14, "grade": "ok", "feedback": "Correcto. C.5.11.1 exceptúa el concreto de alta resistencia inicial del plazo general de curado, y los cilindros demuestran la resistencia antes de cargar." },
+            { "id": "d", "text": "Dados prefabricados en planta con curado acelerado, ensayados y colocados con grúa sobre un solado.", "hours": 9, "grade": "ok", "best": true, "feedback": "Excelente. Es curado acelerado según C.5.11.3, con ensayos que demuestran la resistencia requerida en la etapa de carga (C.5.11.3.2). Mientras la planta trabaja, la obra excava.", "requires": { "decision": "d2", "option": "c", "elseHours": 6, "elseNote": "Sin acceso para el camión-grúa, la colocación tomó 6 horas adicionales." } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "clock": "Hora 26 · 06:00 del día 2",
+      "title": "Acero en pie",
+      "stage": 3,
+      "baseHours": 8,
+      "lines": [
+        ["aurelio", "Llegaron los seis pórticos. Si los paro todos de una y después arriostro, ganamos medio día."],
+        ["camilo", "Y si sopla el viento de la tarde con seis pórticos sueltos, los perdemos todos. El montaje también se diseña."],
+        ["tu", "Vamos a ordenar la secuencia antes de izar el primero."]
+      ],
+      "lesson": {
+        "title": "Montaje estable en cada instante",
+        "process": [
+          "Cada etapa del montaje debe resistir el peso propio, las cargas de montaje y el viento.",
+          "Se arriostra un vano primero y se ligan a él los demás pórticos.",
+          "Los arriostramientos temporales se retiran solo cuando el sistema definitivo está completo.",
+          "Las conexiones se aprietan según lo especificado: apriete ajustado o pretensionado."
+        ],
+        "norms": [
+          { "ref": "F.2.13.4.2", "folio": "F-157", "text": "Durante el montaje, la estructura debe resistir las cargas muertas, de montaje y otras; deben colocarse arriostramientos temporales y dejarse el tiempo necesario." },
+          { "ref": "F.2.14.5.6", "folio": "F-163", "text": "Con giro de tuerca con marcas permanentes, indicadores directos de tensión o pernos de tensión controlada, no se requiere la presencia del inspector durante la instalación; con llaves calibradas sí." }
+        ],
+        "speed": "Elija métodos de apriete que dejen evidencia verificable después, como las marcas permanentes. Así la inspección no frena el montaje."
+      },
+      "order": {
+        "id": "o1",
+        "prompt": "Ordene la secuencia de montaje (toque los pasos en el orden correcto).",
+        "items": [
+          "Verificar nivel y posición de los pernos de anclaje con la plantilla",
+          "Izar el primer pórtico extremo, aplomarlo y fijarlo con vientos provisionales",
+          "Izar el segundo pórtico y arriostrar ese primer vano con las riostras en X",
+          "Montar los pórticos restantes ligándolos al vano arriostrado",
+          "Apretar y verificar las conexiones según la especificación",
+          "Retirar los vientos provisionales con el sistema definitivo completo"
+        ],
+        "bracingIndex": 2,
+        "laterIndex": 3,
+        "hoursPerError": 1,
+        "defect": "bracing",
+        "feedbackOk": "Secuencia correcta: la estructura es estable en cada etapa, como exige F.2.13.4.2.",
+        "feedbackBad": "La secuencia tiene errores. Lo crítico: si los pórticos se montan antes de arriostrar el primer vano, la estructura queda inestable durante el montaje."
+      },
+      "decisions": [
+        {
+          "id": "d5",
+          "prompt": "Los planos especifican juntas pretensionadas en las riostras y apriete ajustado en las correas. ¿Qué hace?",
+          "options": [
+            { "id": "a", "text": "Apriete ajustado en todo, para ganar tiempo.", "hours": 1, "grade": "bad", "defect": "connections", "feedback": "Una junta especificada como pretensionada no puede quedar con apriete ajustado: en una réplica, las riostras se deslizan y pierden rigidez." },
+            { "id": "b", "text": "Pretensionar con giro de tuerca y marcas permanentes; apriete ajustado solo donde el diseño lo indica.", "hours": 3, "grade": "ok", "feedback": "Correcto. Con marcas permanentes, la inspección verifica después y no hay que detener la cuadrilla esperando al inspector (F.2.14.5.6 b)." },
+            { "id": "c", "text": "Cambiar todas las conexiones a soldadura en obra.", "hours": 14, "grade": "partial", "feedback": "Modifica el diseño sin revisión y la soldadura de campo bajo lluvia exige procedimientos e inspección más lentos. Funciona, pero cuesta 14 horas." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "clock": "Hora 40 · 20:00 del día 2",
+      "title": "Cubierta antes de la tormenta",
+      "stage": 4,
+      "baseHours": 6,
+      "lines": [
+        ["marta", "El pronóstico se adelantó: granizo fuerte el jueves en la noche. Estamos a 2 350 metros, aquí graniza en serio."],
+        ["aurelio", "Le pongo la lámina casi plana, que así se monta más rápido y se gasta menos material."],
+        ["camilo", "¿Y las correas resisten el granizo acumulado y la succión del viento en los bordes?"]
+      ],
+      "lesson": {
+        "title": "Cargas de cubierta: granizo y viento",
+        "process": [
+          "Defina las cargas de la cubierta: muerta, viva de cubierta, granizo y viento.",
+          "Con más pendiente el granizo escurre y no se acumula.",
+          "Verifique las correas y sus fijaciones, en especial en bordes y esquinas, donde la succión del viento es mayor.",
+          "Instale las láminas desde el alero hacia la cumbrera con los traslapos especificados."
+        ],
+        "norms": [
+          { "ref": "B.4.8.3.1", "folio": "B-18", "text": "Las cargas de granizo deben considerarse en regiones con más de 2 000 m de altura sobre el nivel del mar o donde la autoridad lo exija." },
+          { "ref": "B.6.1.1", "folio": "B-21", "text": "Las cargas de viento se determinan por el procedimiento simplificado, el analítico o el de túnel de viento, según el caso." },
+          { "ref": "Tabla B.4.2.1-2", "folio": "B-16", "text": "Fija las cargas vivas mínimas en cubiertas según su tipo y pendiente." }
+        ],
+        "speed": "Una pendiente mayor apenas cuesta tiempo de montaje y elimina el problema de acumulación de granizo."
+      },
+      "decisions": [
+        {
+          "id": "d6",
+          "prompt": "¿Qué cubierta instala?",
+          "options": [
+            { "id": "a", "text": "Lámina liviana casi plana, sin revisar las correas.", "hours": 2, "grade": "bad", "defect": "roof", "feedback": "A 2 350 m s. n. m. el granizo es carga de diseño (B.4.8.3.1). Con pendiente mínima se acumula y sobrecarga las correas." },
+            { "id": "b", "text": "Pendiente del 20 %, correas verificadas para granizo y viento, y fijaciones adicionales en bordes y esquinas.", "hours": 4, "grade": "ok", "feedback": "Correcto. El granizo escurre, las correas tienen respaldo de cálculo y la succión de borde queda controlada." },
+            { "id": "c", "text": "Lonas tensadas sobre los pórticos: se ponen en dos horas.", "hours": 1, "grade": "bad", "defect": "roof", "feedback": "Una lona no resiste granizo acumulado ni succión de viento. Sirve para unas horas, no para un refugio de Grupo IV." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "clock": "Hora 52 · 08:00 del día 3",
+      "title": "Puertas abiertas",
+      "stage": 5,
+      "baseHours": 5,
+      "lines": [
+        ["alcaldesa", "Mañana a mediodía quiero entregar el refugio con la prensa. Pongan una sola puerta grande, así controlamos quién entra."],
+        ["camilo", "Trescientas personas de noche, con réplicas. La salida no se diseña para el control: se diseña para la evacuación."],
+        ["alcaldesa", "Y no me demore la entrega con más papeles, ingeniero."]
+      ],
+      "lesson": {
+        "title": "Salidas y recibo técnico",
+        "process": [
+          "Calcule la carga de ocupación y, con ella, el número mínimo de salidas.",
+          "Ubique las salidas lo más alejadas posible entre sí (remotas), señalizadas e iluminadas.",
+          "Antes de ocupar, haga un recorrido de recibo con el supervisor técnico, con lista de chequeo y registro."
+        ],
+        "norms": [
+          { "ref": "K.3.4.2 · Tabla K.3.4-1", "folio": "K-18", "text": "Número mínimo de salidas por carga de ocupación: de 0 a 100 personas, 1; de 101 a 500, 2; de 501 a 1 000, 3; más de 1 000, 4." },
+          { "ref": "I.1.2.3", "folio": "I-3", "text": "Los Grupos de Uso III y IV deben someterse a supervisión técnica independientemente de su área." }
+        ],
+        "speed": "Si la supervisión acompañó la obra desde el primer día, el recibo final es una verificación corta y no una auditoría."
+      },
+      "decisions": [
+        {
+          "id": "d7",
+          "prompt": "300 personas ocuparán el refugio. ¿Cuántas salidas deja?",
+          "options": [
+            { "id": "a", "text": "Una sola puerta grande, como pide la alcaldesa.", "hours": 0, "grade": "bad", "defect": "exits", "feedback": "Con 101 a 500 personas, la Tabla K.3.4-1 exige mínimo 2 salidas. Una puerta grande no reemplaza una segunda ruta si la primera se bloquea." },
+            { "id": "b", "text": "Dos salidas remotas en extremos opuestos, señalizadas y con luz de emergencia.", "hours": 2, "grade": "ok", "feedback": "Correcto. Cumple la Tabla K.3.4-1 y, al estar alejadas, una sola obstrucción no bloquea las dos." },
+            { "id": "c", "text": "Cuatro salidas, una en cada fachada.", "hours": 5, "grade": "partial", "feedback": "Cumple, pero abrir los hastiales obliga a reforzar los vanos arriostrados. Cuesta tiempo sin necesidad." }
+          ]
+        },
+        {
+          "id": "d8",
+          "prompt": "¿Cómo se hace la entrega?",
+          "options": [
+            { "id": "a", "text": "Entregar ya; la supervisión firma la próxima semana.", "hours": 0, "grade": "bad", "defect": "supervision", "feedback": "En un Grupo IV la supervisión técnica es obligatoria (I.1.2.3). Ocupar sin recibo traslada el riesgo a las familias." },
+            { "id": "b", "text": "Recorrido de recibo con el supervisor: lista de chequeo, registro fotográfico y acta.", "hours": 3, "grade": "ok", "feedback": "Correcto. Tres horas de verificación con quien acompañó toda la obra. En el recorrido apareció una riostra sin pernos en el vano de la cocina y se corrigió a tiempo." }
+          ]
+        }
+      ]
+    }
+  ],
+  "finale": {
+    "title": "La noche de prueba",
+    "lines": [
+      ["narrador", "Jueves, 22:10. Las familias duermen en el refugio. A lo lejos, los primeros truenos."],
+      ["narrador", "El granizo golpea la cubierta como grava arrojada a puñados. A las 23:47, una réplica de magnitud 5,1 sacude el valle."]
+    ],
+    "perfect": "La estructura cruje, pero no se mueve. El granizo escurre por la cubierta, las luces de emergencia marcan las dos salidas y nadie tiene que levantarse. A la mañana siguiente, Don Aurelio golpea una columna con los nudillos: «Esto quedó bien hecho, y a tiempo».",
+    "closing": "Atender una emergencia rápido no consiste en saltarse la norma. Consiste en paralelizar, prefabricar y escoger métodos verificables que hagan cumplirla sin detener la obra."
+  }
+}
